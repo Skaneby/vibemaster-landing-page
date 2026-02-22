@@ -1,3 +1,6 @@
+# Tailwind CLI binary (download with: curl -sL https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-macos-arm64 -o tailwindcss && chmod +x tailwindcss)
+tailwindcss
+
 # OS
 .DS_Store
 Thumbs.db
