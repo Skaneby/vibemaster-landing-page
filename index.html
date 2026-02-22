@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Vibe Researcher | The Idea to Build Bridge</title>
-  <meta name="description" content="Turn your idea into something AI builders can actually build. From vague idea to clear technical plan to ready-to-use prompts." />
+  <meta name="description" content="Turn your idea into something AI builders can actually build." />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -15,7 +15,6 @@
         extend: {
           colors: {
             "primary":          "#6366f1",
-            "primary-dark":     "#5048e5",
             "background-dark":  "#020617",
             "slate-card":       "#15141f",
             "slate-border":     "#2d2c3d",
@@ -72,9 +71,7 @@
 </head>
 <body class="bg-background-dark font-display text-slate-100 selection:bg-indigo-500/30">
 
-  <!-- ============================================================
-       HEADER
-  ============================================================ -->
+  <!-- HEADER -->
   <header class="fixed top-0 w-full z-50 glass border-b border-white/5">
     <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
@@ -84,46 +81,40 @@
         <h2 class="text-white text-lg font-bold tracking-tight">Vibe Researcher</h2>
       </div>
       <nav class="hidden md:flex items-center gap-8">
-        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#problem">The Gap</a>
-        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#how-it-works">Process</a>
-        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#pricing">Pricing</a>
-        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#testimonials">Reviews</a>
+        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#problem" data-i18n="nav.gap">The Gap</a>
+        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#how-it-works" data-i18n="nav.process">Process</a>
+        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#testimonials" data-i18n="nav.reviews">Reviews</a>
       </nav>
       <div class="flex items-center gap-4">
-        <button class="text-slate-400 hover:text-white text-sm font-medium px-4 py-2 transition-colors">Login</button>
-        <button class="gradient-button text-white text-sm font-bold px-6 py-2.5 rounded-full shadow-lg shadow-indigo-500/20 hover:scale-105">
-          Start Building
-        </button>
+        <button class="text-slate-400 hover:text-white text-sm font-medium px-4 py-2 transition-colors" data-i18n="nav.login">Login</button>
+        <button class="gradient-button text-white text-sm font-bold px-6 py-2.5 rounded-full shadow-lg shadow-indigo-500/20 hover:scale-105" data-i18n="nav.cta">Start Building</button>
       </div>
     </div>
   </header>
 
   <main class="pt-16">
 
-    <!-- ============================================================
-         HERO
-    ============================================================ -->
+    <!-- HERO -->
     <section class="relative overflow-hidden pt-24 pb-32">
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full hero-glow -z-10"></div>
       <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div class="flex flex-col gap-8">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 w-fit">
             <span class="size-2 rounded-full bg-indigo-500 animate-pulse"></span>
-            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">Built for non-technical founders, operators and creators</span>
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider" data-i18n="hero.badge">Built for non-technical founders, operators and creators</span>
           </div>
           <h1 class="text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-tight">
-            Turn your idea into something <span class="text-gradient">AI builders</span> can actually build
+            <span data-i18n="hero.h1.a">Turn your idea into something</span> <span class="text-gradient" data-i18n="hero.h1.b">AI builders</span> <span data-i18n="hero.h1.c">can actually build</span>
           </h1>
-          <p class="text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl">
-            From vague idea <span class="text-indigo-400">→</span> clear technical plan <span class="text-indigo-400">→</span> ready-to-use prompts. No coding. No guessing. No broken builds.
+          <p class="text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl" data-i18n="hero.sub">
+            From vague idea → clear technical plan → ready-to-use prompts. No coding. No guessing. No broken builds.
           </p>
           <div class="flex flex-wrap gap-4">
-            <button class="gradient-button text-white text-lg font-bold px-8 py-4 rounded-2xl shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all">
-              Build My Tech Plan
-            </button>
+            <button class="gradient-button text-white text-lg font-bold px-8 py-4 rounded-2xl shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all" data-i18n="hero.cta.primary">Build My Tech Plan</button>
             <button class="bg-white/5 hover:bg-white/10 text-white text-lg font-bold px-8 py-4 rounded-2xl border border-white/10 flex items-center gap-2 transition-all">
               <span class="material-symbols-outlined">play_circle</span>
-              How it works
+              <span data-i18n="hero.cta.secondary">How it works</span>
             </button>
           </div>
         </div>
@@ -169,9 +160,7 @@
                   <div class="h-full w-full bg-indigo-500"></div>
                 </div>
                 <div class="flex gap-2">
-                  <div class="flex-1 h-8 bg-white/5 rounded flex items-center px-3 text-[10px] text-slate-400 font-mono">
-                    copy_replit_prompt_v1.txt
-                  </div>
+                  <div class="flex-1 h-8 bg-white/5 rounded flex items-center px-3 text-[10px] text-slate-400 font-mono">copy_replit_prompt_v1.txt</div>
                   <div class="size-8 bg-indigo-600 rounded flex items-center justify-center text-white">
                     <span class="material-symbols-outlined text-sm">content_copy</span>
                   </div>
@@ -183,12 +172,10 @@
       </div>
     </section>
 
-    <!-- ============================================================
-         INTEGRATIONS BAR
-    ============================================================ -->
+    <!-- INTEGRATIONS BAR -->
     <section class="border-y border-white/5 bg-white/[0.01] py-12">
       <div class="max-w-7xl mx-auto px-6">
-        <p class="text-center text-slate-500 text-xs font-bold uppercase tracking-[0.3em] mb-10">Perfect Handoffs To</p>
+        <p class="text-center text-slate-500 text-xs font-bold uppercase tracking-[0.3em] mb-10" data-i18n="integrations.label">Perfect Handoffs To</p>
         <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60">
           <div class="flex items-center gap-3">
             <span class="material-symbols-outlined text-2xl text-indigo-400">favorite</span>
@@ -210,103 +197,83 @@
       </div>
     </section>
 
-    <!-- ============================================================
-         PROBLEM SECTION
-    ============================================================ -->
+    <!-- PROBLEM -->
     <section class="py-32" id="problem">
       <div class="max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-20 items-center">
           <div>
             <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
-              The problem isn't <span class="text-indigo-400">Lovable</span> or <span class="text-purple-400">Replit</span>...
+              <span data-i18n="problem.h2.a">The problem isn't</span> <span class="text-indigo-400">Lovable</span> <span data-i18n="problem.h2.b">or</span> <span class="text-purple-400">Replit</span><span data-i18n="problem.h2.c">...</span>
             </h2>
             <div class="space-y-6">
-              <div class="glass p-6 rounded-2xl border-red-500/10 bg-red-500/[0.02]">
+              <div class="glass p-6 rounded-2xl bg-red-500/[0.02]">
                 <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
                   <span class="material-symbols-outlined text-red-500">warning</span>
-                  It's the gap between your idea and the tech.
+                  <span data-i18n="problem.card1.h3">It's the gap between your idea and the tech.</span>
                 </h3>
-                <p class="text-slate-400 leading-relaxed">
-                  AI builders are incredibly fast, but they only build what you tell them. If your prompt is vague, the result is broken builds, circular errors, and wasted time.
-                </p>
+                <p class="text-slate-400 leading-relaxed" data-i18n="problem.card1.p">AI builders are incredibly fast, but they only build what you tell them. If your prompt is vague, the result is broken builds, circular errors, and wasted time.</p>
               </div>
-              <div class="glass p-6 rounded-2xl border-indigo-500/20 bg-indigo-500/[0.02]">
+              <div class="glass p-6 rounded-2xl bg-indigo-500/[0.02]">
                 <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
                   <span class="material-symbols-outlined text-indigo-400">account_tree</span>
-                  The Idea → Build Bridge
+                  <span data-i18n="problem.card2.h3">The Idea → Build Bridge</span>
                 </h3>
-                <p class="text-slate-400 leading-relaxed">
-                  Vibe Researcher acts as your <span class="text-white font-medium">Product Manager + Tech Lead</span>. We extract the complex logic from your head and translate it into instructions an AI can't misinterpret.
-                </p>
+                <p class="text-slate-400 leading-relaxed" data-i18n="problem.card2.p">Vibe Researcher acts as your Product Manager + Tech Lead. We extract the complex logic from your head and translate it into instructions an AI can't misinterpret.</p>
               </div>
             </div>
           </div>
           <div class="relative">
             <div class="absolute -inset-10 bg-indigo-500/10 blur-[100px] -z-10"></div>
             <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img alt="Bridging the gap between idea and build" class="w-full h-auto object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUNSemnITvpFVne63vV4TseB00D3U1uIvprT1b-g4xFzHsYwm93wRPOqo0NIjjXj9RCgJk0btHvwjLazXVIIsxLHcn1G_BRoGfmppafMCiFZazhu6kf3QgibjEbjOZrcBkl0Z3SAqCuda6hfyXgVVFUc4q7kqUdqJTx5bvvFm4gskTSB3kNLCpenURuLcivBzBlRCNVndl4_20SXQrLtJrureEeuq7BAtosY4WrGcKAH1702MrOaIISJqzwzwZBLGU3Bv6LY_L5d_B"/>
+              <img alt="Bridging the gap" class="w-full h-auto object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUNSemnITvpFVne63vV4TseB00D3U1uIvprT1b-g4xFzHsYwm93wRPOqo0NIjjXj9RCgJk0btHvwjLazXVIIsxLHcn1G_BRoGfmppafMCiFZazhu6kf3QgibjEbjOZrcBkl0Z3SAqCuda6hfyXgVVFUc4q7kqUdqJTx5bvvFm4gskTSB3kNLCpenURuLcivBzBlRCNVndl4_20SXQrLtJrureEeuq7BAtosY4WrGcKAH1702MrOaIISJqzwzwZBLGU3Bv6LY_L5d_B"/>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         HOW IT WORKS
-    ============================================================ -->
+    <!-- HOW IT WORKS -->
     <section class="py-32 bg-slate-900/50" id="how-it-works">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-20">
-          <h2 class="text-3xl md:text-5xl font-black text-white mb-6">How You Bridge the Gap</h2>
-          <p class="text-slate-400 text-lg max-w-2xl mx-auto">Skip the technical manual and start building with confidence in three steps.</p>
+          <h2 class="text-3xl md:text-5xl font-black text-white mb-6" data-i18n="hiw.h2">How You Bridge the Gap</h2>
+          <p class="text-slate-400 text-lg max-w-2xl mx-auto" data-i18n="hiw.sub">Skip the technical manual and start building with confidence in three steps.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="glass p-10 rounded-3xl relative group hover:bg-white/[0.05] transition-colors">
+          <div class="glass p-10 rounded-3xl group hover:bg-white/[0.05] transition-colors">
             <div class="size-14 rounded-2xl bg-indigo-600/20 flex items-center justify-center text-indigo-400 mb-8 group-hover:scale-110 transition-transform">
               <span class="material-symbols-outlined text-3xl">chat_bubble</span>
             </div>
-            <h4 class="text-2xl font-bold text-white mb-4">1. Describe your idea</h4>
-            <p class="text-slate-400 leading-relaxed">
-              Tell us what you want to build in plain English. Our AI interviews you to uncover the hidden technical requirements you didn't know you needed.
-            </p>
+            <h4 class="text-2xl font-bold text-white mb-4" data-i18n="hiw.step1.h4">1. Describe your idea</h4>
+            <p class="text-slate-400 leading-relaxed" data-i18n="hiw.step1.p">Tell us what you want to build in plain English. Our AI interviews you to uncover the hidden technical requirements you didn't know you needed.</p>
           </div>
-          <div class="glass p-10 rounded-3xl relative group hover:bg-white/[0.05] transition-colors">
+          <div class="glass p-10 rounded-3xl group hover:bg-white/[0.05] transition-colors">
             <div class="size-14 rounded-2xl bg-purple-600/20 flex items-center justify-center text-purple-400 mb-8 group-hover:scale-110 transition-transform">
               <span class="material-symbols-outlined text-3xl">transform</span>
             </div>
-            <h4 class="text-2xl font-bold text-white mb-4">2. We translate to tech</h4>
-            <p class="text-slate-400 leading-relaxed">
-              We instantly translate your vision into a buildable system: database schemas, API routes, and feature specs optimized for AI builders.
-            </p>
+            <h4 class="text-2xl font-bold text-white mb-4" data-i18n="hiw.step2.h4">2. We translate to tech</h4>
+            <p class="text-slate-400 leading-relaxed" data-i18n="hiw.step2.p">We instantly translate your vision into a buildable system: database schemas, API routes, and feature specs optimized for AI builders.</p>
           </div>
-          <div class="glass p-10 rounded-3xl relative group hover:bg-white/[0.05] transition-colors">
+          <div class="glass p-10 rounded-3xl group hover:bg-white/[0.05] transition-colors">
             <div class="size-14 rounded-2xl bg-indigo-600/20 flex items-center justify-center text-indigo-400 mb-8 group-hover:scale-110 transition-transform">
               <span class="material-symbols-outlined text-3xl">rocket_launch</span>
             </div>
-            <h4 class="text-2xl font-bold text-white mb-4">3. Build instantly</h4>
-            <p class="text-slate-400 leading-relaxed">
-              Paste our generated prompts into <span class="text-indigo-400 font-bold">Lovable</span> or <span class="text-indigo-400 font-bold">Replit</span>. Watch your app come to life without the usual AI hallucination errors.
-            </p>
+            <h4 class="text-2xl font-bold text-white mb-4" data-i18n="hiw.step3.h4">3. Build instantly</h4>
+            <p class="text-slate-400 leading-relaxed" data-i18n="hiw.step3.p">Paste our generated prompts into Lovable or Replit. Watch your app come to life without the usual AI hallucination errors.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         TESTIMONIALS / SOCIAL PROOF
-    ============================================================ -->
+    <!-- TESTIMONIALS -->
     <section class="py-24 px-6 lg:px-40 max-w-[1440px] mx-auto" id="testimonials">
       <div class="flex flex-col items-center text-center mb-16">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-6 border border-indigo-500/20">
           <span class="material-symbols-outlined text-sm">favorite</span>
-          Wall of Love
+          <span data-i18n="testimonials.badge">Wall of Love</span>
         </div>
-        <h2 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-white max-w-3xl">
-          Turning ideas into specs for the world's fastest builders
-        </h2>
-        <p class="mt-6 text-slate-400 text-lg max-w-2xl leading-relaxed">
-          Join 5,000+ solo hackers, technical founders, and product teams shipping at the speed of thought.
-        </p>
+        <h2 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-white max-w-3xl" data-i18n="testimonials.h2">Turning ideas into specs for the world's fastest builders</h2>
+        <p class="mt-6 text-slate-400 text-lg max-w-2xl leading-relaxed" data-i18n="testimonials.sub">Join 5,000+ solo hackers, technical founders, and product teams shipping at the speed of thought.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="flex flex-col gap-6 p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300">
@@ -315,13 +282,13 @@
               <div class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRFbPEGGtUGyQdXiZUcnu41UXmg8oycWYPECAOps9wnjJ2ir3OFZIIHnIO5NSZCwYGR4Nx1zaT1-wEEweeXIQ-oJq0YxjeVRJ8BK_KtlYTqj08r8LlCG7dSZr7_VhSJuVSd6cuDYtjjVjMxTFXnLDcihbOXh8-tqNjv49RC1h4oTvQonCV_JgsHj3OaJzaY6xYqzQjt_ucmBguP4lNioeDGIxGcSYHTxNM8STb-z2Twr4s-NKnacXTawtLo1H2cEHkH29ytvCNDhU_");'></div>
             </div>
             <div>
-              <p class="text-white font-bold text-base leading-tight">Alex Rivera</p>
-              <p class="text-indigo-400 text-xs font-semibold mt-1">Founder @ TechFlow</p>
+              <p class="text-white font-bold">Alex Rivera</p>
+              <p class="text-indigo-400 text-xs font-semibold mt-1" data-i18n="testimonials.t1.role">Founder @ TechFlow</p>
             </div>
           </div>
-          <p class="text-slate-300 leading-relaxed italic text-lg">"From idea to PRD in minutes. This changed how we prototype. We used to spend weeks debating specs, now we just 'vibe' them out."</p>
+          <p class="text-slate-300 leading-relaxed italic text-lg" data-i18n="testimonials.t1">"From idea to PRD in minutes. This changed how we prototype. We used to spend weeks debating specs, now we just 'vibe' them out."</p>
           <div class="flex gap-1 text-yellow-400">
-            <span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span>
+            <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
           </div>
         </div>
         <div class="flex flex-col gap-6 p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300">
@@ -330,13 +297,13 @@
               <div class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABexbvC8jcBJwZN85I_MR_9HDjUnKsPb7CVjxOAThczQCj7le67BQ8jKWov9GvMjbiia6K9ELrdVTVb2sFRQPDjywz3gKKWm4-eWLPP3JyR5Gbh4iZSGeFH1zSJS_Bt2nL5U-V0ya_FeKAzCK01rDbyh_23Km760B_zpLTPx0imLs-_BC3hs3SZP9PPlikiuwDXEpcyzYit6toJcdJL1PnB-AoE2xcXpuVBThuegYOaNLtfmsshXhPyrx22Yzy9I-z5meRZYsto5v6");'></div>
             </div>
             <div>
-              <p class="text-white font-bold text-base leading-tight">Sarah Chen</p>
-              <p class="text-indigo-400 text-xs font-semibold mt-1">CTO @ BuildFast</p>
+              <p class="text-white font-bold">Sarah Chen</p>
+              <p class="text-indigo-400 text-xs font-semibold mt-1" data-i18n="testimonials.t2.role">CTO @ BuildFast</p>
             </div>
           </div>
-          <p class="text-slate-300 leading-relaxed italic text-lg">"The technical specs are incredibly accurate. The coding prompts generated work flawlessly with our existing stack and Cursor setup."</p>
+          <p class="text-slate-300 leading-relaxed italic text-lg" data-i18n="testimonials.t2">"The technical specs are incredibly accurate. The coding prompts generated work flawlessly with our existing stack and Cursor setup."</p>
           <div class="flex gap-1 text-yellow-400">
-            <span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span>
+            <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
           </div>
         </div>
         <div class="flex flex-col gap-6 p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300">
@@ -345,223 +312,154 @@
               <div class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHEsP8JHgIyD2zsMV8DifRP07e-J2OgjHf0gpIF_Xb7NbQj7VFF7H18P3L3n4VinwX2heKfETA6-F9AqBN9oyLyKUBNB8Or7YV769EfXltlVzLHnwI4sVC_Wz-WCdi3tgC_hYe2kk-N7NPsf_rzUGgSmV2L3BxFGwqD1GhBPK61ibPSvQ7Pqx3hGtnS5oWSDDbNq5BtBhYTN8IWZfz7x1818mRvrxS0QwXzVj490ywwkQe31lHMsWf4Uflp9QLEeA7whJaZU3ze4t8");'></div>
             </div>
             <div>
-              <p class="text-white font-bold text-base leading-tight">James Wilson</p>
-              <p class="text-indigo-400 text-xs font-semibold mt-1">Product Lead @ Innovate</p>
+              <p class="text-white font-bold">James Wilson</p>
+              <p class="text-indigo-400 text-xs font-semibold mt-1" data-i18n="testimonials.t3.role">Product Lead @ Innovate</p>
             </div>
           </div>
-          <p class="text-slate-300 leading-relaxed italic text-lg">"The best AI tool for turning vision into actionable coding prompts. It understands nuance better than any senior architect I've met."</p>
+          <p class="text-slate-300 leading-relaxed italic text-lg" data-i18n="testimonials.t3">"The best AI tool for turning vision into actionable coding prompts. It understands nuance better than any senior architect I've met."</p>
           <div class="flex gap-1 text-yellow-400">
-            <span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span>
+            <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         PRICING
-    ============================================================ -->
+    <!-- PRICING -->
     <section class="py-24 bg-slate-900/50 px-6 lg:px-40" id="pricing">
       <div class="max-w-[1440px] mx-auto">
         <div class="flex flex-col items-center text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-white">Simple Pricing for Visionaries</h2>
-          <p class="mt-6 text-slate-400 max-w-2xl text-lg">
-            Choose the plan that matches your shipping speed. All plans include core AI research capabilities.
-          </p>
+          <h2 class="text-4xl md:text-5xl font-black text-white" data-i18n="pricing.h2">Simple Pricing for Visionaries</h2>
+          <p class="mt-6 text-slate-400 max-w-2xl text-lg" data-i18n="pricing.sub">Choose the plan that matches your shipping speed. All plans include core AI research capabilities.</p>
           <div class="mt-10 inline-flex items-center p-1 bg-white/5 border border-white/10 rounded-lg">
-            <button class="px-6 py-2 text-sm font-bold rounded-md bg-white/10 text-white shadow-sm">Monthly</button>
-            <button class="px-6 py-2 text-sm font-bold text-slate-400 hover:text-slate-200 transition-colors">Yearly <span class="text-green-500 ml-1">-20%</span></button>
+            <button class="px-6 py-2 text-sm font-bold rounded-md bg-white/10 text-white shadow-sm" data-i18n="pricing.monthly">Monthly</button>
+            <button class="px-6 py-2 text-sm font-bold text-slate-400 hover:text-slate-200 transition-colors">
+              <span data-i18n="pricing.yearly">Yearly</span> <span class="text-green-500 ml-1">-20%</span>
+            </button>
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+
           <!-- Explorer -->
-          <div class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-indigo-500/40 group">
+          <div class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-indigo-500/40">
             <div class="flex flex-col gap-4">
-              <h3 class="text-white text-xl font-bold">Explorer</h3>
+              <h3 class="text-white text-xl font-bold" data-i18n="pricing.explorer.name">Explorer</h3>
               <div class="flex items-baseline gap-1">
-                <span class="text-white text-5xl font-black">$0</span>
-                <span class="text-slate-400 text-sm font-semibold">/mo</span>
+                <span class="text-white text-5xl font-black" data-i18n="pricing.explorer.price">$0</span>
+                <span class="text-slate-400 text-sm font-semibold" data-i18n="pricing.explorer.period">/mo</span>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">Perfect for solo hackers testing the waters.</p>
+              <p class="text-slate-400 text-sm" data-i18n="pricing.explorer.sub">Perfect for solo hackers testing the waters.</p>
             </div>
-            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/10 text-white text-sm font-extrabold transition-all hover:bg-white/5">
-              Start Free
-            </button>
+            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/10 text-white text-sm font-extrabold hover:bg-white/5 transition-all" data-i18n="pricing.explorer.cta">Start Free</button>
             <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                3 Projects per month
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Basic technical specs
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Markdown exports
-              </li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.explorer.f1">3 Projects per month</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.explorer.f2">Basic technical specs</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.explorer.f3">Markdown exports</span></li>
             </ul>
           </div>
 
-          <!-- Professional (Most Popular) -->
+          <!-- Professional -->
           <div class="flex flex-col gap-8 rounded-2xl pro-gradient-border p-8 shadow-2xl relative lg:-mt-4 lg:mb-4">
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-[11px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg">
-              Most Popular
-            </div>
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-[11px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg" data-i18n="pricing.popular">Most Popular</div>
             <div class="flex flex-col gap-4">
-              <h3 class="text-white text-xl font-bold">Professional</h3>
+              <h3 class="text-white text-xl font-bold" data-i18n="pricing.pro.name">Professional</h3>
               <div class="flex items-baseline gap-1">
-                <span class="text-white text-5xl font-black">$29</span>
-                <span class="text-slate-400 text-sm font-semibold">/mo</span>
+                <span class="text-white text-5xl font-black" data-i18n="pricing.pro.price">$29</span>
+                <span class="text-slate-400 text-sm font-semibold" data-i18n="pricing.pro.period">/mo</span>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">For serious builders shipping weekly.</p>
+              <p class="text-slate-400 text-sm" data-i18n="pricing.pro.sub">For serious builders shipping weekly.</p>
             </div>
-            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 gradient-button text-white text-sm font-extrabold shadow-lg shadow-indigo-500/20 hover:scale-[1.02] transition-all">
-              Go Pro
-            </button>
+            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 gradient-button text-white text-sm font-extrabold shadow-lg shadow-indigo-500/20 hover:scale-[1.02] transition-all" data-i18n="pricing.pro.cta">Go Pro</button>
             <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3 text-sm text-slate-300 font-bold">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Unlimited Projects
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Premium AI Models (GPT-4o)
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Advanced Coding Prompts
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                JSON &amp; VS Code Integrations
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Priority 24/7 Support
-              </li>
+              <li class="flex items-start gap-3 text-sm text-slate-300 font-bold"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f1">Unlimited Projects</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f2">Premium AI Models (GPT-4o)</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f3">Advanced Coding Prompts</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f4">JSON &amp; VS Code Integrations</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f5">Priority 24/7 Support</span></li>
             </ul>
           </div>
 
           <!-- Studio -->
           <div class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-indigo-500/40">
             <div class="flex flex-col gap-4">
-              <h3 class="text-white text-xl font-bold">Studio</h3>
+              <h3 class="text-white text-xl font-bold" data-i18n="pricing.studio.name">Studio</h3>
               <div class="flex items-baseline gap-1">
-                <span class="text-white text-5xl font-black">$99</span>
-                <span class="text-slate-400 text-sm font-semibold">/mo</span>
+                <span class="text-white text-5xl font-black" data-i18n="pricing.studio.price">$99</span>
+                <span class="text-slate-400 text-sm font-semibold" data-i18n="pricing.studio.period">/mo</span>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">For agencies and small product teams.</p>
+              <p class="text-slate-400 text-sm" data-i18n="pricing.studio.sub">For agencies and small product teams.</p>
             </div>
-            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/10 text-white text-sm font-extrabold transition-all hover:bg-white/5">
-              Start Trial
-            </button>
+            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/10 text-white text-sm font-extrabold hover:bg-white/5 transition-all" data-i18n="pricing.studio.cta">Start Trial</button>
             <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Up to 5 team seats
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Shared component library
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Collaborative real-time specs
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Full API access
-              </li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f1">Up to 5 team seats</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f2">Shared component library</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f3">Collaborative real-time specs</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f4">Full API access</span></li>
             </ul>
           </div>
 
           <!-- Enterprise -->
           <div class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-indigo-500/40">
             <div class="flex flex-col gap-4">
-              <h3 class="text-white text-xl font-bold">Enterprise</h3>
+              <h3 class="text-white text-xl font-bold" data-i18n="pricing.enterprise.name">Enterprise</h3>
               <div class="flex items-baseline gap-1">
-                <span class="text-white text-4xl font-black">Custom</span>
+                <span class="text-white text-4xl font-black" data-i18n="pricing.enterprise.price">Custom</span>
               </div>
-              <p class="text-slate-400 text-sm leading-relaxed">Global scale and security requirements.</p>
+              <p class="text-slate-400 text-sm" data-i18n="pricing.enterprise.sub">Global scale and security requirements.</p>
             </div>
-            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/10 text-white text-sm font-extrabold transition-all hover:bg-white/5">
-              Contact Sales
-            </button>
+            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/10 text-white text-sm font-extrabold hover:bg-white/5 transition-all" data-i18n="pricing.enterprise.cta">Contact Sales</button>
             <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Unlimited Seats
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                SOC-2 Compliance
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                SSO &amp; SAML
-              </li>
-              <li class="flex items-start gap-3 text-sm text-slate-300">
-                <span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span>
-                Custom data training
-              </li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f1">Unlimited Seats</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f2">SOC-2 Compliance</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f3">SSO &amp; SAML</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f4">Custom data training</span></li>
             </ul>
           </div>
         </div>
-        <p class="text-center mt-12 text-slate-500 text-sm">Need something else? <a class="text-indigo-400 font-bold hover:underline" href="#">Chat with us</a></p>
+        <p class="text-center mt-12 text-slate-500 text-sm">
+          <span data-i18n="pricing.contact">Need something else?</span> <a class="text-indigo-400 font-bold hover:underline" href="#" data-i18n="pricing.chat">Chat with us</a>
+        </p>
       </div>
     </section>
 
-    <!-- ============================================================
-         FAQ
-    ============================================================ -->
+    <!-- FAQ -->
     <section class="py-24 px-6 lg:px-40 max-w-[1000px] mx-auto" id="faq">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-black text-white">Questions? We have answers.</h2>
-        <p class="mt-6 text-slate-400 text-lg">Everything you need to know about getting started.</p>
+        <h2 class="text-3xl md:text-4xl font-black text-white" data-i18n="faq.h2">Questions? We have answers.</h2>
+        <p class="mt-6 text-slate-400 text-lg" data-i18n="faq.sub">Everything you need to know about getting started.</p>
       </div>
       <div class="flex flex-col gap-4">
         <details class="group rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden" open>
           <summary class="flex cursor-pointer items-center justify-between p-6 text-white font-bold select-none list-none text-lg">
-            Do I need technical knowledge to use Vibe Researcher?
+            <span data-i18n="faq.q1">Do I need technical knowledge to use Vibe Researcher?</span>
             <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-indigo-400">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-slate-400 text-base leading-relaxed">
-            No! Vibe Researcher is built to bridge the gap between imagination and implementation. Whether you're a non-technical founder or a senior engineer, the platform translates plain-language ideas into rigorous technical specs and prompts that AI coding assistants love.
-          </div>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed" data-i18n="faq.a1">No! Vibe Researcher is built to bridge the gap between imagination and implementation.</div>
         </details>
         <details class="group rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
           <summary class="flex cursor-pointer items-center justify-between p-6 text-white font-bold select-none list-none text-lg">
-            How does this integrate with my existing workflow?
+            <span data-i18n="faq.q2">How does this integrate with my existing workflow?</span>
             <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-indigo-400">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-slate-400 text-base leading-relaxed">
-            We integrate directly with your favorite tools. Export specs as Markdown for GitHub, JSON for custom scripts, or direct copy-paste coding blocks optimized for Cursor, VS Code, and Replit.
-          </div>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed" data-i18n="faq.a2">We integrate directly with your favorite tools.</div>
         </details>
         <details class="group rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
           <summary class="flex cursor-pointer items-center justify-between p-6 text-white font-bold select-none list-none text-lg">
-            Is my intellectual property secure?
+            <span data-i18n="faq.q3">Is my intellectual property secure?</span>
             <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-indigo-400">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-slate-400 text-base leading-relaxed">
-            Absolutely. We do not use your proprietary ideas to train our global models. Your data is yours. We use enterprise-grade encryption and offer custom data retention policies for Team and Enterprise tiers.
-          </div>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed" data-i18n="faq.a3">Absolutely. We do not use your proprietary ideas to train our global models.</div>
         </details>
         <details class="group rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
           <summary class="flex cursor-pointer items-center justify-between p-6 text-white font-bold select-none list-none text-lg">
-            Can I switch plans later?
+            <span data-i18n="faq.q4">Can I switch plans later?</span>
             <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-indigo-400">expand_more</span>
           </summary>
-          <div class="px-6 pb-6 text-slate-400 text-base leading-relaxed">
-            Yes, you can upgrade or downgrade at any time. When you upgrade, the new features are available instantly. If you downgrade, you'll finish your current billing cycle on the higher plan.
-          </div>
+          <div class="px-6 pb-6 text-slate-400 leading-relaxed" data-i18n="faq.a4">Yes, you can upgrade or downgrade at any time.</div>
         </details>
       </div>
     </section>
 
-    <!-- ============================================================
-         FINAL CTA
-    ============================================================ -->
+    <!-- FINAL CTA -->
     <section class="py-20 px-6 lg:px-40">
       <div class="relative overflow-hidden rounded-[2rem] bg-slate-950 border border-indigo-500/20 p-12 lg:p-24 text-center">
         <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -569,30 +467,24 @@
           <div class="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-purple-600/20 blur-[120px] rounded-full"></div>
         </div>
         <div class="relative z-10">
-          <h2 class="text-4xl md:text-7xl font-black text-white leading-tight mb-8">Ready to ship <br class="hidden md:block"/> your next big idea?</h2>
-          <p class="text-slate-400 text-xl md:text-2xl max-w-2xl mx-auto mb-12">
-            Start today and go from "vibe" to "production" in record time. No credit card required.
-          </p>
+          <h2 class="text-4xl md:text-7xl font-black text-white leading-tight mb-8" data-i18n="cta.h2">Ready to ship your next big idea?</h2>
+          <p class="text-slate-400 text-xl md:text-2xl max-w-2xl mx-auto mb-12" data-i18n="cta.sub">Start today and go from "vibe" to "production" in record time. No credit card required.</p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button class="gradient-button flex min-w-[240px] items-center justify-center rounded-2xl h-16 px-10 text-white text-xl font-black shadow-2xl shadow-indigo-500/40 hover:scale-105 active:scale-95 transition-all">
-              Start Free Research
-            </button>
-            <button class="flex min-w-[240px] items-center justify-center rounded-2xl h-16 px-10 bg-white/5 text-white text-xl font-bold backdrop-blur-md border border-white/10 hover:bg-white/10 transition-all">
-              Book a Demo
-            </button>
+            <button class="gradient-button flex min-w-[240px] items-center justify-center rounded-2xl h-16 px-10 text-white text-xl font-black shadow-2xl shadow-indigo-500/40 hover:scale-105 transition-all" data-i18n="cta.primary">Start Free Research</button>
+            <button class="flex min-w-[240px] items-center justify-center rounded-2xl h-16 px-10 bg-white/5 text-white text-xl font-bold border border-white/10 hover:bg-white/10 transition-all" data-i18n="cta.secondary">Book a Demo</button>
           </div>
           <div class="mt-16 flex flex-wrap items-center justify-center gap-10">
             <div class="flex items-center gap-2 text-slate-400 text-sm font-semibold">
               <span class="material-symbols-outlined text-green-500">verified_user</span>
-              GDPR &amp; SOC-2 Ready
+              <span data-i18n="cta.trust1">GDPR &amp; SOC-2 Ready</span>
             </div>
             <div class="flex items-center gap-2 text-slate-400 text-sm font-semibold">
               <span class="material-symbols-outlined text-green-500">lock</span>
-              Encrypted Payments
+              <span data-i18n="cta.trust2">Encrypted Payments</span>
             </div>
             <div class="flex items-center gap-2 text-slate-400 text-sm font-semibold">
               <span class="material-symbols-outlined text-green-500">bolt</span>
-              Instant Provisioning
+              <span data-i18n="cta.trust3">Instant Provisioning</span>
             </div>
           </div>
         </div>
@@ -601,9 +493,7 @@
 
   </main>
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
+  <!-- FOOTER -->
   <footer class="bg-background-dark border-t border-white/5 px-6 lg:px-40 py-20">
     <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16">
       <div class="lg:col-span-4">
@@ -613,57 +503,50 @@
           </div>
           <span class="text-xl font-black">Vibe Researcher</span>
         </div>
-        <p class="text-slate-500 text-base leading-relaxed mb-8 max-w-sm">
-          The ultimate AI-first workspace for product architects and technical founders. Turning vision into verifiable architecture.
-        </p>
+        <p class="text-slate-500 text-base leading-relaxed mb-8 max-w-sm" data-i18n="footer.desc">The ultimate AI-first workspace for product architects and technical founders.</p>
         <div class="flex gap-4">
-          <a class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" href="#">
-            <span class="material-symbols-outlined">share</span>
-          </a>
-          <a class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" href="#">
-            <span class="material-symbols-outlined">public</span>
-          </a>
-          <a class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" href="#">
-            <span class="material-symbols-outlined">group</span>
-          </a>
+          <a class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+          <a class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+          <a class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" href="#"><span class="material-symbols-outlined">group</span></a>
         </div>
       </div>
       <div class="lg:col-span-2">
-        <h4 class="text-white font-bold text-sm mb-8 uppercase tracking-widest">Product</h4>
+        <h4 class="text-white font-bold text-sm mb-8 uppercase tracking-widest" data-i18n="footer.product">Product</h4>
         <ul class="flex flex-col gap-4 text-sm font-medium text-slate-500">
-          <li><a class="hover:text-indigo-400 transition-colors" href="#">Features</a></li>
-          <li><a class="hover:text-indigo-400 transition-colors" href="#">Pricing</a></li>
-          <li><a class="hover:text-indigo-400 transition-colors" href="#">Integrations</a></li>
-          <li><a class="hover:text-indigo-400 transition-colors" href="#">Changelog</a></li>
+          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.f.features">Features</a></li>
+          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.f.pricing">Pricing</a></li>
+          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.f.integrations">Integrations</a></li>
+          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.f.changelog">Changelog</a></li>
         </ul>
       </div>
       <div class="lg:col-span-2">
-        <h4 class="text-white font-bold text-sm mb-8 uppercase tracking-widest">Resources</h4>
+        <h4 class="text-white font-bold text-sm mb-8 uppercase tracking-widest" data-i18n="footer.resources">Resources</h4>
         <ul class="flex flex-col gap-4 text-sm font-medium text-slate-500">
-          <li><a class="hover:text-indigo-400 transition-colors" href="#">Documentation</a></li>
-          <li><a class="hover:text-indigo-400 transition-colors" href="#">Community</a></li>
-          <li><a class="hover:text-indigo-400 transition-colors" href="#">Blog</a></li>
-          <li><a class="hover:text-indigo-400 transition-colors" href="#">Manifesto</a></li>
+          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.r.docs">Documentation</a></li>
+          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.r.community">Community</a></li>
+          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.r.blog">Blog</a></li>
+          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.r.manifesto">Manifesto</a></li>
         </ul>
       </div>
       <div class="lg:col-span-4">
-        <h4 class="text-white font-bold text-sm mb-8 uppercase tracking-widest">Stay Updated</h4>
-        <p class="text-slate-500 text-sm mb-6 leading-relaxed">Join 10k+ builders receiving our weekly "Vibe to Spec" newsletter.</p>
+        <h4 class="text-white font-bold text-sm mb-8 uppercase tracking-widest" data-i18n="footer.newsletter">Stay Updated</h4>
+        <p class="text-slate-500 text-sm mb-6" data-i18n="footer.newsletter.sub">Join 10k+ builders receiving our weekly "Vibe to Spec" newsletter.</p>
         <form class="flex flex-col gap-3">
-          <input class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all" placeholder="name@email.com" type="email"/>
-          <button class="w-full gradient-button text-white text-sm font-black py-3 rounded-xl hover:brightness-110 active:scale-[0.98] transition-all">Subscribe Now</button>
+          <input class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all" type="email" data-i18n-placeholder="footer.newsletter.placeholder" placeholder="name@email.com"/>
+          <button class="w-full gradient-button text-white text-sm font-black py-3 rounded-xl hover:brightness-110 transition-all" data-i18n="footer.newsletter.cta">Subscribe Now</button>
         </form>
       </div>
     </div>
     <div class="max-w-[1440px] mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-      <p class="text-slate-600 text-sm font-medium">© 2025 Vibe Researcher. From Idea to Reality.</p>
+      <p class="text-slate-600 text-sm" data-i18n="footer.legal">© 2025 Vibe Researcher. From Idea to Reality.</p>
       <div class="flex gap-10 text-sm font-medium text-slate-600">
-        <a class="hover:text-white transition-colors" href="#">Privacy</a>
-        <a class="hover:text-white transition-colors" href="#">Terms</a>
-        <a class="hover:text-white transition-colors" href="#">Security</a>
+        <a class="hover:text-white transition-colors" href="#" data-i18n="footer.privacy">Privacy</a>
+        <a class="hover:text-white transition-colors" href="#" data-i18n="footer.terms">Terms</a>
+        <a class="hover:text-white transition-colors" href="#" data-i18n="footer.security">Security</a>
       </div>
     </div>
   </footer>
 
+  <script src="src/scripts/i18n.js"></script>
 </body>
 </html>
