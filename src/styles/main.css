@@ -1,0 +1,54 @@
+/* ================================
+   Vibemaster — Global Styles
+   Replace with Google Stitch output
+   ================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colors — update from Stitch design */
+  --color-primary: #6c63ff;
+  --color-primary-dark: #4b44cc;
+  --color-bg: #ffffff;
+  --color-text: #1a1a2e;
+  --color-text-muted: #6b7280;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.6;
+
+  /* Spacing */
+  --space-section: 5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
