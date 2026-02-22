@@ -26,6 +26,7 @@ const translations = {
     "hero.cta.secondary": "How it works",
 
     "integrations.label": "Perfect Handoffs To",
+    "integrations.more":  "and many more...",
 
     "problem.h2.a":       "The problem isn't",
     "problem.h2.b":       "or",
@@ -161,6 +162,7 @@ const translations = {
     "hero.cta.secondary": "Hur det fungerar",
 
     "integrations.label": "Perfekta överlämningar till",
+    "integrations.more":  "och många fler...",
 
     "problem.h2.a":       "Problemet är inte",
     "problem.h2.b":       "eller",
@@ -296,6 +298,7 @@ const translations = {
     "hero.cta.secondary": "Wie es funktioniert",
 
     "integrations.label": "Perfekte Übergaben an",
+    "integrations.more":  "und viele mehr...",
 
     "problem.h2.a":       "Das Problem ist nicht",
     "problem.h2.b":       "oder",
@@ -431,6 +434,7 @@ const translations = {
     "hero.cta.secondary": "Cómo funciona",
 
     "integrations.label": "Entregas perfectas a",
+    "integrations.more":  "y muchos más...",
 
     "problem.h2.a":       "El problema no es",
     "problem.h2.b":       "ni",
@@ -566,6 +570,7 @@ const translations = {
     "hero.cta.secondary": "Comment ça marche",
 
     "integrations.label": "Transferts parfaits vers",
+    "integrations.more":  "et bien d'autres...",
 
     "problem.h2.a":       "Le problème n'est pas",
     "problem.h2.b":       "ni",
@@ -701,6 +706,7 @@ const translations = {
     "hero.cta.secondary": "यह कैसे काम करता है",
 
     "integrations.label": "परफेक्ट हैंडऑफ",
+    "integrations.more":  "और भी कई...",
 
     "problem.h2.a":       "समस्या",
     "problem.h2.b":       "या",
@@ -836,6 +842,7 @@ const translations = {
     "hero.cta.secondary": "了解工作原理",
 
     "integrations.label": "完美对接",
+    "integrations.more":  "以及更多...",
 
     "problem.h2.a":       "问题不在于",
     "problem.h2.b":       "或",
