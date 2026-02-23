@@ -1,5 +1,5 @@
 /**
- * Vibe Researcher — i18n
+ * Vibemaster — i18n
  * Detects browser language and applies translations on page load.
  * Supported: en, sv, de, es, hi, zh, fr
  */
@@ -34,7 +34,7 @@ const translations = {
     "problem.card1.h3":   "It's the gap between your idea and the tech.",
     "problem.card1.p":    "AI builders are incredibly fast, but they only build what you tell them. If your prompt is vague, the result is broken builds, circular errors, and wasted time.",
     "problem.card2.h3":   "The Idea → Build Bridge",
-    "problem.card2.p":    "Vibe Researcher acts as your Product Manager + Tech Lead. We extract the complex logic from your head and translate it into instructions an AI can't misinterpret.",
+    "problem.card2.p":    "Vibemaster acts as your Product Manager + Tech Lead. We extract the complex logic from your head and translate it into instructions an AI can't misinterpret.",
 
     "hiw.h2":             "How You Bridge the Gap",
     "hiw.sub":            "Skip the technical manual and start building with confidence in three steps.",
@@ -104,8 +104,8 @@ const translations = {
 
     "faq.h2":             "Questions? We have answers.",
     "faq.sub":            "Everything you need to know about getting started.",
-    "faq.q1":             "Do I need technical knowledge to use Vibe Researcher?",
-    "faq.a1":             "No! Vibe Researcher is built to bridge the gap between imagination and implementation. Whether you're a non-technical founder or a senior engineer, the platform translates plain-language ideas into rigorous technical specs and prompts that AI coding assistants love.",
+    "faq.q1":             "Do I need technical knowledge to use Vibemaster?",
+    "faq.a1":             "No! Vibemaster is built to bridge the gap between imagination and implementation. Whether you're a non-technical founder or a senior engineer, the platform translates plain-language ideas into rigorous technical specs and prompts that AI coding assistants love.",
     "faq.q2":             "How does this integrate with my existing workflow?",
     "faq.a2":             "We integrate directly with your favorite tools. Export specs as Markdown for GitHub, JSON for custom scripts, or direct copy-paste coding blocks optimized for Cursor, VS Code, and Replit.",
     "faq.q3":             "Is my intellectual property secure?",
@@ -115,7 +115,7 @@ const translations = {
 
     "eu.badge":           "Built in Europe",
     "eu.h2":              "Build products that meet EU standards — from day one",
-    "eu.sub":             "Vibe Researcher helps you specify compliance requirements as part of your technical plan, so your product is built right the first time.",
+    "eu.sub":             "Vibemaster helps you specify compliance requirements as part of your technical plan, so your product is built right the first time.",
     "eu.gdpr.title":      "GDPR Compliant",
     "eu.gdpr.desc":       "Your data stays in the EU. We never use your ideas to train models. Full data deletion on request.",
     "eu.aiact.title":     "EU AI Act Ready",
@@ -123,7 +123,7 @@ const translations = {
     "eu.residency.title": "EU Data Residency",
     "eu.residency.desc":  "Hosted on European infrastructure. Your data never leaves EU jurisdiction.",
     "eu.privacy.title":   "Privacy by Design",
-    "eu.privacy.desc":    "Vibe Researcher prompts you to consider data minimisation, consent flows, and retention policies as part of your technical spec.",
+    "eu.privacy.desc":    "Vibemaster prompts you to consider data minimisation, consent flows, and retention policies as part of your technical spec.",
     "eu.cta":             "Build your compliant product",
 
     "cta.h2":             "Ready to ship your next big idea?",
@@ -149,7 +149,7 @@ const translations = {
     "footer.newsletter.sub": "Join 10k+ builders receiving our weekly \"Vibe to Spec\" newsletter.",
     "footer.newsletter.placeholder": "name@email.com",
     "footer.newsletter.cta": "Subscribe Now",
-    "footer.legal":       "© 2025 Vibe Researcher. From Idea to Reality.",
+    "footer.legal":       "© 2025 Vibemaster. From Idea to Reality.",
     "footer.privacy":     "Privacy",
     "footer.terms":       "Terms",
     "footer.security":    "Security",
@@ -183,7 +183,7 @@ const translations = {
     "problem.card1.h3":   "Det är glappet mellan din idé och tekniken.",
     "problem.card1.p":    "AI-byggare är otroligt snabba, men de bygger bara det du säger till dem. Om din prompt är vag blir resultatet trasiga byggen, cirkulära fel och bortkastad tid.",
     "problem.card2.h3":   "Idé → Bygg-bryggan",
-    "problem.card2.p":    "Vibe Researcher agerar som din Produktchef + Teknisk ledare. Vi extraherar den komplexa logiken från ditt huvud och översätter den till instruktioner som en AI inte kan misstolka.",
+    "problem.card2.p":    "Vibemaster agerar som din Produktchef + Teknisk ledare. Vi extraherar den komplexa logiken från ditt huvud och översätter den till instruktioner som en AI inte kan misstolka.",
 
     "hiw.h2":             "Hur du överbryggar glappet",
     "hiw.sub":            "Hoppa över den tekniska manualen och börja bygga med självförtroende i tre steg.",
@@ -253,8 +253,8 @@ const translations = {
 
     "faq.h2":             "Frågor? Vi har svar.",
     "faq.sub":            "Allt du behöver veta för att komma igång.",
-    "faq.q1":             "Behöver jag teknisk kunskap för att använda Vibe Researcher?",
-    "faq.a1":             "Nej! Vibe Researcher är byggt för att överbrygga klyftan mellan fantasi och implementering. Oavsett om du är en icke-teknisk grundare eller en erfaren ingenjör översätter plattformen idéer på vanligt språk till rigorösa tekniska specifikationer.",
+    "faq.q1":             "Behöver jag teknisk kunskap för att använda Vibemaster?",
+    "faq.a1":             "Nej! Vibemaster är byggt för att överbrygga klyftan mellan fantasi och implementering. Oavsett om du är en icke-teknisk grundare eller en erfaren ingenjör översätter plattformen idéer på vanligt språk till rigorösa tekniska specifikationer.",
     "faq.q2":             "Hur integreras det med mitt befintliga arbetsflöde?",
     "faq.a2":             "Vi integreras direkt med dina favoritverktyg. Exportera specifikationer som Markdown för GitHub, JSON för anpassade skript eller direkta copy-paste-kodblock optimerade för Cursor, VS Code och Replit.",
     "faq.q3":             "Är min immateriella egendom säker?",
@@ -264,7 +264,7 @@ const translations = {
 
     "eu.badge":           "Byggt i Europa",
     "eu.h2":              "Bygg produkter som uppfyller EU:s krav — från dag ett",
-    "eu.sub":             "Vibe Researcher hjälper dig att specificera efterlevnadskrav som en del av din tekniska plan, så att din produkt byggs rätt från första gången.",
+    "eu.sub":             "Vibemaster hjälper dig att specificera efterlevnadskrav som en del av din tekniska plan, så att din produkt byggs rätt från första gången.",
     "eu.gdpr.title":      "GDPR-anpassad",
     "eu.gdpr.desc":       "Din data stannar inom EU. Vi använder aldrig dina idéer för att träna modeller. Full dataradering på begäran.",
     "eu.aiact.title":     "EU AI Act-redo",
@@ -272,7 +272,7 @@ const translations = {
     "eu.residency.title": "EU-datalagring",
     "eu.residency.desc":  "Driftsatt på europeisk infrastruktur. Din data lämnar aldrig EU:s jurisdiktion.",
     "eu.privacy.title":   "Inbyggd integritet",
-    "eu.privacy.desc":    "Vibe Researcher uppmuntrar dig att beakta dataminimering, samtyckesflöden och lagringsregler som en del av din tekniska specifikation.",
+    "eu.privacy.desc":    "Vibemaster uppmuntrar dig att beakta dataminimering, samtyckesflöden och lagringsregler som en del av din tekniska specifikation.",
     "eu.cta":             "Bygg din regelefterlevande produkt",
 
     "cta.h2":             "Redo att lansera din nästa stora idé?",
@@ -298,7 +298,7 @@ const translations = {
     "footer.newsletter.sub": "Gå med 10 000+ byggare som får vårt veckovisa \"Vibe to Spec\"-nyhetsbrev.",
     "footer.newsletter.placeholder": "namn@email.com",
     "footer.newsletter.cta": "Prenumerera nu",
-    "footer.legal":       "© 2025 Vibe Researcher. Från idé till verklighet.",
+    "footer.legal":       "© 2025 Vibemaster. Från idé till verklighet.",
     "footer.privacy":     "Integritet",
     "footer.terms":       "Villkor",
     "footer.security":    "Säkerhet",
@@ -332,7 +332,7 @@ const translations = {
     "problem.card1.h3":   "Es ist die Lücke zwischen deiner Idee und der Technik.",
     "problem.card1.p":    "KI-Builder sind unglaublich schnell, bauen aber nur das, was du ihnen sagst. Wenn dein Prompt vage ist, entstehen fehlerhafte Builds, zirkuläre Fehler und verschwendete Zeit.",
     "problem.card2.h3":   "Die Idee → Build-Brücke",
-    "problem.card2.p":    "Vibe Researcher agiert als dein Produktmanager + Tech Lead. Wir extrahieren die komplexe Logik aus deinem Kopf und übersetzen sie in Anweisungen, die eine KI nicht falsch interpretieren kann.",
+    "problem.card2.p":    "Vibemaster agiert als dein Produktmanager + Tech Lead. Wir extrahieren die komplexe Logik aus deinem Kopf und übersetzen sie in Anweisungen, die eine KI nicht falsch interpretieren kann.",
 
     "hiw.h2":             "So überbrückst du die Lücke",
     "hiw.sub":            "Überspringe das technische Handbuch und baue in drei Schritten mit Zuversicht.",
@@ -402,8 +402,8 @@ const translations = {
 
     "faq.h2":             "Fragen? Wir haben Antworten.",
     "faq.sub":            "Alles, was du für den Einstieg wissen musst.",
-    "faq.q1":             "Benötige ich technische Kenntnisse, um Vibe Researcher zu nutzen?",
-    "faq.a1":             "Nein! Vibe Researcher ist darauf ausgelegt, die Lücke zwischen Vorstellung und Umsetzung zu überbrücken. Die Plattform übersetzt einfache Ideen in präzise technische Spezifikationen.",
+    "faq.q1":             "Benötige ich technische Kenntnisse, um Vibemaster zu nutzen?",
+    "faq.a1":             "Nein! Vibemaster ist darauf ausgelegt, die Lücke zwischen Vorstellung und Umsetzung zu überbrücken. Die Plattform übersetzt einfache Ideen in präzise technische Spezifikationen.",
     "faq.q2":             "Wie integriert es sich in meinen bestehenden Workflow?",
     "faq.a2":             "Wir integrieren uns direkt in deine Lieblingstools. Exportiere Spezifikationen als Markdown für GitHub, JSON für eigene Skripte oder direkte Copy-Paste-Blöcke für Cursor, VS Code und Replit.",
     "faq.q3":             "Ist mein geistiges Eigentum sicher?",
@@ -413,7 +413,7 @@ const translations = {
 
     "eu.badge":           "In Europa gebaut",
     "eu.h2":              "Produkte bauen, die EU-Standards erfüllen — von Anfang an",
-    "eu.sub":             "Vibe Researcher hilft dir, Compliance-Anforderungen als Teil deines technischen Plans zu spezifizieren, damit dein Produkt von Beginn an korrekt gebaut wird.",
+    "eu.sub":             "Vibemaster hilft dir, Compliance-Anforderungen als Teil deines technischen Plans zu spezifizieren, damit dein Produkt von Beginn an korrekt gebaut wird.",
     "eu.gdpr.title":      "DSGVO-konform",
     "eu.gdpr.desc":       "Deine Daten bleiben in der EU. Wir nutzen deine Ideen nie zum Trainieren von Modellen. Vollständige Datenlöschung auf Anfrage.",
     "eu.aiact.title":     "EU AI Act bereit",
@@ -421,7 +421,7 @@ const translations = {
     "eu.residency.title": "EU-Datenspeicherung",
     "eu.residency.desc":  "Gehostet auf europäischer Infrastruktur. Deine Daten verlassen nie die EU-Jurisdiktion.",
     "eu.privacy.title":   "Privacy by Design",
-    "eu.privacy.desc":    "Vibe Researcher fordert dich auf, Datensparsamkeit, Einwilligungsflüsse und Aufbewahrungsrichtlinien als Teil deiner technischen Spezifikation zu berücksichtigen.",
+    "eu.privacy.desc":    "Vibemaster fordert dich auf, Datensparsamkeit, Einwilligungsflüsse und Aufbewahrungsrichtlinien als Teil deiner technischen Spezifikation zu berücksichtigen.",
     "eu.cta":             "Dein konformes Produkt bauen",
 
     "cta.h2":             "Bereit, deine nächste große Idee zu launchen?",
@@ -447,7 +447,7 @@ const translations = {
     "footer.newsletter.sub": "Schließ dich 10.000+ Buildern an, die unseren wöchentlichen Newsletter erhalten.",
     "footer.newsletter.placeholder": "name@email.com",
     "footer.newsletter.cta": "Jetzt abonnieren",
-    "footer.legal":       "© 2025 Vibe Researcher. Von der Idee zur Realität.",
+    "footer.legal":       "© 2025 Vibemaster. Von der Idee zur Realität.",
     "footer.privacy":     "Datenschutz",
     "footer.terms":       "AGB",
     "footer.security":    "Sicherheit",
@@ -481,7 +481,7 @@ const translations = {
     "problem.card1.h3":   "Es la brecha entre tu idea y la tecnología.",
     "problem.card1.p":    "Los constructores de IA son increíblemente rápidos, pero solo construyen lo que les dices. Si tu prompt es vago, el resultado son builds rotos, errores circulares y tiempo perdido.",
     "problem.card2.h3":   "El puente Idea → Build",
-    "problem.card2.p":    "Vibe Researcher actúa como tu Director de Producto + Líder Técnico. Extraemos la lógica compleja de tu cabeza y la traducimos en instrucciones que una IA no puede malinterpretar.",
+    "problem.card2.p":    "Vibemaster actúa como tu Director de Producto + Líder Técnico. Extraemos la lógica compleja de tu cabeza y la traducimos en instrucciones que una IA no puede malinterpretar.",
 
     "hiw.h2":             "Cómo cruzas la brecha",
     "hiw.sub":            "Olvídate del manual técnico y empieza a construir con confianza en tres pasos.",
@@ -551,8 +551,8 @@ const translations = {
 
     "faq.h2":             "¿Preguntas? Tenemos respuestas.",
     "faq.sub":            "Todo lo que necesitas saber para empezar.",
-    "faq.q1":             "¿Necesito conocimientos técnicos para usar Vibe Researcher?",
-    "faq.a1":             "¡No! Vibe Researcher está diseñado para cerrar la brecha entre la imaginación y la implementación. La plataforma traduce ideas en lenguaje sencillo a especificaciones técnicas rigurosas.",
+    "faq.q1":             "¿Necesito conocimientos técnicos para usar Vibemaster?",
+    "faq.a1":             "¡No! Vibemaster está diseñado para cerrar la brecha entre la imaginación y la implementación. La plataforma traduce ideas en lenguaje sencillo a especificaciones técnicas rigurosas.",
     "faq.q2":             "¿Cómo se integra con mi flujo de trabajo existente?",
     "faq.a2":             "Nos integramos directamente con tus herramientas favoritas. Exporta especificaciones como Markdown para GitHub, JSON para scripts personalizados o bloques de código optimizados para Cursor, VS Code y Replit.",
     "faq.q3":             "¿Mi propiedad intelectual está segura?",
@@ -562,7 +562,7 @@ const translations = {
 
     "eu.badge":           "Construido en Europa",
     "eu.h2":              "Construye productos que cumplan los estándares de la UE — desde el primer día",
-    "eu.sub":             "Vibe Researcher te ayuda a especificar los requisitos de cumplimiento como parte de tu plan técnico, para que tu producto se construya correctamente desde el principio.",
+    "eu.sub":             "Vibemaster te ayuda a especificar los requisitos de cumplimiento como parte de tu plan técnico, para que tu producto se construya correctamente desde el principio.",
     "eu.gdpr.title":      "Conforme al RGPD",
     "eu.gdpr.desc":       "Tus datos permanecen en la UE. Nunca usamos tus ideas para entrenar modelos. Eliminación completa de datos a petición.",
     "eu.aiact.title":     "Listo para la Ley de IA de la UE",
@@ -570,7 +570,7 @@ const translations = {
     "eu.residency.title": "Residencia de datos en la UE",
     "eu.residency.desc":  "Alojado en infraestructura europea. Tus datos nunca salen de la jurisdicción de la UE.",
     "eu.privacy.title":   "Privacidad por diseño",
-    "eu.privacy.desc":    "Vibe Researcher te invita a considerar la minimización de datos, los flujos de consentimiento y las políticas de retención como parte de tu especificación técnica.",
+    "eu.privacy.desc":    "Vibemaster te invita a considerar la minimización de datos, los flujos de consentimiento y las políticas de retención como parte de tu especificación técnica.",
     "eu.cta":             "Construye tu producto conforme",
 
     "cta.h2":             "¿Listo para lanzar tu próxima gran idea?",
@@ -596,7 +596,7 @@ const translations = {
     "footer.newsletter.sub": "Únete a más de 10.000 constructores que reciben nuestro boletín semanal.",
     "footer.newsletter.placeholder": "nombre@email.com",
     "footer.newsletter.cta": "Suscribirse ahora",
-    "footer.legal":       "© 2025 Vibe Researcher. De la idea a la realidad.",
+    "footer.legal":       "© 2025 Vibemaster. De la idea a la realidad.",
     "footer.privacy":     "Privacidad",
     "footer.terms":       "Términos",
     "footer.security":    "Seguridad",
@@ -630,7 +630,7 @@ const translations = {
     "problem.card1.h3":   "C'est le fossé entre votre idée et la technologie.",
     "problem.card1.p":    "Les constructeurs IA sont incroyablement rapides, mais ils ne construisent que ce que vous leur dites. Si votre prompt est vague, le résultat est des builds cassés et du temps gaspillé.",
     "problem.card2.h3":   "Le pont Idée → Build",
-    "problem.card2.p":    "Vibe Researcher agit comme votre Chef de Produit + Responsable Technique. Nous extrayons la logique complexe de votre tête et la traduisons en instructions qu'une IA ne peut pas mal interpréter.",
+    "problem.card2.p":    "Vibemaster agit comme votre Chef de Produit + Responsable Technique. Nous extrayons la logique complexe de votre tête et la traduisons en instructions qu'une IA ne peut pas mal interpréter.",
 
     "hiw.h2":             "Comment combler le fossé",
     "hiw.sub":            "Oubliez le manuel technique et commencez à construire avec confiance en trois étapes.",
@@ -700,8 +700,8 @@ const translations = {
 
     "faq.h2":             "Des questions ? Nous avons des réponses.",
     "faq.sub":            "Tout ce que vous devez savoir pour commencer.",
-    "faq.q1":             "Ai-je besoin de connaissances techniques pour utiliser Vibe Researcher ?",
-    "faq.a1":             "Non ! Vibe Researcher est conçu pour combler le fossé entre l'imagination et la mise en œuvre. La plateforme traduit les idées en langage simple en spécifications techniques rigoureuses.",
+    "faq.q1":             "Ai-je besoin de connaissances techniques pour utiliser Vibemaster ?",
+    "faq.a1":             "Non ! Vibemaster est conçu pour combler le fossé entre l'imagination et la mise en œuvre. La plateforme traduit les idées en langage simple en spécifications techniques rigoureuses.",
     "faq.q2":             "Comment s'intègre-t-il à mon flux de travail existant ?",
     "faq.a2":             "Nous nous intégrons directement à vos outils préférés. Exportez des spécifications en Markdown pour GitHub, JSON pour des scripts personnalisés ou des blocs de code optimisés pour Cursor, VS Code et Replit.",
     "faq.q3":             "Ma propriété intellectuelle est-elle sécurisée ?",
@@ -711,7 +711,7 @@ const translations = {
 
     "eu.badge":           "Construit en Europe",
     "eu.h2":              "Créez des produits conformes aux normes de l'UE — dès le premier jour",
-    "eu.sub":             "Vibe Researcher vous aide à spécifier les exigences de conformité dans votre plan technique, afin que votre produit soit conçu correctement dès le départ.",
+    "eu.sub":             "Vibemaster vous aide à spécifier les exigences de conformité dans votre plan technique, afin que votre produit soit conçu correctement dès le départ.",
     "eu.gdpr.title":      "Conforme au RGPD",
     "eu.gdpr.desc":       "Vos données restent dans l'UE. Nous n'utilisons jamais vos idées pour entraîner des modèles. Suppression complète des données sur demande.",
     "eu.aiact.title":     "Prêt pour la loi IA de l'UE",
@@ -719,7 +719,7 @@ const translations = {
     "eu.residency.title": "Résidence des données en UE",
     "eu.residency.desc":  "Hébergé sur infrastructure européenne. Vos données ne quittent jamais la juridiction de l'UE.",
     "eu.privacy.title":   "Confidentialité dès la conception",
-    "eu.privacy.desc":    "Vibe Researcher vous invite à considérer la minimisation des données, les flux de consentement et les politiques de conservation dans votre spécification technique.",
+    "eu.privacy.desc":    "Vibemaster vous invite à considérer la minimisation des données, les flux de consentement et les politiques de conservation dans votre spécification technique.",
     "eu.cta":             "Construire votre produit conforme",
 
     "cta.h2":             "Prêt à lancer votre prochaine grande idée ?",
@@ -745,7 +745,7 @@ const translations = {
     "footer.newsletter.sub": "Rejoignez 10 000+ constructeurs qui reçoivent notre newsletter hebdomadaire.",
     "footer.newsletter.placeholder": "nom@email.com",
     "footer.newsletter.cta": "S'abonner maintenant",
-    "footer.legal":       "© 2025 Vibe Researcher. De l'idée à la réalité.",
+    "footer.legal":       "© 2025 Vibemaster. De l'idée à la réalité.",
     "footer.privacy":     "Confidentialité",
     "footer.terms":       "Conditions",
     "footer.security":    "Sécurité",
@@ -779,7 +779,7 @@ const translations = {
     "problem.card1.h3":   "समस्या आपके विचार और तकनीक के बीच का अंतर है।",
     "problem.card1.p":    "AI बिल्डर अविश्वसनीय रूप से तेज़ हैं, लेकिन वे केवल वही बनाते हैं जो आप उन्हें बताते हैं। यदि आपका प्रॉम्प्ट अस्पष्ट है, तो परिणाम टूटे बिल्ड और बर्बाद समय है।",
     "problem.card2.h3":   "विचार → बिल्ड ब्रिज",
-    "problem.card2.p":    "Vibe Researcher आपके Product Manager + Tech Lead के रूप में काम करता है। हम आपके दिमाग से जटिल तर्क निकालते हैं और उसे ऐसे निर्देशों में अनुवाद करते हैं जिन्हें AI गलत नहीं समझ सकता।",
+    "problem.card2.p":    "Vibemaster आपके Product Manager + Tech Lead के रूप में काम करता है। हम आपके दिमाग से जटिल तर्क निकालते हैं और उसे ऐसे निर्देशों में अनुवाद करते हैं जिन्हें AI गलत नहीं समझ सकता।",
 
     "hiw.h2":             "आप अंतर को कैसे पाटते हैं",
     "hiw.sub":            "तकनीकी मैनुअल को छोड़ें और तीन चरणों में आत्मविश्वास के साथ निर्माण शुरू करें।",
@@ -849,8 +849,8 @@ const translations = {
 
     "faq.h2":             "सवाल? हमारे पास जवाब हैं।",
     "faq.sub":            "शुरू करने के लिए आपको जो कुछ भी जानना है।",
-    "faq.q1":             "क्या मुझे Vibe Researcher का उपयोग करने के लिए तकनीकी ज्ञान चाहिए?",
-    "faq.a1":             "नहीं! Vibe Researcher कल्पना और कार्यान्वयन के बीच की खाई को पाटने के लिए बनाया गया है। प्लेटफ़ॉर्म सरल भाषा के विचारों को कठोर तकनीकी स्पेक्स में अनुवाद करता है।",
+    "faq.q1":             "क्या मुझे Vibemaster का उपयोग करने के लिए तकनीकी ज्ञान चाहिए?",
+    "faq.a1":             "नहीं! Vibemaster कल्पना और कार्यान्वयन के बीच की खाई को पाटने के लिए बनाया गया है। प्लेटफ़ॉर्म सरल भाषा के विचारों को कठोर तकनीकी स्पेक्स में अनुवाद करता है।",
     "faq.q2":             "यह मेरे मौजूदा वर्कफ़्लो के साथ कैसे इंटीग्रेट होता है?",
     "faq.a2":             "हम सीधे आपके पसंदीदा टूल्स के साथ इंटीग्रेट होते हैं। GitHub के लिए Markdown, कस्टम स्क्रिप्ट के लिए JSON, या Cursor, VS Code और Replit के लिए कोड ब्लॉक एक्सपोर्ट करें।",
     "faq.q3":             "क्या मेरी बौद्धिक संपदा सुरक्षित है?",
@@ -860,7 +860,7 @@ const translations = {
 
     "eu.badge":           "यूरोप में बनाया गया",
     "eu.h2":              "ऐसे उत्पाद बनाएं जो EU मानकों को पूरा करें — पहले दिन से",
-    "eu.sub":             "Vibe Researcher आपको अपनी तकनीकी योजना के हिस्से के रूप में अनुपालन आवश्यकताओं को निर्दिष्ट करने में मदद करता है।",
+    "eu.sub":             "Vibemaster आपको अपनी तकनीकी योजना के हिस्से के रूप में अनुपालन आवश्यकताओं को निर्दिष्ट करने में मदद करता है।",
     "eu.gdpr.title":      "GDPR अनुपालक",
     "eu.gdpr.desc":       "आपका डेटा EU में रहता है। हम आपके विचारों का उपयोग मॉडल प्रशिक्षण के लिए कभी नहीं करते।",
     "eu.aiact.title":     "EU AI Act तैयार",
@@ -868,7 +868,7 @@ const translations = {
     "eu.residency.title": "EU डेटा निवास",
     "eu.residency.desc":  "यूरोपीय बुनियादी ढांचे पर होस्ट किया गया। आपका डेटा कभी EU क्षेत्राधिकार नहीं छोड़ता।",
     "eu.privacy.title":   "डिज़ाइन द्वारा गोपनीयता",
-    "eu.privacy.desc":    "Vibe Researcher आपको डेटा न्यूनीकरण, सहमति प्रवाह और प्रतिधारण नीतियों पर विचार करने के लिए प्रेरित करता है।",
+    "eu.privacy.desc":    "Vibemaster आपको डेटा न्यूनीकरण, सहमति प्रवाह और प्रतिधारण नीतियों पर विचार करने के लिए प्रेरित करता है।",
     "eu.cta":             "अपना अनुपालक उत्पाद बनाएं",
 
     "cta.h2":             "अपने अगले बड़े विचार को लॉन्च करने के लिए तैयार हैं?",
@@ -894,7 +894,7 @@ const translations = {
     "footer.newsletter.sub": "10k+ बिल्डर्स के साथ जुड़ें जो हमारा साप्ताहिक न्यूज़लेटर प्राप्त करते हैं।",
     "footer.newsletter.placeholder": "name@email.com",
     "footer.newsletter.cta": "अभी सब्सक्राइब करें",
-    "footer.legal":       "© 2025 Vibe Researcher. विचार से वास्तविकता तक।",
+    "footer.legal":       "© 2025 Vibemaster. विचार से वास्तविकता तक।",
     "footer.privacy":     "गोपनीयता",
     "footer.terms":       "शर्तें",
     "footer.security":    "सुरक्षा",
@@ -928,7 +928,7 @@ const translations = {
     "problem.card1.h3":   "问题在于你的想法与技术之间的差距。",
     "problem.card1.p":    "AI构建者速度极快，但只能构建你告诉它们的内容。如果你的提示词含糊，结果就是构建失败、循环错误和时间浪费。",
     "problem.card2.h3":   "想法 → 构建桥梁",
-    "problem.card2.p":    "Vibe Researcher充当你的产品经理+技术负责人。我们从你的脑海中提取复杂逻辑，并将其翻译成AI无法误解的指令。",
+    "problem.card2.p":    "Vibemaster充当你的产品经理+技术负责人。我们从你的脑海中提取复杂逻辑，并将其翻译成AI无法误解的指令。",
 
     "hiw.h2":             "如何跨越差距",
     "hiw.sub":            "跳过技术手册，三步自信构建。",
@@ -998,8 +998,8 @@ const translations = {
 
     "faq.h2":             "有疑问？我们有答案。",
     "faq.sub":            "关于入门所需了解的一切。",
-    "faq.q1":             "使用Vibe Researcher需要技术知识吗？",
-    "faq.a1":             "不需要！Vibe Researcher旨在弥合想象与实现之间的差距。该平台将简单语言的想法翻译成严格的技术规格和AI编码助手喜欢的提示词。",
+    "faq.q1":             "使用Vibemaster需要技术知识吗？",
+    "faq.a1":             "不需要！Vibemaster旨在弥合想象与实现之间的差距。该平台将简单语言的想法翻译成严格的技术规格和AI编码助手喜欢的提示词。",
     "faq.q2":             "它如何与我现有的工作流程集成？",
     "faq.a2":             "我们直接与您喜爱的工具集成。将规格导出为GitHub的Markdown、自定义脚本的JSON，或针对Cursor、VS Code和Replit优化的直接复制粘贴代码块。",
     "faq.q3":             "我的知识产权安全吗？",
@@ -1009,7 +1009,7 @@ const translations = {
 
     "eu.badge":           "在欧洲构建",
     "eu.h2":              "从第一天起就构建符合欧盟标准的产品",
-    "eu.sub":             "Vibe Researcher帮助您将合规要求作为技术计划的一部分进行规范，确保您的产品从一开始就构建正确。",
+    "eu.sub":             "Vibemaster帮助您将合规要求作为技术计划的一部分进行规范，确保您的产品从一开始就构建正确。",
     "eu.gdpr.title":      "GDPR合规",
     "eu.gdpr.desc":       "您的数据留在欧盟境内。我们从不使用您的想法来训练模型。应要求完全删除数据。",
     "eu.aiact.title":     "欧盟AI法案就绪",
@@ -1017,7 +1017,7 @@ const translations = {
     "eu.residency.title": "欧盟数据驻留",
     "eu.residency.desc":  "托管在欧洲基础设施上。您的数据永远不会离开欧盟司法管辖区。",
     "eu.privacy.title":   "隐私设计",
-    "eu.privacy.desc":    "Vibe Researcher提示您将数据最小化、同意流程和保留策略作为技术规范的一部分加以考虑。",
+    "eu.privacy.desc":    "Vibemaster提示您将数据最小化、同意流程和保留策略作为技术规范的一部分加以考虑。",
     "eu.cta":             "构建您的合规产品",
 
     "cta.h2":             "准备好发布您的下一个大想法了吗？",
@@ -1043,7 +1043,7 @@ const translations = {
     "footer.newsletter.sub": "加入10,000+构建者，接收我们每周的\"Vibe to Spec\"通讯。",
     "footer.newsletter.placeholder": "name@email.com",
     "footer.newsletter.cta": "立即订阅",
-    "footer.legal":       "© 2025 Vibe Researcher. 从想法到现实。",
+    "footer.legal":       "© 2025 Vibemaster. 从想法到现实。",
     "footer.privacy":     "隐私",
     "footer.terms":       "条款",
     "footer.security":    "安全",
