@@ -76,7 +76,7 @@
   // Dropdown menu
   var menu = document.createElement('div');
   menu.id = 'ds-menu';
-  menu.innerHTML = '<div class="ds-menu-label">Design Preview</div>';
+  menu.innerHTML = '';
 
   DESIGNS.forEach(function (d) {
     var isActive = d.name === current;
