@@ -75,7 +75,7 @@
     /* ── Stage ── */
     #stage {
       display: flex;
-      height: calc(100vh - 52px);
+      height: 100vh;
     }
 
     .pane {
@@ -145,33 +145,6 @@
   </style>
 </head>
 <body>
-
-<div id="toolbar">
-  <div id="logo">
-    <svg viewBox="0 0 22 22" fill="none">
-      <rect width="22" height="22" rx="6" fill="#6366f1"/>
-      <path d="M7 11 L11 7 L15 11 L11 15 Z" fill="none" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
-      <circle cx="11" cy="11" r="1.8" fill="white"/>
-    </svg>
-    Design Compare
-  </div>
-
-  <div class="sep"></div>
-
-  <div class="pills">
-    <button class="pill active" data-mode="a">← Current (A)</button>
-    <button class="pill" data-mode="split">Split</button>
-    <button class="pill" data-mode="b">Stitch (B) →</button>
-  </div>
-
-  <div class="sep"></div>
-  <span class="badge badge-a">A — Current</span>
-  <span class="badge badge-b">B — Stitch</span>
-
-  <div class="spacer"></div>
-
-  <span class="hint">Switch: <kbd>A</kbd> <kbd>S</kbd> <kbd>B</kbd></span>
-</div>
 
 <div id="stage">
   <!-- Pane A: current design -->

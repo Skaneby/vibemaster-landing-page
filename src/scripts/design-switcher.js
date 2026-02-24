@@ -21,7 +21,7 @@
 
   // ── Styles ──────────────────────────────────────────────────────────────────
   var css = [
-    '#ds-widget{position:fixed;bottom:20px;right:20px;z-index:9999;',
+    '#ds-widget{position:fixed;top:20px;right:20px;z-index:9999;',
       'font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}',
 
     '#ds-trigger{display:flex;align-items:center;gap:7px;padding:8px 14px;',
@@ -38,7 +38,7 @@
     '#ds-widget.ds-open #ds-trigger .ds-icon{transform:rotate(180deg);}',
     '#ds-trigger .ds-label-pre{color:#475569;font-size:10px;letter-spacing:0.06em;}',
 
-    '#ds-menu{position:absolute;bottom:calc(100% + 8px);right:0;min-width:230px;',
+    '#ds-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:230px;',
       'background:rgba(4,7,16,0.98);border:1px solid rgba(255,255,255,0.1);',
       'border-radius:12px;padding:6px;',
       'box-shadow:0 12px 40px rgba(0,0,0,0.6);',
