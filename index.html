@@ -9,6 +9,78 @@
   <link rel="stylesheet" href="src/styles/output.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <!-- Space Grotesk for Stitch theme -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── Stitch Theme Overrides ── */
+    [data-theme="stitch"] body {
+      background-color: #101922 !important;
+      font-family: 'Space Grotesk', sans-serif !important;
+    }
+    [data-theme="stitch"] .font-display {
+      font-family: 'Space Grotesk', sans-serif !important;
+    }
+    [data-theme="stitch"] header {
+      background: rgba(16, 25, 34, 0.95) !important;
+    }
+    [data-theme="stitch"] .bg-background-dark {
+      background-color: #101922 !important;
+    }
+    [data-theme="stitch"] .gradient-button {
+      background-image: linear-gradient(to right, #1a7ad4, #2B8CEE) !important;
+    }
+    [data-theme="stitch"] .hero-glow {
+      background: radial-gradient(circle at center, rgba(43,140,238,0.18) 0%, transparent 70%) !important;
+    }
+    [data-theme="stitch"] .text-gradient {
+      background-image: linear-gradient(to right, #7ab8f5, #2B8CEE) !important;
+    }
+    [data-theme="stitch"] .bg-indigo-600 { background-color: #2B8CEE !important; }
+    [data-theme="stitch"] .text-indigo-400 { color: #7ab8f5 !important; }
+    [data-theme="stitch"] .bg-indigo-500\/10 { background-color: rgba(43,140,238,0.1) !important; }
+    [data-theme="stitch"] .border-indigo-500\/20 { border-color: rgba(43,140,238,0.25) !important; }
+    [data-theme="stitch"] .text-indigo-300 { color: #93c5fd !important; }
+    [data-theme="stitch"] .shadow-indigo-500\/20 { box-shadow: 0 0 20px rgba(43,140,238,0.2) !important; }
+    [data-theme="stitch"] .pro-gradient-border::before {
+      background: linear-gradient(135deg, #2B8CEE 0%, #1a7ad4 100%) !important;
+    }
+
+    /* ── Theme Switcher Widget ── */
+    #theme-switcher {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      background: rgba(5, 8, 20, 0.95);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 28px;
+      padding: 4px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+    .ts-pill {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: none;
+      background: transparent;
+      color: #475569;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      transition: all 0.15s;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    }
+    .ts-pill:hover { color: #94a3b8; }
+    .ts-pill.ts-active { background: #6366f1; color: #fff; box-shadow: 0 2px 8px rgba(99,102,241,0.4); }
+    [data-theme="stitch"] .ts-pill.ts-active { background: #2B8CEE; box-shadow: 0 2px 8px rgba(43,140,238,0.4); }
+  </style>
 </head>
 <body class="bg-background-dark font-display text-slate-100 selection:bg-indigo-500/30">
 
@@ -612,6 +684,23 @@
       mobileNav.querySelectorAll('a').forEach(function (a) {
         a.addEventListener('click', closeNav);
       });
+    })();
+  </script>
+
+  <!-- ── Design Theme Switcher ── -->
+  <div id="theme-switcher">
+    <button id="ts-vibemaster" class="ts-pill ts-active" onclick="switchTheme('vibemaster')">Vibemaster</button>
+    <button id="ts-stitch"     class="ts-pill"           onclick="switchTheme('stitch')">Stitch</button>
+  </div>
+  <script>
+    (function () {
+      function switchTheme(t) {
+        document.body.dataset.theme = t === 'stitch' ? 'stitch' : '';
+        document.getElementById('ts-vibemaster').classList.toggle('ts-active', t === 'vibemaster');
+        document.getElementById('ts-stitch').classList.toggle('ts-active', t === 'stitch');
+        try { localStorage.setItem('vm-theme', t); } catch(e) {}
+      }
+      try { var s = localStorage.getItem('vm-theme'); if (s === 'stitch') switchTheme('stitch'); } catch(e) {}
     })();
   </script>
 </body>
