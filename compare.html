@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Design Compare — Vibemaster</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; overflow: hidden; background: #020617; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
+
+    /* ── Toolbar ── */
+    #toolbar {
+      height: 52px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 18px;
+      background: rgba(10, 10, 30, 0.98);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      position: relative;
+      z-index: 200;
+      flex-shrink: 0;
+    }
+    #logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #818cf8;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    #logo svg { width: 22px; height: 22px; }
+    .sep { width: 1px; height: 22px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+    .pills {
+      display: flex;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 3px;
+      gap: 2px;
+    }
+    .pill {
+      padding: 5px 16px;
+      border-radius: 7px;
+      border: none;
+      background: transparent;
+      color: #475569;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      transition: all 0.15s;
+      white-space: nowrap;
+      user-select: none;
+    }
+    .pill:hover { color: #94a3b8; }
+    .pill.active { background: #6366f1; color: #fff; box-shadow: 0 2px 8px rgba(99,102,241,0.4); }
+    .badge {
+      font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 20px; white-space: nowrap;
+    }
+    .badge-a { background: rgba(99,102,241,0.15); color: #818cf8; border: 1px solid rgba(99,102,241,0.25); }
+    .badge-b { background: rgba(168,85,247,0.15); color: #c084fc; border: 1px solid rgba(168,85,247,0.25); }
+    .spacer { flex: 1; }
+    .hint { font-size: 11px; color: #1e293b; white-space: nowrap; }
+    kbd {
+      display: inline-block; padding: 1px 5px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px; font-size: 10px; font-family: monospace; color: #64748b;
+    }
+
+    /* ── Stage ── */
+    #stage {
+      display: flex;
+      height: calc(100vh - 52px);
+    }
+
+    .pane {
+      position: relative;
+      overflow: hidden;
+      flex: 0;
+      transition: flex 0.25s ease;
+    }
+    .pane iframe {
+      width: 100%; height: 100%; border: none; display: block;
+    }
+
+    /* Pane labels (only in split) */
+    .pane-label {
+      position: absolute; top: 10px; left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      padding: 4px 12px; border-radius: 20px;
+      font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em;
+      pointer-events: none; white-space: nowrap;
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .label-a { background: rgba(79,70,229,0.9); color: #fff; }
+    .label-b { background: rgba(147,51,234,0.9); color: #fff; }
+
+    /* Divider */
+    #divider {
+      width: 0; flex-shrink: 0;
+      background: rgba(99,102,241,0.6);
+      transition: width 0.25s ease;
+    }
+
+    /* Fallback when Stitch iframe is blocked */
+    #fallback {
+      position: absolute; inset: 0;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 20px; background: #070714; z-index: 10;
+    }
+    #fallback h3 { color: #64748b; font-size: 14px; font-weight: 600; }
+    #fallback p { color: #334155; font-size: 12px; max-width: 260px; text-align: center; line-height: 1.6; }
+    .open-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 20px; background: #6366f1; color: #fff;
+      border-radius: 10px; text-decoration: none;
+      font-size: 13px; font-weight: 700; transition: opacity 0.15s;
+    }
+    .open-btn:hover { opacity: 0.85; }
+
+    /* ── Modes ── */
+
+    /* Default: show A only */
+    #pane-a { flex: 1; }
+    #pane-b { flex: 0; }
+    #divider { width: 0; }
+
+    /* Split */
+    #stage.split #pane-a { flex: 1; }
+    #stage.split #pane-b { flex: 1; }
+    #stage.split #divider { width: 3px; }
+    #stage.split .pane-label { opacity: 1; }
+
+    /* B only */
+    #stage.show-b #pane-a { flex: 0; }
+    #stage.show-b #pane-b { flex: 1; }
+    #stage.show-b #divider { width: 0; }
+  </style>
+</head>
+<body>
+
+<div id="toolbar">
+  <div id="logo">
+    <svg viewBox="0 0 22 22" fill="none">
+      <rect width="22" height="22" rx="6" fill="#6366f1"/>
+      <path d="M7 11 L11 7 L15 11 L11 15 Z" fill="none" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="11" cy="11" r="1.8" fill="white"/>
+    </svg>
+    Design Compare
+  </div>
+
+  <div class="sep"></div>
+
+  <div class="pills">
+    <button class="pill active" data-mode="a">← Current (A)</button>
+    <button class="pill" data-mode="split">Split</button>
+    <button class="pill" data-mode="b">Stitch (B) →</button>
+  </div>
+
+  <div class="sep"></div>
+  <span class="badge badge-a">A — Current</span>
+  <span class="badge badge-b">B — Stitch</span>
+
+  <div class="spacer"></div>
+
+  <span class="hint">Switch: <kbd>A</kbd> <kbd>S</kbd> <kbd>B</kbd></span>
+</div>
+
+<div id="stage">
+  <!-- Pane A: current design -->
+  <div class="pane" id="pane-a">
+    <div class="pane-label label-a">A — Current Design</div>
+    <iframe src="./index.html" title="Current Vibemaster design"></iframe>
+  </div>
+
+  <div id="divider"></div>
+
+  <!-- Pane B: Stitch design -->
+  <div class="pane" id="pane-b">
+    <div class="pane-label label-b">B — Stitch Design</div>
+
+    <!-- Fallback if iframe is blocked by X-Frame-Options -->
+    <div id="fallback">
+      <div style="font-size:36px; line-height:1">🖼️</div>
+      <h3>Stitch embed blockerad</h3>
+      <p>Google Stitch tillåter inte att sidan bäddas in i en iframe.<br/>Öppna den i ett nytt fönster och jämför sida vid sida.</p>
+      <a class="open-btn"
+         href="https://stitch.withgoogle.com/preview/10788809620820595531?node-id=92f20ff08f7a414d8fcc6167579a6349"
+         target="_blank" rel="noopener">
+        Öppna Stitch ↗
+      </a>
+    </div>
+
+    <iframe
+      id="stitch-frame"
+      src="https://stitch.withgoogle.com/preview/10788809620820595531?node-id=92f20ff08f7a414d8fcc6167579a6349"
+      title="Stitch design preview"
+    ></iframe>
+  </div>
+</div>
+
+<script>
+(function () {
+  var stage   = document.getElementById('stage');
+  var pills   = document.querySelectorAll('.pill');
+  var stitch  = document.getElementById('stitch-frame');
+  var fallback = document.getElementById('fallback');
+
+  // ── Mode switching ──
+  function setMode(mode) {
+    stage.className = mode === 'split' ? 'split' : mode === 'b' ? 'show-b' : '';
+    pills.forEach(function (p) {
+      p.classList.toggle('active', p.dataset.mode === mode);
+    });
+  }
+
+  pills.forEach(function (p) {
+    p.addEventListener('click', function () { setMode(p.dataset.mode); });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'a' || e.key === 'A') setMode('a');
+    if (e.key === 's' || e.key === 'S') setMode('split');
+    if (e.key === 'b' || e.key === 'B') setMode('b');
+  });
+
+  // ── Stitch iframe detection ──
+  // If X-Frame-Options blocks, browser navigates iframe to about:blank.
+  // We can read contentDocument.URL → blocked.
+  // If cross-origin content loads, SecurityError is thrown → success.
+  stitch.addEventListener('load', function () {
+    try {
+      var url = stitch.contentDocument && stitch.contentDocument.URL;
+      if (!url || url === 'about:blank') {
+        // Blocked or empty
+        fallback.style.zIndex = '20'; // ensure fallback is on top
+      } else {
+        // Same-origin content loaded fine
+        fallback.style.display = 'none';
+      }
+    } catch (e) {
+      // SecurityError → cross-origin content loaded successfully!
+      fallback.style.display = 'none';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
