@@ -28,7 +28,7 @@ const translations = {
     "integrations.label": "Perfect Handoffs To",
     "integrations.more":  "and many more...",
 
-    "problem.h2.a":       "The problem isn't",
+    "problem.h2.a":       "The problem isn't your AI vibecoding service",
     "problem.h2.b":       "or",
     "problem.h2.c":       "...",
     "problem.card1.h3":   "It's the gap between your idea and the tech.",
@@ -179,7 +179,7 @@ const translations = {
     "integrations.label": "Perfekta överlämningar till",
     "integrations.more":  "och många fler...",
 
-    "problem.h2.a":       "Problemet är inte",
+    "problem.h2.a":       "Problemet är inte din AI vibecoding-tjänst",
     "problem.h2.b":       "eller",
     "problem.h2.c":       "...",
     "problem.card1.h3":   "Det är glappet mellan din idé och tekniken.",
@@ -330,7 +330,7 @@ const translations = {
     "integrations.label": "Perfekte Übergaben an",
     "integrations.more":  "und viele mehr...",
 
-    "problem.h2.a":       "Das Problem ist nicht",
+    "problem.h2.a":       "Das Problem ist nicht dein KI-Vibecoding-Dienst",
     "problem.h2.b":       "oder",
     "problem.h2.c":       "...",
     "problem.card1.h3":   "Es ist die Lücke zwischen deiner Idee und der Technik.",
@@ -481,7 +481,7 @@ const translations = {
     "integrations.label": "Entregas perfectas a",
     "integrations.more":  "y muchos más...",
 
-    "problem.h2.a":       "El problema no es",
+    "problem.h2.a":       "El problema no es tu servicio de vibecoding con IA",
     "problem.h2.b":       "ni",
     "problem.h2.c":       "...",
     "problem.card1.h3":   "Es la brecha entre tu idea y la tecnología.",
@@ -632,7 +632,7 @@ const translations = {
     "integrations.label": "Transferts parfaits vers",
     "integrations.more":  "et bien d'autres...",
 
-    "problem.h2.a":       "Le problème n'est pas",
+    "problem.h2.a":       "Le problème n'est pas votre service de vibecoding IA",
     "problem.h2.b":       "ni",
     "problem.h2.c":       "...",
     "problem.card1.h3":   "C'est le fossé entre votre idée et la technologie.",
@@ -783,7 +783,7 @@ const translations = {
     "integrations.label": "परफेक्ट हैंडऑफ",
     "integrations.more":  "और भी कई...",
 
-    "problem.h2.a":       "समस्या",
+    "problem.h2.a":       "समस्या आपकी AI vibecoding सेवा नहीं है",
     "problem.h2.b":       "या",
     "problem.h2.c":       "नहीं है...",
     "problem.card1.h3":   "समस्या आपके विचार और तकनीक के बीच का अंतर है।",
@@ -934,7 +934,7 @@ const translations = {
     "integrations.label": "完美对接",
     "integrations.more":  "以及更多...",
 
-    "problem.h2.a":       "问题不在于",
+    "problem.h2.a":       "问题不在于您的AI vibecoding服务",
     "problem.h2.b":       "或",
     "problem.h2.c":       "...",
     "problem.card1.h3":   "问题在于你的想法与技术之间的差距。",
