@@ -28,10 +28,21 @@
         <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#testimonials" data-i18n="nav.reviews">Reviews</a>
       </nav>
       <div class="flex items-center gap-3">
-        <div class="hidden sm:flex items-center gap-1 border border-white/10 rounded-lg px-1 py-1">
-          <button data-lang-btn="en" onclick="vmSetLang('en')" class="px-2 py-0.5 rounded text-xs transition-colors" style="color:#ffffff;font-weight:700">EN</button>
-          <span class="text-slate-700 text-xs">|</span>
-          <button data-lang-btn="sv" onclick="vmSetLang('sv')" class="px-2 py-0.5 rounded text-xs transition-colors" style="color:#64748b;font-weight:500">SV</button>
+        <!-- Language switcher -->
+        <div class="hidden sm:block relative" id="lang-switcher">
+          <button id="lang-trigger" onclick="toggleLangMenu()" style="display:flex;align-items:center;gap:5px;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:5px 10px;background:transparent;cursor:pointer;color:#e2e8f0;font-size:11px;font-weight:700;letter-spacing:0.05em;transition:border-color .15s" onmouseover="this.style.borderColor='rgba(255,255,255,0.22)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)'">
+            <span id="lang-current">EN</span>
+            <span class="material-symbols-outlined" style="font-size:14px;line-height:1;color:#475569">expand_more</span>
+          </button>
+          <div id="lang-menu" style="display:none;position:absolute;right:0;top:calc(100% + 8px);min-width:130px;background:rgba(4,7,16,0.97);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:6px;box-shadow:0 12px 40px rgba(0,0,0,0.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:9998">
+            <button data-lang-btn="en" onclick="vmSetLang('en');closeLangMenu()">EN — English</button>
+            <button data-lang-btn="sv" onclick="vmSetLang('sv');closeLangMenu()">SV — Svenska</button>
+            <button data-lang-btn="de" onclick="vmSetLang('de');closeLangMenu()">DE — Deutsch</button>
+            <button data-lang-btn="es" onclick="vmSetLang('es');closeLangMenu()">ES — Español</button>
+            <button data-lang-btn="fr" onclick="vmSetLang('fr');closeLangMenu()">FR — Français</button>
+            <button data-lang-btn="hi" onclick="vmSetLang('hi');closeLangMenu()">HI — हिंदी</button>
+            <button data-lang-btn="zh" onclick="vmSetLang('zh');closeLangMenu()">ZH — 中文</button>
+          </div>
         </div>
         <a href="https://vibemaster.osc-fr1.scalingo.io/" class="hidden sm:block text-slate-400 hover:text-white text-sm font-medium transition-colors" data-i18n="nav.login">Login</a>
         <a href="https://vibemaster.osc-fr1.scalingo.io/" class="hidden sm:block gradient-button text-white text-sm font-bold px-6 py-2.5 rounded-full shadow-lg shadow-indigo-500/20 hover:scale-105" data-i18n="nav.cta">Start Building</a>
@@ -338,66 +349,74 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS – KOMMENTERAT UT, AKTIVERA SENARE -->
-    <!--
+    <!-- USE CASES -->
     <section class="py-24 px-6 lg:px-40 max-w-[1440px] mx-auto" id="testimonials">
       <div class="flex flex-col items-center text-center mb-16">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-6 border border-indigo-500/20">
-          <span class="material-symbols-outlined text-sm">favorite</span>
-          <span data-i18n="testimonials.badge">Wall of Love</span>
+          <span class="material-symbols-outlined text-sm">auto_stories</span>
+          <span data-i18n="cases.badge">Real Stories</span>
         </div>
-        <h2 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-white max-w-3xl" data-i18n="testimonials.h2">Turning ideas into specs for the world's fastest builders</h2>
-        <p class="mt-6 text-slate-400 text-lg max-w-2xl leading-relaxed" data-i18n="testimonials.sub">Join 5,000+ solo hackers, technical founders, and product teams shipping at the speed of thought.</p>
+        <h2 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-white max-w-3xl" data-i18n="cases.h2">Vibemaster in the wild</h2>
+        <p class="mt-6 text-slate-400 text-lg max-w-2xl leading-relaxed" data-i18n="cases.sub">Real people, real problems. See how Vibemaster helps across industries.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Niklas — Emerald / Automation -->
         <div class="flex flex-col gap-6 p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300">
           <div class="flex items-center gap-4">
-            <div class="size-14 rounded-full overflow-hidden ring-2 ring-white/10">
-              <div class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRFbPEGGtUGyQdXiZUcnu41UXmg8oycWYPECAOps9wnjJ2ir3OFZIIHnIO5NSZCwYGR4Nx1zaT1-wEEweeXIQ-oJq0YxjeVRJ8BK_KtlYTqj08r8LlCG7dSZr7_VhSJuVSd6cuDYtjjVjMxTFXnLDcihbOXh8-tqNjv49RC1h4oTvQonCV_JgsHj3OaJzaY6xYqzQjt_ucmBguP4lNioeDGIxGcSYHTxNM8STb-z2Twr4s-NKnacXTawtLo1H2cEHkH29ytvCNDhU_");'></div>
+            <div class="size-12 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-emerald-400">table_view</span>
             </div>
             <div>
-              <p class="text-white font-bold">Alex Rivera</p>
-              <p class="text-indigo-400 text-xs font-semibold mt-1" data-i18n="testimonials.t1.role">Founder @ TechFlow</p>
+              <p class="text-white font-bold" data-i18n="cases.c1.name">Niklas</p>
+              <p class="text-emerald-400 text-xs font-semibold mt-0.5" data-i18n="cases.c1.role">Administrator</p>
             </div>
           </div>
-          <p class="text-slate-300 leading-relaxed italic text-lg" data-i18n="testimonials.t1">"From idea to PRD in minutes. This changed how we prototype. We used to spend weeks debating specs, now we just 'vibe' them out."</p>
-          <div class="flex gap-1 text-yellow-400">
-            <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+          <p class="text-slate-300 leading-relaxed flex-1" data-i18n="cases.c1.story">Niklas was spending hours every week copying data from Excel into PDF invoice templates — cell by cell. With Vibemaster, he built a custom tool that reads his spreadsheet and automatically fills in the PDF. What used to take a full afternoon now runs in seconds.</p>
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 w-fit mt-auto">
+            <span class="material-symbols-outlined text-emerald-400 text-sm">bolt</span>
+            <span class="text-emerald-400 text-xs font-bold" data-i18n="cases.c1.tag">Automation</span>
           </div>
         </div>
+
+        <!-- Eva — Indigo / Product & Strategy -->
         <div class="flex flex-col gap-6 p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300">
           <div class="flex items-center gap-4">
-            <div class="size-14 rounded-full overflow-hidden ring-2 ring-white/10">
-              <div class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABexbvC8jcBJwZN85I_MR_9HDjUnKsPb7CVjxOAThczQCj7le67BQ8jKWov9GvMjbiia6K9ELrdVTVb2sFRQPDjywz3gKKWm4-eWLPP3JyR5Gbh4iZSGeFH1zSJS_Bt2nL5U-V0ya_FeKAzCK01rDbyh_23Km760B_zpLTPx0imLs-_BC3hs3SZP9PPlikiuwDXEpcyzYit6toJcdJL1PnB-AoE2xcXpuVBThuegYOaNLtfmsshXhPyrx22Yzy9I-z5meRZYsto5v6");'></div>
+            <div class="size-12 rounded-xl bg-indigo-500/15 border border-indigo-500/20 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-indigo-400">account_tree</span>
             </div>
             <div>
-              <p class="text-white font-bold">Sarah Chen</p>
-              <p class="text-indigo-400 text-xs font-semibold mt-1" data-i18n="testimonials.t2.role">CTO @ BuildFast</p>
+              <p class="text-white font-bold" data-i18n="cases.c2.name">Eva</p>
+              <p class="text-indigo-400 text-xs font-semibold mt-0.5" data-i18n="cases.c2.role">Product Manager</p>
             </div>
           </div>
-          <p class="text-slate-300 leading-relaxed italic text-lg" data-i18n="testimonials.t2">"The technical specs are incredibly accurate. The coding prompts generated work flawlessly with our existing stack and Cursor setup."</p>
-          <div class="flex gap-1 text-yellow-400">
-            <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+          <p class="text-slate-300 leading-relaxed flex-1" data-i18n="cases.c2.story">Eva needed to align her CTO and the entire development team around a new feature — and the solution had to comply with EU GDPR regulations from day one. Vibemaster helped her produce a clear technical plan and a proposed roadmap that gave everyone a shared language. The feature was approved in a single meeting.</p>
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 w-fit mt-auto">
+            <span class="material-symbols-outlined text-indigo-400 text-sm">route</span>
+            <span class="text-indigo-400 text-xs font-bold" data-i18n="cases.c2.tag">Product & Strategy</span>
           </div>
         </div>
+
+        <!-- Mikael — Rose / Product Launch -->
         <div class="flex flex-col gap-6 p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300">
           <div class="flex items-center gap-4">
-            <div class="size-14 rounded-full overflow-hidden ring-2 ring-white/10">
-              <div class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHEsP8JHgIyD2zsMV8DifRP07e-J2OgjHf0gpIF_Xb7NbQj7VFF7H18P3L3n4VinwX2heKfETA6-F9AqBN9oyLyKUBNB8Or7YV769EfXltlVzLHnwI4sVC_Wz-WCdi3tgC_hYe2kk-N7NPsf_rzUGgSmV2L3BxFGwqD1GhBPK61ibPSvQ7Pqx3hGtnS5oWSDDbNq5BtBhYTN8IWZfz7x1818mRvrxS0QwXzVj490ywwkQe31lHMsWf4Uflp9QLEeA7whJaZU3ze4t8");'></div>
+            <div class="size-12 rounded-xl bg-rose-500/15 border border-rose-500/20 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-rose-400">music_note</span>
             </div>
             <div>
-              <p class="text-white font-bold">James Wilson</p>
-              <p class="text-indigo-400 text-xs font-semibold mt-1" data-i18n="testimonials.t3.role">Product Lead @ Innovate</p>
+              <p class="text-white font-bold" data-i18n="cases.c3.name">Mikael</p>
+              <p class="text-rose-400 text-xs font-semibold mt-0.5" data-i18n="cases.c3.role">Music Producer</p>
             </div>
           </div>
-          <p class="text-slate-300 leading-relaxed italic text-lg" data-i18n="testimonials.t3">"The best AI tool for turning vision into actionable coding prompts. It understands nuance better than any senior architect I've met."</p>
-          <div class="flex gap-1 text-yellow-400">
-            <span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span>
+          <p class="text-slate-300 leading-relaxed flex-1" data-i18n="cases.c3.story">Mikael had an idea for a plugin that could transform his production workflow — and a hunch others would pay for it. Vibemaster helped him spec the plugin, write the brief for developers, and plan the website and sales channel he'd need to sell it. A side project became a real product.</p>
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 w-fit mt-auto">
+            <span class="material-symbols-outlined text-rose-400 text-sm">rocket_launch</span>
+            <span class="text-rose-400 text-xs font-bold" data-i18n="cases.c3.tag">Product Launch</span>
           </div>
         </div>
+
       </div>
     </section>
-    -->
 
     <!-- PRICING -->
     <section class="py-24 bg-slate-900/50 px-6 lg:px-40" id="pricing">

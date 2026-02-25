@@ -63,6 +63,22 @@ const translations = {
     "testimonials.t3":    "\"The best AI tool for turning vision into actionable coding prompts. It understands nuance better than any senior architect I've met.\"",
     "testimonials.t3.role": "Product Lead @ Innovate",
 
+    "cases.badge":   "Real Stories",
+    "cases.h2":      "Vibemaster in the wild",
+    "cases.sub":     "Real people, real problems. See how Vibemaster helps across industries.",
+    "cases.c1.name": "Niklas",
+    "cases.c1.role": "Administrator",
+    "cases.c1.story": "Niklas was spending hours every week copying data from Excel into PDF invoice templates — cell by cell. With Vibemaster, he built a custom tool that reads his spreadsheet and automatically fills in the PDF. What used to take a full afternoon now runs in seconds.",
+    "cases.c1.tag":  "Automation",
+    "cases.c2.name": "Eva",
+    "cases.c2.role": "Product Manager",
+    "cases.c2.story": "Eva needed to align her CTO and the entire development team around a new feature — and the solution had to comply with EU GDPR regulations from day one. Vibemaster helped her produce a clear technical plan and a proposed roadmap that gave everyone a shared language. The feature was approved in a single meeting.",
+    "cases.c2.tag":  "Product & Strategy",
+    "cases.c3.name": "Mikael",
+    "cases.c3.role": "Music Producer",
+    "cases.c3.story": "Mikael had an idea for a plugin that could transform his production workflow — and a hunch others would pay for it. Vibemaster helped him spec the plugin, write the brief for developers, and plan the website and sales channel he'd need to sell it. A side project became a real product.",
+    "cases.c3.tag":  "Product Launch",
+
     "pricing.h2":         "Simple Pricing for Visionaries",
     "pricing.sub":        "Choose the plan that matches your shipping speed. All plans include core AI research capabilities.",
     "pricing.monthly":    "Monthly",
@@ -222,6 +238,22 @@ const translations = {
     "testimonials.t2.role": "CTO @ BuildFast",
     "testimonials.t3":    "\"Det bästa AI-verktyget för att omvandla vision till handlingsbara kodpromptrar. Det förstår nyanser bättre än någon senior arkitekt jag har träffat.\"",
     "testimonials.t3.role": "Produktchef @ Innovate",
+
+    "cases.badge":   "Verkliga berättelser",
+    "cases.h2":      "Vibemaster i verkligheten",
+    "cases.sub":     "Riktiga människor, riktiga problem. Se hur Vibemaster hjälper inom olika branscher.",
+    "cases.c1.name": "Niklas",
+    "cases.c1.role": "Administratör",
+    "cases.c1.story": "Niklas lade timmar varje vecka på att kopiera data från Excel till PDF-fakturamallar — cell för cell. Med Vibemaster byggde han ett eget verktyg som läser kalkylbladet och fyller i PDF:en automatiskt. Det som tog en hel eftermiddag tar nu sekunder.",
+    "cases.c1.tag":  "Automatisering",
+    "cases.c2.name": "Eva",
+    "cases.c2.role": "Produktchef",
+    "cases.c2.story": "Eva behövde samla sin CTO och hela utvecklingsteamet kring en ny feature — och lösningen behövde följa EUs GDPR-riktlinjer redan från start. Vibemaster hjälpte henne ta fram en tydlig teknisk plan och en föreslagen roadmap som gav alla ett gemensamt språk. Featuren godkändes på ett enda möte.",
+    "cases.c2.tag":  "Produkt & Strategi",
+    "cases.c3.name": "Mikael",
+    "cases.c3.role": "Musikproducent",
+    "cases.c3.story": "Mikael hade en idé om en plugin som kunde förändra hans produktionsflöde — och en känsla av att andra skulle betala för den. Vibemaster hjälpte honom specificera pluginen, skriva underlaget för utvecklare och planera hemsidan och försäljningskanalen. Ett sidoprojekt blev en riktig produkt.",
+    "cases.c3.tag":  "Produktlansering",
 
     "pricing.h2":         "Enkel prissättning för visionärer",
     "pricing.sub":        "Välj den plan som matchar din leveranshastighet. Alla planer inkluderar grundläggande AI-forskningsfunktioner.",
@@ -383,6 +415,22 @@ const translations = {
     "testimonials.t3":    "\"Das beste KI-Tool, um Visionen in umsetzbare Coding-Prompts zu verwandeln. Es versteht Nuancen besser als jeder Senior-Architekt, den ich je getroffen habe.\"",
     "testimonials.t3.role": "Produktleiter @ Innovate",
 
+    "cases.badge":   "Echte Geschichten",
+    "cases.h2":      "Vibemaster in der Praxis",
+    "cases.sub":     "Echte Menschen, echte Probleme. Entdecke, wie Vibemaster in verschiedenen Branchen hilft.",
+    "cases.c1.name": "Niklas",
+    "cases.c1.role": "Verwaltungsangestellter",
+    "cases.c1.story": "Niklas verbrachte jede Woche Stunden damit, Daten aus Excel Zelle für Zelle in PDF-Rechnungsvorlagen zu kopieren. Mit Vibemaster baute er ein eigenes Tool, das seine Tabelle liest und die PDF automatisch ausfüllt. Was früher einen ganzen Nachmittag dauerte, läuft jetzt in Sekunden.",
+    "cases.c1.tag":  "Automatisierung",
+    "cases.c2.name": "Eva",
+    "cases.c2.role": "Produktmanagerin",
+    "cases.c2.story": "Eva musste ihren CTO und das gesamte Entwicklungsteam für ein neues Feature gewinnen — und die Lösung musste von Anfang an den EU-DSGVO-Richtlinien entsprechen. Vibemaster half ihr, einen klaren technischen Plan und eine vorgeschlagene Roadmap zu erstellen. Das Feature wurde in einem einzigen Meeting genehmigt.",
+    "cases.c2.tag":  "Produkt & Strategie",
+    "cases.c3.name": "Mikael",
+    "cases.c3.role": "Musikproduzent",
+    "cases.c3.story": "Mikael hatte eine Idee für ein Plugin, das seinen Produktions-Workflow verändern könnte — und ahnte, dass andere dafür zahlen würden. Vibemaster half ihm, das Plugin zu spezifizieren, das Briefing für Entwickler zu schreiben und die Website sowie den Verkaufskanal zu planen. Ein Nebenprojekt wurde zu einem echten Produkt.",
+    "cases.c3.tag":  "Produkteinführung",
+
     "pricing.h2":         "Einfache Preise für Visionäre",
     "pricing.sub":        "Wähle den Plan, der zu deiner Entwicklungsgeschwindigkeit passt.",
     "pricing.monthly":    "Monatlich",
@@ -542,6 +590,22 @@ const translations = {
     "testimonials.t2.role": "CTO @ BuildFast",
     "testimonials.t3":    "\"La mejor herramienta de IA para convertir visiones en prompts de código accionables. Entiende los matices mejor que cualquier arquitecto senior que haya conocido.\"",
     "testimonials.t3.role": "Líder de Producto @ Innovate",
+
+    "cases.badge":   "Historias reales",
+    "cases.h2":      "Vibemaster en acción",
+    "cases.sub":     "Personas reales, problemas reales. Descubre cómo Vibemaster ayuda en distintos sectores.",
+    "cases.c1.name": "Niklas",
+    "cases.c1.role": "Administrativo",
+    "cases.c1.story": "Niklas pasaba horas cada semana copiando datos de Excel a plantillas de factura en PDF, celda por celda. Con Vibemaster construyó una herramienta propia que lee su hoja de cálculo y rellena el PDF automáticamente. Lo que antes llevaba una tarde entera ahora tarda segundos.",
+    "cases.c1.tag":  "Automatización",
+    "cases.c2.name": "Eva",
+    "cases.c2.role": "Gestora de Producto",
+    "cases.c2.story": "Eva necesitaba alinear a su CTO y a todo el equipo de desarrollo en torno a una nueva funcionalidad, y la solución debía cumplir con el RGPD de la UE desde el primer día. Vibemaster le ayudó a crear un plan técnico claro y una hoja de ruta propuesta. La funcionalidad fue aprobada en una sola reunión.",
+    "cases.c2.tag":  "Producto y Estrategia",
+    "cases.c3.name": "Mikael",
+    "cases.c3.role": "Productor Musical",
+    "cases.c3.story": "Mikael tenía una idea para un plugin que podría transformar su flujo de producción, y la corazonada de que otros pagarían por él. Vibemaster le ayudó a especificar el plugin, redactar el brief para desarrolladores y planificar el sitio web y el canal de ventas. Un proyecto paralelo se convirtió en un producto real.",
+    "cases.c3.tag":  "Lanzamiento de Producto",
 
     "pricing.h2":         "Precios simples para visionarios",
     "pricing.sub":        "Elige el plan que se adapte a tu velocidad de entrega.",
@@ -703,6 +767,22 @@ const translations = {
     "testimonials.t3":    "\"Le meilleur outil IA pour transformer des visions en prompts de code actionnables. Il comprend les nuances mieux que n'importe quel architecte senior que j'ai rencontré.\"",
     "testimonials.t3.role": "Responsable Produit @ Innovate",
 
+    "cases.badge":   "Témoignages réels",
+    "cases.h2":      "Vibemaster sur le terrain",
+    "cases.sub":     "Des personnes réelles, des problèmes réels. Découvrez comment Vibemaster aide dans différents secteurs.",
+    "cases.c1.name": "Niklas",
+    "cases.c1.role": "Administrateur",
+    "cases.c1.story": "Niklas passait des heures chaque semaine à copier des données Excel dans des modèles de facture PDF, cellule par cellule. Avec Vibemaster, il a créé un outil personnalisé qui lit son tableur et remplit automatiquement le PDF. Ce qui prenait tout un après-midi ne prend désormais que quelques secondes.",
+    "cases.c1.tag":  "Automatisation",
+    "cases.c2.name": "Eva",
+    "cases.c2.role": "Chef de Produit",
+    "cases.c2.story": "Eva devait aligner son CTO et toute l'équipe de développement sur une nouvelle fonctionnalité — et la solution devait respecter le RGPD de l'UE dès le premier jour. Vibemaster l'a aidée à produire un plan technique clair et une feuille de route proposée. La fonctionnalité a été approuvée en une seule réunion.",
+    "cases.c2.tag":  "Produit & Stratégie",
+    "cases.c3.name": "Mikael",
+    "cases.c3.role": "Producteur de Musique",
+    "cases.c3.story": "Mikael avait une idée de plugin pouvant transformer son flux de production, et le pressentiment que d'autres paieraient pour l'utiliser. Vibemaster l'a aidé à spécifier le plugin, rédiger le brief pour les développeurs et planifier le site web et le canal de vente. Un projet parallèle est devenu un vrai produit.",
+    "cases.c3.tag":  "Lancement de Produit",
+
     "pricing.h2":         "Tarification simple pour les visionnaires",
     "pricing.sub":        "Choisissez le plan qui correspond à votre vitesse de livraison.",
     "pricing.monthly":    "Mensuel",
@@ -862,6 +942,22 @@ const translations = {
     "testimonials.t2.role": "CTO @ BuildFast",
     "testimonials.t3":    "\"दृष्टि को कार्रवाई योग्य कोडिंग प्रॉम्प्ट में बदलने के लिए सबसे अच्छा AI टूल।\"",
     "testimonials.t3.role": "प्रोडक्ट लीड @ Innovate",
+
+    "cases.badge":   "असली कहानियाँ",
+    "cases.h2":      "Vibemaster वास्तविकता में",
+    "cases.sub":     "असली लोग, असली समस्याएं। देखें कि Vibemaster विभिन्न क्षेत्रों में कैसे मदद करता है।",
+    "cases.c1.name": "Niklas",
+    "cases.c1.role": "प्रशासनिक कर्मचारी",
+    "cases.c1.story": "Niklas हर हफ्ते घंटों Excel से PDF इनवॉइस टेम्पलेट में सेल-दर-सेल डेटा कॉपी करता था। Vibemaster की मदद से उसने एक ऐसा टूल बनाया जो स्प्रेडशीट पढ़कर PDF अपने आप भर देता है। जिसमें पूरी दोपहर लगती थी, वो अब सेकंडों में होता है।",
+    "cases.c1.tag":  "ऑटोमेशन",
+    "cases.c2.name": "Eva",
+    "cases.c2.role": "प्रोडक्ट मैनेजर",
+    "cases.c2.story": "Eva को अपने CTO और पूरी डेवलपमेंट टीम को एक नई फीचर पर एकजुट करना था — और समाधान को EU GDPR नियमों का पहले दिन से पालन करना था। Vibemaster ने उसे एक स्पष्ट तकनीकी योजना और रोडमैप बनाने में मदद की। फीचर एक ही मीटिंग में अप्रूव हो गई।",
+    "cases.c2.tag":  "प्रोडक्ट और रणनीति",
+    "cases.c3.name": "Mikael",
+    "cases.c3.role": "म्यूजिक प्रोड्यूसर",
+    "cases.c3.story": "Mikael के पास एक प्लगइन का आइडिया था जो उसके प्रोडक्शन वर्कफ्लो को बदल सकता था — और उसे लगा कि दूसरे लोग इसके लिए पैसे देंगे। Vibemaster ने प्लगइन स्पेक करने, डेवलपर्स के लिए ब्रीफ लिखने और वेबसाइट व सेल्स चैनल प्लान करने में मदद की। एक साइड प्रोजेक्ट असली प्रोडक्ट बन गया।",
+    "cases.c3.tag":  "प्रोडक्ट लॉन्च",
 
     "pricing.h2":         "दूरदर्शी लोगों के लिए सरल मूल्य निर्धारण",
     "pricing.sub":        "वह योजना चुनें जो आपकी डिलीवरी गति से मेल खाती हो।",
@@ -1023,6 +1119,22 @@ const translations = {
     "testimonials.t3":    "\"将愿景转化为可执行编码提示词的最佳AI工具。它理解细微差别的能力超过了我遇到的任何高级架构师。\"",
     "testimonials.t3.role": "产品负责人 @ Innovate",
 
+    "cases.badge":   "真实故事",
+    "cases.h2":      "Vibemaster 的实际应用",
+    "cases.sub":     "真实的人，真实的问题。看看 Vibemaster 如何在各行各业提供帮助。",
+    "cases.c1.name": "Niklas",
+    "cases.c1.role": "行政人员",
+    "cases.c1.story": "Niklas 每周都要花好几个小时，逐格将 Excel 数据复制到 PDF 发票模板中。借助 Vibemaster，他构建了一个自定义工具，能自动读取电子表格并填写 PDF。原本需要整个下午的工作，现在只需几秒钟。",
+    "cases.c1.tag":  "自动化",
+    "cases.c2.name": "Eva",
+    "cases.c2.role": "产品经理",
+    "cases.c2.story": "Eva 需要让 CTO 和整个开发团队在新功能上达成共识——而且解决方案从第一天起就必须符合欧盟 GDPR 法规。Vibemaster 帮助她制定了清晰的技术方案和路线图，为所有人提供了共同语言。该功能在一次会议中就获得了批准。",
+    "cases.c2.tag":  "产品与战略",
+    "cases.c3.name": "Mikael",
+    "cases.c3.role": "音乐制作人",
+    "cases.c3.story": "Mikael 有一个可以改变其制作流程的插件创意，并直觉认为其他人会为此付费。Vibemaster 帮助他规划插件、为开发者撰写简报，并规划销售所需的网站和渠道。一个副业项目变成了真正的产品。",
+    "cases.c3.tag":  "产品发布",
+
     "pricing.h2":         "面向远见者的简单定价",
     "pricing.sub":        "选择与您的交付速度相匹配的计划。",
     "pricing.monthly":    "月付",
@@ -1155,11 +1267,16 @@ function applyTranslations(lang) {
     if (t[key] !== undefined) el.placeholder = t[key];
   });
 
-  // Update toggle buttons
+  // Update lang-current label
+  const langCurrentEl = document.getElementById("lang-current");
+  if (langCurrentEl) langCurrentEl.textContent = lang.toUpperCase();
+
+  // Update dropdown items
   document.querySelectorAll("[data-lang-btn]").forEach(btn => {
     const active = btn.dataset.langBtn === lang;
-    btn.style.color  = active ? "#ffffff" : "#64748b";
-    btn.style.fontWeight = active ? "700" : "500";
+    btn.style.color  = active ? "#ffffff" : "#94a3b8";
+    btn.style.fontWeight = active ? "700" : "400";
+    btn.style.background = active ? "rgba(255,255,255,0.05)" : "transparent";
   });
 }
 
@@ -1172,3 +1289,35 @@ window.vmSetLang = function(lang) {
 document.addEventListener("DOMContentLoaded", () => {
   applyTranslations(detectLanguage());
 });
+
+// ── Lang menu dropdown ────────────────────────────────────────────────────────
+(function() {
+  // Inject hover styles for lang menu buttons
+  const style = document.createElement("style");
+  style.textContent =
+    '#lang-menu button{display:block;width:100%;text-align:left;' +
+    'padding:6px 10px;border-radius:8px;font-size:11px;cursor:pointer;' +
+    'background:transparent;border:none;color:#94a3b8;transition:background .1s,color .1s;}' +
+    '#lang-menu button:hover{background:rgba(255,255,255,0.06);color:#e2e8f0;}';
+  document.head.appendChild(style);
+
+  window.toggleLangMenu = function() {
+    const menu = document.getElementById("lang-menu");
+    if (!menu) return;
+    menu.style.display = menu.style.display === "none" ? "block" : "none";
+  };
+
+  window.closeLangMenu = function() {
+    const menu = document.getElementById("lang-menu");
+    if (menu) menu.style.display = "none";
+  };
+
+  document.addEventListener("click", function(e) {
+    const trigger = document.getElementById("lang-trigger");
+    const menu = document.getElementById("lang-menu");
+    if (!menu || !trigger) return;
+    if (!trigger.contains(e.target) && !menu.contains(e.target)) {
+      menu.style.display = "none";
+    }
+  });
+})();
