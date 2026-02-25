@@ -28,6 +28,14 @@ const translations = {
     "integrations.label": "Perfect Handoffs To",
     "integrations.more":  "and many more...",
 
+    "who.h2":         "Who is Vibemaster for?",
+    "who.card1.role": "Non-technical founders & creators",
+    "who.card1.p":    "You have the vision. Vibemaster gives you the vocabulary. Turn your idea into a complete technical specification — without writing a single line of code.",
+    "who.card2.role": "Product managers",
+    "who.card2.p":    "Stop losing hours translating business goals into engineering reality. Vibemaster helps you define, analyse, and present your next feature with technical precision.",
+    "who.card3.role": "Developers & technical leads",
+    "who.card3.p":    "Even the best engineers have blind spots. Use Vibemaster as your technical second opinion — to stress-test architecture decisions and catch edge cases before they ship.",
+
     "problem.h2.a":       "The problem isn't your AI vibecoding service",
     "problem.h2.b":       "or",
     "problem.h2.c":       "...",
@@ -178,6 +186,15 @@ const translations = {
 
     "integrations.label": "Perfekta överlämningar till",
     "integrations.more":  "och många fler...",
+
+    "who.h2":         "Vem är Vibemaster till för?",
+    "who.card1.role": "Icke-tekniska grundare & kreatörer",
+    "who.card1.p":    "Du har visionen. Vibemaster ger dig språket. Förvandla din idé till en komplett teknisk specifikation — utan att skriva en enda rad kod.",
+    "who.card2.role": "Produktchefer",
+    "who.card2.p":    "Sluta slösa timmar på att översätta affärsmål till teknisk verklighet. Vibemaster hjälper dig att definiera, analysera och presentera din nästa feature med teknisk precision.",
+    "who.card3.role": "Utvecklare & tekniska ledare",
+    "who.card3.p":    "Även de bästa ingenjörerna har blinda fläckar. Använd Vibemaster som ditt tekniska second opinion — för att stresstesta arkitekturbeslut och hitta edge cases innan de är i produktion.",
+
 
     "problem.h2.a":       "Problemet är inte din AI vibecoding-tjänst",
     "problem.h2.b":       "eller",
@@ -330,6 +347,15 @@ const translations = {
     "integrations.label": "Perfekte Übergaben an",
     "integrations.more":  "und viele mehr...",
 
+    "who.h2":         "Für wen ist Vibemaster?",
+    "who.card1.role": "Nicht-technische Gründer & Kreative",
+    "who.card1.p":    "Du hast die Vision. Vibemaster gibt dir das Vokabular. Verwandle deine Idee in eine vollständige technische Spezifikation — ohne eine einzige Zeile Code.",
+    "who.card2.role": "Produktmanager",
+    "who.card2.p":    "Hör auf, Stunden damit zu verschwenden, Geschäftsziele in technische Realität zu übersetzen. Vibemaster hilft dir, dein nächstes Feature präzise zu definieren und zu präsentieren.",
+    "who.card3.role": "Entwickler & technische Leads",
+    "who.card3.p":    "Auch die besten Ingenieure haben blinde Flecken. Nutze Vibemaster als technisches Zweitmeinung — um Architekturentscheidungen zu testen und Edge Cases früh zu finden.",
+
+
     "problem.h2.a":       "Das Problem ist nicht dein KI-Vibecoding-Dienst",
     "problem.h2.b":       "oder",
     "problem.h2.c":       "...",
@@ -480,6 +506,15 @@ const translations = {
 
     "integrations.label": "Entregas perfectas a",
     "integrations.more":  "y muchos más...",
+
+    "who.h2":         "¿Para quién es Vibemaster?",
+    "who.card1.role": "Fundadores no técnicos y creadores",
+    "who.card1.p":    "Tienes la visión. Vibemaster te da el vocabulario. Convierte tu idea en una especificación técnica completa — sin escribir una sola línea de código.",
+    "who.card2.role": "Gestores de producto",
+    "who.card2.p":    "Deja de perder horas traduciendo objetivos de negocio en realidad técnica. Vibemaster te ayuda a definir, analizar y presentar tu próxima funcionalidad con precisión.",
+    "who.card3.role": "Desarrolladores y líderes técnicos",
+    "who.card3.p":    "Incluso los mejores ingenieros tienen puntos ciegos. Usa Vibemaster como tu segunda opinión técnica — para probar decisiones de arquitectura antes de que lleguen a producción.",
+
 
     "problem.h2.a":       "El problema no es tu servicio de vibecoding con IA",
     "problem.h2.b":       "ni",
@@ -632,6 +667,15 @@ const translations = {
     "integrations.label": "Transferts parfaits vers",
     "integrations.more":  "et bien d'autres...",
 
+    "who.h2":         "À qui s'adresse Vibemaster ?",
+    "who.card1.role": "Fondateurs non techniques & créateurs",
+    "who.card1.p":    "Vous avez la vision. Vibemaster vous donne le vocabulaire. Transformez votre idée en spécification technique complète — sans écrire une seule ligne de code.",
+    "who.card2.role": "Chefs de produit",
+    "who.card2.p":    "Arrêtez de perdre des heures à traduire les objectifs métier en réalité technique. Vibemaster vous aide à définir, analyser et présenter votre prochaine fonctionnalité avec précision.",
+    "who.card3.role": "Développeurs & leads techniques",
+    "who.card3.p":    "Même les meilleurs ingénieurs ont des angles morts. Utilisez Vibemaster comme second avis technique — pour tester vos décisions d'architecture avant qu'elles ne soient en production.",
+
+
     "problem.h2.a":       "Le problème n'est pas votre service de vibecoding IA",
     "problem.h2.b":       "ni",
     "problem.h2.c":       "...",
@@ -783,6 +827,15 @@ const translations = {
     "integrations.label": "परफेक्ट हैंडऑफ",
     "integrations.more":  "और भी कई...",
 
+    "who.h2":         "Vibemaster किसके लिए है?",
+    "who.card1.role": "गैर-तकनीकी संस्थापक और क्रिएटर्स",
+    "who.card1.p":    "आपके पास विज़न है। Vibemaster आपको शब्दावली देता है। बिना एक भी कोड लिखे अपने विचार को पूर्ण तकनीकी स्पेसिफिकेशन में बदलें।",
+    "who.card2.role": "प्रोडक्ट मैनेजर",
+    "who.card2.p":    "व्यापार लक्ष्यों को तकनीकी वास्तविकता में अनुवाद करने में घंटे बर्बाद करना बंद करें। Vibemaster आपको सटीकता के साथ अपनी अगली फीचर परिभाषित करने में मदद करता है।",
+    "who.card3.role": "डेवलपर्स और तकनीकी लीड्स",
+    "who.card3.p":    "यहां तक कि सबसे अच्छे इंजीनियरों के भी अंधे धब्बे होते हैं। Vibemaster को अपनी तकनीकी दूसरी राय के रूप में उपयोग करें — शिपिंग से पहले edge cases पकड़ने के लिए।",
+
+
     "problem.h2.a":       "समस्या आपकी AI vibecoding सेवा नहीं है",
     "problem.h2.b":       "या",
     "problem.h2.c":       "नहीं है...",
@@ -933,6 +986,15 @@ const translations = {
 
     "integrations.label": "完美对接",
     "integrations.more":  "以及更多...",
+
+    "who.h2":         "Vibemaster适合谁？",
+    "who.card1.role": "非技术创始人和创作者",
+    "who.card1.p":    "你有愿景。Vibemaster给你词汇。将你的想法转化为完整的技术规格说明——无需编写任何代码。",
+    "who.card2.role": "产品经理",
+    "who.card2.p":    "停止花费数小时将业务目标转化为技术现实。Vibemaster帮助你精确定义、分析和呈现你的下一个功能。",
+    "who.card3.role": "开发者和技术负责人",
+    "who.card3.p":    "即使是最优秀的工程师也有盲点。将Vibemaster用作你的技术第二意见——在发布前测试架构决策并发现边缘情况。",
+
 
     "problem.h2.a":       "问题不在于您的AI vibecoding服务",
     "problem.h2.b":       "或",
