@@ -1302,9 +1302,27 @@ document.addEventListener("DOMContentLoaded", () => {
   document.head.appendChild(style);
 
   window.toggleLangMenu = function() {
+    const trigger = document.getElementById("lang-trigger");
     const menu = document.getElementById("lang-menu");
-    if (!menu) return;
-    menu.style.display = menu.style.display === "none" ? "block" : "none";
+    if (!menu || !trigger) return;
+
+    if (menu.style.display !== "none") {
+      menu.style.display = "none";
+      return;
+    }
+
+    // Portal to body to escape header stacking context
+    if (menu.parentElement !== document.body) {
+      document.body.appendChild(menu);
+      menu.style.position = "fixed";
+      menu.style.zIndex = "10000";
+    }
+
+    const rect = trigger.getBoundingClientRect();
+    menu.style.top  = (rect.bottom + 8) + "px";
+    menu.style.right = (window.innerWidth - rect.right) + "px";
+    menu.style.left = "auto";
+    menu.style.display = "block";
   };
 
   window.closeLangMenu = function() {
