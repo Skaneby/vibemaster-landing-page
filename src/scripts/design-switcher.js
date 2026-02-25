@@ -21,7 +21,7 @@
 
   // ── Styles ──────────────────────────────────────────────────────────────────
   var css = [
-    '#ds-widget{position:fixed;top:20px;right:20px;z-index:9999;',
+    '#ds-widget{position:fixed;top:76px;right:20px;z-index:9999;',
       'font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;}',
 
     '#ds-trigger{display:flex;align-items:center;gap:7px;padding:8px 14px;',
