@@ -13,7 +13,7 @@ const translations = {
     "nav.gap":            "The Gap",
     "nav.process":        "Process",
     "nav.pricing":        "Pricing",
-    "nav.reviews":        "Reviews",
+    "nav.reviews":        "Cases",
     "nav.login":          "Login",
     "nav.cta":            "Start Building",
 
@@ -186,7 +186,7 @@ const translations = {
     "nav.gap":            "Glappet",
     "nav.process":        "Processen",
     "nav.pricing":        "Priser",
-    "nav.reviews":        "Recensioner",
+    "nav.reviews":        "Cases",
     "nav.login":          "Logga in",
     "nav.cta":            "Börja bygga",
 
@@ -360,7 +360,7 @@ const translations = {
     "nav.gap":            "Die Lücke",
     "nav.process":        "Prozess",
     "nav.pricing":        "Preise",
-    "nav.reviews":        "Bewertungen",
+    "nav.reviews":        "Cases",
     "nav.login":          "Anmelden",
     "nav.cta":            "Jetzt starten",
 
@@ -536,7 +536,7 @@ const translations = {
     "nav.gap":            "La Brecha",
     "nav.process":        "Proceso",
     "nav.pricing":        "Precios",
-    "nav.reviews":        "Reseñas",
+    "nav.reviews":        "Casos",
     "nav.login":          "Iniciar sesión",
     "nav.cta":            "Empezar a construir",
 
@@ -712,7 +712,7 @@ const translations = {
     "nav.gap":            "Le Fossé",
     "nav.process":        "Processus",
     "nav.pricing":        "Tarifs",
-    "nav.reviews":        "Avis",
+    "nav.reviews":        "Cas",
     "nav.login":          "Connexion",
     "nav.cta":            "Commencer à construire",
 
@@ -888,7 +888,7 @@ const translations = {
     "nav.gap":            "अंतर",
     "nav.process":        "प्रक्रिया",
     "nav.pricing":        "मूल्य",
-    "nav.reviews":        "समीक्षाएं",
+    "nav.reviews":        "केस",
     "nav.login":          "लॉग इन",
     "nav.cta":            "निर्माण शुरू करें",
 
@@ -1064,7 +1064,7 @@ const translations = {
     "nav.gap":            "差距",
     "nav.process":        "流程",
     "nav.pricing":        "定价",
-    "nav.reviews":        "评价",
+    "nav.reviews":        "案例",
     "nav.login":          "登录",
     "nav.cta":            "开始构建",
 
