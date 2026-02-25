@@ -1069,6 +1069,7 @@ const translations = {
 // ──────────────────────────────────────────────
 
 function detectLanguage() {
+  try { const saved = localStorage.getItem("vm-lang"); if (saved && translations[saved]) return saved; } catch(e) {}
   const supported = Object.keys(translations);
   const langs = navigator.languages || [navigator.language || "en"];
   for (const lang of langs) {
@@ -1091,7 +1092,20 @@ function applyTranslations(lang) {
     const key = el.dataset.i18nPlaceholder;
     if (t[key] !== undefined) el.placeholder = t[key];
   });
+
+  // Update toggle buttons
+  document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+    const active = btn.dataset.langBtn === lang;
+    btn.style.color  = active ? "#ffffff" : "#64748b";
+    btn.style.fontWeight = active ? "700" : "500";
+  });
 }
+
+window.vmSetLang = function(lang) {
+  if (!translations[lang]) return;
+  try { localStorage.setItem("vm-lang", lang); } catch(e) {}
+  applyTranslations(lang);
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   applyTranslations(detectLanguage());
