@@ -76,29 +76,57 @@
   // Dropdown menu
   var menu = document.createElement('div');
   menu.id = 'ds-menu';
-  menu.innerHTML = '';
 
   DESIGNS.forEach(function (d) {
     var isActive = d.name === current;
     var a = document.createElement('a');
     a.className = 'ds-item' + (isActive ? ' ds-active' : '');
     a.href = isActive ? '#' : d.url;
-    a.innerHTML =
-      '<div class="ds-item-info">' +
-        '<span class="ds-item-name">' + d.name + '</span>' +
-        (d.desc ? '<span class="ds-item-desc">' + d.desc + '</span>' : '') +
-      '</div>' +
-      (isActive ? '<span class="ds-check material-symbols-outlined">check_circle</span>' : '');
+
+    var info = document.createElement('div');
+    info.className = 'ds-item-info';
+
+    var nameSpan = document.createElement('span');
+    nameSpan.className = 'ds-item-name';
+    nameSpan.textContent = d.name;
+    info.appendChild(nameSpan);
+
+    if (d.desc) {
+      var descSpan = document.createElement('span');
+      descSpan.className = 'ds-item-desc';
+      descSpan.textContent = d.desc;
+      info.appendChild(descSpan);
+    }
+    a.appendChild(info);
+
+    if (isActive) {
+      var check = document.createElement('span');
+      check.className = 'ds-check material-symbols-outlined';
+      check.textContent = 'check_circle';
+      a.appendChild(check);
+    }
     menu.appendChild(a);
   });
 
   // Trigger button
   var trigger = document.createElement('div');
   trigger.id = 'ds-trigger';
-  trigger.innerHTML =
-    '<span class="ds-label-pre">Design</span>' +
-    '<span class="ds-name">' + (current || 'Switch') + '</span>' +
-    '<span class="ds-icon material-symbols-outlined">expand_more</span>';
+
+  var labelPre = document.createElement('span');
+  labelPre.className = 'ds-label-pre';
+  labelPre.textContent = 'Design';
+
+  var nameEl = document.createElement('span');
+  nameEl.className = 'ds-name';
+  nameEl.textContent = current || 'Switch';
+
+  var iconEl = document.createElement('span');
+  iconEl.className = 'ds-icon material-symbols-outlined';
+  iconEl.textContent = 'expand_more';
+
+  trigger.appendChild(labelPre);
+  trigger.appendChild(nameEl);
+  trigger.appendChild(iconEl);
 
   widget.appendChild(menu);
   widget.appendChild(trigger);

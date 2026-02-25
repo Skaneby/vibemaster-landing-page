@@ -19,3 +19,12 @@ Thumbs.db
 # Temporary
 *.tmp
 *.swp
+
+# Internal / AI workflow — do not expose to public repo
+tasks/
+CLAUDE.MD
+.claude/
+documents/
+
+# Internal design tools (not production pages)
+compare.html
