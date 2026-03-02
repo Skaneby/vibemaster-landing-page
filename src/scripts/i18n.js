@@ -124,7 +124,7 @@ const translations = {
     "pricing.enterprise.sub":   "Global scale and security requirements.",
     "pricing.enterprise.cta":   "Call us!",
     "pricing.enterprise.f1":    "Unlimited Seats",
-    "pricing.enterprise.f2":    "SOC-2 Compliance",
+    "pricing.enterprise.f2":    "ISO 27001:2022 Certified",
     "pricing.enterprise.f3":    "SSO & SAML",
     "pricing.enterprise.f4":    "Custom data training",
 
@@ -154,9 +154,9 @@ const translations = {
 
     "cta.h2":             "Ready to ship your next big idea?",
     "cta.primary":        "Get Started Now",
-    "cta.trust1":         "GDPR & SOC-2 Ready",
+    "cta.trust1":         "GDPR & ISO 27001:2022",
     "cta.trust2":         "Encrypted Payments",
-    "cta.trust3":         "Instant Provisioning",
+    "cta.trust3":         "Hosted on Scalingo",
 
     "footer.desc":        "The ultimate AI-first workspace for product architects and technical founders. Turning vision into verifiable architecture.",
     "footer.product":     "Product",
@@ -298,7 +298,7 @@ const translations = {
     "pricing.enterprise.sub":   "Global skala och säkerhetskrav.",
     "pricing.enterprise.cta":   "Ring oss!",
     "pricing.enterprise.f1":    "Obegränsade platser",
-    "pricing.enterprise.f2":    "SOC-2-efterlevnad",
+    "pricing.enterprise.f2":    "ISO 27001:2022-certifierad",
     "pricing.enterprise.f3":    "SSO & SAML",
     "pricing.enterprise.f4":    "Anpassad dataträning",
 
@@ -328,9 +328,9 @@ const translations = {
 
     "cta.h2":             "Redo att lansera din nästa stora idé?",
     "cta.primary":        "Kom igång nu",
-    "cta.trust1":         "GDPR & SOC-2-redo",
+    "cta.trust1":         "GDPR & ISO 27001:2022",
     "cta.trust2":         "Krypterade betalningar",
-    "cta.trust3":         "Omedelbar provisionering",
+    "cta.trust3":         "Hostad på Scalingo",
 
     "footer.desc":        "Den ultimata AI-first-arbetsytan för produktarkitekter och tekniska grundare. Förvandlar vision till verifierbar arkitektur.",
     "footer.product":     "Produkt",
@@ -472,7 +472,7 @@ const translations = {
     "pricing.enterprise.sub":   "Globale Skalierung und Sicherheitsanforderungen.",
     "pricing.enterprise.cta":   "Ruf uns an!",
     "pricing.enterprise.f1":    "Unbegrenzte Plätze",
-    "pricing.enterprise.f2":    "SOC-2-Konformität",
+    "pricing.enterprise.f2":    "ISO 27001:2022 zertifiziert",
     "pricing.enterprise.f3":    "SSO & SAML",
     "pricing.enterprise.f4":    "Individuelle Datenschulung",
 
@@ -504,9 +504,9 @@ const translations = {
     "cta.sub":            "Starte noch heute und geh von \"Vibe\" zu \"Produktion\" in Rekordzeit. Keine Kreditkarte erforderlich.",
     "cta.primary":        "Kostenlose Recherche starten",
     "cta.secondary":      "Demo buchen",
-    "cta.trust1":         "DSGVO & SOC-2-bereit",
+    "cta.trust1":         "DSGVO & ISO 27001:2022",
     "cta.trust2":         "Verschlüsselte Zahlungen",
-    "cta.trust3":         "Sofortige Bereitstellung",
+    "cta.trust3":         "Gehostet auf Scalingo",
 
     "footer.desc":        "Der ultimative KI-First-Arbeitsbereich für Produktarchitekten und technische Gründer.",
     "footer.product":     "Produkt",
@@ -648,7 +648,7 @@ const translations = {
     "pricing.enterprise.sub":   "Escala global y requisitos de seguridad.",
     "pricing.enterprise.cta":   "¡Llámanos!",
     "pricing.enterprise.f1":    "Puestos ilimitados",
-    "pricing.enterprise.f2":    "Cumplimiento SOC-2",
+    "pricing.enterprise.f2":    "Certificado ISO 27001:2022",
     "pricing.enterprise.f3":    "SSO & SAML",
     "pricing.enterprise.f4":    "Entrenamiento de datos personalizado",
 
@@ -680,9 +680,9 @@ const translations = {
     "cta.sub":            "Empieza hoy y pasa de \"vibe\" a \"producción\" en tiempo récord. No se requiere tarjeta de crédito.",
     "cta.primary":        "Iniciar investigación gratuita",
     "cta.secondary":      "Reservar una demo",
-    "cta.trust1":         "Listo para GDPR & SOC-2",
+    "cta.trust1":         "GDPR & ISO 27001:2022",
     "cta.trust2":         "Pagos cifrados",
-    "cta.trust3":         "Aprovisionamiento instantáneo",
+    "cta.trust3":      "Alojado en Scalingo",
 
     "footer.desc":        "El espacio de trabajo definitivo con IA para arquitectos de producto y fundadores técnicos.",
     "footer.product":     "Producto",
@@ -824,7 +824,7 @@ const translations = {
     "pricing.enterprise.sub":   "Échelle mondiale et exigences de sécurité.",
     "pricing.enterprise.cta":   "Appelez-nous !",
     "pricing.enterprise.f1":    "Sièges illimités",
-    "pricing.enterprise.f2":    "Conformité SOC-2",
+    "pricing.enterprise.f2":    "Certifié ISO 27001:2022",
     "pricing.enterprise.f3":    "SSO & SAML",
     "pricing.enterprise.f4":    "Formation de données personnalisée",
 
@@ -856,9 +856,9 @@ const translations = {
     "cta.sub":            "Commencez aujourd'hui et passez de \"vibe\" à \"production\" en un temps record. Aucune carte de crédit requise.",
     "cta.primary":        "Démarrer la recherche gratuite",
     "cta.secondary":      "Réserver une démo",
-    "cta.trust1":         "Prêt RGPD & SOC-2",
+    "cta.trust1":         "RGPD & ISO 27001:2022",
     "cta.trust2":         "Paiements chiffrés",
-    "cta.trust3":         "Provisionnement instantané",
+    "cta.trust3":         "Hébergé sur Scalingo",
 
     "footer.desc":        "L'espace de travail IA ultime pour les architectes produit et les fondateurs techniques.",
     "footer.product":     "Produit",
@@ -1000,7 +1000,7 @@ const translations = {
     "pricing.enterprise.sub":   "वैश्विक स्केल और सुरक्षा आवश्यकताएं।",
     "pricing.enterprise.cta":   "हमें कॉल करें!",
     "pricing.enterprise.f1":    "असीमित सीटें",
-    "pricing.enterprise.f2":    "SOC-2 अनुपालन",
+    "pricing.enterprise.f2":    "ISO 27001:2022 प्रमाणित",
     "pricing.enterprise.f3":    "SSO & SAML",
     "pricing.enterprise.f4":    "कस्टम डेटा ट्रेनिंग",
 
@@ -1032,9 +1032,9 @@ const translations = {
     "cta.sub":            "आज ही शुरू करें और रिकॉर्ड समय में \"वाइब\" से \"प्रोडक्शन\" तक जाएं। क्रेडिट कार्ड की आवश्यकता नहीं।",
     "cta.primary":        "मुफ्त रिसर्च शुरू करें",
     "cta.secondary":      "डेमो बुक करें",
-    "cta.trust1":         "GDPR & SOC-2 तैयार",
+    "cta.trust1":         "GDPR & ISO 27001:2022",
     "cta.trust2":         "एन्क्रिप्टेड भुगतान",
-    "cta.trust3":         "तत्काल प्रोविजनिंग",
+    "cta.trust3":         "Scalingo पर होस्टेड",
 
     "footer.desc":        "उत्पाद आर्किटेक्ट और तकनीकी संस्थापकों के लिए अंतिम AI-प्रथम कार्यक्षेत्र।",
     "footer.product":     "उत्पाद",
@@ -1176,7 +1176,7 @@ const translations = {
     "pricing.enterprise.sub":   "全球规模和安全要求。",
     "pricing.enterprise.cta":   "联系我们！",
     "pricing.enterprise.f1":    "无限席位",
-    "pricing.enterprise.f2":    "SOC-2合规",
+    "pricing.enterprise.f2":    "ISO 27001:2022认证",
     "pricing.enterprise.f3":    "SSO & SAML",
     "pricing.enterprise.f4":    "自定义数据训练",
 
@@ -1208,9 +1208,9 @@ const translations = {
     "cta.sub":            "今天就开始，以创纪录的时间从\"vibe\"到\"生产\"。无需信用卡。",
     "cta.primary":        "开始免费研究",
     "cta.secondary":      "预约演示",
-    "cta.trust1":         "符合GDPR & SOC-2",
+    "cta.trust1":         "GDPR & ISO 27001:2022",
     "cta.trust2":         "加密支付",
-    "cta.trust3":         "即时配置",
+    "cta.trust3":         "托管于Scalingo",
 
     "footer.desc":        "面向产品架构师和技术创始人的终极AI优先工作区。",
     "footer.product":     "产品",
