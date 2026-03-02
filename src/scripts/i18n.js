@@ -307,7 +307,7 @@ const translations = {
     "faq.q1":             "Behöver jag teknisk kunskap för att använda Vibemaster?",
     "faq.a1":             "Nej! Vibemaster är byggt för att överbrygga klyftan mellan fantasi och implementering. Oavsett om du är en icke-teknisk grundare eller en erfaren ingenjör översätter plattformen idéer på vanligt språk till rigorösa tekniska specifikationer.",
     "faq.q2":             "Hur integreras det med mitt befintliga arbetsflöde?",
-    "faq.a2":             "Vi integreras direkt med dina favoritverktyg. Exportera specifikationer som Markdown för GitHub, JSON för anpassade skript eller direkta copy-paste-kodblock optimerade för Cursor, VS Code och Replit.",
+    "faq.a2":             "Vi integreras direkt med dina favoritverktyg. Du får en prompt med allt du behöver för att ditt projekt ska lyckas. Denna prompt kan du använda och bara klistra in i den Vibekodningstjänst eller direkt i din IDE (VS Code, Cursor, Antigravity m.fl.). Som produktägare eller CTO får du även en hel affärsplan som grund för vidare diskussioner — och en roadmap.",
     "faq.q3":             "Är min immateriella egendom säker?",
     "faq.a3":             "Absolut. Vi använder inte dina egna idéer för att träna våra globala modeller. Din data är din. Vi använder kryptering på företagsnivå och erbjuder anpassade datalagringspolicyer.",
     "faq.q4":             "Kan jag byta plan senare?",

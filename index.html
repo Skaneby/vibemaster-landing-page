@@ -467,31 +467,26 @@
             <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 gradient-button text-white text-sm font-extrabold shadow-lg shadow-indigo-500/20 hover:scale-[1.02] transition-all" data-i18n="pricing.pro.cta">Go Pro</button>
             <ul class="flex flex-col gap-4">
               <li class="flex items-start gap-3 text-sm text-slate-300 font-bold"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f1">Unlimited Projects</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f2">Premium AI Models (GPT-4o)</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f3">Advanced Coding Prompts</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f4">JSON &amp; VS Code Integrations</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f5">Priority 24/7 Support</span></li>
               <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f6">Bring Your Own API Key (BYOK)</span></li>
             </ul>
           </div>
 
-          <!-- Studio -->
-          <div class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-indigo-500/40">
+          <!-- Team (coming soon) -->
+          <div class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-indigo-500/40 relative">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-slate-700 text-slate-300 text-[11px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg" data-i18n="pricing.studio.badge">Coming soon</div>
             <div class="flex flex-col gap-4">
               <h3 class="text-white text-xl font-bold" data-i18n="pricing.studio.name">Studio</h3>
               <div class="flex items-baseline gap-1">
                 <span class="text-white text-5xl font-black" data-i18n="pricing.studio.price">€49</span>
                 <span class="text-slate-400 text-sm font-semibold" data-i18n="pricing.studio.period">/mo</span>
               </div>
-              <p class="text-slate-400 text-sm" data-i18n="pricing.studio.sub">For teams up to 5 people.</p>
+              <p class="text-slate-400 text-sm" data-i18n="pricing.studio.sub">For teams up to 6 people.</p>
             </div>
-            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/10 text-white text-sm font-extrabold hover:bg-white/5 transition-all" data-i18n="pricing.studio.cta">Start Trial</button>
+            <button disabled class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/5 text-slate-600 text-sm font-extrabold cursor-not-allowed" data-i18n="pricing.studio.cta">Coming soon</button>
             <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f1">Up to 5 team seats</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f2">Shared component library</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f3">Collaborative real-time specs</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f4">Full API access</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f5">BYOK: Gemini, Claude &amp; Mistral</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f1">Up to 6 team seats</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f2">Shared projects</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f3">Claude &amp; Mistral via own API key</span></li>
             </ul>
           </div>
 
@@ -506,10 +501,10 @@
             </div>
             <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/10 text-white text-sm font-extrabold hover:bg-white/5 transition-all" data-i18n="pricing.enterprise.cta">Call us!</button>
             <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f1">Unlimited Seats</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f2">SOC-2 Compliance</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f3">SSO &amp; SAML</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f4">Custom data training</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f1">Custom number of seats</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f2">Shared branding</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f3">Shared projects</span></li>
+              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f4">Dedicated support</span></li>
             </ul>
           </div>
         </div>
