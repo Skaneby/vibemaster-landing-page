@@ -160,9 +160,9 @@ const translations = {
 
     "cta.h2":             "Ready to ship your next big idea?",
     "cta.primary":        "Get Started Now",
-    "cta.trust1":    "Hosted in EU",
+    "cta.trust1":         "EU Data Residency",
     "cta.trust2":         "Encrypted Payments",
-    "cta.trust3":         "Hosted on Scalingo",
+    "cta.trust3":         "Your ideas stay private",
 
     "footer.desc":        "The ultimate AI-first workspace for product architects and technical founders. Turning vision into verifiable architecture.",
     "footer.product":     "Product",
@@ -341,9 +341,9 @@ const translations = {
 
     "cta.h2":             "Redo att lansera din nästa stora idé?",
     "cta.primary":        "Kom igång nu",
-    "cta.trust1":    "Hostad i EU",
+    "cta.trust1":         "EU-datahemvist",
     "cta.trust2":         "Krypterade betalningar",
-    "cta.trust3":         "Hostad på Scalingo",
+    "cta.trust3":         "Dina idéer är privata",
 
     "footer.desc":        "Den ultimata AI-first-arbetsytan för produktarkitekter och tekniska grundare. Förvandlar vision till verifierbar arkitektur.",
     "footer.product":     "Produkt",
@@ -524,9 +524,9 @@ const translations = {
     "cta.sub":            "Starte noch heute und geh von \"Vibe\" zu \"Produktion\" in Rekordzeit. Keine Kreditkarte erforderlich.",
     "cta.primary":        "Kostenlose Recherche starten",
     "cta.secondary":      "Demo buchen",
-    "cta.trust1":    "In der EU gehostet",
+    "cta.trust1":         "EU-Datenspeicherung",
     "cta.trust2":         "Verschlüsselte Zahlungen",
-    "cta.trust3":         "Gehostet auf Scalingo",
+    "cta.trust3":         "Deine Ideen bleiben privat",
 
     "footer.desc":        "Der ultimative KI-First-Arbeitsbereich für Produktarchitekten und technische Gründer.",
     "footer.product":     "Produkt",
@@ -707,9 +707,9 @@ const translations = {
     "cta.sub":            "Empieza hoy y pasa de \"vibe\" a \"producción\" en tiempo récord. No se requiere tarjeta de crédito.",
     "cta.primary":        "Iniciar investigación gratuita",
     "cta.secondary":      "Reservar una demo",
-    "cta.trust1":    "Alojado en la UE",
+    "cta.trust1":         "Residencia de datos en la UE",
     "cta.trust2":         "Pagos cifrados",
-    "cta.trust3":      "Alojado en Scalingo",
+    "cta.trust3":         "Tus ideas se mantienen privadas",
 
     "footer.desc":        "El espacio de trabajo definitivo con IA para arquitectos de producto y fundadores técnicos.",
     "footer.product":     "Producto",
@@ -890,9 +890,9 @@ const translations = {
     "cta.sub":            "Commencez aujourd'hui et passez de \"vibe\" à \"production\" en un temps record. Aucune carte de crédit requise.",
     "cta.primary":        "Démarrer la recherche gratuite",
     "cta.secondary":      "Réserver une démo",
-    "cta.trust1":    "Hébergé dans l'UE",
+    "cta.trust1":         "Données hébergées dans l'UE",
     "cta.trust2":         "Paiements chiffrés",
-    "cta.trust3":         "Hébergé sur Scalingo",
+    "cta.trust3":         "Vos idées restent privées",
 
     "footer.desc":        "L'espace de travail IA ultime pour les architectes produit et les fondateurs techniques.",
     "footer.product":     "Produit",
@@ -1074,9 +1074,9 @@ const translations = {
     "cta.sub":            "आज ही शुरू करें और रिकॉर्ड समय में \"वाइब\" से \"प्रोडक्शन\" तक जाएं। क्रेडिट कार्ड की आवश्यकता नहीं।",
     "cta.primary":        "मुफ्त रिसर्च शुरू करें",
     "cta.secondary":      "डेमो बुक करें",
-    "cta.trust1":    "EU में होस्टेड",
+    "cta.trust1":         "EU डेटा स्थान",
     "cta.trust2":         "एन्क्रिप्टेड भुगतान",
-    "cta.trust3":         "Scalingo पर होस्टेड",
+    "cta.trust3":         "आपके विचार निजी रहते हैं",
 
     "footer.desc":        "उत्पाद आर्किटेक्ट और तकनीकी संस्थापकों के लिए अंतिम AI-प्रथम कार्यक्षेत्र।",
     "footer.product":     "उत्पाद",
@@ -1258,9 +1258,9 @@ const translations = {
     "cta.sub":            "今天就开始，以创纪录的时间从\"vibe\"到\"生产\"。无需信用卡。",
     "cta.primary":        "开始免费研究",
     "cta.secondary":      "预约演示",
-    "cta.trust1":    "托管于欧盟",
+    "cta.trust1":         "欧盟数据存储",
     "cta.trust2":         "加密支付",
-    "cta.trust3":         "托管于Scalingo",
+    "cta.trust3":         "您的想法保持私密",
 
     "footer.desc":        "面向产品架构师和技术创始人的终极AI优先工作区。",
     "footer.product":     "产品",
