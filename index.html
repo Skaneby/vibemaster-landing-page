@@ -581,9 +581,7 @@
         </div>
         <p class="text-slate-500 text-base leading-relaxed mb-8 max-w-sm" data-i18n="footer.desc">The ultimate AI-first workspace for product architects and technical founders.</p>
         <div class="flex gap-4">
-          <a class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-          <a class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-          <a class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" href="#"><span class="material-symbols-outlined">group</span></a>
+          <button onclick="shareVibemaster()" class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" title="Share Vibemaster"><span class="material-symbols-outlined">share</span></button>
         </div>
       </div>
       <div class="lg:col-span-2">
@@ -652,6 +650,20 @@
         a.addEventListener('click', closeNav);
       });
     })();
+  </script>
+
+  <script>
+    function shareVibemaster() {
+      var url = 'https://vibemaster.ai';
+      var title = 'Vibemaster — Turn your idea into an AI-buildable product';
+      if (navigator.share) {
+        navigator.share({ title: title, url: url });
+      } else {
+        navigator.clipboard.writeText(url).then(function () {
+          alert('Link copied: ' + url);
+        });
+      }
+    }
   </script>
 
   <!-- Design switcher disabled — re-enable when Stitch variant is in sync
