@@ -888,6 +888,7 @@ const translations = {
 
   // ──────────────────────────────────────────────
   // HINDI
+  // ⚠️  NEEDS NATIVE SPEAKER REVIEW — AI-translated, not verified
   // ──────────────────────────────────────────────
   hi: {
     "nav.gap":            "अंतर",
@@ -1065,6 +1066,7 @@ const translations = {
 
   // ──────────────────────────────────────────────
   // MANDARIN (SIMPLIFIED CHINESE)
+  // ⚠️  NEEDS NATIVE SPEAKER REVIEW — AI-translated, not verified
   // ──────────────────────────────────────────────
   zh: {
     "nav.gap":            "差距",
