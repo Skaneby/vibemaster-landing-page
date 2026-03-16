@@ -655,13 +655,12 @@
   <script>
     function shareVibemaster() {
       var url = 'https://vibemaster.ai';
-      var title = 'Vibemaster — Turn your idea into an AI-buildable product';
+      var subject = 'Jag vill tipsa om Vibemaster.ai';
+      var body = 'Med den här tjänsten blir det mycket enklare att arbeta med de vanligaste vibekodningstjänsterna.\n\nVibemaster är lite som receptet (prompten) som du ger till kocken (vibekodningstjänsten). Med rätt information i receptet bygger du din idé både snabbare och bättre.\n\nProva — det finns en gratis trial!\n\n' + url;
       if (navigator.share) {
-        navigator.share({ title: title, url: url });
+        navigator.share({ title: subject, text: body, url: url });
       } else {
-        navigator.clipboard.writeText(url).then(function () {
-          alert('Link copied: ' + url);
-        });
+        window.location.href = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       }
     }
   </script>
