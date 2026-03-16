@@ -51,7 +51,7 @@ const translations = {
     "hiw.step2.h4":       "2. We translate to tech",
     "hiw.step2.p":        "We instantly translate your vision into a buildable system: database schemas, API routes, and feature specs optimized for AI builders.",
     "hiw.step3.h4":       "3. Build instantly",
-    "hiw.step3.p":        "Paste our generated prompts into your favourite IDE or vibecoding service. Watch your app come to life without the usual AI hallucination errors.",
+    "hiw.step3.p":        "Paste your Vibemaster plan directly into <a href='https://aistudio.google.com/app/prompts/new_chat' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Google AI Studio</a>, <a href='https://lovable.dev' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Lovable</a>, <a href='https://bolt.new' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Bolt.new</a>, <a href='https://replit.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Replit</a>, <a href='https://cursor.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Cursor</a>. Watch your app come to life — no hallucinations, no guessing.",
 
     "testimonials.badge": "Wall of Love",
     "testimonials.h2":    "Turning ideas into specs for the world's fastest builders",
@@ -232,7 +232,7 @@ const translations = {
     "hiw.step2.h4":       "2. Vi översätter till teknik",
     "hiw.step2.p":        "Vi översätter omedelbart din vision till ett byggbart system: databasscheman, API-rutter och funktionsspecifikationer optimerade för AI-byggare.",
     "hiw.step3.h4":       "3. Bygg direkt",
-    "hiw.step3.p":        "Klistra in våra genererade promptar i din favorit-IDE eller vibecoding-tjänst. Se din app ta form utan de vanliga AI-hallucinationsfelen.",
+    "hiw.step3.p":        "Klistra in din Vibemaster-plan direkt i <a href='https://aistudio.google.com/app/prompts/new_chat' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Google AI Studio</a>, <a href='https://lovable.dev' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Lovable</a>, <a href='https://bolt.new' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Bolt.new</a>, <a href='https://replit.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Replit</a>, <a href='https://cursor.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Cursor</a>. Se din app ta form — inga hallucinationer, inget gissande.",
 
     "testimonials.badge": "Kärleksmuren",
     "testimonials.h2":    "Förvandlar idéer till specifikationer för världens snabbaste byggare",
@@ -413,7 +413,7 @@ const translations = {
     "hiw.step2.h4":       "2. Wir übersetzen in Technik",
     "hiw.step2.p":        "Wir übersetzen deine Vision sofort in ein baubares System: Datenbankschemata, API-Routen und Feature-Specs, optimiert für KI-Builder.",
     "hiw.step3.h4":       "3. Sofort bauen",
-    "hiw.step3.p":        "Füge unsere generierten Prompts in deine bevorzugte IDE oder deinen Vibecoding-Dienst ein. Sieh zu, wie deine App ohne die üblichen KI-Halluzinationsfehler entsteht.",
+    "hiw.step3.p":        "Füge deinen Vibemaster-Plan direkt in <a href='https://aistudio.google.com/app/prompts/new_chat' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Google AI Studio</a>, <a href='https://lovable.dev' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Lovable</a>, <a href='https://bolt.new' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Bolt.new</a>, <a href='https://replit.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Replit</a>, <a href='https://cursor.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Cursor</a> ein. Sieh zu, wie deine App entsteht — ohne Halluzinationen, ohne Rätselraten.",
 
     "testimonials.badge": "Begeisterte Nutzer",
     "testimonials.h2":    "Ideen in Spezifikationen für die schnellsten Builder der Welt verwandeln",
@@ -596,7 +596,7 @@ const translations = {
     "hiw.step2.h4":       "2. Traducimos a tecnología",
     "hiw.step2.p":        "Traducimos instantáneamente tu visión en un sistema construible: esquemas de base de datos, rutas API y especificaciones optimizadas para constructores de IA.",
     "hiw.step3.h4":       "3. Construye al instante",
-    "hiw.step3.p":        "Pega nuestros prompts generados en tu IDE favorito o servicio de vibecoding. Observa cómo tu app cobra vida sin los errores habituales de alucinación de IA.",
+    "hiw.step3.p":        "Pega tu plan de Vibemaster directamente en <a href='https://aistudio.google.com/app/prompts/new_chat' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Google AI Studio</a>, <a href='https://lovable.dev' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Lovable</a>, <a href='https://bolt.new' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Bolt.new</a>, <a href='https://replit.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Replit</a>, <a href='https://cursor.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Cursor</a>. Observa cómo tu app cobra vida — sin alucinaciones, sin adivinar.",
 
     "testimonials.badge": "Muro del Amor",
     "testimonials.h2":    "Convirtiendo ideas en especificaciones para los constructores más rápidos del mundo",
@@ -779,7 +779,7 @@ const translations = {
     "hiw.step2.h4":       "2. Nous traduisons en technologie",
     "hiw.step2.p":        "Nous traduisons instantanément votre vision en un système constructible : schémas de base de données, routes API et spécifications optimisées pour les constructeurs IA.",
     "hiw.step3.h4":       "3. Construisez instantanément",
-    "hiw.step3.p":        "Collez nos prompts générés dans votre IDE favori ou service de vibecoding. Regardez votre application prendre vie sans les erreurs habituelles d'hallucination IA.",
+    "hiw.step3.p":        "Collez votre plan Vibemaster directement dans <a href='https://aistudio.google.com/app/prompts/new_chat' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Google AI Studio</a>, <a href='https://lovable.dev' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Lovable</a>, <a href='https://bolt.new' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Bolt.new</a>, <a href='https://replit.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Replit</a>, <a href='https://cursor.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Cursor</a>. Regardez votre application prendre vie — sans hallucinations, sans devinettes.",
 
     "testimonials.badge": "Mur d'Amour",
     "testimonials.h2":    "Transformer des idées en spécifications pour les constructeurs les plus rapides du monde",
@@ -963,7 +963,7 @@ const translations = {
     "hiw.step2.h4":       "2. हम तकनीक में अनुवाद करते हैं",
     "hiw.step2.p":        "हम तुरंत आपकी दृष्टि को एक निर्मित प्रणाली में अनुवाद करते हैं: डेटाबेस स्कीमा, API रूट और फीचर स्पेक्स।",
     "hiw.step3.h4":       "3. तुरंत बनाएं",
-    "hiw.step3.p":        "हमारे जेनरेट किए गए प्रॉम्प्ट को अपनी पसंदीदा IDE या vibecoding सेवा में पेस्ट करें। सामान्य AI हेलुसिनेशन त्रुटियों के बिना अपना ऐप जीवंत होते देखें।",
+    "hiw.step3.p":        "अपना Vibemaster प्लान सीधे <a href='https://aistudio.google.com/app/prompts/new_chat' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Google AI Studio</a>, <a href='https://lovable.dev' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Lovable</a>, <a href='https://bolt.new' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Bolt.new</a>, <a href='https://replit.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Replit</a>, <a href='https://cursor.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Cursor</a> में पेस्ट करें। देखें आपका ऐप कैसे जीवंत होता है — कोई hallucination नहीं, कोई अनुमान नहीं।",
 
     "testimonials.badge": "प्रेम की दीवार",
     "testimonials.h2":    "दुनिया के सबसे तेज़ बिल्डर्स के लिए विचारों को स्पेक्स में बदलना",
@@ -1147,7 +1147,7 @@ const translations = {
     "hiw.step2.h4":       "2. 我们翻译成技术",
     "hiw.step2.p":        "我们立即将你的愿景转化为可构建的系统：数据库模式、API路由和针对AI构建者优化的功能规格。",
     "hiw.step3.h4":       "3. 立即构建",
-    "hiw.step3.p":        "将我们生成的提示词粘贴到您喜爱的IDE或vibecoding服务中。观看你的应用程序在没有常见AI幻觉错误的情况下成形。",
+    "hiw.step3.p":        "将您的 Vibemaster 计划直接粘贴到 <a href='https://aistudio.google.com/app/prompts/new_chat' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Google AI Studio</a>, <a href='https://lovable.dev' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Lovable</a>, <a href='https://bolt.new' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Bolt.new</a>, <a href='https://replit.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Replit</a>, <a href='https://cursor.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Cursor</a>。看您的应用程序栩栩如生——没有幻觉，无需猜测。",
 
     "testimonials.badge": "用户之声",
     "testimonials.h2":    "为全球最快的构建者将想法转化为规格",
