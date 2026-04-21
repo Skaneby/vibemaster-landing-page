@@ -201,6 +201,36 @@ const translations = {
     "footer.privacy":     "Privacy",
     "footer.terms":       "Terms",
     "footer.security":    "Security",
+
+    "who.eyebrow":        "Who it's for",
+    "problem.eyebrow":    "The problem",
+    "hiw.eyebrow":        "The bridge",
+    "hiw.step1.label":    "Step 01",
+    "hiw.step2.label":    "Step 02",
+    "hiw.step3.label":    "Step 03",
+    "pricing.eyebrow":    "Pricing",
+    "faq.eyebrow":        "FAQ",
+
+    "hero.trust1.sub":    "EU-hosted · Paris",
+    "hero.trust2.sub":    "BYOK supported",
+    "hero.trust3.sub":    "Free forever plan",
+
+    "pricing.pro.f2":     "Version history & diffs",
+    "pricing.pro.f3":     "Export to JSON & PDF",
+    "pricing.pro.f4":     "Priority generation queue",
+
+    "cta.trust1.sub":     "Paris · Scalingo · GDPR",
+    "cta.trust2.sub":     "Stripe · SOC2 partners",
+    "cta.trust3.sub":     "BYOK · anonymised training only",
+
+    "footer.usecases":    "Use cases",
+    "footer.uc.founders": "For founders",
+    "footer.uc.pms":      "For PMs",
+    "footer.uc.devs":     "For developers",
+    "footer.resources":   "Resources",
+    "footer.r.docs":      "Docs",
+    "footer.r.community": "Community",
+    "footer.r.status":    "Status",
   },
 
   // ──────────────────────────────────────────────
@@ -399,6 +429,36 @@ const translations = {
     "footer.privacy":     "Integritet",
     "footer.terms":       "Villkor",
     "footer.security":    "Säkerhet",
+
+    "who.eyebrow":        "För vem",
+    "problem.eyebrow":    "Problemet",
+    "hiw.eyebrow":        "Bryggan",
+    "hiw.step1.label":    "Steg 01",
+    "hiw.step2.label":    "Steg 02",
+    "hiw.step3.label":    "Steg 03",
+    "pricing.eyebrow":    "Priser",
+    "faq.eyebrow":        "Vanliga frågor",
+
+    "hero.trust1.sub":    "EU-hostad · Paris",
+    "hero.trust2.sub":    "BYOK stöds",
+    "hero.trust3.sub":    "Gratis för alltid",
+
+    "pricing.pro.f2":     "Versionshistorik & diff",
+    "pricing.pro.f3":     "Exportera till JSON & PDF",
+    "pricing.pro.f4":     "Prioriterad genereringskö",
+
+    "cta.trust1.sub":     "Paris · Scalingo · GDPR",
+    "cta.trust2.sub":     "Stripe · SOC2-partners",
+    "cta.trust3.sub":     "BYOK · endast anonym träning",
+
+    "footer.usecases":    "Användningsfall",
+    "footer.uc.founders": "För grundare",
+    "footer.uc.pms":      "För produktchefer",
+    "footer.uc.devs":     "För utvecklare",
+    "footer.resources":   "Resurser",
+    "footer.r.docs":      "Docs",
+    "footer.r.community": "Community",
+    "footer.r.status":    "Status",
   },
 
   // ──────────────────────────────────────────────
@@ -599,6 +659,36 @@ const translations = {
     "footer.privacy":     "Datenschutz",
     "footer.terms":       "AGB",
     "footer.security":    "Sicherheit",
+
+    "who.eyebrow":        "Für wen",
+    "problem.eyebrow":    "Das Problem",
+    "hiw.eyebrow":        "Die Brücke",
+    "hiw.step1.label":    "Schritt 01",
+    "hiw.step2.label":    "Schritt 02",
+    "hiw.step3.label":    "Schritt 03",
+    "pricing.eyebrow":    "Preise",
+    "faq.eyebrow":        "FAQ",
+
+    "hero.trust1.sub":    "EU-gehostet · Paris",
+    "hero.trust2.sub":    "BYOK unterstützt",
+    "hero.trust3.sub":    "Kostenloser Dauerplan",
+
+    "pricing.pro.f2":     "Versionsverlauf & Diffs",
+    "pricing.pro.f3":     "Export als JSON & PDF",
+    "pricing.pro.f4":     "Priorisierte Generierungswarteschlange",
+
+    "cta.trust1.sub":     "Paris · Scalingo · DSGVO",
+    "cta.trust2.sub":     "Stripe · SOC2-Partner",
+    "cta.trust3.sub":     "BYOK · nur anonymisiertes Training",
+
+    "footer.usecases":    "Anwendungsfälle",
+    "footer.uc.founders": "Für Gründer",
+    "footer.uc.pms":      "Für Produktmanager",
+    "footer.uc.devs":     "Für Entwickler",
+    "footer.resources":   "Ressourcen",
+    "footer.r.docs":      "Docs",
+    "footer.r.community": "Community",
+    "footer.r.status":    "Status",
   },
 
   // ──────────────────────────────────────────────
@@ -799,6 +889,36 @@ const translations = {
     "footer.privacy":     "Privacidad",
     "footer.terms":       "Términos",
     "footer.security":    "Seguridad",
+
+    "who.eyebrow":        "Para quién",
+    "problem.eyebrow":    "El problema",
+    "hiw.eyebrow":        "El puente",
+    "hiw.step1.label":    "Paso 01",
+    "hiw.step2.label":    "Paso 02",
+    "hiw.step3.label":    "Paso 03",
+    "pricing.eyebrow":    "Precios",
+    "faq.eyebrow":        "Preguntas frecuentes",
+
+    "hero.trust1.sub":    "Alojado en UE · París",
+    "hero.trust2.sub":    "BYOK compatible",
+    "hero.trust3.sub":    "Plan gratuito permanente",
+
+    "pricing.pro.f2":     "Historial de versiones & diffs",
+    "pricing.pro.f3":     "Exportar a JSON & PDF",
+    "pricing.pro.f4":     "Cola de generación prioritaria",
+
+    "cta.trust1.sub":     "París · Scalingo · RGPD",
+    "cta.trust2.sub":     "Stripe · socios SOC2",
+    "cta.trust3.sub":     "BYOK · solo entrenamiento anónimo",
+
+    "footer.usecases":    "Casos de uso",
+    "footer.uc.founders": "Para fundadores",
+    "footer.uc.pms":      "Para gestores de producto",
+    "footer.uc.devs":     "Para desarrolladores",
+    "footer.resources":   "Recursos",
+    "footer.r.docs":      "Documentación",
+    "footer.r.community": "Comunidad",
+    "footer.r.status":    "Estado",
   },
 
   // ──────────────────────────────────────────────
@@ -999,6 +1119,36 @@ const translations = {
     "footer.privacy":     "Confidentialité",
     "footer.terms":       "Conditions",
     "footer.security":    "Sécurité",
+
+    "who.eyebrow":        "Pour qui",
+    "problem.eyebrow":    "Le problème",
+    "hiw.eyebrow":        "Le pont",
+    "hiw.step1.label":    "Étape 01",
+    "hiw.step2.label":    "Étape 02",
+    "hiw.step3.label":    "Étape 03",
+    "pricing.eyebrow":    "Tarifs",
+    "faq.eyebrow":        "Questions fréquentes",
+
+    "hero.trust1.sub":    "Hébergé en UE · Paris",
+    "hero.trust2.sub":    "BYOK supporté",
+    "hero.trust3.sub":    "Plan gratuit à vie",
+
+    "pricing.pro.f2":     "Historique des versions & diffs",
+    "pricing.pro.f3":     "Export JSON & PDF",
+    "pricing.pro.f4":     "File de génération prioritaire",
+
+    "cta.trust1.sub":     "Paris · Scalingo · RGPD",
+    "cta.trust2.sub":     "Stripe · partenaires SOC2",
+    "cta.trust3.sub":     "BYOK · entraînement anonymisé uniquement",
+
+    "footer.usecases":    "Cas d'usage",
+    "footer.uc.founders": "Pour les fondateurs",
+    "footer.uc.pms":      "Pour les chefs de produit",
+    "footer.uc.devs":     "Pour les développeurs",
+    "footer.resources":   "Ressources",
+    "footer.r.docs":      "Documentation",
+    "footer.r.community": "Communauté",
+    "footer.r.status":    "Statut",
   },
 
   // ──────────────────────────────────────────────
@@ -1200,6 +1350,36 @@ const translations = {
     "footer.privacy":     "गोपनीयता",
     "footer.terms":       "शर्तें",
     "footer.security":    "सुरक्षा",
+
+    "who.eyebrow":        "किसके लिए",
+    "problem.eyebrow":    "समस्या",
+    "hiw.eyebrow":        "पुल",
+    "hiw.step1.label":    "चरण 01",
+    "hiw.step2.label":    "चरण 02",
+    "hiw.step3.label":    "चरण 03",
+    "pricing.eyebrow":    "मूल्य",
+    "faq.eyebrow":        "सामान्य प्रश्न",
+
+    "hero.trust1.sub":    "EU-होस्टेड · पेरिस",
+    "hero.trust2.sub":    "BYOK समर्थित",
+    "hero.trust3.sub":    "हमेशा के लिए निःशुल्क",
+
+    "pricing.pro.f2":     "संस्करण इतिहास और diffs",
+    "pricing.pro.f3":     "JSON & PDF में निर्यात",
+    "pricing.pro.f4":     "प्राथमिकता जनरेशन कतार",
+
+    "cta.trust1.sub":     "पेरिस · Scalingo · GDPR",
+    "cta.trust2.sub":     "Stripe · SOC2 पार्टनर",
+    "cta.trust3.sub":     "BYOK · केवल अनाम प्रशिक्षण",
+
+    "footer.usecases":    "उपयोग के मामले",
+    "footer.uc.founders": "संस्थापकों के लिए",
+    "footer.uc.pms":      "PM के लिए",
+    "footer.uc.devs":     "डेवलपर्स के लिए",
+    "footer.resources":   "संसाधन",
+    "footer.r.docs":      "दस्तावेज़",
+    "footer.r.community": "समुदाय",
+    "footer.r.status":    "स्टेटस",
   },
 
   // ──────────────────────────────────────────────
@@ -1401,6 +1581,36 @@ const translations = {
     "footer.privacy":     "隐私",
     "footer.terms":       "条款",
     "footer.security":    "安全",
+
+    "who.eyebrow":        "适合谁",
+    "problem.eyebrow":    "问题所在",
+    "hiw.eyebrow":        "桥梁",
+    "hiw.step1.label":    "步骤 01",
+    "hiw.step2.label":    "步骤 02",
+    "hiw.step3.label":    "步骤 03",
+    "pricing.eyebrow":    "定价",
+    "faq.eyebrow":        "常见问题",
+
+    "hero.trust1.sub":    "欧盟托管 · 巴黎",
+    "hero.trust2.sub":    "支持 BYOK",
+    "hero.trust3.sub":    "永久免费计划",
+
+    "pricing.pro.f2":     "版本历史和差异对比",
+    "pricing.pro.f3":     "导出为 JSON 和 PDF",
+    "pricing.pro.f4":     "优先生成队列",
+
+    "cta.trust1.sub":     "巴黎 · Scalingo · GDPR",
+    "cta.trust2.sub":     "Stripe · SOC2 合作伙伴",
+    "cta.trust3.sub":     "BYOK · 仅匿名训练数据",
+
+    "footer.usecases":    "使用场景",
+    "footer.uc.founders": "适合创始人",
+    "footer.uc.pms":      "适合产品经理",
+    "footer.uc.devs":     "适合开发者",
+    "footer.resources":   "资源",
+    "footer.r.docs":      "文档",
+    "footer.r.community": "社区",
+    "footer.r.status":    "状态",
   },
 };
 
