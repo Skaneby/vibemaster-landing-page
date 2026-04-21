@@ -1,692 +1,902 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html class="light" lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://lh3.googleusercontent.com; connect-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
   <meta name="referrer" content="strict-origin-when-cross-origin"/>
-  <title>Vibemaster | The Idea to Build Bridge</title>
-  <meta name="description" content="Turn your idea into something AI builders can actually build." />
+  <title>Vibemaster — Turn your idea into a spec AI can build</title>
+  <meta name="description" content="Vibemaster interviews you, writes the product spec, and hands it to Lovable, Cursor, Bolt or Replit — no vague prompts, no broken builds." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
   <link rel="stylesheet" href="src/styles/output.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    .icon { width:1em; height:1em; display:inline-block; vertical-align:-.14em; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+    .mono { font-family:'JetBrains Mono', monospace; }
+    .serif-em { font-family:'Instrument Serif', Georgia, serif; font-style:italic; font-weight:400; }
+    .card-tactile { background:#F5F5E6; border:1px solid rgba(184,188,163,.35); border-radius:20px; box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 -1px 0 rgba(54,58,39,.04) inset,0 12px 28px rgba(54,58,39,.06),0 2px 4px rgba(54,58,39,.04); }
+    .card-flat { background:#F5F5E6; border:1px solid rgba(184,188,163,.4); border-radius:16px; }
+    .btn-ink { background:#1E2113; color:#FAFAEB; border:1px solid #1E2113; transition:transform .15s,background .15s; }
+    .btn-ink:hover { background:#2A2E1D; transform:translateY(-1px); }
+    .btn-outline { background:transparent; color:#1E2113; border:2px solid rgba(30,33,19,.2); transition:border-color .15s; }
+    .btn-outline:hover { border-color:rgba(30,33,19,.5); }
+    .faq-row { border-bottom:1px solid rgba(184,188,163,.45); }
+    .faq-row:last-child { border-bottom:0; }
+    .grain { position:relative; }
+    .grain::after { content:''; position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(rgba(90,94,69,.05) 1px, transparent 1px); background-size:3px 3px; opacity:.5; mix-blend-mode:multiply; }
+    @keyframes traveler { 0%,100% { left:8%; } 50% { left:92%; } }
+    .traveler { animation:traveler 5s ease-in-out infinite; }
+    section[id] { scroll-margin-top:72px; }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline:2px solid #6B7A2F; outline-offset:3px; border-radius:6px; }
+  </style>
 </head>
-<body class="bg-background-dark font-display text-slate-100 selection:bg-indigo-500/30">
+<body style="background:#FAFAEB; color:#1E2113; font-family:'Plus Jakarta Sans',system-ui,sans-serif; font-weight:500;">
 
-  <!-- HEADER -->
-  <header class="fixed top-0 w-full z-50 border-b border-white/10" style="background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);">
-    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <div class="size-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-          <span class="material-symbols-outlined text-white text-xl">link</span>
+<!-- ============ SVG ICON SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-arrow-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6z"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.85 12.15 20 3m-3 3 3 3m-6 0 3 3"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 4 14h7l-1 7 9-11h-7z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v6m0 6v6m-9-9h6m6 0h6M6 6l3 3m6 6 3 3M6 18l3-3m6-6 3-3"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M7 17V9h5l-2 4h2v4zm8 0V9h5l-2 4h2v4z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 24 24"><path d="M4 18 10 6l4 8 6-12" stroke-width="2.4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h6"/></symbol>
+    <symbol id="i-spreadsheet" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51 15.42 17.49M15.41 6.51 8.59 10.49"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="fixed top-0 inset-x-0 z-50 border-b border-mist/50" style="background:rgba(250,250,235,.92); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);">
+  <div class="max-w-[1200px] mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5">
+      <span class="size-7 rounded-md bg-ink text-ivory flex items-center justify-center">
+        <svg class="icon" style="font-size:14px"><use href="#i-logo"/></svg>
+      </span>
+      <span class="text-[15px] font-black tracking-tight text-ink">Vibemaster</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium text-moss">
+      <a href="#problem" class="hover:text-ink transition-colors" data-i18n="nav.gap">The Gap</a>
+      <a href="#how-it-works" class="hover:text-ink transition-colors" data-i18n="nav.process">Process</a>
+      <a href="#pricing" class="hover:text-ink transition-colors" data-i18n="nav.pricing">Pricing</a>
+      <a href="#testimonials" class="hover:text-ink transition-colors" data-i18n="nav.reviews">Reviews</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <!-- Language switcher -->
+      <div class="hidden sm:block relative" id="lang-switcher">
+        <button id="lang-trigger" onclick="toggleLangMenu()" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu"
+          class="flex items-center gap-1.5 border border-mist/60 rounded-lg px-2.5 py-1.5 text-[11px] font-bold mono tracking-widest text-charcoal hover:border-stone/60 transition-colors">
+          <span id="lang-current">EN</span>
+          <svg class="icon" style="font-size:11px"><use href="#i-arrow-down"/></svg>
+        </button>
+        <div id="lang-menu" style="display:none;position:absolute;right:0;top:calc(100% + 8px);min-width:140px;background:rgba(250,250,235,.98);border:1px solid rgba(184,188,163,.5);border-radius:12px;padding:6px;box-shadow:0 12px 40px rgba(54,58,39,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:9998">
+          <button data-lang-btn="en" onclick="vmSetLang('en');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">EN · English</button>
+          <button data-lang-btn="sv" onclick="vmSetLang('sv');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">SV · Svenska</button>
+          <button data-lang-btn="de" onclick="vmSetLang('de');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">DE · Deutsch</button>
+          <button data-lang-btn="es" onclick="vmSetLang('es');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">ES · Español</button>
+          <button data-lang-btn="fr" onclick="vmSetLang('fr');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">FR · Français</button>
+          <button data-lang-btn="hi" onclick="vmSetLang('hi');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">HI · हिंदी</button>
+          <button data-lang-btn="zh" onclick="vmSetLang('zh');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">ZH · 中文</button>
         </div>
-        <h2 class="text-white text-lg font-bold tracking-tight">Vibemaster</h2>
       </div>
-      <nav class="hidden md:flex items-center gap-8">
-        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#problem" data-i18n="nav.gap">The Gap</a>
-        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#how-it-works" data-i18n="nav.process">Process</a>
-        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#pricing" data-i18n="nav.pricing">Pricing</a>
-        <a class="text-slate-400 hover:text-white text-sm font-medium transition-colors" href="#testimonials" data-i18n="nav.reviews">Reviews</a>
-      </nav>
-      <div class="flex items-center gap-3">
-        <!-- Language switcher -->
-        <div class="hidden sm:block relative" id="lang-switcher">
-          <button id="lang-trigger" onclick="toggleLangMenu()" style="display:flex;align-items:center;gap:5px;border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:5px 10px;background:transparent;cursor:pointer;color:#e2e8f0;font-size:11px;font-weight:700;letter-spacing:0.05em;transition:border-color .15s" onmouseover="this.style.borderColor='rgba(255,255,255,0.22)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)'">
-            <span id="lang-current">EN</span>
-            <span class="material-symbols-outlined" style="font-size:14px;line-height:1;color:#475569">expand_more</span>
-          </button>
-          <div id="lang-menu" style="display:none;position:absolute;right:0;top:calc(100% + 8px);min-width:130px;background:rgba(4,7,16,0.97);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:6px;box-shadow:0 12px 40px rgba(0,0,0,0.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:9998">
-            <button data-lang-btn="en" onclick="vmSetLang('en');closeLangMenu()">EN — English</button>
-            <button data-lang-btn="sv" onclick="vmSetLang('sv');closeLangMenu()">SV — Svenska</button>
-            <button data-lang-btn="de" onclick="vmSetLang('de');closeLangMenu()">DE — Deutsch</button>
-            <button data-lang-btn="es" onclick="vmSetLang('es');closeLangMenu()">ES — Español</button>
-            <button data-lang-btn="fr" onclick="vmSetLang('fr');closeLangMenu()">FR — Français</button>
-            <button data-lang-btn="hi" onclick="vmSetLang('hi');closeLangMenu()">HI — हिंदी</button>
-            <button data-lang-btn="zh" onclick="vmSetLang('zh');closeLangMenu()">ZH — 中文</button>
+      <a href="https://app.vibemaster.ai/" class="hidden sm:inline-block text-[13px] font-medium text-moss hover:text-ink transition-colors" data-i18n="nav.login">Login</a>
+      <a href="https://app.vibemaster.ai/" class="btn-ink inline-flex items-center gap-1.5 text-[13px] font-bold px-4 py-2 rounded-lg" data-i18n="nav.cta">Start Building</a>
+      <button id="nav-toggle" class="md:hidden size-9 flex items-center justify-center text-moss hover:text-ink transition-colors" aria-label="Menu" aria-expanded="false">
+        <svg class="icon" style="font-size:20px" id="nav-icon-menu"><use href="#i-menu"/></svg>
+        <svg class="icon hidden" style="font-size:20px" id="nav-icon-close"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <div id="mobile-nav" class="hidden md:hidden border-t border-mist/30 px-6 py-3" style="background:rgba(250,250,235,.97);">
+    <a href="#problem" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.gap">The Gap</a>
+    <a href="#how-it-works" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.process">Process</a>
+    <a href="#pricing" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.pricing">Pricing</a>
+    <a href="#testimonials" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.reviews">Reviews</a>
+    <a href="https://app.vibemaster.ai/" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.login">Login</a>
+    <div class="py-3 border-b border-mist/30">
+      <div class="flex flex-wrap gap-2">
+        <button onclick="vmSetLang('en')" data-lang-btn="en" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">EN</button>
+        <button onclick="vmSetLang('sv')" data-lang-btn="sv" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">SV</button>
+        <button onclick="vmSetLang('de')" data-lang-btn="de" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">DE</button>
+        <button onclick="vmSetLang('es')" data-lang-btn="es" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">ES</button>
+        <button onclick="vmSetLang('fr')" data-lang-btn="fr" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">FR</button>
+        <button onclick="vmSetLang('hi')" data-lang-btn="hi" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">HI</button>
+        <button onclick="vmSetLang('zh')" data-lang-btn="zh" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">ZH</button>
+      </div>
+    </div>
+    <div class="py-4">
+      <a href="https://app.vibemaster.ai/" class="btn-ink block w-full text-center text-sm font-bold px-6 py-3 rounded-xl" data-i18n="nav.cta">Start Building</a>
+    </div>
+  </div>
+</header>
+
+<main id="top" class="pt-14">
+
+<!-- ============ HERO ============ -->
+<section class="relative overflow-hidden pt-20 pb-24 grain">
+  <div aria-hidden="true" class="absolute -z-10 inset-0">
+    <div class="absolute top-10 -left-20 w-[520px] h-[520px] rounded-full" style="background:radial-gradient(closest-side, rgba(107,122,47,.15), transparent 70%); filter:blur(20px);"></div>
+    <div class="absolute bottom-0 -right-10 w-[440px] h-[440px] rounded-full" style="background:radial-gradient(closest-side, rgba(176,143,74,.12), transparent 70%); filter:blur(20px);"></div>
+  </div>
+
+  <div class="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-[1.05fr_1fr] gap-14 items-center">
+
+    <!-- LEFT · text -->
+    <div>
+      <div class="inline-flex items-center gap-2 mb-6">
+        <span class="size-1.5 rounded-full bg-olive animate-pulse"></span>
+        <span class="mono text-[10.5px] uppercase tracking-[0.22em] text-olive font-bold" data-i18n="hero.badge">Built for non-technical founders, operators and creators</span>
+      </div>
+
+      <h1 class="text-[44px] md:text-[64px] lg:text-[68px] font-black leading-[0.98] tracking-[-0.02em]">
+        <span data-i18n="hero.h1.a">You bring the idea. We make it</span> <span class="serif-em text-olive" data-i18n="hero.h1.b">buildable.</span><span data-i18n="hero.h1.c"></span>
+      </h1>
+
+      <p class="mt-6 text-[17px] text-moss leading-relaxed max-w-lg" data-i18n="hero.sub">
+        Most people can't describe what they want to build. That's why AI fails. Vibemaster solves that.
+      </p>
+
+      <div class="mt-6 flex flex-col gap-3">
+        <p class="text-xs font-bold text-olive uppercase tracking-wider mono" data-i18n="hero.deliverables.label">From idea to buildable</p>
+        <ul class="flex flex-col gap-2">
+          <li class="flex items-center gap-2 text-[14px] text-ink">
+            <svg class="icon text-olive shrink-0" style="font-size:15px"><use href="#i-check"/></svg>
+            <span data-i18n="hero.del1">Product structure</span>
+          </li>
+          <li class="flex items-center gap-2 text-[14px] text-ink">
+            <svg class="icon text-olive shrink-0" style="font-size:15px"><use href="#i-check"/></svg>
+            <span data-i18n="hero.del2">User flows</span>
+          </li>
+          <li class="flex items-center gap-2 text-[14px] text-ink">
+            <svg class="icon text-olive shrink-0" style="font-size:15px"><use href="#i-check"/></svg>
+            <span data-i18n="hero.del3">Data model</span>
+          </li>
+          <li class="flex items-center gap-2 text-[14px] text-ink">
+            <svg class="icon text-olive shrink-0" style="font-size:15px"><use href="#i-check"/></svg>
+            <span data-i18n="hero.del4">AI build instructions</span>
+          </li>
+        </ul>
+        <p class="text-sm text-stone italic" data-i18n="hero.positioning">Vibemaster is the layer between idea and AI building.</p>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="https://app.vibemaster.ai/" class="btn-ink inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[15px] font-bold" data-i18n="hero.cta.primary">
+          Make My Idea Buildable
+        </a>
+        <a href="#how-it-works" class="btn-outline inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[15px] font-bold">
+          <svg class="icon" style="font-size:16px"><use href="#i-play"/></svg>
+          <span data-i18n="hero.cta.secondary">How it works</span>
+        </a>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-mist/60 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12.5px] text-moss">
+        <span class="flex items-center gap-1.5"><svg class="icon text-olive" style="font-size:14px"><use href="#i-shield"/></svg>EU-hosted · Paris</span>
+        <span class="flex items-center gap-1.5"><svg class="icon text-olive" style="font-size:14px"><use href="#i-key"/></svg>BYOK supported</span>
+        <span class="flex items-center gap-1.5"><svg class="icon text-olive" style="font-size:14px"><use href="#i-bolt"/></svg>Free forever plan</span>
+      </div>
+    </div>
+
+    <!-- RIGHT · document mock -->
+    <div class="relative">
+      <div class="absolute inset-0 translate-x-3 translate-y-3 rounded-[22px]" style="background:rgba(235,235,213,.8);" aria-hidden="true"></div>
+      <div class="relative card-tactile p-0 overflow-hidden">
+        <!-- browser bar -->
+        <div class="flex items-center gap-1.5 px-3 py-2.5 border-b border-mist/50" style="background:#F5F5E6;">
+          <span class="size-2.5 rounded-full" style="background:rgba(180,65,42,.5)"></span>
+          <span class="size-2.5 rounded-full" style="background:rgba(200,138,31,.5)"></span>
+          <span class="size-2.5 rounded-full" style="background:rgba(107,122,47,.5)"></span>
+          <div class="flex-1 ml-2 h-5 rounded border border-mist/50 flex items-center justify-center px-2" style="background:#FAFAEB;">
+            <svg class="icon text-stone mr-1.5" style="font-size:10px"><use href="#i-lock"/></svg>
+            <span class="mono text-[10px] text-stone">app.vibemaster.ai/projects/coffee-box</span>
           </div>
         </div>
-        <a href="https://app.vibemaster.ai/" class="hidden sm:block text-slate-400 hover:text-white text-sm font-medium transition-colors" data-i18n="nav.login">Login</a>
-        <a href="https://app.vibemaster.ai/" class="hidden sm:block gradient-button text-white text-sm font-bold px-6 py-2.5 rounded-full shadow-lg shadow-indigo-500/20 hover:scale-105" data-i18n="nav.cta">Start Building</a>
-        <button id="nav-toggle" class="md:hidden flex flex-col justify-center gap-1.5 w-10 h-10 p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors" aria-label="Toggle navigation">
-          <span class="block h-0.5 w-full bg-current transition-all duration-300"></span>
-          <span class="block h-0.5 w-full bg-current transition-all duration-300"></span>
-          <span class="block h-0.5 w-full bg-current transition-all duration-300"></span>
+        <!-- content -->
+        <div class="p-5">
+          <div class="flex items-end gap-0 text-[10px] mono uppercase tracking-widest border-b border-mist/60 mb-4">
+            <span class="px-3 py-2 border-b-2 border-olive text-olive font-bold">Spec</span>
+            <span class="px-3 py-2 text-stone">User flows</span>
+            <span class="px-3 py-2 text-stone">Data model</span>
+            <span class="px-3 py-2 text-stone">Build prompt</span>
+          </div>
+          <div class="flex items-start justify-between mb-4 gap-3">
+            <div>
+              <div class="mono text-[9.5px] text-stone tracking-widest uppercase">Project</div>
+              <div class="font-black text-[17px] leading-tight text-ink">Coffee Box · subscription marketplace</div>
+            </div>
+            <div class="mono text-[9.5px] text-olive uppercase tracking-widest flex items-center gap-1.5 shrink-0 mt-1">
+              <span class="size-1.5 rounded-full bg-olive animate-pulse"></span>Ready
+            </div>
+          </div>
+          <div class="space-y-2.5">
+            <div class="p-3 rounded-lg border border-mist/40" style="background:#F5F5E6;">
+              <div class="flex items-baseline gap-2 mb-1.5">
+                <span class="mono text-[9.5px] text-bronze">§ 1</span>
+                <span class="font-bold text-[13px] text-ink">Subscription engine</span>
+                <span class="ml-auto mono text-[9.5px] text-stone">4 req</span>
+              </div>
+              <div class="space-y-1">
+                <div class="h-1.5 rounded bg-mist/50" style="width:82%"></div>
+                <div class="h-1.5 rounded bg-mist/50" style="width:67%"></div>
+                <div class="h-1.5 rounded bg-mist/50" style="width:74%"></div>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg border border-mist/40" style="background:#F5F5E6;">
+              <div class="flex items-baseline gap-2 mb-1.5">
+                <span class="mono text-[9.5px] text-bronze">§ 2</span>
+                <span class="font-bold text-[13px] text-ink">Roast &amp; frequency picker</span>
+                <span class="ml-auto mono text-[9.5px] text-stone">3 req</span>
+              </div>
+              <div class="space-y-1">
+                <div class="h-1.5 rounded bg-mist/50" style="width:92%"></div>
+                <div class="h-1.5 rounded bg-mist/50" style="width:55%"></div>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg border border-mist/40" style="background:#F5F5E6;">
+              <div class="flex items-baseline gap-2 mb-1.5">
+                <span class="mono text-[9.5px] text-bronze">§ 3</span>
+                <span class="font-bold text-[13px] text-ink">Recurring billing &amp; pausing</span>
+                <span class="ml-auto mono text-[9.5px] text-stone">5 req</span>
+              </div>
+              <div class="space-y-1">
+                <div class="h-1.5 rounded bg-mist/50" style="width:76%"></div>
+                <div class="h-1.5 rounded bg-mist/50" style="width:48%"></div>
+                <div class="h-1.5 rounded bg-mist/50" style="width:61%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 p-3 rounded-lg bg-ink text-ivory flex items-center justify-between cursor-pointer transition-colors hover:bg-charcoal">
+            <div class="flex items-center gap-2.5">
+              <span class="size-6 rounded flex items-center justify-center" style="background:rgba(250,250,235,.1);">
+                <svg class="icon" style="font-size:12px"><use href="#i-logo"/></svg>
+              </span>
+              <span class="mono text-[10.5px] uppercase tracking-widest font-bold">Copy for Lovable</span>
+            </div>
+            <svg class="icon" style="font-size:15px"><use href="#i-copy"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="hidden lg:block absolute -left-3 -top-3 card-flat p-3 w-[164px] -rotate-[4deg] shadow-sm">
+        <div class="mono text-[9px] uppercase tracking-widest text-bronze mb-1">Ships as</div>
+        <div class="text-[12px] font-bold leading-tight text-ink">Markdown + JSON, not a chat transcript.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRAND ROW — dark section ============ -->
+<section class="py-10 border-y border-ink" style="background:#1E2113; color:#FAFAEB;">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="mono text-[10px] tracking-[0.32em] uppercase text-center mb-6" style="color:rgba(184,188,163,.8);" data-i18n="integrations.label">Perfect Handoffs To</div>
+    <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 md:gap-x-14">
+      <span class="font-black text-[22px] tracking-tight">Lovable</span>
+      <span class="font-black text-[22px] tracking-tight">bolt<span class="text-bronze">.new</span></span>
+      <span class="font-black text-[22px] tracking-tight">Replit</span>
+      <span class="font-black text-[22px] tracking-tight lowercase">cursor</span>
+      <span class="font-black text-[22px] tracking-tight">Claude</span>
+      <span class="font-black text-[22px] tracking-tight">Google&nbsp;AI&nbsp;Studio</span>
+      <span class="font-black text-[22px] tracking-tight">v0</span>
+    </div>
+    <p class="text-center text-[11px] mt-6 italic" style="color:rgba(184,188,163,.7);" data-i18n="integrations.more">and many more...</p>
+  </div>
+</section>
+
+<!-- ============ WHO IS IT FOR ============ -->
+<section class="py-20" id="who">
+  <div class="max-w-[1000px] mx-auto px-6">
+    <div class="mb-10">
+      <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3">Who it's for</div>
+      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] max-w-2xl text-ink" data-i18n="who.h2">
+        Who is Vibemaster for?
+      </h2>
+    </div>
+    <div class="card-flat overflow-hidden">
+      <div class="divide-y" style="--tw-divide-opacity:0.5; border-color:rgba(184,188,163,0.5);">
+
+        <div class="flex items-start gap-5 p-5 group hover:bg-sand transition-colors">
+          <span class="mono text-[11px] text-stone w-10 shrink-0 mt-0.5">01 /</span>
+          <div class="flex-1">
+            <div class="font-bold text-[16px] text-charcoal" data-i18n="who.card1.role">Non-technical founders &amp; creators</div>
+            <div class="text-[13px] text-moss mt-1 leading-relaxed" data-i18n="who.card1.p">You bring the idea. Vibemaster makes it buildable.</div>
+          </div>
+          <svg class="icon text-stone group-hover:text-olive transition-colors mt-1 shrink-0" style="font-size:18px"><use href="#i-arrow-right"/></svg>
+        </div>
+
+        <div class="flex items-start gap-5 p-5 group hover:bg-sand transition-colors" style="border-top:1px solid rgba(184,188,163,.5);">
+          <span class="mono text-[11px] text-stone w-10 shrink-0 mt-0.5">02 /</span>
+          <div class="flex-1">
+            <div class="font-bold text-[16px] text-charcoal" data-i18n="who.card2.role">Product managers</div>
+            <div class="text-[13px] text-moss mt-1 leading-relaxed" data-i18n="who.card2.p">Stop translating between business and tech manually.</div>
+          </div>
+          <svg class="icon text-stone group-hover:text-olive transition-colors mt-1 shrink-0" style="font-size:18px"><use href="#i-arrow-right"/></svg>
+        </div>
+
+        <div class="flex items-start gap-5 p-5 group hover:bg-sand transition-colors" style="border-top:1px solid rgba(184,188,163,.5);">
+          <span class="mono text-[11px] text-stone w-10 shrink-0 mt-0.5">03 /</span>
+          <div class="flex-1">
+            <div class="font-bold text-[16px] text-charcoal" data-i18n="who.card3.role">Developers &amp; technical leads</div>
+            <div class="text-[13px] text-moss mt-1 leading-relaxed" data-i18n="who.card3.p">Get a clear structure before you start building.</div>
+          </div>
+          <svg class="icon text-stone group-hover:text-olive transition-colors mt-1 shrink-0" style="font-size:18px"><use href="#i-arrow-right"/></svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS / CASES — sand section ============ -->
+<section class="py-20 grain" id="testimonials" style="background:#EBEBD5;">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="flex items-end justify-between gap-6 mb-10 flex-wrap">
+      <div>
+        <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="cases.badge">Real Stories</div>
+        <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] max-w-xl text-ink" data-i18n="cases.h2">
+          Vibemaster in the wild
+        </h2>
+        <p class="mt-3 text-[15px] text-moss max-w-xl" data-i18n="cases.sub">Real people, real problems.</p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+
+      <!-- Niklas -->
+      <figure class="card-flat p-6 flex flex-col">
+        <svg class="icon text-olive mb-1" style="font-size:34px; opacity:.3;"><use href="#i-quote"/></svg>
+        <blockquote class="text-[15px] leading-snug font-medium text-charcoal flex-1" data-i18n="cases.c1.story">
+          Niklas was spending hours every week copying data from Excel into PDF invoice templates.
+        </blockquote>
+        <figcaption class="mt-5 pt-5 flex items-center gap-3" style="border-top:1px solid rgba(184,188,163,.5);">
+          <div class="size-10 rounded-full flex items-center justify-center font-black text-[13px]" style="background:rgba(107,122,47,.15); border:1px solid rgba(107,122,47,.25); color:#6B7A2F;">NL</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold text-[13px] text-ink" data-i18n="cases.c1.name">Niklas</div>
+            <div class="text-[11.5px] text-stone truncate" data-i18n="cases.c1.role">Administrator</div>
+          </div>
+          <span class="mono text-[9.5px] uppercase tracking-widest text-olive flex items-center gap-1 shrink-0">
+            <svg class="icon" style="font-size:11px"><use href="#i-spreadsheet"/></svg>
+            <span data-i18n="cases.c1.tag">Automation</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <!-- Eva -->
+      <figure class="card-flat p-6 flex flex-col">
+        <svg class="icon text-olive mb-1" style="font-size:34px; opacity:.3;"><use href="#i-quote"/></svg>
+        <blockquote class="text-[15px] leading-snug font-medium text-charcoal flex-1" data-i18n="cases.c2.story">
+          Eva needed to align her CTO and the entire development team around a new feature.
+        </blockquote>
+        <figcaption class="mt-5 pt-5 flex items-center gap-3" style="border-top:1px solid rgba(184,188,163,.5);">
+          <div class="size-10 rounded-full flex items-center justify-center font-black text-[13px]" style="background:rgba(176,143,74,.15); border:1px solid rgba(176,143,74,.25); color:#B08F4A;">EK</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold text-[13px] text-ink" data-i18n="cases.c2.name">Eva</div>
+            <div class="text-[11.5px] text-stone truncate" data-i18n="cases.c2.role">Product Manager</div>
+          </div>
+          <span class="mono text-[9.5px] uppercase tracking-widest text-bronze flex items-center gap-1 shrink-0">
+            <svg class="icon" style="font-size:11px"><use href="#i-route"/></svg>
+            <span data-i18n="cases.c2.tag">Product &amp; Strategy</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <!-- Mikael -->
+      <figure class="card-flat p-6 flex flex-col">
+        <svg class="icon text-olive mb-1" style="font-size:34px; opacity:.3;"><use href="#i-quote"/></svg>
+        <blockquote class="text-[15px] leading-snug font-medium text-charcoal flex-1" data-i18n="cases.c3.story">
+          Mikael had an idea for a plugin that could transform his production workflow.
+        </blockquote>
+        <figcaption class="mt-5 pt-5 flex items-center gap-3" style="border-top:1px solid rgba(184,188,163,.5);">
+          <div class="size-10 rounded-full flex items-center justify-center font-black text-[13px]" style="background:rgba(180,65,42,.12); border:1px solid rgba(180,65,42,.22); color:#B4412A;">MR</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold text-[13px] text-ink" data-i18n="cases.c3.name">Mikael</div>
+            <div class="text-[11.5px] text-stone truncate" data-i18n="cases.c3.role">Music Producer</div>
+          </div>
+          <span class="mono text-[9.5px] uppercase tracking-widest flex items-center gap-1 shrink-0" style="color:#B4412A;">
+            <svg class="icon" style="font-size:11px"><use href="#i-music"/></svg>
+            <span data-i18n="cases.c3.tag">Product Launch</span>
+          </span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="py-20" id="problem">
+  <div class="max-w-[1000px] mx-auto px-6">
+    <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3">The problem</div>
+    <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] max-w-2xl mb-10 text-ink" data-i18n="problem.h2.a">
+      The problem isn't your AI vibecoding service
+    </h2>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="card-flat p-6">
+        <div class="mono text-[10px] uppercase tracking-widest mb-3" style="color:#B4412A;" data-i18n="problem.card1.h3">It's the gap between your idea and the tech.</div>
+        <p class="text-[14px] text-charcoal leading-relaxed" data-i18n="problem.card1.p">AI builders are incredibly fast, but they only build what you tell them. If your prompt is vague, the result is broken builds, circular errors, and wasted time.</p>
+      </div>
+      <div class="card-flat p-6" style="background:#EEF1DD; border-color:rgba(107,122,47,.3);">
+        <div class="mono text-[10px] uppercase tracking-widest text-olive mb-3" data-i18n="problem.card2.h3">The Idea → Build Bridge</div>
+        <p class="text-[14px] text-charcoal leading-relaxed" data-i18n="problem.card2.p">Vibemaster acts as your Product Manager + Tech Lead. We extract the complex logic from your head and translate it into instructions an AI can't misinterpret.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS — dark section ============ -->
+<section class="py-24 relative overflow-hidden" id="how-it-works" style="background:#363A27; color:#FAFAEB;">
+  <div aria-hidden="true" class="absolute inset-0 -z-0 opacity-60" style="background:radial-gradient(800px 400px at 50% 0%, rgba(107,122,47,.25), transparent 70%);"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="text-center mb-14">
+      <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3">The bridge</div>
+      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05]" data-i18n="hiw.h2">
+        How You Bridge the Gap
+      </h2>
+      <p class="mt-4 text-[16px] max-w-xl mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n="hiw.sub">
+        Skip the technical manual and start building with confidence in three steps.
+      </p>
+    </div>
+
+    <!-- rail -->
+    <div class="relative">
+      <div class="hidden md:block absolute top-[26px] left-[16.6%] right-[16.6%] h-px border-t border-dashed" style="border-color:rgba(250,250,235,.25);"></div>
+      <div class="hidden md:block absolute top-[22px] size-2.5 rounded-full bg-bronze traveler" style="box-shadow:0 0 0 4px rgba(176,143,74,.2);"></div>
+
+      <div class="grid md:grid-cols-3 gap-10 md:gap-6 relative">
+        <div>
+          <div class="size-[52px] rounded-full flex items-center justify-center mx-auto border-2 border-bronze/60" style="background:#363A27;">
+            <svg class="icon text-bronze" style="font-size:22px"><use href="#i-sparkle"/></svg>
+          </div>
+          <div class="text-center mt-5">
+            <div class="mono text-[10px] uppercase tracking-widest text-bronze">Step 01</div>
+            <div class="text-[19px] font-black mt-1 tracking-tight" data-i18n="hiw.step1.h4">1. Describe your idea</div>
+            <p class="text-[13.5px] mt-2 max-w-[280px] mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n="hiw.step1.p">
+              Tell us what you want to build in plain English.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="size-[52px] rounded-full flex items-center justify-center mx-auto border-2 border-bronze/60" style="background:#363A27;">
+            <svg class="icon text-bronze" style="font-size:22px"><use href="#i-file"/></svg>
+          </div>
+          <div class="text-center mt-5">
+            <div class="mono text-[10px] uppercase tracking-widest text-bronze">Step 02</div>
+            <div class="text-[19px] font-black mt-1 tracking-tight" data-i18n="hiw.step2.h4">2. We translate to tech</div>
+            <p class="text-[13.5px] mt-2 max-w-[280px] mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n="hiw.step2.p">
+              We instantly translate your vision into a buildable system.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="size-[52px] rounded-full flex items-center justify-center mx-auto border-2 border-bronze/60" style="background:#363A27;">
+            <svg class="icon text-bronze" style="font-size:22px"><use href="#i-bolt"/></svg>
+          </div>
+          <div class="text-center mt-5">
+            <div class="mono text-[10px] uppercase tracking-widest text-bronze">Step 03</div>
+            <div class="text-[19px] font-black mt-1 tracking-tight" data-i18n="hiw.step3.h4">3. Build instantly</div>
+            <p class="text-[13.5px] mt-2 max-w-[280px] mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n-html="hiw.step3.p">
+              Paste your Vibemaster plan directly into Lovable, Bolt, Replit, or Cursor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EU COMPLIANCE ============ -->
+<section class="py-20" id="eu-compliance">
+  <div class="max-w-[1000px] mx-auto px-6">
+    <div class="card-flat p-8 md:p-10 flex flex-col md:flex-row items-start gap-8">
+      <div class="shrink-0 size-16 rounded-2xl flex items-center justify-center" style="background:#6B7A2F; color:#FAFAEB;">
+        <svg class="icon" style="font-size:32px"><use href="#i-shield"/></svg>
+      </div>
+      <div class="flex-1">
+        <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-2" data-i18n="eu.badge">Hosted in Europe</div>
+        <h2 class="text-[26px] md:text-[32px] font-black tracking-tight leading-[1.1] text-ink" data-i18n="eu.h2">Your data stays in Europe</h2>
+        <p class="text-[15px] text-moss mt-3 leading-relaxed max-w-xl" data-i18n-html="eu.sub">
+          Vibemaster is hosted on Scalingo's infrastructure in Paris, France.
+        </p>
+        <p class="text-sm text-stone mt-2" data-i18n="eu.hosted">Hosted on Scalingo · Paris, France</p>
+        <div class="flex flex-wrap gap-2 mt-5">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 mono text-[10.5px] uppercase tracking-wider font-bold text-charcoal" style="background:#F5F5E6;">
+            <svg class="icon text-olive" style="font-size:11px"><use href="#i-shield"/></svg>GDPR
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 mono text-[10.5px] uppercase tracking-wider font-bold text-charcoal" style="background:#F5F5E6;">
+            <svg class="icon text-olive" style="font-size:11px"><use href="#i-globe"/></svg>Scalingo · Paris
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 mono text-[10.5px] uppercase tracking-wider font-bold text-charcoal" style="background:#F5F5E6;">
+            <svg class="icon text-olive" style="font-size:11px"><use href="#i-key"/></svg>BYOK
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 mono text-[10.5px] uppercase tracking-wider font-bold text-charcoal" style="background:#F5F5E6;">
+            🇪🇺 EU-owned
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING — sand section ============ -->
+<section class="py-24 grain" id="pricing" style="background:#EBEBD5;">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="text-center mb-12">
+      <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3">Pricing</div>
+      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] text-ink" data-i18n="pricing.h2">
+        Simple Pricing for Visionaries
+      </h2>
+      <p class="mt-4 text-moss text-[15px] max-w-xl mx-auto" data-i18n="pricing.sub">
+        Choose the plan that matches your shipping speed.
+      </p>
+      <div class="mt-8 inline-flex items-center p-1 rounded-lg border border-mist/60" style="background:#F5F5E6;">
+        <button id="bill-month" class="px-5 py-1.5 text-[12px] font-bold rounded-md" style="background:#1E2113; color:#FAFAEB;" data-i18n="pricing.monthly">Monthly</button>
+        <button id="bill-year" class="px-5 py-1.5 text-[12px] font-bold text-moss hover:text-ink transition-colors">
+          <span data-i18n="pricing.yearly">Yearly</span> <span class="text-olive">−20%</span>
         </button>
       </div>
     </div>
-    <!-- Mobile navigation -->
-    <div id="mobile-nav" class="hidden md:hidden border-t border-white/5 px-6 py-2">
-      <a href="#problem" class="block text-slate-300 hover:text-white py-3 text-sm font-medium transition-colors border-b border-white/5" data-i18n="nav.gap">The Gap</a>
-      <a href="#how-it-works" class="block text-slate-300 hover:text-white py-3 text-sm font-medium transition-colors border-b border-white/5" data-i18n="nav.process">Process</a>
-      <a href="#pricing" class="block text-slate-300 hover:text-white py-3 text-sm font-medium transition-colors border-b border-white/5" data-i18n="nav.pricing">Pricing</a>
-      <a href="#testimonials" class="block text-slate-300 hover:text-white py-3 text-sm font-medium transition-colors border-b border-white/5" data-i18n="nav.reviews">Reviews</a>
-      <a href="https://app.vibemaster.ai/" class="block text-slate-300 hover:text-white py-3 text-sm font-medium transition-colors border-b border-white/5" data-i18n="nav.login">Login</a>
-      <!-- Language selector — mobile -->
-      <div class="py-3 border-b border-white/5">
-        <div class="flex flex-wrap gap-2">
-          <button onclick="vmSetLang('en')" data-lang-btn="en" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white border border-white/10 hover:border-white/25 transition-colors">EN</button>
-          <button onclick="vmSetLang('sv')" data-lang-btn="sv" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white border border-white/10 hover:border-white/25 transition-colors">SV</button>
-          <button onclick="vmSetLang('de')" data-lang-btn="de" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white border border-white/10 hover:border-white/25 transition-colors">DE</button>
-          <button onclick="vmSetLang('es')" data-lang-btn="es" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white border border-white/10 hover:border-white/25 transition-colors">ES</button>
-          <button onclick="vmSetLang('fr')" data-lang-btn="fr" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white border border-white/10 hover:border-white/25 transition-colors">FR</button>
-          <button onclick="vmSetLang('hi')" data-lang-btn="hi" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white border border-white/10 hover:border-white/25 transition-colors">HI</button>
-          <button onclick="vmSetLang('zh')" data-lang-btn="zh" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-400 hover:text-white border border-white/10 hover:border-white/25 transition-colors">ZH</button>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 items-stretch">
+
+      <!-- Explorer -->
+      <div class="card-flat p-6 flex flex-col">
+        <div class="flex-1">
+          <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.explorer.name">Explorer</div>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-[44px] font-black leading-none text-ink" data-i18n="pricing.explorer.price">€0</span>
+            <span class="text-[13px] text-stone" data-i18n="pricing.explorer.period">/mo</span>
+          </div>
+          <p class="text-[13px] text-moss mt-3" data-i18n="pricing.explorer.sub">Perfect for solo hackers testing the waters.</p>
+          <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f1">2 Projects per month</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f2">Basic technical specs</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f3">Markdown exports</span></li>
+          </ul>
+        </div>
+        <button class="btn-outline mt-6 w-full py-3 rounded-lg font-bold text-[13px]" data-i18n="pricing.explorer.cta">Start Free</button>
+      </div>
+
+      <!-- Professional — inverted -->
+      <div class="flex flex-col p-6 rounded-[16px] relative" style="background:#1E2113; color:#FAFAEB; border:1px solid #1E2113;">
+        <div class="absolute -top-3 left-6 px-3 py-0.5 rounded-full mono text-[9.5px] uppercase tracking-widest font-bold" style="background:#B08F4A; color:#1E2113;" data-i18n="pricing.popular">Most Popular</div>
+        <div class="flex-1">
+          <div class="mono text-[10px] uppercase tracking-widest text-bronze" data-i18n="pricing.pro.name">Professional</div>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-[44px] font-black leading-none" data-i18n="pricing.pro.price">€9</span>
+            <span class="text-[13px]" style="color:rgba(250,250,235,.6);" data-i18n="pricing.pro.period">/mo</span>
+          </div>
+          <p class="text-[13px] mt-3" style="color:rgba(250,250,235,.7);" data-i18n="pricing.pro.sub">For serious builders shipping weekly.</p>
+          <ul class="mt-6 space-y-2.5 text-[13.5px]">
+            <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><strong data-i18n="pricing.pro.f1">Unlimited Projects</strong></li>
+            <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span>Version history &amp; diffs</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span>Export to JSON &amp; PDF</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span>Priority generation queue</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f6">Bring Your Own API Key (BYOK)</span></li>
+          </ul>
+        </div>
+        <button class="mt-6 w-full py-3 rounded-lg font-bold text-[13px] hover:opacity-90 transition-opacity" style="background:#B08F4A; color:#1E2113;" data-i18n="pricing.pro.cta">Go Pro</button>
+      </div>
+
+      <!-- Studio -->
+      <div class="card-flat p-6 flex flex-col relative">
+        <div class="absolute -top-3 left-6 px-3 py-0.5 rounded-full mono text-[9.5px] uppercase tracking-widest font-bold text-charcoal" style="background:#B8BCA3;" data-i18n="pricing.studio.badge">Coming soon</div>
+        <div class="flex-1">
+          <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.studio.name">Studio</div>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-[44px] font-black leading-none text-ink" data-i18n="pricing.studio.price">€49</span>
+            <span class="text-[13px] text-stone" data-i18n="pricing.studio.period">/mo</span>
+          </div>
+          <p class="text-[13px] text-moss mt-3" data-i18n="pricing.studio.sub">For teams up to 6 people.</p>
+          <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f1">Up to 6 team seats</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f2">Shared projects</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f3">Claude &amp; Mistral via own API key</span></li>
+          </ul>
+        </div>
+        <button disabled class="btn-outline mt-6 w-full py-3 rounded-lg font-bold text-[13px] opacity-50 cursor-not-allowed" data-i18n="pricing.studio.cta">Coming soon</button>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="card-flat p-6 flex flex-col">
+        <div class="flex-1">
+          <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.enterprise.name">Enterprise</div>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-[32px] font-black leading-none text-ink" data-i18n="pricing.enterprise.price">Custom</span>
+          </div>
+          <p class="text-[13px] text-moss mt-3" data-i18n="pricing.enterprise.sub">Global scale and security requirements.</p>
+          <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f1">Custom number of seats</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f2">Shared branding</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f3">Shared projects</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f4">Dedicated support</span></li>
+          </ul>
+        </div>
+        <button class="btn-outline mt-6 w-full py-3 rounded-lg font-bold text-[13px]" data-i18n="pricing.enterprise.cta">Call us!</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="py-24" id="faq">
+  <div class="max-w-[820px] mx-auto px-6">
+    <div class="text-center mb-12">
+      <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3">FAQ</div>
+      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] text-ink" data-i18n="faq.h2">
+        Questions? We have answers.
+      </h2>
+      <p class="mt-4 text-moss text-[15px]" data-i18n="faq.sub">Everything you need to know about getting started.</p>
+    </div>
+    <div>
+
+      <details class="faq-row group py-5" open>
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q1">Do I need technical knowledge to use Vibemaster?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a1">
+          No! Vibemaster is built to bridge the gap between imagination and implementation.
+        </div>
+      </details>
+
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q2">Does Vibemaster build my product for me?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a2">
+          Vibemaster writes the recipe — you choose the chef.
+        </div>
+      </details>
+
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q3">How does Vibemaster differ from using ChatGPT or Claude?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a3">
+          ChatGPT and Claude give you answers. Vibemaster gives you a buildable product specification.
+        </div>
+      </details>
+
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q4">Which tools can I use with Vibemaster?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a4">
+          You can use Vibemaster with most AI building tools — e.g. Google AI Studio, Lovable, Replit, Bolt.new, Cursor or Claude.
+        </div>
+      </details>
+
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q5">Is my data secure and do you comply with EU regulations?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a5">
+          Yes. Your data stays within the EU and is handled according to EU regulations.
+        </div>
+      </details>
+
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q6">How does Vibemaster generate its tech plans?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a6">
+          Vibemaster uses advanced AI models combined with a structured method.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA — dark section ============ -->
+<section class="py-24 relative overflow-hidden" style="background:#1E2113; color:#FAFAEB;">
+  <div aria-hidden="true" class="absolute inset-0 opacity-50" style="background:radial-gradient(900px 400px at 50% 0%, rgba(176,143,74,.2), transparent 70%);"></div>
+  <div class="max-w-[900px] mx-auto px-6 text-center relative">
+    <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-4">Ready when you are</div>
+    <h2 class="text-[34px] md:text-[52px] font-black tracking-tight leading-[1.02]" data-i18n="cta.h2">
+      Ready to ship your next big idea?
+    </h2>
+    <p class="mt-5 text-[16px] max-w-lg mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);">
+      Free plan, no card. Two real projects, yours forever. Upgrade when you're shipping weekly.
+    </p>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+      <a href="https://app.vibemaster.ai/" class="inline-flex items-center gap-2 px-7 py-4 rounded-xl font-bold text-[15px] hover:opacity-90 transition-opacity" style="background:#B08F4A; color:#1E2113;" data-i18n="cta.primary">
+        Get Started Now
+        <svg class="icon" style="font-size:16px"><use href="#i-arrow-right"/></svg>
+      </a>
+      <a href="#how-it-works" class="inline-flex items-center gap-2 px-7 py-4 rounded-xl font-bold text-[15px] transition-colors" style="border:2px solid rgba(250,250,235,.2); color:#FAFAEB;">
+        See how it works
+      </a>
+    </div>
+
+    <div class="mt-12 pt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left max-w-2xl mx-auto" style="border-top:1px solid rgba(250,250,235,.1);">
+      <div class="flex items-start gap-3">
+        <svg class="icon text-bronze mt-1 shrink-0" style="font-size:18px"><use href="#i-shield"/></svg>
+        <div>
+          <div class="font-bold text-[14px]" data-i18n="cta.trust1">EU Data Residency</div>
+          <div class="text-[12.5px] mt-0.5" style="color:rgba(250,250,235,.6);">Paris · Scalingo · GDPR</div>
         </div>
       </div>
-      <div class="py-4">
-        <a href="https://app.vibemaster.ai/" class="block w-full gradient-button text-white text-sm font-bold px-6 py-3 rounded-xl text-center" data-i18n="nav.cta">Start Building</a>
+      <div class="flex items-start gap-3">
+        <svg class="icon text-bronze mt-1 shrink-0" style="font-size:18px"><use href="#i-lock"/></svg>
+        <div>
+          <div class="font-bold text-[14px]" data-i18n="cta.trust2">Encrypted Payments</div>
+          <div class="text-[12.5px] mt-0.5" style="color:rgba(250,250,235,.6);">Stripe · SOC2 partners</div>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="icon text-bronze mt-1 shrink-0" style="font-size:18px"><use href="#i-key"/></svg>
+        <div>
+          <div class="font-bold text-[14px]" data-i18n="cta.trust3">Your ideas stay private</div>
+          <div class="text-[12.5px] mt-0.5" style="color:rgba(250,250,235,.6);">BYOK · anonymised training only</div>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main class="pt-16">
+</main>
 
-    <!-- HERO -->
-    <section class="relative overflow-hidden pt-24 pb-32">
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full hero-glow -z-10"></div>
-      <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-        <div class="flex flex-col gap-8">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 w-fit">
-            <span class="size-2 rounded-full bg-indigo-500 animate-pulse"></span>
-            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider" data-i18n="hero.badge">Built for non-technical founders, operators and creators</span>
-          </div>
-          <h1 class="text-5xl md:text-7xl font-black text-white leading-[1.05] tracking-tight">
-            <span data-i18n="hero.h1.a">You bring the idea. We make it</span> <span class="text-gradient" data-i18n="hero.h1.b">buildable.</span><span data-i18n="hero.h1.c"></span>
-          </h1>
-          <p class="text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl" data-i18n="hero.sub">
-            Most people can't describe what they want to build. That's why AI fails. Vibemaster solves that.
-          </p>
-          <div class="flex flex-col gap-3">
-            <p class="text-xs font-bold text-indigo-400 uppercase tracking-wider" data-i18n="hero.deliverables.label">From idea to buildable</p>
-            <ul class="flex flex-col gap-2">
-              <li class="flex items-center gap-2 text-slate-300 text-sm">
-                <span class="material-symbols-outlined text-indigo-400" style="font-size:16px">check_circle</span>
-                <span data-i18n="hero.del1">Product structure</span>
-              </li>
-              <li class="flex items-center gap-2 text-slate-300 text-sm">
-                <span class="material-symbols-outlined text-indigo-400" style="font-size:16px">check_circle</span>
-                <span data-i18n="hero.del2">User flows</span>
-              </li>
-              <li class="flex items-center gap-2 text-slate-300 text-sm">
-                <span class="material-symbols-outlined text-indigo-400" style="font-size:16px">check_circle</span>
-                <span data-i18n="hero.del3">Data model</span>
-              </li>
-              <li class="flex items-center gap-2 text-slate-300 text-sm">
-                <span class="material-symbols-outlined text-indigo-400" style="font-size:16px">check_circle</span>
-                <span data-i18n="hero.del4">AI build instructions</span>
-              </li>
-            </ul>
-            <p class="text-sm text-slate-500 italic" data-i18n="hero.positioning">Vibemaster is the layer between idea and AI building.</p>
-          </div>
-          <div class="flex flex-wrap gap-4">
-            <a href="https://app.vibemaster.ai/" class="gradient-button text-white text-lg font-bold px-8 py-4 rounded-2xl shadow-2xl shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all" data-i18n="hero.cta.primary">Make My Idea Buildable</a>
-            <a href="#how-it-works" class="bg-white/5 hover:bg-white/10 text-white text-lg font-bold px-8 py-4 rounded-2xl border border-white/10 flex items-center gap-2 transition-all">
-              <span class="material-symbols-outlined">play_circle</span>
-              <span data-i18n="hero.cta.secondary">How it works</span>
-            </a>
-          </div>
+<!-- ============ FOOTER ============ -->
+<footer style="background:#F5F5E6; border-top:1px solid rgba(184,188,163,.5);">
+  <div class="max-w-[1200px] mx-auto px-6 py-16">
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
+
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-2">
+        <div class="flex items-center gap-2.5 mb-4">
+          <span class="size-7 rounded-md bg-ink text-ivory flex items-center justify-center">
+            <svg class="icon" style="font-size:14px"><use href="#i-logo"/></svg>
+          </span>
+          <span class="text-[15px] font-black tracking-tight text-ink">Vibemaster</span>
         </div>
-
-        <!-- Mock UI -->
-        <div class="relative group">
-          <div class="absolute -inset-4 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 blur-3xl opacity-50"></div>
-          <div class="relative glass rounded-2xl p-4 border border-white/10 shadow-2xl">
-            <div class="flex items-center gap-2 mb-4 px-2">
-              <div class="flex gap-1.5">
-                <div class="size-3 rounded-full bg-red-500/30"></div>
-                <div class="size-3 rounded-full bg-amber-500/30"></div>
-                <div class="size-3 rounded-full bg-green-500/30"></div>
-              </div>
-              <div class="flex-1 bg-white/5 rounded py-1 px-3 text-[10px] text-slate-500 font-mono flex items-center gap-1 overflow-hidden">
-                <span class="truncate flex-1">bridge.vibe-researcher.ai/new-project</span>
-                <span class="material-symbols-outlined text-xs shrink-0">lock</span>
-              </div>
-            </div>
-            <div class="space-y-4">
-              <div class="flex gap-3">
-                <div class="size-8 rounded-full bg-indigo-600/20 flex items-center justify-center text-indigo-400">
-                  <span class="material-symbols-outlined text-sm">psychology</span>
-                </div>
-                <div class="bg-white/5 p-4 rounded-2xl rounded-tl-none text-sm text-slate-300 max-w-[85%] border border-white/5">
-                  "I understand your vision for a subscription-based coffee marketplace. Let's map out the database architecture for your recurring billing logic."
-                </div>
-              </div>
-              <div class="flex gap-3 justify-end">
-                <div class="bg-indigo-600 p-4 rounded-2xl rounded-tr-none text-sm text-white max-w-[80%] shadow-lg shadow-indigo-500/20">
-                  "Exactly. I need it to handle different roast types and delivery frequencies."
-                </div>
-                <div class="size-8 rounded-full bg-slate-700 flex items-center justify-center text-white">
-                  <span class="material-symbols-outlined text-sm">person</span>
-                </div>
-              </div>
-              <div class="bg-indigo-500/10 border border-indigo-500/20 p-4 rounded-xl space-y-2">
-                <div class="flex justify-between items-center text-[11px] font-mono text-indigo-300">
-                  <span>TECHNICAL SPEC GENERATED</span>
-                  <span class="material-symbols-outlined text-xs">check_circle</span>
-                </div>
-                <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-                  <div class="h-full w-full bg-indigo-500"></div>
-                </div>
-                <div class="flex gap-2">
-                  <div class="flex-1 h-8 bg-white/5 rounded flex items-center px-3 text-[10px] text-slate-400 font-mono overflow-hidden"><span class="truncate">copy_replit_prompt_v1.txt</span></div>
-                  <div class="size-8 bg-indigo-600 rounded flex items-center justify-center text-white">
-                    <span class="material-symbols-outlined text-sm">content_copy</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTEGRATIONS BAR -->
-    <section class="border-y border-white/5 bg-white/[0.01] py-12">
-      <div class="max-w-7xl mx-auto px-6">
-        <p class="text-center text-slate-500 text-xs font-bold uppercase tracking-[0.3em] mb-10" data-i18n="integrations.label">Perfect Handoffs To</p>
-        <div class="flex flex-nowrap justify-center items-center gap-6 md:gap-8 opacity-60 overflow-x-auto pb-2">
-          <a href="https://aistudio.google.com/app/prompts/new_chat" target="_blank" rel="noopener" class="flex items-center gap-2 shrink-0 hover:opacity-100 transition-opacity">
-            <span class="material-symbols-outlined text-lg text-indigo-400">auto_awesome</span>
-            <span class="font-bold text-base tracking-tight text-slate-300">Google AI Studio</span>
-          </a>
-          <a href="https://lovable.dev" target="_blank" rel="noopener" class="flex items-center gap-2 shrink-0 hover:opacity-100 transition-opacity">
-            <span class="material-symbols-outlined text-lg text-indigo-400">favorite</span>
-            <span class="font-bold text-base tracking-tight text-slate-300">Lovable</span>
-          </a>
-          <a href="https://bolt.new" target="_blank" rel="noopener" class="flex items-center gap-2 shrink-0 hover:opacity-100 transition-opacity">
-            <span class="material-symbols-outlined text-lg text-indigo-400">bolt</span>
-            <span class="font-bold text-base tracking-tight text-slate-300">Bolt.new</span>
-          </a>
-          <a href="https://replit.com" target="_blank" rel="noopener" class="flex items-center gap-2 shrink-0 hover:opacity-100 transition-opacity">
-            <span class="material-symbols-outlined text-lg text-indigo-400">terminal</span>
-            <span class="font-bold text-base tracking-tight text-slate-300">Replit</span>
-          </a>
-          <a href="https://cursor.com" target="_blank" rel="noopener" class="flex items-center gap-2 shrink-0 hover:opacity-100 transition-opacity">
-            <span class="material-symbols-outlined text-lg text-indigo-400">mouse</span>
-            <span class="font-bold text-base tracking-tight text-slate-300">Cursor</span>
-          </a>
-          <a href="https://claude.ai" target="_blank" rel="noopener" class="flex items-center gap-2 shrink-0 hover:opacity-100 transition-opacity">
-            <span class="material-symbols-outlined text-lg text-indigo-400">data_object</span>
-            <span class="font-bold text-base tracking-tight text-slate-300">Claude</span>
-          </a>
-          <a href="https://code.visualstudio.com" target="_blank" rel="noopener" class="flex items-center gap-2 shrink-0 hover:opacity-100 transition-opacity">
-            <span class="material-symbols-outlined text-lg text-indigo-400">code</span>
-            <span class="font-bold text-base tracking-tight text-slate-300">VS Code</span>
-          </a>
-          <div class="flex items-center gap-2 shrink-0">
-            <span class="material-symbols-outlined text-lg text-indigo-400">rocket_launch</span>
-            <span class="font-bold text-base tracking-tight text-slate-300">Antigravity</span>
-          </div>
-        </div>
-        <p class="text-center text-slate-600 text-xs mt-6 italic" data-i18n="integrations.more">and many more...</p>
-      </div>
-    </section>
-
-    <!-- WHO IS IT FOR -->
-    <section class="py-24 px-6" id="who">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-black text-white text-center mb-14" data-i18n="who.h2">Who is Vibemaster for?</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-
-          <div class="glass p-8 rounded-2xl border border-white/10 hover:border-indigo-500/30 transition-colors flex flex-col gap-4">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 w-fit">
-              <span class="material-symbols-outlined text-indigo-400 text-sm">person</span>
-              <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider" data-i18n="who.card1.role">Non-technical founders &amp; creators</span>
-            </div>
-            <p class="text-slate-300 leading-relaxed" data-i18n="who.card1.p">You bring the idea. Vibemaster makes it buildable. Turn your idea into a complete product specification that AI can build — with features, user flows, data model, and ready-made prompts. No code. No guessing. No broken builds.</p>
-          </div>
-
-          <div class="glass p-8 rounded-2xl border border-white/10 hover:border-purple-500/30 transition-colors flex flex-col gap-4">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 w-fit">
-              <span class="material-symbols-outlined text-purple-400 text-sm">account_tree</span>
-              <span class="text-xs font-bold text-purple-400 uppercase tracking-wider" data-i18n="who.card2.role">Product managers</span>
-            </div>
-            <p class="text-slate-300 leading-relaxed" data-i18n="who.card2.p">Stop translating between business and tech manually. Vibemaster turns your ideas and requirements into clear product specifications — with features, user flows, data model, and buildable instructions. Less interpretation. More buildable.</p>
-          </div>
-
-          <div class="glass p-8 rounded-2xl border border-white/10 hover:border-teal-500/30 transition-colors flex flex-col gap-4">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 w-fit">
-              <span class="material-symbols-outlined text-teal-400 text-sm">code</span>
-              <span class="text-xs font-bold text-teal-400 uppercase tracking-wider" data-i18n="who.card3.role">Developers &amp; technical leads</span>
-            </div>
-            <p class="text-slate-300 leading-relaxed" data-i18n="who.card3.p">Get a clear structure before you start building. Vibemaster helps you break down ideas into product architecture — features, user flows, data model, and edge cases. Fewer misses. Better decisions from the start.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- USE CASES -->
-    <section class="py-24 px-6 lg:px-40 max-w-[1440px] mx-auto" id="testimonials">
-      <div class="flex flex-col items-center text-center mb-16">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-wider mb-6 border border-indigo-500/20">
-          <span class="material-symbols-outlined text-sm">auto_stories</span>
-          <span data-i18n="cases.badge">Real Stories</span>
-        </div>
-        <h2 class="text-4xl md:text-5xl font-black leading-tight tracking-tight text-white max-w-3xl" data-i18n="cases.h2">Vibemaster in the wild</h2>
-        <p class="mt-6 text-slate-400 text-lg max-w-2xl leading-relaxed" data-i18n="cases.sub">Real people, real problems. See how Vibemaster helps across industries.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-        <!-- Niklas — Emerald / Automation -->
-        <div class="flex flex-col gap-6 p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300">
-          <div class="flex items-center gap-4">
-            <div class="size-12 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-emerald-400">table_view</span>
-            </div>
-            <div>
-              <p class="text-white font-bold" data-i18n="cases.c1.name">Niklas</p>
-              <p class="text-emerald-400 text-xs font-semibold mt-0.5" data-i18n="cases.c1.role">Administrator</p>
-            </div>
-          </div>
-          <p class="text-slate-300 leading-relaxed flex-1" data-i18n="cases.c1.story">Niklas was spending hours every week copying data from Excel into PDF invoice templates — cell by cell. With Vibemaster, he built a custom tool that reads his spreadsheet and automatically fills in the PDF. What used to take a full afternoon now runs in seconds.</p>
-          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 w-fit mt-auto">
-            <span class="material-symbols-outlined text-emerald-400 text-sm">bolt</span>
-            <span class="text-emerald-400 text-xs font-bold" data-i18n="cases.c1.tag">Automation</span>
-          </div>
-        </div>
-
-        <!-- Eva — Indigo / Product & Strategy -->
-        <div class="flex flex-col gap-6 p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300">
-          <div class="flex items-center gap-4">
-            <div class="size-12 rounded-xl bg-indigo-500/15 border border-indigo-500/20 flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-indigo-400">account_tree</span>
-            </div>
-            <div>
-              <p class="text-white font-bold" data-i18n="cases.c2.name">Eva</p>
-              <p class="text-indigo-400 text-xs font-semibold mt-0.5" data-i18n="cases.c2.role">Product Manager</p>
-            </div>
-          </div>
-          <p class="text-slate-300 leading-relaxed flex-1" data-i18n="cases.c2.story">Eva needed to align her CTO and the entire development team around a new feature — and the solution had to comply with EU GDPR regulations from day one. Vibemaster helped her produce a clear technical plan and a proposed roadmap that gave everyone a shared language. The feature was approved in a single meeting.</p>
-          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 w-fit mt-auto">
-            <span class="material-symbols-outlined text-indigo-400 text-sm">route</span>
-            <span class="text-indigo-400 text-xs font-bold" data-i18n="cases.c2.tag">Product & Strategy</span>
-          </div>
-        </div>
-
-        <!-- Mikael — Rose / Product Launch -->
-        <div class="flex flex-col gap-6 p-8 rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] transition-all duration-300">
-          <div class="flex items-center gap-4">
-            <div class="size-12 rounded-xl bg-rose-500/15 border border-rose-500/20 flex items-center justify-center shrink-0">
-              <span class="material-symbols-outlined text-rose-400">music_note</span>
-            </div>
-            <div>
-              <p class="text-white font-bold" data-i18n="cases.c3.name">Mikael</p>
-              <p class="text-rose-400 text-xs font-semibold mt-0.5" data-i18n="cases.c3.role">Music Producer</p>
-            </div>
-          </div>
-          <p class="text-slate-300 leading-relaxed flex-1" data-i18n="cases.c3.story">Mikael had an idea for a plugin that could transform his production workflow — and a hunch others would pay for it. Vibemaster helped him spec the plugin, write the brief for developers, and plan the website and sales channel he'd need to sell it. A side project became a real product.</p>
-          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 w-fit mt-auto">
-            <span class="material-symbols-outlined text-rose-400 text-sm">rocket_launch</span>
-            <span class="text-rose-400 text-xs font-bold" data-i18n="cases.c3.tag">Product Launch</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- PROBLEM -->
-    <section class="py-32" id="problem">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-20 items-center">
-          <div>
-            <h2 class="text-4xl md:text-5xl font-black text-white mb-8 leading-tight" data-i18n="problem.h2.a">The problem isn't your AI vibecoding service</h2>
-            <div class="space-y-6">
-              <div class="glass p-6 rounded-2xl bg-red-500/[0.02]">
-                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                  <span class="material-symbols-outlined text-red-500">warning</span>
-                  <span data-i18n="problem.card1.h3">It's the gap between your idea and the tech.</span>
-                </h3>
-                <p class="text-slate-400 leading-relaxed" data-i18n="problem.card1.p">AI builders are incredibly fast, but they only build what you tell them. If your prompt is vague, the result is broken builds, circular errors, and wasted time.</p>
-              </div>
-              <div class="glass p-6 rounded-2xl bg-indigo-500/[0.02]">
-                <h3 class="text-xl font-bold text-white mb-2 flex items-center gap-2">
-                  <span class="material-symbols-outlined text-indigo-400">account_tree</span>
-                  <span data-i18n="problem.card2.h3">The Idea → Build Bridge</span>
-                </h3>
-                <p class="text-slate-400 leading-relaxed" data-i18n="problem.card2.p">Vibemaster acts as your Product Manager + Tech Lead. We extract the complex logic from your head and translate it into instructions an AI can't misinterpret.</p>
-              </div>
-            </div>
-          </div>
-          <div class="relative mt-8 lg:mt-0">
-            <div class="absolute -inset-10 bg-indigo-500/10 blur-[100px] -z-10"></div>
-            <div class="rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img alt="Bridging the gap" class="w-full h-auto object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUNSemnITvpFVne63vV4TseB00D3U1uIvprT1b-g4xFzHsYwm93wRPOqo0NIjjXj9RCgJk0btHvwjLazXVIIsxLHcn1G_BRoGfmppafMCiFZazhu6kf3QgibjEbjOZrcBkl0Z3SAqCuda6hfyXgVVFUc4q7kqUdqJTx5bvvFm4gskTSB3kNLCpenURuLcivBzBlRCNVndl4_20SXQrLtJrureEeuq7BAtosY4WrGcKAH1702MrOaIISJqzwzwZBLGU3Bv6LY_L5d_B"/>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="py-32 bg-slate-900/50" id="how-it-works">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-20">
-          <h2 class="text-3xl md:text-5xl font-black text-white mb-6" data-i18n="hiw.h2">How You Bridge the Gap</h2>
-          <p class="text-slate-400 text-lg max-w-2xl mx-auto" data-i18n="hiw.sub">Skip the technical manual and start building with confidence in three steps.</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="glass p-10 rounded-3xl group hover:bg-white/[0.05] transition-colors">
-            <div class="size-14 rounded-2xl bg-indigo-600/20 flex items-center justify-center text-indigo-400 mb-8 group-hover:scale-110 transition-transform">
-              <span class="material-symbols-outlined text-3xl">chat_bubble</span>
-            </div>
-            <h4 class="text-2xl font-bold text-white mb-4" data-i18n="hiw.step1.h4">1. Describe your idea</h4>
-            <p class="text-slate-400 leading-relaxed" data-i18n="hiw.step1.p">Tell us what you want to build in plain English. Our AI interviews you to uncover the hidden technical requirements you didn't know you needed.</p>
-          </div>
-          <div class="glass p-10 rounded-3xl group hover:bg-white/[0.05] transition-colors">
-            <div class="size-14 rounded-2xl bg-purple-600/20 flex items-center justify-center text-purple-400 mb-8 group-hover:scale-110 transition-transform">
-              <span class="material-symbols-outlined text-3xl">transform</span>
-            </div>
-            <h4 class="text-2xl font-bold text-white mb-4" data-i18n="hiw.step2.h4">2. We translate to tech</h4>
-            <p class="text-slate-400 leading-relaxed" data-i18n="hiw.step2.p">We instantly translate your vision into a buildable system: database schemas, API routes, and feature specs optimized for AI builders.</p>
-          </div>
-          <div class="glass p-10 rounded-3xl group hover:bg-white/[0.05] transition-colors">
-            <div class="size-14 rounded-2xl bg-indigo-600/20 flex items-center justify-center text-indigo-400 mb-8 group-hover:scale-110 transition-transform">
-              <span class="material-symbols-outlined text-3xl">rocket_launch</span>
-            </div>
-            <h4 class="text-2xl font-bold text-white mb-4" data-i18n="hiw.step3.h4">3. Build instantly</h4>
-            <p class="text-slate-400 leading-relaxed" data-i18n-html="hiw.step3.p">Paste your Vibemaster plan directly into <a href='https://aistudio.google.com/app/prompts/new_chat' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Google AI Studio</a>, <a href='https://lovable.dev' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Lovable</a>, <a href='https://bolt.new' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Bolt.new</a>, <a href='https://replit.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Replit</a>, or <a href='https://cursor.com' target='_blank' rel='noopener' class='text-indigo-400 hover:text-indigo-300 underline underline-offset-2 transition-colors'>Cursor</a>. Watch your app come to life — no hallucinations, no guessing.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EU HOSTING -->
-    <section class="py-24" id="eu-compliance">
-      <div class="max-w-3xl mx-auto px-6 text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider mb-8">
-          <span class="material-symbols-outlined text-sm">euro</span>
-          <span data-i18n="eu.badge">Hosted in Europe</span>
-        </div>
-        <div class="text-8xl mb-6" aria-label="EU flag">🇪🇺</div>
-        <h2 class="text-3xl md:text-5xl font-black text-white mb-6" data-i18n="eu.h2">Your data stays in Europe</h2>
-        <p class="text-slate-400 text-lg leading-relaxed mb-10" data-i18n-html="eu.sub">Vibemaster is hosted on Scalingo's infrastructure in Paris, France. Your ideas and data never leave EU jurisdiction.</p>
-        <div class="flex items-center justify-center gap-2 text-slate-500 text-sm font-medium">
-          <span data-i18n="eu.hosted">Hosted on Scalingo · Paris, France</span>
-        </div>
-        <!-- EU compliance cards — re-enable when GDPR/AI Act audit is complete
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-          GDPR, EU AI Act, Data Residency, Privacy by Design cards go here
-        </div>
-        -->
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="py-24 bg-slate-900/50 px-6 lg:px-40" id="pricing">
-      <div class="max-w-[1440px] mx-auto">
-        <div class="flex flex-col items-center text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-black text-white" data-i18n="pricing.h2">Simple Pricing for Visionaries</h2>
-          <p class="mt-6 text-slate-400 max-w-2xl text-lg" data-i18n="pricing.sub">Choose the plan that matches your shipping speed. All plans include core AI research capabilities.</p>
-          <div class="mt-10 inline-flex items-center p-1 bg-white/5 border border-white/10 rounded-lg">
-            <button class="px-6 py-2 text-sm font-bold rounded-md bg-white/10 text-white shadow-sm" data-i18n="pricing.monthly">Monthly</button>
-            <button class="px-6 py-2 text-sm font-bold text-slate-400 hover:text-slate-200 transition-colors">
-              <span data-i18n="pricing.yearly">Yearly</span> <span class="text-green-500 ml-1">-20%</span>
-            </button>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-
-          <!-- Explorer -->
-          <div class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-indigo-500/40">
-            <div class="flex flex-col gap-4">
-              <h3 class="text-white text-xl font-bold" data-i18n="pricing.explorer.name">Explorer</h3>
-              <div class="flex items-baseline gap-1">
-                <span class="text-white text-5xl font-black" data-i18n="pricing.explorer.price">€0</span>
-                <span class="text-slate-400 text-sm font-semibold" data-i18n="pricing.explorer.period">/mo</span>
-              </div>
-              <p class="text-slate-400 text-sm" data-i18n="pricing.explorer.sub">Perfect for solo hackers testing the waters.</p>
-            </div>
-            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/10 text-white text-sm font-extrabold hover:bg-white/5 transition-all" data-i18n="pricing.explorer.cta">Start Free</button>
-            <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.explorer.f1">2 Projects per month</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.explorer.f2">Basic technical specs</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.explorer.f3">Markdown exports</span></li>
-            </ul>
-          </div>
-
-          <!-- Professional -->
-          <div class="flex flex-col gap-8 rounded-2xl pro-gradient-border p-8 shadow-2xl relative lg:-mt-4 lg:mb-4">
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-[11px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg" data-i18n="pricing.popular">Most Popular</div>
-            <div class="flex flex-col gap-4">
-              <h3 class="text-white text-xl font-bold" data-i18n="pricing.pro.name">Professional</h3>
-              <div class="flex items-baseline gap-1">
-                <span class="text-white text-5xl font-black" data-i18n="pricing.pro.price">€9</span>
-                <span class="text-slate-400 text-sm font-semibold" data-i18n="pricing.pro.period">/mo</span>
-              </div>
-              <p class="text-slate-400 text-sm" data-i18n="pricing.pro.sub">For serious builders shipping weekly.</p>
-            </div>
-            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 gradient-button text-white text-sm font-extrabold shadow-lg shadow-indigo-500/20 hover:scale-[1.02] transition-all" data-i18n="pricing.pro.cta">Go Pro</button>
-            <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3 text-sm text-slate-300 font-bold"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f1">Unlimited Projects</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.pro.f6">Bring Your Own API Key (BYOK)</span></li>
-            </ul>
-          </div>
-
-          <!-- Team (coming soon) -->
-          <div class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-indigo-500/40 relative">
-            <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-slate-700 text-slate-300 text-[11px] font-black uppercase tracking-widest whitespace-nowrap shadow-lg" data-i18n="pricing.studio.badge">Coming soon</div>
-            <div class="flex flex-col gap-4">
-              <h3 class="text-white text-xl font-bold" data-i18n="pricing.studio.name">Studio</h3>
-              <div class="flex items-baseline gap-1">
-                <span class="text-white text-5xl font-black" data-i18n="pricing.studio.price">€49</span>
-                <span class="text-slate-400 text-sm font-semibold" data-i18n="pricing.studio.period">/mo</span>
-              </div>
-              <p class="text-slate-400 text-sm" data-i18n="pricing.studio.sub">For teams up to 6 people.</p>
-            </div>
-            <button disabled class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/5 text-slate-600 text-sm font-extrabold cursor-not-allowed" data-i18n="pricing.studio.cta">Coming soon</button>
-            <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f1">Up to 6 team seats</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f2">Shared projects</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.studio.f3">Claude &amp; Mistral via own API key</span></li>
-            </ul>
-          </div>
-
-          <!-- Enterprise -->
-          <div class="flex flex-col gap-8 rounded-2xl border border-white/10 bg-white/[0.02] p-8 transition-all hover:border-indigo-500/40">
-            <div class="flex flex-col gap-4">
-              <h3 class="text-white text-xl font-bold" data-i18n="pricing.enterprise.name">Enterprise</h3>
-              <div class="flex items-baseline gap-1">
-                <span class="text-white text-4xl font-black" data-i18n="pricing.enterprise.price">Custom</span>
-              </div>
-              <p class="text-slate-400 text-sm" data-i18n="pricing.enterprise.sub">Global scale and security requirements.</p>
-            </div>
-            <button class="w-full flex items-center justify-center rounded-xl h-12 px-4 border-2 border-white/10 text-white text-sm font-extrabold hover:bg-white/5 transition-all" data-i18n="pricing.enterprise.cta">Call us!</button>
-            <ul class="flex flex-col gap-4">
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f1">Custom number of seats</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f2">Shared branding</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f3">Shared projects</span></li>
-              <li class="flex items-start gap-3 text-sm text-slate-300"><span class="material-symbols-outlined text-indigo-400 text-[20px] shrink-0">check_circle</span><span data-i18n="pricing.enterprise.f4">Dedicated support</span></li>
-            </ul>
-          </div>
-        </div>
-        <p class="text-center mt-12 text-slate-500 text-sm">
-          <span data-i18n="pricing.contact">Need something else?</span> <a class="text-indigo-400 font-bold hover:underline" href="#" data-i18n="pricing.chat">Chat with us</a>
+        <p class="text-[13px] text-moss leading-relaxed max-w-xs" data-i18n="footer.desc">
+          Vibemaster — The AI-powered workspace for making ideas buildable.
         </p>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="py-24 px-6 lg:px-40 max-w-[1000px] mx-auto" id="faq">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-black text-white" data-i18n="faq.h2">Questions? We have answers.</h2>
-        <p class="mt-6 text-slate-400 text-lg" data-i18n="faq.sub">Everything you need to know about getting started.</p>
-      </div>
-      <div class="flex flex-col gap-4">
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden" open>
-          <summary class="flex cursor-pointer items-center justify-between p-6 text-white font-bold select-none list-none text-lg">
-            <span data-i18n="faq.q1">Do I need technical knowledge to use Vibemaster?</span>
-            <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-indigo-400">expand_more</span>
-          </summary>
-          <div class="px-6 pb-6 text-slate-400 leading-relaxed" data-i18n-html="faq.a1">No! Vibemaster is built to bridge the gap between imagination and implementation.</div>
-        </details>
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
-          <summary class="flex cursor-pointer items-center justify-between p-6 text-white font-bold select-none list-none text-lg">
-            <span data-i18n="faq.q2">Does Vibemaster build my product for me?</span>
-            <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-indigo-400">expand_more</span>
-          </summary>
-          <div class="px-6 pb-6 text-slate-400 leading-relaxed" data-i18n-html="faq.a2">Vibemaster writes the recipe — you choose the chef.</div>
-        </details>
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
-          <summary class="flex cursor-pointer items-center justify-between p-6 text-white font-bold select-none list-none text-lg">
-            <span data-i18n="faq.q3">How does Vibemaster differ from using ChatGPT or Claude?</span>
-            <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-indigo-400">expand_more</span>
-          </summary>
-          <div class="px-6 pb-6 text-slate-400 leading-relaxed" data-i18n-html="faq.a3">ChatGPT and Claude give you answers. Vibemaster gives you a buildable product specification. Instead of a conversation, you get a structured plan with features, user flows, data model, and instructions that AI can build from.</div>
-        </details>
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
-          <summary class="flex cursor-pointer items-center justify-between p-6 text-white font-bold select-none list-none text-lg">
-            <span data-i18n="faq.q4">Which tools can I use with Vibemaster?</span>
-            <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-indigo-400">expand_more</span>
-          </summary>
-          <div class="px-6 pb-6 text-slate-400 leading-relaxed" data-i18n-html="faq.a4">You can use Vibemaster with most AI building tools — e.g. Google AI Studio, Lovable, Replit, Bolt.new, Cursor or Claude. We give you a structured plan that works directly in these tools — without them having to guess.</div>
-        </details>
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
-          <summary class="flex cursor-pointer items-center justify-between p-6 text-white font-bold select-none list-none text-lg">
-            <span data-i18n="faq.q5">Is my data secure and do you comply with EU regulations?</span>
-            <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-indigo-400">expand_more</span>
-          </summary>
-          <div class="px-6 pb-6 text-slate-400 leading-relaxed" data-i18n-html="faq.a5">Yes. Your data stays within the EU and is handled according to EU regulations. We only use anonymized material to train AI models. You retain full control over your content. With BYOK (Bring Your Own Key), your prompts go directly to the model of your choice.</div>
-        </details>
-        <details class="group rounded-2xl border border-white/10 bg-white/[0.02] overflow-hidden">
-          <summary class="flex cursor-pointer items-center justify-between p-6 text-white font-bold select-none list-none text-lg">
-            <span data-i18n="faq.q6">How does Vibemaster generate its tech plans?</span>
-            <span class="material-symbols-outlined transition-transform group-open:rotate-180 text-indigo-400">expand_more</span>
-          </summary>
-          <div class="px-6 pb-6 text-slate-400 leading-relaxed" data-i18n-html="faq.a6">Vibemaster uses advanced AI models combined with a structured method. We guide you through the right questions and transform your answers into a complete product specification — based on established best practice for how digital products are built.</div>
-        </details>
-      </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section class="py-20 px-6 lg:px-40">
-      <div class="relative overflow-hidden rounded-[2rem] bg-slate-950 border border-indigo-500/20 p-8 sm:p-12 lg:p-24 text-center">
-        <div class="absolute inset-0 pointer-events-none overflow-hidden">
-          <div class="absolute -top-24 -left-24 w-[500px] h-[500px] bg-indigo-500/20 blur-[120px] rounded-full"></div>
-          <div class="absolute -bottom-24 -right-24 w-[500px] h-[500px] bg-purple-600/20 blur-[120px] rounded-full"></div>
-        </div>
-        <div class="relative z-10">
-          <h2 class="text-4xl md:text-7xl font-black text-white leading-tight mb-8" data-i18n="cta.h2">Ready to ship your next big idea?</h2>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a href="https://app.vibemaster.ai/" class="gradient-button flex min-w-[240px] items-center justify-center rounded-2xl h-16 px-10 text-white text-xl font-black shadow-2xl shadow-indigo-500/40 hover:scale-105 transition-all" data-i18n="cta.primary">Get Started Now</a>
-          </div>
-          <div class="mt-16 flex flex-wrap items-center justify-center gap-10">
-            <div class="flex items-center gap-2 text-slate-400 text-sm font-semibold">
-              <span class="text-lg">🇪🇺</span>
-              <span data-i18n="cta.trust1">EU Data Residency</span>
-            </div>
-            <div class="flex items-center gap-2 text-slate-400 text-sm font-semibold">
-              <span class="material-symbols-outlined text-green-500">lock</span>
-              <span data-i18n="cta.trust2">Encrypted Payments</span>
-            </div>
-            <div class="flex items-center gap-2 text-slate-400 text-sm font-semibold">
-              <span class="material-symbols-outlined text-green-500">shield</span>
-              <span data-i18n="cta.trust3">Your ideas stay private</span>
-            </div>
-          </div>
+        <div class="mt-5 flex items-center gap-2">
+          <button onclick="shareVibemaster()" class="size-9 rounded-lg border border-mist/60 flex items-center justify-center text-stone hover:text-ink hover:border-stone/60 transition-colors" title="Share Vibemaster">
+            <svg class="icon" style="font-size:14px"><use href="#i-share"/></svg>
+          </button>
+          <a href="mailto:admin@vibemaster.ai" aria-label="Email" class="size-9 rounded-lg border border-mist/60 flex items-center justify-center text-stone hover:text-ink hover:border-stone/60 transition-colors">
+            <svg class="icon" style="font-size:14px" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
         </div>
       </div>
-    </section>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="bg-background-dark border-t border-white/5 px-6 lg:px-40 py-20">
-    <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16">
-      <div class="lg:col-span-4">
-        <div class="flex items-center gap-3 text-white mb-8">
-          <div class="size-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-            <span class="material-symbols-outlined text-white text-xl">link</span>
-          </div>
-          <span class="text-xl font-black">Vibemaster</span>
-        </div>
-        <p class="text-slate-500 text-base leading-relaxed mb-8 max-w-sm" data-i18n="footer.desc">Vibemaster — The AI-powered workspace for making ideas buildable. Turn your vision into a clear product specification that can be built directly.</p>
-        <div class="flex gap-4">
-          <button onclick="shareVibemaster()" class="size-11 rounded-xl flex items-center justify-center bg-white/5 border border-white/10 text-slate-400 hover:text-indigo-400 transition-colors" title="Share Vibemaster"><span class="material-symbols-outlined">share</span></button>
-        </div>
-      </div>
-      <div class="lg:col-span-2">
-        <h4 class="text-white font-bold text-sm mb-8 uppercase tracking-widest" data-i18n="footer.product">Product</h4>
-        <ul class="flex flex-col gap-4 text-sm font-medium text-slate-500">
-          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.f.features">Features</a></li>
-          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.f.pricing">Pricing</a></li>
-          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.f.integrations">Integrations</a></li>
-          <li><a class="hover:text-indigo-400 transition-colors" href="#" data-i18n="footer.f.changelog">Changelog</a></li>
+      <div>
+        <div class="mono text-[10px] uppercase tracking-widest text-stone mb-4" data-i18n="footer.product">Product</div>
+        <ul class="space-y-2.5 text-[13px] text-moss">
+          <li><a class="hover:text-ink transition-colors" href="#" data-i18n="footer.f.features">Features</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#pricing" data-i18n="footer.f.pricing">Pricing</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#" data-i18n="footer.f.integrations">Integrations</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#" data-i18n="footer.f.changelog">Changelog</a></li>
         </ul>
       </div>
-      <div class="lg:col-span-2">
-        <h4 class="text-white font-bold text-sm mb-8 uppercase tracking-widest" data-i18n="footer.contact">Contact</h4>
-        <ul class="flex flex-col gap-4 text-sm font-medium text-slate-500">
-          <li><a class="hover:text-indigo-400 transition-colors" href="mailto:admin@vibemaster.ai">admin@vibemaster.ai</a></li>
-          <li><a class="hover:text-indigo-400 transition-colors" href="https://app.vibemaster.ai/" data-i18n="footer.c.app">Try the app →</a></li>
+
+      <div>
+        <div class="mono text-[10px] uppercase tracking-widest text-stone mb-4">Use cases</div>
+        <ul class="space-y-2.5 text-[13px] text-moss">
+          <li><a class="hover:text-ink transition-colors" href="#who">For founders</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#who">For PMs</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#who">For developers</a></li>
         </ul>
       </div>
-      <!-- NEWSLETTER — commented out during beta, re-enable later
-      <div class="lg:col-span-4">
-        <h4 class="text-white font-bold text-sm mb-8 uppercase tracking-widest" data-i18n="footer.newsletter">Stay Updated</h4>
-        <p class="text-slate-500 text-sm mb-6" data-i18n="footer.newsletter.sub">Join 10k+ builders receiving our weekly "Vibe to Spec" newsletter.</p>
-        <form class="flex flex-col gap-3">
-          <input class="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all" type="email" data-i18n-placeholder="footer.newsletter.placeholder" placeholder="name@email.com"/>
-          <button class="w-full gradient-button text-white text-sm font-black py-3 rounded-xl hover:brightness-110 transition-all" data-i18n="footer.newsletter.cta">Kom igång nu</button>
-        </form>
-      </div>
-      -->
-    </div>
-    <div class="max-w-[1440px] mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-      <p class="text-slate-600 text-sm" data-i18n="footer.legal">© 2025 Vibemaster. From Idea to Reality.</p>
-      <div class="flex gap-10 text-sm font-medium text-slate-600">
-        <a class="hover:text-white transition-colors" href="villkor.html#integritetspolicy" data-i18n="footer.privacy">Privacy</a>
-        <a class="hover:text-white transition-colors" href="villkor.html#anvandarvillkor" data-i18n="footer.terms">Terms</a>
-        <a class="hover:text-white transition-colors" href="villkor.html#liability" data-i18n="footer.security">Security</a>
-      </div>
-    </div>
-  </footer>
 
-  <script src="src/scripts/i18n.js?v=2"></script>
-  <script>
-    (function () {
-      var toggle = document.getElementById('nav-toggle');
-      var mobileNav = document.getElementById('mobile-nav');
-      if (!toggle || !mobileNav) return;
-      var bars = toggle.querySelectorAll('span');
-      function openNav() {
-        mobileNav.classList.remove('hidden');
-        bars[0].style.transform = 'translateY(8px) rotate(45deg)';
-        bars[1].style.opacity = '0';
-        bars[2].style.transform = 'translateY(-8px) rotate(-45deg)';
-      }
-      function closeNav() {
-        mobileNav.classList.add('hidden');
-        bars[0].style.transform = '';
-        bars[1].style.opacity = '';
-        bars[2].style.transform = '';
-      }
-      toggle.addEventListener('click', function () {
-        mobileNav.classList.contains('hidden') ? openNav() : closeNav();
-      });
-      mobileNav.querySelectorAll('a').forEach(function (a) {
-        a.addEventListener('click', closeNav);
-      });
-    })();
-  </script>
+      <div>
+        <div class="mono text-[10px] uppercase tracking-widest text-stone mb-4" data-i18n="footer.contact">Contact</div>
+        <ul class="space-y-2.5 text-[13px] text-moss">
+          <li><a class="hover:text-ink transition-colors" href="mailto:admin@vibemaster.ai">admin@vibemaster.ai</a></li>
+          <li><a class="hover:text-ink transition-colors" href="https://app.vibemaster.ai/" data-i18n="footer.c.app">Try the app →</a></li>
+        </ul>
+      </div>
 
-  <script>
-    function shareVibemaster() {
-      var url = 'https://vibemaster.ai';
-      var subject = 'Jag vill tipsa om Vibemaster.ai';
-      var body = 'Med den här tjänsten blir det mycket enklare att arbeta med de vanligaste vibekodningstjänsterna.\n\nVibemaster är lite som receptet (prompten) som du ger till kocken (vibekodningstjänsten). Med rätt information i receptet bygger du din idé både snabbare och bättre.\n\nProva — det finns en gratis trial!\n\n' + url;
-      if (navigator.share) {
-        navigator.share({ title: subject, text: body, url: url });
+      <div>
+        <div class="mono text-[10px] uppercase tracking-widest text-stone mb-4">Resources</div>
+        <ul class="space-y-2.5 text-[13px] text-moss">
+          <li><a class="hover:text-ink transition-colors" href="#">Docs</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#">Community</a></li>
+          <li>
+            <a class="hover:text-ink transition-colors" href="#">Status</a>
+            <span class="ml-1.5 inline-block size-1.5 rounded-full bg-olive align-middle"></span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-between gap-4 pt-8" style="border-top:1px solid rgba(184,188,163,.5);">
+      <p class="text-[12px] text-stone" data-i18n="footer.legal">© 2026 Vibemaster. From Idea to Reality.</p>
+      <div class="flex gap-6 text-[12px] text-stone">
+        <a class="hover:text-ink transition-colors" href="villkor.html#integritetspolicy" data-i18n="footer.privacy">Privacy</a>
+        <a class="hover:text-ink transition-colors" href="villkor.html#anvandarvillkor" data-i18n="footer.terms">Terms</a>
+        <a class="hover:text-ink transition-colors" href="villkor.html#liability" data-i18n="footer.security">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="src/scripts/i18n.js?v=2"></script>
+<script>
+  (function () {
+    var toggle = document.getElementById('nav-toggle');
+    var mobileNav = document.getElementById('mobile-nav');
+    var iconMenu = document.getElementById('nav-icon-menu');
+    var iconClose = document.getElementById('nav-icon-close');
+    if (!toggle || !mobileNav) return;
+    function openNav() {
+      mobileNav.classList.remove('hidden');
+      iconMenu.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+    function closeNav() {
+      mobileNav.classList.add('hidden');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    toggle.addEventListener('click', function () {
+      mobileNav.classList.contains('hidden') ? openNav() : closeNav();
+    });
+    mobileNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeNav);
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    var m = document.getElementById('bill-month');
+    var y = document.getElementById('bill-year');
+    if (!m || !y) return;
+    function set(which) {
+      if (which === 'y') {
+        y.style.background = '#1E2113'; y.style.color = '#FAFAEB';
+        m.style.background = ''; m.style.color = '#5A5E45';
       } else {
-        window.location.href = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        m.style.background = '#1E2113'; m.style.color = '#FAFAEB';
+        y.style.background = ''; y.style.color = '#5A5E45';
       }
     }
-  </script>
+    m.addEventListener('click', function () { set('m'); });
+    y.addEventListener('click', function () { set('y'); });
+  })();
+</script>
 
-  <!-- Design switcher disabled — re-enable when Stitch variant is in sync
-  <script>window.DESIGN_CURRENT = 'Vibemaster';</script>
-  <script src="src/scripts/design-switcher.js"></script>
-  -->
+<script>
+  function shareVibemaster() {
+    var url = 'https://vibemaster.ai';
+    var subject = 'Jag vill tipsa om Vibemaster.ai';
+    var body = 'Med den här tjänsten blir det mycket enklare att arbeta med de vanligaste vibekodningstjänsterna.\n\nVibemaster är lite som receptet (prompten) som du ger till kocken (vibekodningstjänsten). Med rätt information i receptet bygger du din idé både snabbare och bättre.\n\nProva — det finns en gratis trial!\n\n' + url;
+    if (navigator.share) {
+      navigator.share({ title: subject, text: body, url: url });
+    } else {
+      window.location.href = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    }
+  }
+</script>
+
 </body>
 </html>
