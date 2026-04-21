@@ -215,7 +215,7 @@ const translations = {
 
     "hero.trust1.sub":    "EU-hosted · Paris",
     "hero.trust2.sub":    "BYOK supported",
-    "hero.trust3.sub":    "Free starter plan",
+    "hero.trust3.sub":    "Free trial available",
 
     "pricing.pro.f2":     "Version history & diffs",
     "pricing.pro.f3":     "Export to JSON & PDF",
@@ -445,7 +445,7 @@ const translations = {
 
     "hero.trust1.sub":    "EU-hostad · Paris",
     "hero.trust2.sub":    "BYOK stöds",
-    "hero.trust3.sub":    "Gratis startplan",
+    "hero.trust3.sub":    "Prova gratis",
 
     "pricing.pro.f2":     "Versionshistorik & diff",
     "pricing.pro.f3":     "Exportera till JSON & PDF",
@@ -675,7 +675,7 @@ const translations = {
 
     "hero.trust1.sub":    "EU-gehostet · Paris",
     "hero.trust2.sub":    "BYOK unterstützt",
-    "hero.trust3.sub":    "Kostenloser Einstiegsplan",
+    "hero.trust3.sub":    "Kostenlose Testversion",
 
     "pricing.pro.f2":     "Versionsverlauf & Diffs",
     "pricing.pro.f3":     "Export als JSON & PDF",
@@ -905,7 +905,7 @@ const translations = {
 
     "hero.trust1.sub":    "Alojado en UE · París",
     "hero.trust2.sub":    "BYOK compatible",
-    "hero.trust3.sub":    "Plan de inicio gratuito",
+    "hero.trust3.sub":    "Prueba gratuita disponible",
 
     "pricing.pro.f2":     "Historial de versiones & diffs",
     "pricing.pro.f3":     "Exportar a JSON & PDF",
@@ -1135,7 +1135,7 @@ const translations = {
 
     "hero.trust1.sub":    "Hébergé en UE · Paris",
     "hero.trust2.sub":    "BYOK supporté",
-    "hero.trust3.sub":    "Plan de démarrage gratuit",
+    "hero.trust3.sub":    "Essai gratuit disponible",
 
     "pricing.pro.f2":     "Historique des versions & diffs",
     "pricing.pro.f3":     "Export JSON & PDF",
@@ -1366,7 +1366,7 @@ const translations = {
 
     "hero.trust1.sub":    "EU-होस्टेड · पेरिस",
     "hero.trust2.sub":    "BYOK समर्थित",
-    "hero.trust3.sub":    "निःशुल्क स्टार्टर प्लान",
+    "hero.trust3.sub":    "निःशुल्क ट्रायल उपलब्ध",
 
     "pricing.pro.f2":     "संस्करण इतिहास और diffs",
     "pricing.pro.f3":     "JSON & PDF में निर्यात",
@@ -1597,7 +1597,7 @@ const translations = {
 
     "hero.trust1.sub":    "欧盟托管 · 巴黎",
     "hero.trust2.sub":    "支持 BYOK",
-    "hero.trust3.sub":    "免费入门计划",
+    "hero.trust3.sub":    "免费试用",
 
     "pricing.pro.f2":     "版本历史和差异对比",
     "pricing.pro.f3":     "导出为 JSON 和 PDF",
