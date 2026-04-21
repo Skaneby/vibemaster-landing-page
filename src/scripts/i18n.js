@@ -180,7 +180,9 @@ const translations = {
 
     "cta.eyebrow":        "Ready when you are",
     "cta.h2":             "Ready to ship your next big idea?",
+    "cta.sub":            "Free plan, no card. Two real projects, yours forever. Upgrade when you're shipping weekly.",
     "cta.primary":        "Get Started Now",
+    "cta.secondary":      "See how it works",
     "cta.trust1":         "EU Data Residency",
     "cta.trust2":         "Encrypted Payments",
     "cta.trust3":         "Your ideas stay private",
@@ -213,7 +215,7 @@ const translations = {
 
     "hero.trust1.sub":    "EU-hosted · Paris",
     "hero.trust2.sub":    "BYOK supported",
-    "hero.trust3.sub":    "Free forever plan",
+    "hero.trust3.sub":    "Free starter plan",
 
     "pricing.pro.f2":     "Version history & diffs",
     "pricing.pro.f3":     "Export to JSON & PDF",
@@ -408,7 +410,9 @@ const translations = {
 
     "cta.eyebrow":        "Redo när du är det",
     "cta.h2":             "Redo att lansera din nästa stora idé?",
+    "cta.sub":            "Gratis plan, inget kort. Två riktiga projekt, dina för alltid. Uppgradera när du levererar varje vecka.",
     "cta.primary":        "Kom igång nu",
+    "cta.secondary":      "Se hur det fungerar",
     "cta.trust1":         "EU-datahemvist",
     "cta.trust2":         "Krypterade betalningar",
     "cta.trust3":         "Dina idéer är privata",
@@ -441,7 +445,7 @@ const translations = {
 
     "hero.trust1.sub":    "EU-hostad · Paris",
     "hero.trust2.sub":    "BYOK stöds",
-    "hero.trust3.sub":    "Gratis för alltid",
+    "hero.trust3.sub":    "Gratis startplan",
 
     "pricing.pro.f2":     "Versionshistorik & diff",
     "pricing.pro.f3":     "Exportera till JSON & PDF",
@@ -636,9 +640,9 @@ const translations = {
 
     "cta.eyebrow":        "Bereit, wenn du es bist",
     "cta.h2":             "Bereit, deine nächste große Idee zu launchen?",
-    "cta.sub":            "Starte noch heute und geh von \"Vibe\" zu \"Produktion\" in Rekordzeit. Keine Kreditkarte erforderlich.",
-    "cta.primary":        "Kostenlose Recherche starten",
-    "cta.secondary":      "Demo buchen",
+    "cta.sub":            "Gratis-Plan, keine Karte. Zwei echte Projekte, für immer deins. Upgrade, wenn du wöchentlich lieferst.",
+    "cta.primary":        "Jetzt loslegen",
+    "cta.secondary":      "So funktioniert es",
     "cta.trust1":         "EU-Datenspeicherung",
     "cta.trust2":         "Verschlüsselte Zahlungen",
     "cta.trust3":         "Deine Ideen bleiben privat",
@@ -671,7 +675,7 @@ const translations = {
 
     "hero.trust1.sub":    "EU-gehostet · Paris",
     "hero.trust2.sub":    "BYOK unterstützt",
-    "hero.trust3.sub":    "Kostenloser Dauerplan",
+    "hero.trust3.sub":    "Kostenloser Einstiegsplan",
 
     "pricing.pro.f2":     "Versionsverlauf & Diffs",
     "pricing.pro.f3":     "Export als JSON & PDF",
@@ -866,9 +870,9 @@ const translations = {
 
     "cta.eyebrow":        "Listo cuando tú lo estés",
     "cta.h2":             "¿Listo para lanzar tu próxima gran idea?",
-    "cta.sub":            "Empieza hoy y pasa de \"vibe\" a \"producción\" en tiempo récord. No se requiere tarjeta de crédito.",
-    "cta.primary":        "Iniciar investigación gratuita",
-    "cta.secondary":      "Reservar una demo",
+    "cta.sub":            "Plan gratuito, sin tarjeta. Dos proyectos reales, para siempre tuyos. Mejora cuando estés enviando semanalmente.",
+    "cta.primary":        "Empezar ahora",
+    "cta.secondary":      "Ver cómo funciona",
     "cta.trust1":         "Residencia de datos en la UE",
     "cta.trust2":         "Pagos cifrados",
     "cta.trust3":         "Tus ideas se mantienen privadas",
@@ -901,7 +905,7 @@ const translations = {
 
     "hero.trust1.sub":    "Alojado en UE · París",
     "hero.trust2.sub":    "BYOK compatible",
-    "hero.trust3.sub":    "Plan gratuito permanente",
+    "hero.trust3.sub":    "Plan de inicio gratuito",
 
     "pricing.pro.f2":     "Historial de versiones & diffs",
     "pricing.pro.f3":     "Exportar a JSON & PDF",
@@ -1096,9 +1100,9 @@ const translations = {
 
     "cta.eyebrow":        "Prêt quand vous l'êtes",
     "cta.h2":             "Prêt à lancer votre prochaine grande idée ?",
-    "cta.sub":            "Commencez aujourd'hui et passez de \"vibe\" à \"production\" en un temps record. Aucune carte de crédit requise.",
-    "cta.primary":        "Démarrer la recherche gratuite",
-    "cta.secondary":      "Réserver une démo",
+    "cta.sub":            "Plan gratuit, sans carte. Deux vrais projets, à vous pour toujours. Passez à la version supérieure quand vous livrez chaque semaine.",
+    "cta.primary":        "Commencer maintenant",
+    "cta.secondary":      "Voir comment ça marche",
     "cta.trust1":         "Données hébergées dans l'UE",
     "cta.trust2":         "Paiements chiffrés",
     "cta.trust3":         "Vos idées restent privées",
@@ -1131,7 +1135,7 @@ const translations = {
 
     "hero.trust1.sub":    "Hébergé en UE · Paris",
     "hero.trust2.sub":    "BYOK supporté",
-    "hero.trust3.sub":    "Plan gratuit à vie",
+    "hero.trust3.sub":    "Plan de démarrage gratuit",
 
     "pricing.pro.f2":     "Historique des versions & diffs",
     "pricing.pro.f3":     "Export JSON & PDF",
@@ -1327,9 +1331,9 @@ const translations = {
 
     "cta.eyebrow":        "तैयार हैं जब आप हों",
     "cta.h2":             "अपने अगले बड़े विचार को लॉन्च करने के लिए तैयार हैं?",
-    "cta.sub":            "आज ही शुरू करें और रिकॉर्ड समय में \"वाइब\" से \"प्रोडक्शन\" तक जाएं। क्रेडिट कार्ड की आवश्यकता नहीं।",
-    "cta.primary":        "मुफ्त रिसर्च शुरू करें",
-    "cta.secondary":      "डेमो बुक करें",
+    "cta.sub":            "मुफ्त प्लान, कोई कार्ड नहीं। दो असली प्रोजेक्ट, हमेशा के लिए आपके। अपग्रेड करें जब आप साप्ताहिक शिप करें।",
+    "cta.primary":        "अभी शुरू करें",
+    "cta.secondary":      "यह कैसे काम करता है",
     "cta.trust1":         "EU डेटा स्थान",
     "cta.trust2":         "एन्क्रिप्टेड भुगतान",
     "cta.trust3":         "आपके विचार निजी रहते हैं",
@@ -1362,7 +1366,7 @@ const translations = {
 
     "hero.trust1.sub":    "EU-होस्टेड · पेरिस",
     "hero.trust2.sub":    "BYOK समर्थित",
-    "hero.trust3.sub":    "हमेशा के लिए निःशुल्क",
+    "hero.trust3.sub":    "निःशुल्क स्टार्टर प्लान",
 
     "pricing.pro.f2":     "संस्करण इतिहास और diffs",
     "pricing.pro.f3":     "JSON & PDF में निर्यात",
@@ -1558,9 +1562,9 @@ const translations = {
 
     "cta.eyebrow":        "随时为您准备好",
     "cta.h2":             "准备好发布您的下一个大想法了吗？",
-    "cta.sub":            "今天就开始，以创纪录的时间从\"vibe\"到\"生产\"。无需信用卡。",
-    "cta.primary":        "开始免费研究",
-    "cta.secondary":      "预约演示",
+    "cta.sub":            "免费计划，无需信用卡。两个真实项目，永远属于你。每周发布时再升级。",
+    "cta.primary":        "立即开始",
+    "cta.secondary":      "了解工作原理",
     "cta.trust1":         "欧盟数据存储",
     "cta.trust2":         "加密支付",
     "cta.trust3":         "您的想法保持私密",
@@ -1593,7 +1597,7 @@ const translations = {
 
     "hero.trust1.sub":    "欧盟托管 · 巴黎",
     "hero.trust2.sub":    "支持 BYOK",
-    "hero.trust3.sub":    "永久免费计划",
+    "hero.trust3.sub":    "免费入门计划",
 
     "pricing.pro.f2":     "版本历史和差异对比",
     "pricing.pro.f3":     "导出为 JSON 和 PDF",
