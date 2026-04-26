@@ -212,6 +212,8 @@ const translations = {
     "hiw.step3.label":    "Step 03",
     "pricing.eyebrow":    "Pricing",
     "faq.eyebrow":        "FAQ",
+    "video.eyebrow":      "Watch it in action",
+    "video.h2":           "See how it works in 2 minutes",
 
     "hero.trust1.sub":    "EU-hosted · Paris",
     "hero.trust2.sub":    "BYOK coming soon",
@@ -442,6 +444,8 @@ const translations = {
     "hiw.step3.label":    "Steg 03",
     "pricing.eyebrow":    "Priser",
     "faq.eyebrow":        "Vanliga frågor",
+    "video.eyebrow":      "Se det i praktiken",
+    "video.h2":           "Se hur det fungerar på 2 minuter",
 
     "hero.trust1.sub":    "EU-hostad · Paris",
     "hero.trust2.sub":    "BYOK kommer snart",
@@ -672,6 +676,8 @@ const translations = {
     "hiw.step3.label":    "Schritt 03",
     "pricing.eyebrow":    "Preise",
     "faq.eyebrow":        "FAQ",
+    "video.eyebrow":      "Sieh es in Aktion",
+    "video.h2":           "So funktioniert es in 2 Minuten",
 
     "hero.trust1.sub":    "EU-gehostet · Paris",
     "hero.trust2.sub":    "BYOK demnächst",
@@ -902,6 +908,8 @@ const translations = {
     "hiw.step3.label":    "Paso 03",
     "pricing.eyebrow":    "Precios",
     "faq.eyebrow":        "Preguntas frecuentes",
+    "video.eyebrow":      "Míralo en acción",
+    "video.h2":           "Descubre cómo funciona en 2 minutos",
 
     "hero.trust1.sub":    "Alojado en UE · París",
     "hero.trust2.sub":    "BYOK próximamente",
@@ -1132,6 +1140,8 @@ const translations = {
     "hiw.step3.label":    "Étape 03",
     "pricing.eyebrow":    "Tarifs",
     "faq.eyebrow":        "Questions fréquentes",
+    "video.eyebrow":      "Voyez-le en action",
+    "video.h2":           "Découvrez comment ça fonctionne en 2 minutes",
 
     "hero.trust1.sub":    "Hébergé en UE · Paris",
     "hero.trust2.sub":    "BYOK bientôt disponible",
@@ -1363,6 +1373,8 @@ const translations = {
     "hiw.step3.label":    "चरण 03",
     "pricing.eyebrow":    "मूल्य",
     "faq.eyebrow":        "सामान्य प्रश्न",
+    "video.eyebrow":      "इसे काम करते देखें",
+    "video.h2":           "2 मिनट में जानें यह कैसे काम करता है",
 
     "hero.trust1.sub":    "EU-होस्टेड · पेरिस",
     "hero.trust2.sub":    "BYOK जल्द आ रहा है",
@@ -1594,6 +1606,8 @@ const translations = {
     "hiw.step3.label":    "步骤 03",
     "pricing.eyebrow":    "定价",
     "faq.eyebrow":        "常见问题",
+    "video.eyebrow":      "观看实际演示",
+    "video.h2":           "2分钟了解工作原理",
 
     "hero.trust1.sub":    "欧盟托管 · 巴黎",
     "hero.trust2.sub":    "BYOK 即将推出",
