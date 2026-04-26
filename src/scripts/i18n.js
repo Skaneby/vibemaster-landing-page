@@ -43,7 +43,7 @@ const translations = {
     "hero.mock.req":        "req",
     "hero.mock.cta":        "Copy for Lovable",
     "hero.mock.ships.label":"Ships as",
-    "hero.mock.ships.desc": "Markdown + JSON, not a chat transcript.",
+    "hero.mock.ships.desc": "A Markdown build prompt + human-readable project plan and implementation timeline.",
 
     "integrations.label": "Perfect Handoffs To",
     "integrations.more":  "and many more...",
@@ -112,7 +112,7 @@ const translations = {
     "pricing.explorer.period":"/mo",
     "pricing.explorer.sub":   "Perfect for solo hackers testing the waters.",
     "pricing.explorer.cta":   "Start Free",
-    "pricing.explorer.f1":    "2 Projects per month",
+    "pricing.explorer.f1":    "1 Project per month",
     "pricing.explorer.f2":    "Basic technical specs",
     "pricing.explorer.f3":    "Markdown exports",
 
@@ -126,7 +126,7 @@ const translations = {
     "pricing.pro.f3":     "Advanced Coding Prompts",
     "pricing.pro.f4":     "JSON & VS Code Integrations",
     "pricing.pro.f5":     "Priority 24/7 Support",
-    "pricing.pro.f6":     "Bring Your Own API Key (BYOK)",
+    "pricing.pro.f6":     "Bring Your Own API Key — BYOK (coming soon)",
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "Coming soon",
@@ -138,7 +138,7 @@ const translations = {
     "pricing.studio.f2":    "Shared projects",
     "pricing.studio.f3":    "Claude & Mistral via own API key",
     "pricing.studio.f4":    "Full API access",
-    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral",
+    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral (coming soon)",
 
     "pricing.enterprise.name":  "Enterprise",
     "pricing.enterprise.price": "Custom",
@@ -214,16 +214,16 @@ const translations = {
     "faq.eyebrow":        "FAQ",
 
     "hero.trust1.sub":    "EU-hosted · Paris",
-    "hero.trust2.sub":    "BYOK supported",
+    "hero.trust2.sub":    "BYOK coming soon",
     "hero.trust3.sub":    "Free trial available",
 
     "pricing.pro.f2":     "Version history & diffs",
-    "pricing.pro.f3":     "Export to JSON & PDF",
+    "pricing.pro.f3":     "Export to PDF & Markdown",
     "pricing.pro.f4":     "Priority generation queue",
 
     "cta.trust1.sub":     "Paris · Scalingo · GDPR",
     "cta.trust2.sub":     "Stripe · SOC2 partners",
-    "cta.trust3.sub":     "BYOK · anonymised training only",
+    "cta.trust3.sub":     "Anonymised training only",
 
     "footer.usecases":    "Use cases",
     "footer.uc.founders": "For founders",
@@ -272,7 +272,7 @@ const translations = {
     "hero.mock.req":        "krav",
     "hero.mock.cta":        "Kopiera för Lovable",
     "hero.mock.ships.label":"Levereras som",
-    "hero.mock.ships.desc": "Markdown + JSON, inte en chatthistorik.",
+    "hero.mock.ships.desc": "En Markdown-prompt + läsbar projektplan och implementeringstidplan.",
 
     "integrations.label": "Perfekta överlämningar till",
     "integrations.more":  "och många fler...",
@@ -342,7 +342,7 @@ const translations = {
     "pricing.explorer.period":"/mån",
     "pricing.explorer.sub":   "Perfekt för soloentreprenörer som testar vattnet.",
     "pricing.explorer.cta":   "Börja gratis",
-    "pricing.explorer.f1":    "2 projekt per månad",
+    "pricing.explorer.f1":    "1 projekt per månad",
     "pricing.explorer.f2":    "Grundläggande tekniska specifikationer",
     "pricing.explorer.f3":    "Markdown-export",
 
@@ -356,7 +356,7 @@ const translations = {
     "pricing.pro.f3":     "Avancerade kodpromptrar",
     "pricing.pro.f4":     "JSON & VS Code-integrationer",
     "pricing.pro.f5":     "Prioritetssupport dygnet runt",
-    "pricing.pro.f6":     "Använd din egen API-nyckel (BYOK)",
+    "pricing.pro.f6":     "Bring Your Own API Key — BYOK (kommer snart)",
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "Kommer snart",
@@ -368,7 +368,7 @@ const translations = {
     "pricing.studio.f2":    "Delade projekt",
     "pricing.studio.f3":    "Claude & Mistral via egen API-nyckel",
     "pricing.studio.f4":    "Full API-åtkomst",
-    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral",
+    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral (coming soon)",
 
     "pricing.enterprise.name":  "Enterprise",
     "pricing.enterprise.price": "Anpassat",
@@ -444,16 +444,16 @@ const translations = {
     "faq.eyebrow":        "Vanliga frågor",
 
     "hero.trust1.sub":    "EU-hostad · Paris",
-    "hero.trust2.sub":    "BYOK stöds",
+    "hero.trust2.sub":    "BYOK kommer snart",
     "hero.trust3.sub":    "Prova gratis",
 
     "pricing.pro.f2":     "Versionshistorik & diff",
-    "pricing.pro.f3":     "Exportera till JSON & PDF",
+    "pricing.pro.f3":     "Exportera till PDF & Markdown",
     "pricing.pro.f4":     "Prioriterad genereringskö",
 
     "cta.trust1.sub":     "Paris · Scalingo · GDPR",
     "cta.trust2.sub":     "Stripe · SOC2-partners",
-    "cta.trust3.sub":     "BYOK · endast anonym träning",
+    "cta.trust3.sub":     "Anonym träning endast",
 
     "footer.usecases":    "Användningsfall",
     "footer.uc.founders": "För grundare",
@@ -502,7 +502,7 @@ const translations = {
     "hero.mock.req":        "Anf.",
     "hero.mock.cta":        "Für Lovable kopieren",
     "hero.mock.ships.label":"Geliefert als",
-    "hero.mock.ships.desc": "Markdown + JSON, kein Chat-Transkript.",
+    "hero.mock.ships.desc": "Ein Markdown-Prompt + lesbarer Projektplan und Implementierungszeitplan.",
 
     "integrations.label": "Perfekte Übergaben an",
     "integrations.more":  "und viele mehr...",
@@ -572,7 +572,7 @@ const translations = {
     "pricing.explorer.period":"/Monat",
     "pricing.explorer.sub":   "Perfekt für Solo-Entwickler, die das Wasser testen.",
     "pricing.explorer.cta":   "Kostenlos starten",
-    "pricing.explorer.f1":    "2 Projekte pro Monat",
+    "pricing.explorer.f1":    "1 Projekt pro Monat",
     "pricing.explorer.f2":    "Grundlegende technische Spezifikationen",
     "pricing.explorer.f3":    "Markdown-Export",
 
@@ -586,7 +586,7 @@ const translations = {
     "pricing.pro.f3":     "Erweiterte Coding-Prompts",
     "pricing.pro.f4":     "JSON & VS Code-Integrationen",
     "pricing.pro.f5":     "Prioritäts-Support rund um die Uhr",
-    "pricing.pro.f6":     "Eigenen API-Schlüssel nutzen (BYOK)",
+    "pricing.pro.f6":     "Bring Your Own API Key — BYOK (demnächst)",
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "Demnächst",
@@ -598,7 +598,7 @@ const translations = {
     "pricing.studio.f2":    "Gemeinsame Projekte",
     "pricing.studio.f3":    "Claude & Mistral über eigenen API-Schlüssel",
     "pricing.studio.f4":    "Vollständiger API-Zugang",
-    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral",
+    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral (coming soon)",
 
     "pricing.enterprise.name":  "Enterprise",
     "pricing.enterprise.price": "Individuell",
@@ -674,16 +674,16 @@ const translations = {
     "faq.eyebrow":        "FAQ",
 
     "hero.trust1.sub":    "EU-gehostet · Paris",
-    "hero.trust2.sub":    "BYOK unterstützt",
+    "hero.trust2.sub":    "BYOK demnächst",
     "hero.trust3.sub":    "Kostenlose Testversion",
 
     "pricing.pro.f2":     "Versionsverlauf & Diffs",
-    "pricing.pro.f3":     "Export als JSON & PDF",
+    "pricing.pro.f3":     "Export als PDF & Markdown",
     "pricing.pro.f4":     "Priorisierte Generierungswarteschlange",
 
     "cta.trust1.sub":     "Paris · Scalingo · DSGVO",
     "cta.trust2.sub":     "Stripe · SOC2-Partner",
-    "cta.trust3.sub":     "BYOK · nur anonymisiertes Training",
+    "cta.trust3.sub":     "Nur anonymisiertes Training",
 
     "footer.usecases":    "Anwendungsfälle",
     "footer.uc.founders": "Für Gründer",
@@ -732,7 +732,7 @@ const translations = {
     "hero.mock.req":        "req",
     "hero.mock.cta":        "Copiar para Lovable",
     "hero.mock.ships.label":"Se entrega como",
-    "hero.mock.ships.desc": "Markdown + JSON, no una transcripción de chat.",
+    "hero.mock.ships.desc": "Un prompt Markdown + plan de proyecto legible y cronograma de implementación.",
 
     "integrations.label": "Entregas perfectas a",
     "integrations.more":  "y muchos más...",
@@ -802,7 +802,7 @@ const translations = {
     "pricing.explorer.period":"/mes",
     "pricing.explorer.sub":   "Perfecto para hackers independientes que prueban el terreno.",
     "pricing.explorer.cta":   "Empezar gratis",
-    "pricing.explorer.f1":    "2 proyectos por mes",
+    "pricing.explorer.f1":    "1 proyecto por mes",
     "pricing.explorer.f2":    "Especificaciones técnicas básicas",
     "pricing.explorer.f3":    "Exportaciones Markdown",
 
@@ -816,7 +816,7 @@ const translations = {
     "pricing.pro.f3":     "Prompts de código avanzados",
     "pricing.pro.f4":     "Integraciones JSON & VS Code",
     "pricing.pro.f5":     "Soporte prioritario 24/7",
-    "pricing.pro.f6":     "Usa tu propia clave API (BYOK)",
+    "pricing.pro.f6":     "Bring Your Own API Key — BYOK (próximamente)",
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "Próximamente",
@@ -828,7 +828,7 @@ const translations = {
     "pricing.studio.f2":    "Proyectos compartidos",
     "pricing.studio.f3":    "Claude & Mistral con tu propia clave API",
     "pricing.studio.f4":    "Acceso completo a la API",
-    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral",
+    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral (coming soon)",
 
     "pricing.enterprise.name":  "Enterprise",
     "pricing.enterprise.price": "Personalizado",
@@ -904,16 +904,16 @@ const translations = {
     "faq.eyebrow":        "Preguntas frecuentes",
 
     "hero.trust1.sub":    "Alojado en UE · París",
-    "hero.trust2.sub":    "BYOK compatible",
+    "hero.trust2.sub":    "BYOK próximamente",
     "hero.trust3.sub":    "Prueba gratuita disponible",
 
     "pricing.pro.f2":     "Historial de versiones & diffs",
-    "pricing.pro.f3":     "Exportar a JSON & PDF",
+    "pricing.pro.f3":     "Exportar a PDF y Markdown",
     "pricing.pro.f4":     "Cola de generación prioritaria",
 
     "cta.trust1.sub":     "París · Scalingo · RGPD",
     "cta.trust2.sub":     "Stripe · socios SOC2",
-    "cta.trust3.sub":     "BYOK · solo entrenamiento anónimo",
+    "cta.trust3.sub":     "Solo entrenamiento anónimo",
 
     "footer.usecases":    "Casos de uso",
     "footer.uc.founders": "Para fundadores",
@@ -962,7 +962,7 @@ const translations = {
     "hero.mock.req":        "req",
     "hero.mock.cta":        "Copier pour Lovable",
     "hero.mock.ships.label":"Livré comme",
-    "hero.mock.ships.desc": "Markdown + JSON, pas une transcription de chat.",
+    "hero.mock.ships.desc": "Un prompt Markdown + plan de projet lisible et calendrier d'implémentation.",
 
     "integrations.label": "Transferts parfaits vers",
     "integrations.more":  "et bien d'autres...",
@@ -1032,7 +1032,7 @@ const translations = {
     "pricing.explorer.period":"/mois",
     "pricing.explorer.sub":   "Parfait pour les hackers indépendants qui testent les eaux.",
     "pricing.explorer.cta":   "Commencer gratuitement",
-    "pricing.explorer.f1":    "2 projets par mois",
+    "pricing.explorer.f1":    "1 projet par mois",
     "pricing.explorer.f2":    "Spécifications techniques de base",
     "pricing.explorer.f3":    "Exports Markdown",
 
@@ -1046,7 +1046,7 @@ const translations = {
     "pricing.pro.f3":     "Prompts de code avancés",
     "pricing.pro.f4":     "Intégrations JSON & VS Code",
     "pricing.pro.f5":     "Support prioritaire 24h/24",
-    "pricing.pro.f6":     "Apportez votre propre clé API (BYOK)",
+    "pricing.pro.f6":     "Bring Your Own API Key — BYOK (bientôt disponible)",
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "Bientôt disponible",
@@ -1058,7 +1058,7 @@ const translations = {
     "pricing.studio.f2":    "Projets partagés",
     "pricing.studio.f3":    "Claude & Mistral via votre propre clé API",
     "pricing.studio.f4":    "Accès complet à l'API",
-    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral",
+    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral (coming soon)",
 
     "pricing.enterprise.name":  "Enterprise",
     "pricing.enterprise.price": "Sur mesure",
@@ -1134,16 +1134,16 @@ const translations = {
     "faq.eyebrow":        "Questions fréquentes",
 
     "hero.trust1.sub":    "Hébergé en UE · Paris",
-    "hero.trust2.sub":    "BYOK supporté",
+    "hero.trust2.sub":    "BYOK bientôt disponible",
     "hero.trust3.sub":    "Essai gratuit disponible",
 
     "pricing.pro.f2":     "Historique des versions & diffs",
-    "pricing.pro.f3":     "Export JSON & PDF",
+    "pricing.pro.f3":     "Export PDF & Markdown",
     "pricing.pro.f4":     "File de génération prioritaire",
 
     "cta.trust1.sub":     "Paris · Scalingo · RGPD",
     "cta.trust2.sub":     "Stripe · partenaires SOC2",
-    "cta.trust3.sub":     "BYOK · entraînement anonymisé uniquement",
+    "cta.trust3.sub":     "Entraînement anonymisé uniquement",
 
     "footer.usecases":    "Cas d'usage",
     "footer.uc.founders": "Pour les fondateurs",
@@ -1193,7 +1193,7 @@ const translations = {
     "hero.mock.req":        "आव.",
     "hero.mock.cta":        "Lovable के लिए कॉपी करें",
     "hero.mock.ships.label":"इस रूप में भेजा जाता है",
-    "hero.mock.ships.desc": "Markdown + JSON, चैट ट्रांसक्रिप्ट नहीं।",
+    "hero.mock.ships.desc": "एक Markdown प्रॉम्प्ट + पठनीय प्रोजेक्ट प्लान और कार्यान्वयन समयरेखा।",
 
     "integrations.label": "परफेक्ट हैंडऑफ",
     "integrations.more":  "और भी कई...",
@@ -1263,7 +1263,7 @@ const translations = {
     "pricing.explorer.period":"/माह",
     "pricing.explorer.sub":   "पानी परखने वाले सोलो हैकर्स के लिए परफेक्ट।",
     "pricing.explorer.cta":   "मुफ्त शुरू करें",
-    "pricing.explorer.f1":    "2 प्रोजेक्ट प्रति माह",
+    "pricing.explorer.f1":    "1 प्रोजेक्ट प्रति माह",
     "pricing.explorer.f2":    "बुनियादी तकनीकी स्पेक्स",
     "pricing.explorer.f3":    "Markdown एक्सपोर्ट",
 
@@ -1277,7 +1277,7 @@ const translations = {
     "pricing.pro.f3":     "उन्नत कोडिंग प्रॉम्प्ट",
     "pricing.pro.f4":     "JSON & VS Code इंटीग्रेशन",
     "pricing.pro.f5":     "प्राथमिकता 24/7 सहायता",
-    "pricing.pro.f6":     "अपनी API कुंजी लाएं (BYOK)",
+    "pricing.pro.f6":     "Bring Your Own API Key — BYOK (जल्द आ रहा है)",
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "जल्द आ रहा है",
@@ -1289,7 +1289,7 @@ const translations = {
     "pricing.studio.f2":    "साझा प्रोजेक्ट",
     "pricing.studio.f3":    "Claude & Mistral अपनी API key से",
     "pricing.studio.f4":    "पूर्ण API एक्सेस",
-    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral",
+    "pricing.studio.f5":    "BYOK: Gemini, Claude & Mistral (coming soon)",
 
     "pricing.enterprise.name":  "Enterprise",
     "pricing.enterprise.price": "कस्टम",
@@ -1365,16 +1365,16 @@ const translations = {
     "faq.eyebrow":        "सामान्य प्रश्न",
 
     "hero.trust1.sub":    "EU-होस्टेड · पेरिस",
-    "hero.trust2.sub":    "BYOK समर्थित",
+    "hero.trust2.sub":    "BYOK जल्द आ रहा है",
     "hero.trust3.sub":    "निःशुल्क ट्रायल उपलब्ध",
 
     "pricing.pro.f2":     "संस्करण इतिहास और diffs",
-    "pricing.pro.f3":     "JSON & PDF में निर्यात",
+    "pricing.pro.f3":     "PDF & Markdown में निर्यात",
     "pricing.pro.f4":     "प्राथमिकता जनरेशन कतार",
 
     "cta.trust1.sub":     "पेरिस · Scalingo · GDPR",
     "cta.trust2.sub":     "Stripe · SOC2 पार्टनर",
-    "cta.trust3.sub":     "BYOK · केवल अनाम प्रशिक्षण",
+    "cta.trust3.sub":     "केवल अनाम प्रशिक्षण",
 
     "footer.usecases":    "उपयोग के मामले",
     "footer.uc.founders": "संस्थापकों के लिए",
@@ -1424,7 +1424,7 @@ const translations = {
     "hero.mock.req":        "需求",
     "hero.mock.cta":        "复制到 Lovable",
     "hero.mock.ships.label":"输出格式",
-    "hero.mock.ships.desc": "Markdown + JSON，而非聊天记录。",
+    "hero.mock.ships.desc": "Markdown构建提示词 + 可读项目计划与实施时间表。",
 
     "integrations.label": "完美对接",
     "integrations.more":  "以及更多...",
@@ -1494,7 +1494,7 @@ const translations = {
     "pricing.explorer.period":"/月",
     "pricing.explorer.sub":   "适合试水的独立开发者。",
     "pricing.explorer.cta":   "免费开始",
-    "pricing.explorer.f1":    "每月2个项目",
+    "pricing.explorer.f1":    "每月1个项目",
     "pricing.explorer.f2":    "基础技术规格",
     "pricing.explorer.f3":    "Markdown导出",
 
@@ -1508,7 +1508,7 @@ const translations = {
     "pricing.pro.f3":     "高级编码提示词",
     "pricing.pro.f4":     "JSON & VS Code集成",
     "pricing.pro.f5":     "优先24/7支持",
-    "pricing.pro.f6":     "自带API密钥 (BYOK)",
+    "pricing.pro.f6":     "自带API密钥 — BYOK（即将推出）",
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "即将推出",
@@ -1520,7 +1520,7 @@ const translations = {
     "pricing.studio.f2":    "共享项目",
     "pricing.studio.f3":    "Claude & Mistral 通过自己的API密钥",
     "pricing.studio.f4":    "完整API访问",
-    "pricing.studio.f5":    "BYOK: Gemini、Claude & Mistral",
+    "pricing.studio.f5":    "BYOK: Gemini、Claude & Mistral（即将推出）",
 
     "pricing.enterprise.name":  "Enterprise",
     "pricing.enterprise.price": "定制",
@@ -1596,16 +1596,16 @@ const translations = {
     "faq.eyebrow":        "常见问题",
 
     "hero.trust1.sub":    "欧盟托管 · 巴黎",
-    "hero.trust2.sub":    "支持 BYOK",
+    "hero.trust2.sub":    "BYOK 即将推出",
     "hero.trust3.sub":    "免费试用",
 
     "pricing.pro.f2":     "版本历史和差异对比",
-    "pricing.pro.f3":     "导出为 JSON 和 PDF",
+    "pricing.pro.f3":     "导出为 PDF 和 Markdown",
     "pricing.pro.f4":     "优先生成队列",
 
     "cta.trust1.sub":     "巴黎 · Scalingo · GDPR",
     "cta.trust2.sub":     "Stripe · SOC2 合作伙伴",
-    "cta.trust3.sub":     "BYOK · 仅匿名训练数据",
+    "cta.trust3.sub":     "仅匿名训练数据",
 
     "footer.usecases":    "使用场景",
     "footer.uc.founders": "适合创始人",
