@@ -288,7 +288,7 @@
     <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="video.eyebrow">Watch it in action</div>
     <h2 class="text-[28px] md:text-[36px] font-black tracking-tight leading-tight text-ink mb-8" data-i18n="video.h2">See how it works in 2 minutes</h2>
     <div class="relative w-full rounded-xl overflow-hidden shadow-lg" style="padding-top:56.25%;">
-      <iframe id="vm-video" class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk" title="Vibemaster" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe id="vm-video" data-i18n-src="video.src" class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk" title="Vibemaster" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -853,16 +853,7 @@
   </div>
 </footer>
 
-<script src="src/scripts/i18n.js?v=12"></script>
-<script>
-  (function () {
-    var lang = (navigator.language || navigator.userLanguage || 'en').substring(0, 2).toLowerCase();
-    if (lang === 'sv') {
-      var vid = document.getElementById('vm-video');
-      if (vid) vid.src = 'https://www.youtube.com/embed/9clkkBarK9M?si=UeKeptvKsE8SA-Oz';
-    }
-  })();
-</script>
+<script src="src/scripts/i18n.js?v=13"></script>
 <script>
   (function () {
     var toggle = document.getElementById('nav-toggle');

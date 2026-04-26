@@ -214,6 +214,7 @@ const translations = {
     "faq.eyebrow":        "FAQ",
     "video.eyebrow":      "Watch it in action",
     "video.h2":           "See how it works in 5 minutes",
+    "video.src":          "https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk",
 
     "hero.trust1.sub":    "EU-hosted · Paris",
     "hero.trust2.sub":    "BYOK coming soon",
@@ -446,6 +447,7 @@ const translations = {
     "faq.eyebrow":        "Vanliga frågor",
     "video.eyebrow":      "Se det i praktiken",
     "video.h2":           "Se hur det fungerar på 5 minuter",
+    "video.src":          "https://www.youtube.com/embed/9clkkBarK9M?si=UeKeptvKsE8SA-Oz",
 
     "hero.trust1.sub":    "EU-hostad · Paris",
     "hero.trust2.sub":    "BYOK kommer snart",
@@ -678,6 +680,7 @@ const translations = {
     "faq.eyebrow":        "FAQ",
     "video.eyebrow":      "Sieh es in Aktion",
     "video.h2":           "So funktioniert es in 5 Minuten",
+    "video.src":          "https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk",
 
     "hero.trust1.sub":    "EU-gehostet · Paris",
     "hero.trust2.sub":    "BYOK demnächst",
@@ -910,6 +913,7 @@ const translations = {
     "faq.eyebrow":        "Preguntas frecuentes",
     "video.eyebrow":      "Míralo en acción",
     "video.h2":           "Descubre cómo funciona en 5 minutos",
+    "video.src":          "https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk",
 
     "hero.trust1.sub":    "Alojado en UE · París",
     "hero.trust2.sub":    "BYOK próximamente",
@@ -1142,6 +1146,7 @@ const translations = {
     "faq.eyebrow":        "Questions fréquentes",
     "video.eyebrow":      "Voyez-le en action",
     "video.h2":           "Découvrez comment ça fonctionne en 5 minutes",
+    "video.src":          "https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk",
 
     "hero.trust1.sub":    "Hébergé en UE · Paris",
     "hero.trust2.sub":    "BYOK bientôt disponible",
@@ -1375,6 +1380,7 @@ const translations = {
     "faq.eyebrow":        "सामान्य प्रश्न",
     "video.eyebrow":      "इसे काम करते देखें",
     "video.h2":           "5 मिनट में जानें यह कैसे काम करता है",
+    "video.src":          "https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk",
 
     "hero.trust1.sub":    "EU-होस्टेड · पेरिस",
     "hero.trust2.sub":    "BYOK जल्द आ रहा है",
@@ -1608,6 +1614,7 @@ const translations = {
     "faq.eyebrow":        "常见问题",
     "video.eyebrow":      "观看实际演示",
     "video.h2":           "5分钟了解工作原理",
+    "video.src":          "https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk",
 
     "hero.trust1.sub":    "欧盟托管 · 巴黎",
     "hero.trust2.sub":    "BYOK 即将推出",
@@ -1664,6 +1671,11 @@ function applyTranslations(lang) {
   document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
     const key = el.dataset.i18nPlaceholder;
     if (t[key] !== undefined) el.placeholder = t[key];
+  });
+
+  document.querySelectorAll("[data-i18n-src]").forEach(el => {
+    const key = el.dataset.i18nSrc;
+    if (t[key] !== undefined) el.src = t[key];
   });
 
   // Update lang-current label
