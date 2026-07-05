@@ -1678,6 +1678,19 @@ function applyTranslations(lang) {
     if (t[key] !== undefined) el.src = t[key];
   });
 
+  // Video facade: update stored embed URL + thumbnail without loading the iframe.
+  document.querySelectorAll("[data-i18n-video-src]").forEach(el => {
+    const key = el.dataset.i18nVideoSrc;
+    const embed = t[key];
+    if (!embed) return;
+    el.dataset.videoSrc = embed;
+    const m = embed.match(/\/embed\/([^?/]+)/);
+    if (m) {
+      const thumb = el.querySelector("img");
+      if (thumb) thumb.src = `https://i.ytimg.com/vi/${m[1]}/maxresdefault.jpg`;
+    }
+  });
+
   // Update lang-current label
   const langCurrentEl = document.getElementById("lang-current");
   if (langCurrentEl) langCurrentEl.textContent = lang.toUpperCase();

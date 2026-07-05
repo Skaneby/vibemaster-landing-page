@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://lh3.googleusercontent.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://lh3.googleusercontent.com https://i.ytimg.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
   <meta name="referrer" content="strict-origin-when-cross-origin"/>
   <title>Vibemaster — Turn your idea into a spec AI can build</title>
   <meta name="description" content="Vibemaster interviews you, writes the product spec, and hands it to Lovable, Cursor, Bolt or Replit — no vague prompts, no broken builds." />
@@ -387,10 +387,57 @@
     <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="video.eyebrow">Watch it in action</div>
     <h2 class="text-[28px] md:text-[36px] font-black tracking-tight leading-tight text-ink mb-8" data-i18n="video.h2">See how it works in 2 minutes</h2>
     <div class="relative w-full rounded-xl overflow-hidden shadow-lg" style="padding-top:56.25%;">
-      <iframe id="vm-video" data-i18n-src="video.src" class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk" title="Vibemaster" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <div id="vm-video-facade"
+           data-i18n-video-src="video.src"
+           data-video-src="https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk"
+           role="button"
+           tabindex="0"
+           aria-label="Play video"
+           class="absolute inset-0 w-full h-full cursor-pointer group bg-ink">
+        <img id="vm-video-thumb"
+             src="https://i.ytimg.com/vi/xl_FHfXn-aA/maxresdefault.jpg"
+             alt=""
+             loading="lazy"
+             decoding="async"
+             class="w-full h-full object-cover"/>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/25 transition group-hover:bg-black/10">
+          <svg class="w-20 h-20 drop-shadow-lg" viewBox="0 0 68 48" aria-hidden="true">
+            <path d="M66.52 7.74a8.51 8.51 0 0 0-6-6.03C55.24 0 34 0 34 0S12.76 0 7.48 1.71a8.51 8.51 0 0 0-6 6.03C0 13.03 0 24 0 24s0 10.97 1.48 16.26a8.51 8.51 0 0 0 6 6.03C12.76 48 34 48 34 48s21.24 0 26.52-1.71a8.51 8.51 0 0 0 6-6.03C68 34.97 68 24 68 24s0-10.97-1.48-16.26z" fill="#f00"/>
+            <path d="M27 34l17.5-10L27 14z" fill="#fff"/>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    var facade = document.getElementById('vm-video-facade');
+    if (!facade) return;
+    function activate() {
+      var embed = facade.dataset.videoSrc;
+      if (!embed) return;
+      var url;
+      try { url = new URL(embed); } catch (e) { return; }
+      url.hostname = 'www.youtube-nocookie.com';
+      url.searchParams.set('autoplay', '1');
+      var iframe = document.createElement('iframe');
+      iframe.id = 'vm-video';
+      iframe.className = 'absolute inset-0 w-full h-full';
+      iframe.title = 'Vibemaster';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allowFullscreen = true;
+      iframe.src = url.toString();
+      facade.replaceWith(iframe);
+    }
+    facade.addEventListener('click', activate);
+    facade.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+    });
+  })();
+</script>
 
 <!-- ============ BRAND ROW — dark section ============ -->
 <section class="py-10 border-y border-ink" style="background:#1E2113; color:#FAFAEB;">
