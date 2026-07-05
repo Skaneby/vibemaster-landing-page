@@ -1,0 +1,50 @@
+name: PageSpeed Insights
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL to audit'
+        required: false
+        default: 'https://vibemaster.ai'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run PageSpeed Insights
+        env:
+          PAGESPEED_API_KEY: ${{ secrets.PAGESPEED_API_KEY }}
+        run: |
+          node scripts/pagespeed.mjs "${{ github.event.inputs.url || 'https://vibemaster.ai' }}"
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pagespeed-report
+          path: reports/pagespeed/
+          retention-days: 90
+
+      - name: Commit latest report
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/pagespeed/
+          if git diff --cached --quiet; then
+            echo "No report changes to commit."
+          else
+            git commit -m "chore(pagespeed): update report"
+            git push
+          fi
