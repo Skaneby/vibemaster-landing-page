@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://lh3.googleusercontent.com https://i.ytimg.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://lh3.googleusercontent.com https://i.ytimg.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'none'; object-src 'none'; base-uri 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin"/>
   <title>Vibemaster — Turn your idea into a spec AI can build</title>
   <meta name="description" content="Vibemaster interviews you, writes the product spec, and hands it to Lovable, Cursor, Bolt or Replit — no vague prompts, no broken builds." />
@@ -108,10 +108,22 @@
   </script>
   <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
   <link rel="stylesheet" href="src/styles/output.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  </noscript>
   <style>
+    /* WCAG AA contrast overrides for small text on ivory backgrounds */
+    .text-bronze { color:#755E31; }
+    .text-stone  { color:#4E5340; }
+    .text-olive  { color:#4E5B22; }
+
     .icon { width:1em; height:1em; display:inline-block; vertical-align:-.14em; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
     .mono { font-family:'JetBrains Mono', monospace; }
     .serif-em { font-family:'Instrument Serif', Georgia, serif; font-weight:400; }
@@ -395,8 +407,10 @@
            aria-label="Play video"
            class="absolute inset-0 w-full h-full cursor-pointer group bg-ink">
         <img id="vm-video-thumb"
-             src="https://i.ytimg.com/vi/xl_FHfXn-aA/maxresdefault.jpg"
+             src="https://i.ytimg.com/vi/xl_FHfXn-aA/hqdefault.jpg"
              alt=""
+             width="480"
+             height="360"
              loading="lazy"
              decoding="async"
              class="w-full h-full object-cover"/>
@@ -999,7 +1013,7 @@
   </div>
 </footer>
 
-<script src="src/scripts/i18n.js?v=13"></script>
+<script defer src="src/scripts/i18n.js?v=13"></script>
 <script>
   (function () {
     var toggle = document.getElementById('nav-toggle');
