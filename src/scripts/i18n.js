@@ -1687,7 +1687,7 @@ function applyTranslations(lang) {
     const m = embed.match(/\/embed\/([^?/]+)/);
     if (m) {
       const thumb = el.querySelector("img");
-      if (thumb) thumb.src = `https://i.ytimg.com/vi/${m[1]}/maxresdefault.jpg`;
+      if (thumb) thumb.src = `https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg`;
     }
   });
 
