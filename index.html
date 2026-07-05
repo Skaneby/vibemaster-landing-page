@@ -124,6 +124,12 @@
     .text-stone  { color:#4E5340; }
     .text-olive  { color:#4E5B22; }
 
+    /* YouTube facade play button — matches lite-youtube-embed sizing */
+    .vm-play-btn { width:68px; height:48px; transition:transform .15s ease; }
+    #vm-video-facade:hover .vm-play-btn,
+    #vm-video-facade:focus-visible .vm-play-btn { transform:scale(1.06); }
+    #vm-video-facade:hover .vm-play-btn path[fill="#212121"] { fill:#f00; fill-opacity:1; }
+
     .icon { width:1em; height:1em; display:inline-block; vertical-align:-.14em; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
     .mono { font-family:'JetBrains Mono', monospace; }
     .serif-em { font-family:'Instrument Serif', Georgia, serif; font-weight:400; }
@@ -414,9 +420,9 @@
              loading="lazy"
              decoding="async"
              class="w-full h-full object-cover"/>
-        <div class="absolute inset-0 flex items-center justify-center bg-black/25 transition group-hover:bg-black/10">
-          <svg class="w-20 h-20 drop-shadow-lg" viewBox="0 0 68 48" aria-hidden="true">
-            <path d="M66.52 7.74a8.51 8.51 0 0 0-6-6.03C55.24 0 34 0 34 0S12.76 0 7.48 1.71a8.51 8.51 0 0 0-6 6.03C0 13.03 0 24 0 24s0 10.97 1.48 16.26a8.51 8.51 0 0 0 6 6.03C12.76 48 34 48 34 48s21.24 0 26.52-1.71a8.51 8.51 0 0 0 6-6.03C68 34.97 68 24 68 24s0-10.97-1.48-16.26z" fill="#f00"/>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/10 transition group-hover:bg-black/20">
+          <svg class="vm-play-btn" viewBox="0 0 68 48" aria-hidden="true">
+            <path d="M66.52 7.74a8.51 8.51 0 0 0-6-6.03C55.24 0 34 0 34 0S12.76 0 7.48 1.71a8.51 8.51 0 0 0-6 6.03C0 13.03 0 24 0 24s0 10.97 1.48 16.26a8.51 8.51 0 0 0 6 6.03C12.76 48 34 48 34 48s21.24 0 26.52-1.71a8.51 8.51 0 0 0 6-6.03C68 34.97 68 24 68 24s0-10.97-1.48-16.26z" fill="#212121" fill-opacity="0.8"/>
             <path d="M27 34l17.5-10L27 14z" fill="#fff"/>
           </svg>
         </div>
