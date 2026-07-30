@@ -41,7 +41,21 @@ The output is designed to work directly with AI builders such as Lovable, Cursor
 - EU AI Act ready
 - Privacy by design
 
+## Languages
+
+Vibemaster is available in 7 languages, each at its own URL (not just a
+client-side toggle — every version below is independently crawlable):
+
+- English (default): https://vibemaster.ai/
+- Swedish: https://vibemaster.ai/sv/
+- German: https://vibemaster.ai/de/
+- Spanish: https://vibemaster.ai/es/
+- French: https://vibemaster.ai/fr/
+- Hindi: https://vibemaster.ai/hi/
+- Chinese: https://vibemaster.ai/zh/
+
 ## Links
 
-- Homepage: https://vibemaster.ai
-- Terms & Privacy: https://vibemaster.ai/villkor.html
+- Homepage: https://vibemaster.ai/
+- Terms & Privacy (Swedish): https://vibemaster.ai/villkor.html
+- Sitemap: https://vibemaster.ai/sitemap.xml

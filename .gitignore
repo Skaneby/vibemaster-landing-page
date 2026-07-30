@@ -28,3 +28,6 @@ documents/
 
 # Internal design tools (not production pages)
 compare.html
+
+# Build tooling (npm install / npx playwright install to restore)
+node_modules/
