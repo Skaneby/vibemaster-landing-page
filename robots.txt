@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+# Internal design/QA tools — not real content, kept out of the crawl budget
+Disallow: /compare.html
+Disallow: /preview-stitch.html
 
 # AI crawlers — explicitly allowed
 User-agent: GPTBot
