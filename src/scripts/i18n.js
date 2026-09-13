@@ -4,6 +4,10 @@
  * Supported: en, sv, de, es, hi, zh, fr
  */
 
+// @i18n-data-start — scripts/build-locales.mjs extracts this object literal
+// verbatim (by marker, not line number) to pre-render one static HTML file
+// per locale. Keep the object literal free of references to `document`,
+// `window`, or anything else that isn't plain, self-contained JS data.
 const translations = {
 
   // ──────────────────────────────────────────────
@@ -1638,21 +1642,20 @@ const translations = {
     "footer.r.status":    "状态",
   },
 };
+// @i18n-data-end
 
 // ──────────────────────────────────────────────
 // Language detection & application
 // ──────────────────────────────────────────────
 
-function detectLanguage() {
-  try { const saved = localStorage.getItem("vm-lang"); if (saved && translations[saved]) return saved; } catch(e) {}
-  const supported = Object.keys(translations);
-  const langs = navigator.languages || [navigator.language || "en"];
-  for (const lang of langs) {
-    const code = lang.split("-")[0].toLowerCase();
-    if (supported.includes(code)) return code;
-  }
-  return "en";
-}
+// Each locale (/, /sv/, /de/, ...) is a separately pre-rendered static page
+// with its own correct text already baked in — see scripts/build-locales.mjs.
+// The site no longer guesses a language from the browser and rewrites the
+// page on load: that would make search engines and AI crawlers, which don't
+// run this script, see different content than what a real visitor gets, and
+// would silently override whichever locale URL the visitor actually landed
+// on. The current page's own lang is always the source of truth.
+const localePaths = { en: "/", sv: "/sv/", de: "/de/", es: "/es/", fr: "/fr/", hi: "/hi/", zh: "/zh/" };
 
 function applyTranslations(lang) {
   const t = translations[lang] || translations["en"];
@@ -1704,14 +1707,20 @@ function applyTranslations(lang) {
   });
 }
 
+// Switching language navigates to that locale's own URL (preserving any
+// in-page anchor) rather than rewriting the DOM in place — so the address
+// bar, canonical tag, and content the visitor sees always agree.
 window.vmSetLang = function(lang) {
   if (!translations[lang]) return;
   try { localStorage.setItem("vm-lang", lang); } catch(e) {}
-  applyTranslations(lang);
+  window.location.href = (localePaths[lang] || "/") + window.location.hash;
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  applyTranslations(detectLanguage());
+  // Re-applies the page's own already-correct language — this is idempotent
+  // for the translated text, and its real job here is just to sync the
+  // dropdown UI (active state, "EN"/"SV"/... label) to match.
+  applyTranslations(document.documentElement.lang || "en");
 });
 
 // ── Lang menu dropdown ────────────────────────────────────────────────────────
