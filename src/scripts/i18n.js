@@ -14,7 +14,7 @@ const translations = {
     "pricing.periodYear": "yr",
     "news.cta": "See what's new",
     "news.text": "Vibemaster 2.0 is here: conversation mode, Mistral and the architecture as a flowchart.",
-    "pricing.studio.priceYear": "€390",
+    "pricing.studio.priceYear": "€519.50",
     "pricing.pro.priceYear": "€119.50",
     // ── Vibemaster 2.0 — sektionen "Nytt i 2.0" (2026-09-17) ──
     "nav.new": "New in 2.0",
@@ -159,7 +159,7 @@ const translations = {
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "Coming soon",
-    "pricing.studio.price": "€39",
+    "pricing.studio.price": "€51.95",
     "pricing.studio.period":"/mo",
     "pricing.studio.sub":   "For teams up to 5 people.",
     "pricing.studio.cta":   "Coming soon",
@@ -272,7 +272,7 @@ const translations = {
     "pricing.periodYear": "år",
     "news.cta": "Se vad som är nytt",
     "news.text": "Vibemaster 2.0 är här: samtalsläge, Mistral och arkitekturen som flödesschema.",
-    "pricing.studio.priceYear": "€390",
+    "pricing.studio.priceYear": "€519.50",
     "pricing.pro.priceYear": "€119.50",
     // ── Vibemaster 2.0 — sektionen "Nytt i 2.0" (2026-09-17) ──
     "nav.new": "Nytt i 2.0",
@@ -418,7 +418,7 @@ const translations = {
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "Kommer snart",
-    "pricing.studio.price": "€39",
+    "pricing.studio.price": "€51.95",
     "pricing.studio.period":"/mån",
     "pricing.studio.sub":   "För team upp till 5 personer.",
     "pricing.studio.cta":   "Kommer snart",
@@ -531,7 +531,7 @@ const translations = {
     "pricing.periodYear": "Jahr",
     "news.cta": "Neuerungen ansehen",
     "news.text": "Vibemaster 2.0 ist da: Gesprächsmodus, Mistral und die Architektur als Flussdiagramm.",
-    "pricing.studio.priceYear": "€390",
+    "pricing.studio.priceYear": "€519.50",
     "pricing.pro.priceYear": "€119.50",
     // ── Vibemaster 2.0 — sektionen "Nytt i 2.0" (2026-09-17) ──
     "nav.new": "Neu in 2.0",
@@ -677,7 +677,7 @@ const translations = {
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "Demnächst",
-    "pricing.studio.price": "€39",
+    "pricing.studio.price": "€51.95",
     "pricing.studio.period":"/Monat",
     "pricing.studio.sub":   "Für Teams bis 5 Personen.",
     "pricing.studio.cta":   "Demnächst",
@@ -790,7 +790,7 @@ const translations = {
     "pricing.periodYear": "año",
     "news.cta": "Ver novedades",
     "news.text": "Vibemaster 2.0 ya está aquí: modo conversación, Mistral y la arquitectura como diagrama de flujo.",
-    "pricing.studio.priceYear": "€390",
+    "pricing.studio.priceYear": "€519.50",
     "pricing.pro.priceYear": "€119.50",
     // ── Vibemaster 2.0 — sektionen "Nytt i 2.0" (2026-09-17) ──
     "nav.new": "Nuevo en 2.0",
@@ -936,7 +936,7 @@ const translations = {
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "Próximamente",
-    "pricing.studio.price": "€39",
+    "pricing.studio.price": "€51.95",
     "pricing.studio.period":"/mes",
     "pricing.studio.sub":   "Para equipos de hasta 5 personas.",
     "pricing.studio.cta":   "Próximamente",
@@ -1049,7 +1049,7 @@ const translations = {
     "pricing.periodYear": "an",
     "news.cta": "Voir les nouveautés",
     "news.text": "Vibemaster 2.0 est là : mode conversation, Mistral et l'architecture en diagramme de flux.",
-    "pricing.studio.priceYear": "€390",
+    "pricing.studio.priceYear": "€519.50",
     "pricing.pro.priceYear": "€119.50",
     // ── Vibemaster 2.0 — sektionen "Nytt i 2.0" (2026-09-17) ──
     "nav.new": "Nouveau en 2.0",
@@ -1195,7 +1195,7 @@ const translations = {
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "Bientôt disponible",
-    "pricing.studio.price": "€39",
+    "pricing.studio.price": "€51.95",
     "pricing.studio.period":"/mois",
     "pricing.studio.sub":   "Pour les équipes jusqu'à 5 personnes.",
     "pricing.studio.cta":   "Bientôt",
@@ -1309,7 +1309,7 @@ const translations = {
     "pricing.periodYear": "वर्ष",
     "news.cta": "नया क्या है देखें",
     "news.text": "Vibemaster 2.0 आ गया है: बातचीत मोड, Mistral और फ़्लोचार्ट के रूप में आर्किटेक्चर।",
-    "pricing.studio.priceYear": "€390",
+    "pricing.studio.priceYear": "€519.50",
     "pricing.pro.priceYear": "€119.50",
     // ── Vibemaster 2.0 — sektionen "Nytt i 2.0" (2026-09-17) ──
     "nav.new": "2.0 में नया",
@@ -1455,7 +1455,7 @@ const translations = {
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "जल्द आ रहा है",
-    "pricing.studio.price": "€39",
+    "pricing.studio.price": "€51.95",
     "pricing.studio.period":"/माह",
     "pricing.studio.sub":   "5 लोगों तक की टीम के लिए।",
     "pricing.studio.cta":   "जल्द आ रहा है",
@@ -1569,7 +1569,7 @@ const translations = {
     "pricing.periodYear": "年",
     "news.cta": "查看新功能",
     "news.text": "Vibemaster 2.0 来了：对话模式、Mistral，以及架构流程图。",
-    "pricing.studio.priceYear": "€390",
+    "pricing.studio.priceYear": "€519.50",
     "pricing.pro.priceYear": "€119.50",
     // ── Vibemaster 2.0 — sektionen "Nytt i 2.0" (2026-09-17) ──
     "nav.new": "2.0 新功能",
@@ -1715,7 +1715,7 @@ const translations = {
 
     "pricing.studio.name":  "Team",
     "pricing.studio.badge": "即将推出",
-    "pricing.studio.price": "€39",
+    "pricing.studio.price": "€51.95",
     "pricing.studio.period":"/月",
     "pricing.studio.sub":   "适合 5 人以内的团队。",
     "pricing.studio.cta":   "即将推出",
