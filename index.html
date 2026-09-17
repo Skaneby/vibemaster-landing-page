@@ -248,10 +248,18 @@
   </div>
 </header>
 
+<!-- ============ NYHET: VIBEMASTER 2.0 (2026-09-17) ============ -->
+<a href="#whats-new" id="news-bar" class="fixed inset-x-0 z-40 flex items-center justify-center gap-2 px-4 py-2 text-[13px] font-semibold text-center transition-colors" style="top:57px; background:#6B7A2F; color:#FAFAEB; border-bottom:1px solid rgba(250,250,235,.15);">
+  <span class="mono text-[10px] uppercase tracking-[0.18em] px-2 py-0.5 rounded-full" style="background:rgba(250,250,235,.18);">2.0</span>
+  <span data-i18n="news.text">Vibemaster 2.0 is here: conversation mode, Mistral and the architecture as a flowchart.</span>
+  <span class="underline underline-offset-2 whitespace-nowrap hidden sm:inline" data-i18n="news.cta">See what's new</span>
+  <svg class="icon" style="font-size:14px"><use href="#i-arrow-right"/></svg>
+</a>
+
 <main id="top" class="pt-14">
 
 <!-- ============ HERO ============ -->
-<section class="relative overflow-hidden pt-20 pb-24 grain">
+<section class="relative overflow-hidden pt-28 md:pt-32 pb-24 grain">
   <div aria-hidden="true" class="absolute -z-10 inset-0">
     <div class="absolute top-10 -left-20 w-[520px] h-[520px] rounded-full" style="background:radial-gradient(closest-side, rgba(107,122,47,.15), transparent 70%); filter:blur(20px);"></div>
     <div class="absolute bottom-0 -right-10 w-[440px] h-[440px] rounded-full" style="background:radial-gradient(closest-side, rgba(176,143,74,.12), transparent 70%); filter:blur(20px);"></div>
@@ -827,7 +835,7 @@
         <div class="flex-1">
           <div class="mono text-[10px] uppercase tracking-widest text-bronze" data-i18n="pricing.pro.name">Professional</div>
           <div class="mt-2 flex items-baseline gap-1">
-            <span class="text-[44px] font-black leading-none" data-i18n="pricing.pro.price">€9</span>
+            <span class="text-[44px] font-black leading-none" data-i18n="pricing.pro.price" data-price-month="pricing.pro.price" data-price-year="pricing.pro.priceYear">€11.95</span>
             <span class="text-[13px]" style="color:rgba(250,250,235,.6);" data-i18n="pricing.pro.period">/mo</span>
           </div>
           <p class="text-[13px] mt-3" style="color:rgba(250,250,235,.7);" data-i18n="pricing.pro.sub">For serious builders shipping weekly.</p>
@@ -836,7 +844,6 @@
             <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f2">Version history &amp; diffs</span></li>
             <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f3">Export to JSON &amp; PDF</span></li>
             <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f4">Priority generation queue</span></li>
-            <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f6">Bring Your Own API Key (BYOK)</span></li>
           </ul>
         </div>
         <div class="mt-6 flex items-center gap-3">
@@ -852,7 +859,7 @@
         <div class="flex-1">
           <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.studio.name">Studio</div>
           <div class="mt-2 flex items-baseline gap-1">
-            <span class="text-[44px] font-black leading-none text-ink" data-i18n="pricing.studio.price">€49</span>
+            <span class="text-[44px] font-black leading-none text-ink" data-i18n="pricing.studio.price" data-price-month="pricing.studio.price" data-price-year="pricing.studio.priceYear">€39</span>
             <span class="text-[13px] text-stone" data-i18n="pricing.studio.period">/mo</span>
           </div>
           <p class="text-[13px] text-moss mt-3" data-i18n="pricing.studio.sub">For teams up to 6 people.</p>
@@ -1148,5 +1155,20 @@
   }
 </script>
 
+
+<script>
+// Månads/årsväxling i prissektionen (fanns bara som knappar utan funktion).
+(function(){
+  var m=document.getElementById('bill-month'), y=document.getElementById('bill-year'); if(!m||!y) return;
+  function t(key){ var lang='en'; try{ lang=localStorage.getItem('vm-lang')||'en'; }catch(e){} var T=(typeof translations!=='undefined')?translations:{}; var d=T[lang]||T.en||{}; return d[key]; }
+  function set(yearly){
+    document.querySelectorAll('[data-price-month]').forEach(function(el){ var k=el.getAttribute(yearly?'data-price-year':'data-price-month'); var v=t(k); if(v) el.textContent=v; el.setAttribute('data-i18n', k); });
+    document.querySelectorAll('[data-i18n$=".period"]').forEach(function(el){ var v=el.textContent.replace(/\/.*$/,''); el.textContent = yearly ? '/'+(t('pricing.periodYear')||'yr') : '/'+(t('pricing.periodMonth')||'mo'); });
+    var on='background:#1E2113; color:#FAFAEB;', off='';
+    m.setAttribute('style', yearly?off:on); y.setAttribute('style', yearly?on:off);
+  }
+  m.addEventListener('click', function(){ set(false); }); y.addEventListener('click', function(){ set(true); });
+})();
+</script>
 </body>
 </html>
