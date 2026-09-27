@@ -58,3 +58,19 @@ Ask Claude something like:
 
 Claude can then cross-reference the opportunities in the report against
 the actual HTML/CSS/JS in this repo.
+
+## Social preview image (`og-image/`)
+
+`og-image/og-image.html` is the source for `assets/images/og-image.png`
+(1200×630, used by `og:image` / `twitter:image`). Everything important sits
+in the centred 630px safe zone, because Threads and similar apps crop the
+preview to a square.
+
+```bash
+npm i -D playwright && npx playwright install chromium
+node scripts/og-image/render.mjs          # writes assets/images/og-image.png
+node scripts/og-image/render.mjs --guide  # preview with the safe zone outlined
+```
+
+After changing the image, bump `?v=` on the `og:image` / `twitter:image`
+URLs in `index.html` so social platforms fetch the new version.
