@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://lh3.googleusercontent.com https://i.ytimg.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'none'; object-src 'none'; base-uri 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin"/>
+  <title>Vibemaster — Turn your idea into a spec AI can build</title>
+  <meta name="description" content="Vibemaster interviews you, writes the product spec, and hands it to Lovable, Cursor, Bolt or Replit — no vague prompts, no broken builds." />
+  <!-- Förhandsvisning av landningssida 2.0: ska inte indexeras. Tas bort när innehållet flyttats till index.html. -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://vibemaster.ai/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vibemaster.ai/" />
+  <meta property="og:title" content="Vibemaster — Turn your idea into a spec AI can build" />
+  <meta property="og:description" content="Vibemaster interviews you, writes the product spec, and hands it to Lovable, Cursor, Bolt or Replit — no vague prompts, no broken builds." />
+  <meta property="og:image" content="https://vibemaster.ai/assets/images/og-image.png?v=2" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vibemaster — Turn your idea into a spec AI can build" />
+  <meta name="twitter:description" content="Vibemaster interviews you, writes the product spec, and hands it to Lovable, Cursor, Bolt or Replit — no vague prompts, no broken builds." />
+  <meta name="twitter:image" content="https://vibemaster.ai/assets/images/og-image.png?v=2" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Vibemaster",
+        "url": "https://vibemaster.ai",
+        "description": "AI-powered workspace that transforms product ideas into structured Markdown build prompts, project plans, and implementation timelines for AI coding tools like Lovable, Cursor, Bolt.new, Replit, and Claude Code.",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Web",
+        "inLanguage": ["en", "sv", "de", "es", "fr", "hi", "zh"],
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Free",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "description": "1 project per month, basic technical specs, Markdown export"
+          },
+          {
+            "@type": "Offer",
+            "name": "Professional",
+            "price": "9",
+            "priceCurrency": "EUR",
+            "description": "Unlimited projects, version history, PDF & Markdown export, priority generation queue"
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "Vibemaster",
+        "url": "https://vibemaster.ai",
+        "description": "Vibemaster transforms ideas into AI-buildable product specifications.",
+        "areaServed": "Worldwide"
+      },
+      {
+        "@type": "WebSite",
+        "name": "Vibemaster",
+        "url": "https://vibemaster.ai"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need to know how to code to use Vibemaster?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Think of Vibemaster as a technical co-founder who structures your idea. You describe what you want to build — we turn it into a buildable product spec that AI tools can follow directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Vibemaster build my product for me?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Vibemaster writes the recipe — a clear product spec that AI can follow. Building happens in AI tools like Lovable, Claude Code, Cursor, etc. The difference is they now know exactly what to build."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Vibemaster differ from using ChatGPT or Claude?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ChatGPT and Claude give you answers. Vibemaster gives you a buildable product specification. Instead of a conversation, you get a structured plan with features, user flows, data model, and instructions that AI can build from."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my data secure and do you comply with EU regulations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Your data stays within the EU and is handled according to EU regulations. We only use anonymized material to train AI models. You retain full control over your content."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="stylesheet" href="src/styles/output.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  </noscript>
+  <style>
+    /* WCAG AA contrast overrides for small text on ivory backgrounds */
+    .text-bronze { color:#755E31; }
+    .text-stone  { color:#4E5340; }
+    .text-olive  { color:#4E5B22; }
+
+    /* YouTube facade play button — matches lite-youtube-embed sizing */
+    .vm-play-btn { width:68px; height:48px; transition:transform .15s ease; }
+    #vm-video-facade:hover .vm-play-btn,
+    #vm-video-facade:focus-visible .vm-play-btn { transform:scale(1.06); }
+    #vm-video-facade:hover .vm-play-btn path[fill="#212121"] { fill:#f00; fill-opacity:1; }
+
+    .icon { width:1em; height:1em; display:inline-block; vertical-align:-.14em; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+    .icon.hidden { display:none; }
+    .mono { font-family:'JetBrains Mono', monospace; }
+    .serif-em { font-family:'Instrument Serif', Georgia, serif; font-weight:400; }
+    .card-tactile { background:#F5F5E6; border:1px solid rgba(184,188,163,.35); border-radius:20px; box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 -1px 0 rgba(54,58,39,.04) inset,0 12px 28px rgba(54,58,39,.06),0 2px 4px rgba(54,58,39,.04); }
+
+    /* Nyhetsbanner 2.0 + hero-luft (arbitrary Tailwind-klasser finns inte i den byggda CSS:en).
+       z-index sätts här: Tailwinds z-40 saknas i output.css, så bannern hamnade under
+       senare positionerade element (hero-kortet, .grain, sektioner) vid scroll.
+       Header = 50, banner = 45, allt innehåll under. */
+    #news-bar { z-index:45; font-size:15px; padding-top:11px; padding-bottom:11px; column-gap:12px; row-gap:4px; }
+    #hero { padding-top:160px; }
+    /* Kort bannertext på mobil, hela texten + länk från 640px (sm:-klasserna saknas i output.css). */
+    .vm-news-long, .vm-news-cta { display:none; }
+    @media (min-width:640px) { .vm-news-short { display:none; } .vm-news-long { display:inline; } .vm-news-cta { display:inline-flex; } }
+    @media (min-width:768px) { #news-bar { font-size:17px; padding-top:13px; padding-bottom:13px; } #hero { padding-top:180px; } }
+
+    /* Så fungerar det: tre steg med bild */
+    .vm-steps { list-style:none; display:grid; gap:20px; }
+    @media (min-width:768px) { .vm-steps { grid-template-columns:repeat(3,1fr); } }
+    .vm-step-visual { background:#EEEFDF; border-bottom:1px solid rgba(184,188,163,.4); padding:20px; min-height:190px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+    .vm-step-num { width:28px; height:28px; border-radius:999px; background:#6B7A2F; color:#FAFAEB; font-weight:900; font-size:13px; display:flex; align-items:center; justify-content:center; margin-bottom:10px; }
+    .vm-tool { font-size:12px; font-weight:800; padding:4px 10px; border-radius:999px; border:1px solid rgba(184,188,163,.6); background:#FAFAEB; color:#1E2113; }
+    .vm-chat { width:100%; display:flex; flex-direction:column; gap:6px; }
+    .vm-bubble { font-size:12.5px; line-height:1.35; padding:8px 11px; border-radius:12px; max-width:88%; }
+    .vm-bubble-ai { background:#FAFAEB; color:#1E2113; border:1px solid rgba(184,188,163,.6); border-bottom-left-radius:4px; align-self:flex-start; }
+    .vm-bubble-me { background:#6B7A2F; color:#FAFAEB; border-bottom-right-radius:4px; align-self:flex-end; }
+
+    /* Case: vi byggde om vår egen sida — idé → intervju → spec → färdig sida */
+    .vm-flow { list-style:none; display:grid; gap:28px; }
+    @media (min-width:900px) { .vm-flow { grid-template-columns:repeat(4,1fr); gap:20px; } }
+    .vm-flow-step { position:relative; display:flex; flex-direction:column; }
+    .vm-flow-label { display:flex; align-items:center; gap:8px; margin-bottom:10px; font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.16em; font-weight:700; color:#D9C08A; }
+    .vm-flow-label span:first-child { color:rgba(250,250,235,.45); }
+    .vm-flow-card { flex:1; background:#F5F5E6; color:#1E2113; border-radius:16px; padding:16px; min-height:150px; display:flex; flex-direction:column; justify-content:center; box-shadow:0 12px 28px rgba(0,0,0,.18); }
+    .vm-flow-step:not(:last-child)::after { content:'↓'; position:absolute; left:50%; bottom:-24px; transform:translateX(-50%); color:#B08F4A; font-weight:900; }
+    @media (min-width:900px) { .vm-flow-step:not(:last-child)::after { content:'→'; left:auto; right:-17px; bottom:auto; top:50%; transform:none; } }
+    .vm-mini-chart { display:flex; flex-direction:column; align-items:center; gap:0; font-size:11.5px; font-weight:800; }
+    .vm-mini-chart span { padding:4px 10px; border-radius:8px; border:1px solid rgba(107,122,47,.45); background:#FAFAEB; }
+    .vm-mini-chart i { display:block; width:1px; height:9px; background:#6B7A2F; }
+    .vm-mini-chart .vm-mini-cta { background:#1E2113; color:#FAFAEB; border-color:#1E2113; }
+    .card-flat { background:#F5F5E6; border:1px solid rgba(184,188,163,.4); border-radius:16px; }
+    .btn-ink { background:#1E2113; color:#FAFAEB; border:1px solid #1E2113; transition:transform .15s,background .15s; }
+    .btn-ink:hover { background:#2A2E1D; transform:translateY(-1px); }
+    .btn-outline { background:transparent; color:#1E2113; border:2px solid rgba(30,33,19,.2); transition:border-color .15s; }
+    .btn-outline:hover { border-color:rgba(30,33,19,.5); }
+    .faq-row { border-bottom:1px solid rgba(184,188,163,.45); }
+    .faq-row:last-child { border-bottom:0; }
+    .grain { position:relative; }
+    .grain::after { content:''; position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(rgba(90,94,69,.05) 1px, transparent 1px); background-size:3px 3px; opacity:.5; mix-blend-mode:multiply; }
+    @keyframes traveler { 0%,100% { left:8%; } 50% { left:92%; } }
+    .traveler { animation:traveler 5s ease-in-out infinite; }
+    section[id] { scroll-margin-top:180px; }
+    @media (min-width:768px) { section[id] { scroll-margin-top:120px; } }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline:2px solid #6B7A2F; outline-offset:3px; border-radius:6px; }
+  </style>
+</head>
+<body style="background:#FAFAEB; color:#1E2113; font-family:'Plus Jakarta Sans',system-ui,sans-serif; font-weight:500;">
+
+<!-- ============ SVG ICON SPRITE ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="i-arrow-out" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6z"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.85 12.15 20 3m-3 3 3 3m-6 0 3 3"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3 4 14h7l-1 7 9-11h-7z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v6m0 6v6m-9-9h6m6 0h6M6 6l3 3m6 6 3 3M6 18l3-3m6-6 3-3"/></symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24"><path d="M7 17V9h5l-2 4h2v4zm8 0V9h5l-2 4h2v4z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-logo" viewBox="0 0 24 24"><path d="M4 18 10 6l4 8 6-12" stroke-width="2.4"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6a3 3 0 0 1 0 6H9a3 3 0 0 0 0 6h6"/></symbol>
+    <symbol id="i-spreadsheet" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51 15.42 17.49M15.41 6.51 8.59 10.49"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="fixed top-0 inset-x-0 z-50 border-b border-mist/50" style="background:rgba(250,250,235,.92); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);">
+  <div class="max-w-[1200px] mx-auto px-6 h-14 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2.5">
+      <span class="size-7 rounded-md bg-ink text-ivory flex items-center justify-center">
+        <svg class="icon" style="font-size:14px"><use href="#i-logo"/></svg>
+      </span>
+      <span class="text-[15px] font-black tracking-tight text-ink">Vibemaster</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium text-moss">
+      <a href="#how-it-works" class="hover:text-ink transition-colors" data-i18n="hero.cta.secondary">How it works</a>
+      <a href="#our-site" class="hover:text-ink transition-colors" data-i18n="nav.case">Our own site</a>
+      <a href="#pricing" class="hover:text-ink transition-colors" data-i18n="nav.pricing">Pricing</a>
+      <a href="#faq" class="hover:text-ink transition-colors" data-i18n="faq.eyebrow">FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <!-- Language switcher -->
+      <div class="hidden sm:block relative" id="lang-switcher">
+        <button id="lang-trigger" onclick="toggleLangMenu()" aria-haspopup="true" aria-expanded="false" aria-controls="lang-menu"
+          class="flex items-center gap-1.5 border border-mist/60 rounded-lg px-2.5 py-1.5 text-[11px] font-bold mono tracking-widest text-charcoal hover:border-stone/60 transition-colors">
+          <span id="lang-current">EN</span>
+          <svg class="icon" style="font-size:11px"><use href="#i-arrow-down"/></svg>
+        </button>
+        <div id="lang-menu" style="display:none;position:absolute;right:0;top:calc(100% + 8px);min-width:140px;background:rgba(250,250,235,.98);border:1px solid rgba(184,188,163,.5);border-radius:12px;padding:6px;box-shadow:0 12px 40px rgba(54,58,39,.12);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);z-index:9998">
+          <button data-lang-btn="en" onclick="vmSetLang('en');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">EN · English</button>
+          <button data-lang-btn="sv" onclick="vmSetLang('sv');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">SV · Svenska</button>
+          <button data-lang-btn="de" onclick="vmSetLang('de');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">DE · Deutsch</button>
+          <button data-lang-btn="es" onclick="vmSetLang('es');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">ES · Español</button>
+          <button data-lang-btn="fr" onclick="vmSetLang('fr');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">FR · Français</button>
+          <button data-lang-btn="hi" onclick="vmSetLang('hi');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">HI · हिंदी</button>
+          <button data-lang-btn="zh" onclick="vmSetLang('zh');closeLangMenu()" class="w-full text-left px-2.5 py-1.5 text-[12px] font-semibold rounded-md hover:bg-sand transition-colors">ZH · 中文</button>
+        </div>
+      </div>
+      <a href="https://app.vibemaster.ai/" class="hidden sm:inline-block text-[13px] font-medium text-moss hover:text-ink transition-colors" data-i18n="nav.login">Login</a>
+      <a href="https://app.vibemaster.ai/" class="btn-ink inline-flex items-center gap-1.5 text-[13px] font-bold px-4 py-2 rounded-lg" data-i18n="nav.cta">Start Building</a>
+      <button id="nav-toggle" class="md:hidden size-9 flex items-center justify-center text-moss hover:text-ink transition-colors" aria-label="Menu" aria-expanded="false">
+        <svg class="icon" style="font-size:20px" id="nav-icon-menu"><use href="#i-menu"/></svg>
+        <svg class="icon hidden" style="font-size:20px" id="nav-icon-close"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile nav -->
+  <div id="mobile-nav" class="hidden md:hidden border-t border-mist/30 px-6 py-3" style="background:rgba(250,250,235,.97);">
+    <a href="#how-it-works" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="hero.cta.secondary">How it works</a>
+    <a href="#our-site" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.case">Our own site</a>
+    <a href="#pricing" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.pricing">Pricing</a>
+    <a href="#faq" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="faq.eyebrow">FAQ</a>
+    <a href="https://app.vibemaster.ai/" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.login">Login</a>
+    <div class="py-3 border-b border-mist/30">
+      <div class="flex flex-wrap gap-2">
+        <button onclick="vmSetLang('en')" data-lang-btn="en" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">EN</button>
+        <button onclick="vmSetLang('sv')" data-lang-btn="sv" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">SV</button>
+        <button onclick="vmSetLang('de')" data-lang-btn="de" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">DE</button>
+        <button onclick="vmSetLang('es')" data-lang-btn="es" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">ES</button>
+        <button onclick="vmSetLang('fr')" data-lang-btn="fr" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">FR</button>
+        <button onclick="vmSetLang('hi')" data-lang-btn="hi" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">HI</button>
+        <button onclick="vmSetLang('zh')" data-lang-btn="zh" class="px-3 py-1.5 rounded-lg text-xs font-bold text-moss hover:text-ink border border-mist/40 hover:border-stone/50 transition-colors">ZH</button>
+      </div>
+    </div>
+    <div class="py-4">
+      <a href="https://app.vibemaster.ai/" class="btn-ink block w-full text-center text-sm font-bold px-6 py-3 rounded-xl" data-i18n="nav.cta">Start Building</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ NYHET: VIBEMASTER 2.0 (2026-09-17) ============ -->
+<a href="#how-it-works" id="news-bar" class="fixed inset-x-0 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 font-bold text-center leading-snug transition-colors" style="top:57px; background:#6B7A2F; color:#FAFAEB; border-bottom:2px solid #B08F4A; box-shadow:0 6px 18px rgba(54,58,39,.18);">
+  <span class="inline-flex items-center gap-1.5 mono text-[11px] md:text-[12px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full font-bold" style="background:#B08F4A; color:#1E2113;"><svg class="icon" style="font-size:13px"><use href="#i-sparkle"/></svg><span data-i18n="news.badge">New</span></span>
+  <span class="vm-news-short" data-i18n="news.text.short">Vibemaster 2.0 is here</span>
+  <span class="vm-news-long" data-i18n="news.text">Vibemaster 2.0 is here: conversation mode, Mistral and the architecture as a flowchart.</span>
+  <span class="vm-news-cta items-center gap-1 underline underline-offset-4 whitespace-nowrap" style="color:#F3E7C8;"><span data-i18n="news.cta">See what's new</span><svg class="icon" style="font-size:15px"><use href="#i-arrow-right"/></svg></span>
+</a>
+
+<main id="top" class="pt-14">
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="relative overflow-hidden pb-24 grain">
+  <div aria-hidden="true" class="absolute -z-10 inset-0">
+    <div class="absolute top-10 -left-20 w-[520px] h-[520px] rounded-full" style="background:radial-gradient(closest-side, rgba(107,122,47,.15), transparent 70%); filter:blur(20px);"></div>
+    <div class="absolute bottom-0 -right-10 w-[440px] h-[440px] rounded-full" style="background:radial-gradient(closest-side, rgba(176,143,74,.12), transparent 70%); filter:blur(20px);"></div>
+  </div>
+
+  <div class="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-[1.05fr_1fr] gap-14 items-center">
+
+    <!-- LEFT · text -->
+    <div>
+      <div class="inline-flex items-center gap-2 mb-6">
+        <span class="size-1.5 rounded-full bg-olive animate-pulse"></span>
+        <span class="mono text-[10.5px] uppercase tracking-[0.22em] text-olive font-bold" data-i18n="hero.badge">Built for non-technical founders, operators and creators</span>
+      </div>
+
+      <h1 class="text-[44px] md:text-[64px] lg:text-[68px] font-black leading-[0.98] tracking-[-0.02em]">
+        <span data-i18n="hero.h1.a">You bring the idea. We make it</span> <span class="text-bronze" data-i18n="hero.h1.b">buildable.</span><span data-i18n="hero.h1.c"></span>
+      </h1>
+
+      <p class="mt-6 text-[17px] text-moss leading-relaxed max-w-lg" data-i18n="hero.sub">
+        Most people can't describe what they want to build. That's why AI fails. Vibemaster solves that.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="https://app.vibemaster.ai/" class="btn-ink inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[15px] font-bold">
+          <span data-i18n="hero.cta.primary">Make My Idea Buildable</span>
+          <svg class="icon" style="font-size:16px"><use href="#i-arrow-right"/></svg>
+        </a>
+        <a href="#how-it-works" class="btn-outline inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[15px] font-bold">
+          <svg class="icon" style="font-size:16px"><use href="#i-play"/></svg>
+          <span data-i18n="hero.cta.secondary">How it works</span>
+        </a>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-mist/60 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12.5px] text-moss">
+        <span class="flex items-center gap-1.5"><svg class="icon text-olive" style="font-size:14px"><use href="#i-shield"/></svg><span data-i18n="hero.trust1.sub">EU-hosted · Paris</span></span>
+        <span class="flex items-center gap-1.5"><svg class="icon text-olive" style="font-size:14px"><use href="#i-key"/></svg><span data-i18n="hero.trust2.sub">BYOK supported</span></span>
+        <span class="flex items-center gap-1.5"><svg class="icon text-olive" style="font-size:14px"><use href="#i-bolt"/></svg><span data-i18n="hero.trust3.sub">Free trial available</span></span>
+      </div>
+    </div>
+
+    <!-- RIGHT · document mock -->
+    <div class="relative">
+      <div class="absolute inset-0 translate-x-3 translate-y-3 rounded-[22px]" style="background:rgba(235,235,213,.8);" aria-hidden="true"></div>
+      <div class="relative card-tactile p-0 overflow-hidden">
+        <!-- browser bar -->
+        <div class="flex items-center gap-1.5 px-3 py-2.5 border-b border-mist/50" style="background:#F5F5E6;">
+          <span class="size-2.5 rounded-full" style="background:rgba(180,65,42,.5)"></span>
+          <span class="size-2.5 rounded-full" style="background:rgba(200,138,31,.5)"></span>
+          <span class="size-2.5 rounded-full" style="background:rgba(107,122,47,.5)"></span>
+          <div class="flex-1 ml-2 h-5 rounded border border-mist/50 flex items-center justify-center px-2" style="background:#FAFAEB;">
+            <svg class="icon text-stone mr-1.5" style="font-size:10px"><use href="#i-lock"/></svg>
+            <span class="mono text-[10px] text-stone">app.vibemaster.ai/projects/coffee-box</span>
+          </div>
+        </div>
+        <!-- content -->
+        <div class="p-5">
+          <div class="flex items-end gap-0 text-[10px] mono uppercase tracking-widest border-b border-mist/60 mb-4">
+            <span class="px-3 py-2 border-b-2 border-olive text-olive font-bold" data-i18n="hero.mock.tab1">Spec</span>
+            <span class="px-3 py-2 text-stone" data-i18n="hero.mock.tab2">User flows</span>
+            <span class="px-3 py-2 text-stone" data-i18n="hero.mock.tab3">Data model</span>
+            <span class="px-3 py-2 text-stone" data-i18n="hero.mock.tab4">Build prompt</span>
+          </div>
+          <div class="flex items-start justify-between mb-4 gap-3">
+            <div>
+              <div class="mono text-[9.5px] text-stone tracking-widest uppercase" data-i18n="hero.mock.project">Project</div>
+              <div class="font-black text-[17px] leading-tight text-ink">Coffee Box · subscription marketplace</div>
+            </div>
+            <div class="mono text-[9.5px] text-olive uppercase tracking-widest flex items-center gap-1.5 shrink-0 mt-1">
+              <span class="size-1.5 rounded-full bg-olive animate-pulse"></span><span data-i18n="hero.mock.ready">Ready</span>
+            </div>
+          </div>
+          <div class="space-y-2.5">
+            <div class="p-3 rounded-lg border border-mist/40" style="background:#F5F5E6;">
+              <div class="flex items-baseline gap-2 mb-1.5">
+                <span class="mono text-[9.5px] text-bronze">§ 1</span>
+                <span class="font-bold text-[13px] text-ink" data-i18n="hero.mock.sec1">Subscription engine</span>
+                <span class="ml-auto mono text-[9.5px] text-stone">4 <span data-i18n="hero.mock.req">req</span></span>
+              </div>
+              <div class="space-y-1">
+                <div class="h-1.5 rounded bg-mist/50" style="width:82%"></div>
+                <div class="h-1.5 rounded bg-mist/50" style="width:67%"></div>
+                <div class="h-1.5 rounded bg-mist/50" style="width:74%"></div>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg border border-mist/40" style="background:#F5F5E6;">
+              <div class="flex items-baseline gap-2 mb-1.5">
+                <span class="mono text-[9.5px] text-bronze">§ 2</span>
+                <span class="font-bold text-[13px] text-ink" data-i18n="hero.mock.sec2">Roast &amp; frequency picker</span>
+                <span class="ml-auto mono text-[9.5px] text-stone">3 <span data-i18n="hero.mock.req">req</span></span>
+              </div>
+              <div class="space-y-1">
+                <div class="h-1.5 rounded bg-mist/50" style="width:92%"></div>
+                <div class="h-1.5 rounded bg-mist/50" style="width:55%"></div>
+              </div>
+            </div>
+            <div class="p-3 rounded-lg border border-mist/40" style="background:#F5F5E6;">
+              <div class="flex items-baseline gap-2 mb-1.5">
+                <span class="mono text-[9.5px] text-bronze">§ 3</span>
+                <span class="font-bold text-[13px] text-ink" data-i18n="hero.mock.sec3">Recurring billing &amp; pausing</span>
+                <span class="ml-auto mono text-[9.5px] text-stone">5 <span data-i18n="hero.mock.req">req</span></span>
+              </div>
+              <div class="space-y-1">
+                <div class="h-1.5 rounded bg-mist/50" style="width:76%"></div>
+                <div class="h-1.5 rounded bg-mist/50" style="width:48%"></div>
+                <div class="h-1.5 rounded bg-mist/50" style="width:61%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4 p-3 rounded-lg bg-ink text-ivory flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <span class="size-6 rounded flex items-center justify-center" style="background:rgba(250,250,235,.1);">
+                <svg class="icon" style="font-size:12px"><use href="#i-logo"/></svg>
+              </span>
+              <span class="mono text-[10.5px] uppercase tracking-widest font-bold" data-i18n="hero.mock.cta">Copy for Lovable</span>
+            </div>
+            <svg class="icon" style="font-size:15px"><use href="#i-copy"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BRAND ROW — dark section ============ -->
+<section class="py-10 border-y border-ink" style="background:#1E2113; color:#FAFAEB;">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="mono text-[10px] tracking-[0.32em] uppercase text-center mb-5" style="color:rgba(184,188,163,.8);" data-i18n="integrations.label">Perfect Handoffs To</div>
+    <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 md:gap-x-14">
+      <span class="font-black text-[22px] tracking-tight">Lovable</span>
+      <span class="font-black text-[22px] tracking-tight">bolt<span class="text-bronze">.new</span></span>
+      <span class="font-black text-[22px] tracking-tight">Replit</span>
+      <span class="font-black text-[22px] tracking-tight lowercase">cursor</span>
+      <span class="font-black text-[22px] tracking-tight">Claude</span>
+      <span class="font-black text-[22px] tracking-tight">Google&nbsp;AI&nbsp;Studio</span>
+      <span class="font-black text-[22px] tracking-tight">v0</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS (inkl. nytt i 2.0) ============ -->
+<section class="py-20 grain" id="how-it-works">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] text-ink text-center mb-12" data-i18n="hiw2.h2">From idea to build in three steps</h2>
+
+    <ol class="vm-steps">
+      <!-- 1 · Beskriv -->
+      <li class="card-flat overflow-hidden flex flex-col">
+        <div class="vm-step-visual">
+          <div class="vm-chat">
+            <div class="vm-bubble vm-bubble-ai" data-i18n="hiw2.s1.q">Who will use it first?</div>
+            <div class="vm-bubble vm-bubble-me" data-i18n="hiw2.s1.a">Small coffee roasters selling subscriptions.</div>
+          </div>
+          <img src="assets/images/ai-models-2.0.png" alt="The AI model selector in Vibemaster 2.0: Gemini or Mistral" width="800" height="112" class="w-full h-auto rounded-lg mt-3" style="box-shadow:0 6px 18px rgba(54,58,39,.1);" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="vm-step-num">1</div>
+          <h3 class="text-[19px] font-black tracking-tight text-ink leading-tight" data-i18n="hiw2.s1.h">Describe your idea</h3>
+          <p class="text-[14px] text-moss mt-2 leading-relaxed" data-i18n="hiw2.s1.p">A guided interview or free conversation. Gemini or Mistral, your choice.</p>
+        </div>
+      </li>
+      <!-- 2 · Spec + flödesschema -->
+      <li class="card-flat overflow-hidden flex flex-col">
+        <div class="vm-step-visual">
+          <img src="assets/images/flowchart-2.0.png" alt="The Architecture tab in Vibemaster 2.0: the project's architecture as a flowchart" width="1700" height="700" class="w-full h-auto rounded-lg" style="box-shadow:0 6px 18px rgba(54,58,39,.1);" loading="lazy">
+        </div>
+        <div class="p-6">
+          <div class="vm-step-num">2</div>
+          <h3 class="text-[19px] font-black tracking-tight text-ink leading-tight" data-i18n="hiw2.s2.h">Get the spec and the flowchart</h3>
+          <p class="text-[14px] text-moss mt-2 leading-relaxed" data-i18n="hiw2.s2.p">Features, user flows, data model and architecture as one picture everyone understands.</p>
+        </div>
+      </li>
+      <!-- 3 · Bygg -->
+      <li class="card-flat overflow-hidden flex flex-col">
+        <div class="vm-step-visual">
+          <div class="w-full">
+            <div class="p-3 rounded-lg bg-ink text-ivory flex items-center justify-between">
+              <span class="mono text-[10.5px] uppercase tracking-widest font-bold" data-i18n="hero.mock.cta">Copy for Lovable</span>
+              <svg class="icon" style="font-size:15px"><use href="#i-copy"/></svg>
+            </div>
+            <div class="flex flex-wrap justify-center gap-2 mt-3">
+              <span class="vm-tool">Lovable</span><span class="vm-tool">Bolt</span><span class="vm-tool">Cursor</span><span class="vm-tool">Replit</span><span class="vm-tool">Claude</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="vm-step-num">3</div>
+          <h3 class="text-[19px] font-black tracking-tight text-ink leading-tight" data-i18n="hiw2.s3.h">Paste and build</h3>
+          <p class="text-[14px] text-moss mt-2 leading-relaxed" data-i18n="hiw2.s3.p">Copy the build prompt into your AI tool. It knows exactly what to build, and in which order.</p>
+        </div>
+      </li>
+    </ol>
+
+    <!-- Video -->
+    <div class="max-w-[820px] mx-auto mt-12">
+      <p class="text-center text-[15px] font-bold text-ink mb-4" data-i18n="video.h2">See how it works in 5 minutes</p>
+      <div class="relative w-full rounded-xl overflow-hidden shadow-lg" style="padding-top:56.25%;">
+        <div id="vm-video-facade"
+             data-i18n-video-src="video.src"
+             data-video-src="https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk"
+             role="button"
+             tabindex="0"
+             aria-label="Play video"
+             class="absolute inset-0 w-full h-full cursor-pointer group bg-ink">
+          <img id="vm-video-thumb"
+               src="https://i.ytimg.com/vi/xl_FHfXn-aA/hqdefault.jpg"
+               alt=""
+               width="480"
+               height="360"
+               loading="lazy"
+               decoding="async"
+               class="w-full h-full object-cover"/>
+          <div class="absolute inset-0 flex items-center justify-center bg-black/10 transition group-hover:bg-black/20">
+            <svg class="vm-play-btn" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.52 7.74a8.51 8.51 0 0 0-6-6.03C55.24 0 34 0 34 0S12.76 0 7.48 1.71a8.51 8.51 0 0 0-6 6.03C0 13.03 0 24 0 24s0 10.97 1.48 16.26a8.51 8.51 0 0 0 6 6.03C12.76 48 34 48 34 48s21.24 0 26.52-1.71a8.51 8.51 0 0 0 6-6.03C68 34.97 68 24 68 24s0-10.97-1.48-16.26z" fill="#212121" fill-opacity="0.8"/>
+              <path d="M27 34l17.5-10L27 14z" fill="#fff"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var facade = document.getElementById('vm-video-facade');
+    if (!facade) return;
+    function activate() {
+      var embed = facade.dataset.videoSrc;
+      if (!embed) return;
+      var url;
+      try { url = new URL(embed); } catch (e) { return; }
+      url.hostname = 'www.youtube-nocookie.com';
+      url.searchParams.set('autoplay', '1');
+      var iframe = document.createElement('iframe');
+      iframe.id = 'vm-video';
+      iframe.className = 'absolute inset-0 w-full h-full';
+      iframe.title = 'Vibemaster';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+      iframe.allowFullscreen = true;
+      iframe.src = url.toString();
+      facade.replaceWith(iframe);
+    }
+    facade.addEventListener('click', activate);
+    facade.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+    });
+  })();
+</script>
+
+<!-- ============ CASE: VI BYGGDE VÅR EGEN SIDA ============ -->
+<section class="py-20 relative overflow-hidden" id="our-site" style="background:#363A27; color:#FAFAEB;">
+  <div aria-hidden="true" class="absolute inset-0 opacity-60" style="background:radial-gradient(800px 400px at 50% 0%, rgba(107,122,47,.25), transparent 70%);"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="text-center mb-12">
+      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05]" data-i18n="case.h2">We built this page with Vibemaster</h2>
+      <p class="mt-4 text-[16px] max-w-xl mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n="case.sub">Same flow you get: from a rough idea to the page you're reading now.</p>
+    </div>
+
+    <ol class="vm-flow">
+      <!-- Idé -->
+      <li class="vm-flow-step">
+        <div class="vm-flow-label"><span>01</span><span data-i18n="case.s1">Idea</span></div>
+        <div class="vm-flow-card">
+          <svg class="icon text-bronze" style="font-size:26px; opacity:.6;"><use href="#i-quote"/></svg>
+          <p class="text-[14px] font-bold leading-snug text-ink mt-1" data-i18n="case.s1.quote">"Our landing page is too long. Make it short, visual and focused on trying the product."</p>
+        </div>
+      </li>
+      <!-- Intervju -->
+      <li class="vm-flow-step">
+        <div class="vm-flow-label"><span>02</span><span data-i18n="case.s2">Interview</span></div>
+        <div class="vm-flow-card">
+          <div class="vm-chat">
+            <div class="vm-bubble vm-bubble-ai" data-i18n="case.s2.q">Who is the most important visitor, and what should they do before leaving?</div>
+            <div class="vm-bubble vm-bubble-me" data-i18n="case.s2.a">A founder with an idea. Start a free project.</div>
+          </div>
+        </div>
+      </li>
+      <!-- Spec + arkitektur -->
+      <li class="vm-flow-step">
+        <div class="vm-flow-label"><span>03</span><span data-i18n="case.s3">Spec &amp; flowchart</span></div>
+        <div class="vm-flow-card">
+          <div class="vm-mini-chart" aria-hidden="true">
+            <span>Hero</span><i></i><span data-i18n="hero.cta.secondary">How it works</span><i></i><span data-i18n="nav.pricing">Pricing</span><i></i><span class="vm-mini-cta" data-i18n="case.s3.cta">Try free</span>
+          </div>
+        </div>
+      </li>
+      <!-- Färdig sida -->
+      <li class="vm-flow-step">
+        <div class="vm-flow-label"><span>04</span><span data-i18n="case.s4">Live page</span></div>
+        <div class="vm-flow-card p-0 overflow-hidden">
+          <div class="flex items-center gap-1 px-2.5 py-2 border-b border-mist/50">
+            <span class="size-2 rounded-full" style="background:rgba(180,65,42,.5)"></span>
+            <span class="size-2 rounded-full" style="background:rgba(200,138,31,.5)"></span>
+            <span class="size-2 rounded-full" style="background:rgba(107,122,47,.5)"></span>
+            <span class="mono text-[9.5px] text-stone ml-2">vibemaster.ai</span>
+          </div>
+          <div class="p-3">
+            <div class="h-1.5 rounded mb-2" style="background:#6B7A2F; width:100%;"></div>
+            <div class="rounded bg-ink" style="height:10px; width:80%;"></div>
+            <div class="rounded mt-1" style="height:10px; background:#B08F4A; width:45%;"></div>
+            <div class="h-1.5 rounded bg-mist/50 mt-2" style="width:70%;"></div>
+            <div class="h-5 rounded-md bg-ink mt-3" style="width:48%;"></div>
+          </div>
+        </div>
+      </li>
+    </ol>
+
+    <div class="mt-12 text-center">
+      <a href="https://app.vibemaster.ai/" class="inline-flex items-center gap-2 px-7 py-4 rounded-xl font-bold text-[15px] hover:opacity-90 transition-opacity" style="background:#B08F4A; color:#1E2113;">
+        <span data-i18n="case.cta">Try it on your own idea</span>
+        <svg class="icon" style="font-size:16px"><use href="#i-arrow-right"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING — sand section ============ -->
+<section class="py-20 grain" id="pricing" style="background:#EBEBD5;">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="text-center mb-10">
+      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] text-ink" data-i18n="pricing.h2">
+        Simple Pricing for Visionaries
+      </h2>
+      <div class="mt-6 inline-flex items-center p-1 rounded-lg border border-mist/60" style="background:#F5F5E6;">
+        <button id="bill-month" class="px-5 py-1.5 text-[12px] font-bold rounded-md" style="background:#1E2113; color:#FAFAEB;" data-i18n="pricing.monthly">Monthly</button>
+        <button id="bill-year" class="px-5 py-1.5 text-[12px] font-bold text-moss hover:text-ink transition-colors">
+          <span data-i18n="pricing.yearly">Yearly, one month free</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 items-stretch">
+
+      <!-- Explorer -->
+      <div class="card-flat p-6 flex flex-col">
+        <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.explorer.name">Explorer</div>
+        <div class="mt-2 flex items-baseline gap-1">
+          <span class="text-[44px] font-black leading-none text-ink" data-i18n="pricing.explorer.price">€0</span>
+          <span class="text-[13px] text-stone" data-i18n="pricing.explorer.period">/mo</span>
+        </div>
+        <p class="text-[13px] text-moss mt-3" data-i18n="pricing.explorer.sub">Perfect for solo hackers testing the waters.</p>
+        <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
+          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f1">2 Projects per month</span></li>
+          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f2">Basic technical specs</span></li>
+          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f3">Markdown exports</span></li>
+        </ul>
+      </div>
+
+      <!-- Professional — inverted -->
+      <div class="flex flex-col p-6 rounded-[16px] relative" style="background:#1E2113; color:#FAFAEB; border:1px solid #1E2113;">
+        <div class="absolute -top-3 left-6 px-3 py-0.5 rounded-full mono text-[9.5px] uppercase tracking-widest font-bold" style="background:#B08F4A; color:#1E2113;" data-i18n="pricing.popular">Most Popular</div>
+        <div class="mono text-[10px] uppercase tracking-widest text-bronze" data-i18n="pricing.pro.name">Professional</div>
+        <div class="mt-2 flex items-baseline gap-1">
+          <span class="text-[44px] font-black leading-none" data-i18n="pricing.pro.price" data-price-month="pricing.pro.price" data-price-year="pricing.pro.priceYear">€11.95</span>
+          <span class="text-[13px]" style="color:rgba(250,250,235,.6);" data-i18n="pricing.pro.period">/mo</span>
+        </div>
+        <p class="text-[13px] mt-3" style="color:rgba(250,250,235,.7);" data-i18n="pricing.pro.sub">For serious builders shipping weekly.</p>
+        <ul class="mt-6 space-y-2.5 text-[13.5px]">
+          <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><strong data-i18n="pricing.pro.f1">Unlimited Projects</strong></li>
+          <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f2">Version history &amp; diffs</span></li>
+          <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f3">Export to JSON &amp; PDF</span></li>
+          <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f4">Priority generation queue</span></li>
+        </ul>
+      </div>
+
+      <!-- Studio -->
+      <div class="card-flat p-6 flex flex-col relative">
+        <div class="absolute -top-3 left-6 px-3 py-0.5 rounded-full mono text-[9.5px] uppercase tracking-widest font-bold text-charcoal" style="background:#B8BCA3;" data-i18n="pricing.studio.badge">Coming soon</div>
+        <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.studio.name">Studio</div>
+        <div class="mt-2 flex items-baseline gap-1">
+          <span class="text-[44px] font-black leading-none text-ink" data-i18n="pricing.studio.price" data-price-month="pricing.studio.price" data-price-year="pricing.studio.priceYear">€51.95</span>
+          <span class="text-[13px] text-stone" data-i18n="pricing.studio.period">/mo</span>
+        </div>
+        <p class="text-[13px] text-moss mt-3" data-i18n="pricing.studio.sub">For teams up to 6 people.</p>
+        <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
+          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f1">Up to 6 team seats</span></li>
+          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f2">Shared projects</span></li>
+          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f3">Claude &amp; Mistral via own API key</span></li>
+        </ul>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="card-flat p-6 flex flex-col">
+        <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.enterprise.name">Enterprise</div>
+        <div class="mt-2 flex items-baseline gap-1">
+          <span class="text-[32px] font-black leading-none text-ink" data-i18n="pricing.enterprise.price">Custom</span>
+        </div>
+        <p class="text-[13px] text-moss mt-3" data-i18n="pricing.enterprise.sub">Global scale and security requirements.</p>
+        <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
+          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f1">Custom number of seats</span></li>
+          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f2">Shared branding</span></li>
+          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f3">Shared projects</span></li>
+          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f4">Dedicated support</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="https://app.vibemaster.ai/" class="btn-ink inline-flex items-center gap-2 px-7 py-4 rounded-xl text-[15px] font-bold">
+        <span data-i18n="pricing.explorer.cta">Start Free</span>
+        <svg class="icon" style="font-size:16px"><use href="#i-arrow-right"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="py-20" id="faq">
+  <div class="max-w-[820px] mx-auto px-6">
+    <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] text-ink text-center mb-10" data-i18n="faq.h2">
+      Questions? We have answers.
+    </h2>
+    <div>
+
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q1">Do I need technical knowledge to use Vibemaster?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a1">
+          No! Vibemaster is built to bridge the gap between imagination and implementation.
+        </div>
+      </details>
+
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q2">Does Vibemaster build my product for me?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a2">
+          Vibemaster writes the recipe — you choose the chef.
+        </div>
+      </details>
+
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q3">How does Vibemaster differ from using ChatGPT or Claude?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a3">
+          ChatGPT and Claude give you answers. Vibemaster gives you a buildable product specification.
+        </div>
+      </details>
+
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q5">Is my data secure and do you comply with EU regulations?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a5">
+          Yes. Your data stays within the EU and is handled according to EU regulations.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA — dark section ============ -->
+<section class="py-20 relative overflow-hidden" style="background:#1E2113; color:#FAFAEB;">
+  <div aria-hidden="true" class="absolute inset-0 opacity-50" style="background:radial-gradient(900px 400px at 50% 0%, rgba(176,143,74,.2), transparent 70%);"></div>
+  <div class="max-w-[900px] mx-auto px-6 text-center relative">
+    <h2 class="text-[34px] md:text-[52px] font-black tracking-tight leading-[1.02]" data-i18n="cta.h2">
+      Ready to ship your next big idea?
+    </h2>
+    <p class="mt-5 text-[16px] max-w-lg mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n="cta.sub">
+      Free plan, no card. Two real projects, yours forever. Upgrade when you're shipping weekly.
+    </p>
+    <div class="mt-8">
+      <a href="https://app.vibemaster.ai/" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-[16px] hover:opacity-90 transition-opacity" style="background:#B08F4A; color:#1E2113;">
+        <span data-i18n="cta.primary">Get Started Now</span>
+        <svg class="icon" style="font-size:16px"><use href="#i-arrow-right"/></svg>
+      </a>
+    </div>
+    <div class="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-3 text-[13px]" style="color:rgba(250,250,235,.7);">
+      <span class="flex items-center gap-2"><svg class="icon text-bronze" style="font-size:16px"><use href="#i-shield"/></svg><span data-i18n="cta.trust1.sub">Paris · Scalingo · GDPR</span></span>
+      <span class="flex items-center gap-2"><svg class="icon text-bronze" style="font-size:16px"><use href="#i-lock"/></svg><span data-i18n="cta.trust2.sub">Stripe · SOC2 partners</span></span>
+      <span class="flex items-center gap-2"><svg class="icon text-bronze" style="font-size:16px"><use href="#i-key"/></svg><span data-i18n="cta.trust3.sub">Anonymised training only</span></span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer style="background:#F5F5E6; border-top:1px solid rgba(184,188,163,.5);">
+  <div class="max-w-[1200px] mx-auto px-6 py-16">
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
+
+      <!-- Brand -->
+      <div class="col-span-2 md:col-span-2">
+        <div class="flex items-center gap-2.5 mb-4">
+          <span class="size-7 rounded-md bg-ink text-ivory flex items-center justify-center">
+            <svg class="icon" style="font-size:14px"><use href="#i-logo"/></svg>
+          </span>
+          <span class="text-[15px] font-black tracking-tight text-ink">Vibemaster</span>
+        </div>
+        <p class="text-[13px] text-moss leading-relaxed max-w-xs" data-i18n="footer.desc">
+          Vibemaster — The AI-powered workspace for making ideas buildable.
+        </p>
+        <div class="mt-5 flex items-center gap-2">
+          <button onclick="shareVibemaster()" class="size-9 rounded-lg border border-mist/60 flex items-center justify-center text-stone hover:text-ink hover:border-stone/60 transition-colors" title="Share Vibemaster">
+            <svg class="icon" style="font-size:14px"><use href="#i-share"/></svg>
+          </button>
+          <a href="mailto:admin@vibemaster.ai" aria-label="Email" class="size-9 rounded-lg border border-mist/60 flex items-center justify-center text-stone hover:text-ink hover:border-stone/60 transition-colors">
+            <svg class="icon" style="font-size:14px" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="mono text-[10px] uppercase tracking-widest text-stone mb-4" data-i18n="footer.product">Product</div>
+        <ul class="space-y-2.5 text-[13px] text-moss">
+          <li><a class="hover:text-ink transition-colors" href="#how-it-works" data-i18n="footer.f.features">Features</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#pricing" data-i18n="footer.f.pricing">Pricing</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#" data-i18n="footer.f.integrations">Integrations</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#" data-i18n="footer.f.changelog">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="mono text-[10px] uppercase tracking-widest text-stone mb-4" data-i18n="footer.contact">Contact</div>
+        <ul class="space-y-2.5 text-[13px] text-moss">
+          <li><a class="hover:text-ink transition-colors" href="mailto:admin@vibemaster.ai">admin@vibemaster.ai</a></li>
+          <li><a class="hover:text-ink transition-colors" href="https://app.vibemaster.ai/" data-i18n="footer.c.app">Try the app →</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col md:flex-row justify-between gap-4 pt-8" style="border-top:1px solid rgba(184,188,163,.5);">
+      <p class="text-[12px] text-stone" data-i18n="footer.legal">© 2026 Vibemaster. From Idea to Reality.</p>
+      <div class="flex gap-6 text-[12px] text-stone">
+        <a class="hover:text-ink transition-colors" href="villkor.html#integritetspolicy" data-i18n="footer.privacy">Privacy</a>
+        <a class="hover:text-ink transition-colors" href="villkor.html#anvandarvillkor" data-i18n="footer.terms">Terms</a>
+        <a class="hover:text-ink transition-colors" href="villkor.html#liability" data-i18n="footer.security">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script defer src="src/scripts/i18n-preview-2.js?v=1"></script>
+<script>
+  (function () {
+    var toggle = document.getElementById('nav-toggle');
+    var mobileNav = document.getElementById('mobile-nav');
+    var iconMenu = document.getElementById('nav-icon-menu');
+    var iconClose = document.getElementById('nav-icon-close');
+    if (!toggle || !mobileNav) return;
+    function openNav() {
+      mobileNav.classList.remove('hidden');
+      iconMenu.classList.add('hidden');
+      iconClose.classList.remove('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+    function closeNav() {
+      mobileNav.classList.add('hidden');
+      iconMenu.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    toggle.addEventListener('click', function () {
+      mobileNav.classList.contains('hidden') ? openNav() : closeNav();
+    });
+    mobileNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', closeNav);
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    var m = document.getElementById('bill-month');
+    var y = document.getElementById('bill-year');
+    if (!m || !y) return;
+    function set(which) {
+      if (which === 'y') {
+        y.style.background = '#1E2113'; y.style.color = '#FAFAEB';
+        m.style.background = ''; m.style.color = '#5A5E45';
+      } else {
+        m.style.background = '#1E2113'; m.style.color = '#FAFAEB';
+        y.style.background = ''; y.style.color = '#5A5E45';
+      }
+    }
+    m.addEventListener('click', function () { set('m'); });
+    y.addEventListener('click', function () { set('y'); });
+  })();
+</script>
+
+<script>
+  function shareVibemaster() {
+    var url = 'https://vibemaster.ai';
+    var subject = 'Jag vill tipsa om Vibemaster.ai';
+    var body = 'Med den här tjänsten blir det mycket enklare att arbeta med de vanligaste vibekodningstjänsterna.\n\nVibemaster är lite som receptet (prompten) som du ger till kocken (vibekodningstjänsten). Med rätt information i receptet bygger du din idé både snabbare och bättre.\n\nProva — det finns en gratis trial!\n\n' + url;
+    if (navigator.share) {
+      navigator.share({ title: subject, text: body, url: url });
+    } else {
+      window.location.href = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    }
+  }
+</script>
+
+<script>
+// Månads/årsväxling i prissektionen (fanns bara som knappar utan funktion).
+(function(){
+  var m=document.getElementById('bill-month'), y=document.getElementById('bill-year'); if(!m||!y) return;
+  function t(key){ var lang='en'; try{ lang=localStorage.getItem('vm-lang')||'en'; }catch(e){} var T=(typeof translations!=='undefined')?translations:{}; var d=T[lang]||T.en||{}; return d[key]; }
+  function set(yearly){
+    document.querySelectorAll('[data-price-month]').forEach(function(el){ var k=el.getAttribute(yearly?'data-price-year':'data-price-month'); var v=t(k); if(v) el.textContent=v; el.setAttribute('data-i18n', k); });
+    document.querySelectorAll('[data-i18n$=".period"]').forEach(function(el){ var v=el.textContent.replace(/\/.*$/,''); el.textContent = yearly ? '/'+(t('pricing.periodYear')||'yr') : '/'+(t('pricing.periodMonth')||'mo'); });
+    var on='background:#1E2113; color:#FAFAEB;', off='';
+    m.setAttribute('style', yearly?off:on); y.setAttribute('style', yearly?on:off);
+  }
+  m.addEventListener('click', function(){ set(false); }); y.addEventListener('click', function(){ set(true); });
+})();
+</script>
+</body>
+</html>

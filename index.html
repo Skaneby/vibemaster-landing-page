@@ -89,6 +89,14 @@
           },
           {
             "@type": "Question",
+            "name": "Which tools can I use with Vibemaster?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can use Vibemaster with most AI building tools — e.g. Google AI Studio, Lovable, Replit, Bolt.new, Cursor or Claude. We give you a structured plan that works directly in these tools."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Is my data secure and do you comply with EU regulations?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -125,46 +133,14 @@
     #vm-video-facade:hover .vm-play-btn path[fill="#212121"] { fill:#f00; fill-opacity:1; }
 
     .icon { width:1em; height:1em; display:inline-block; vertical-align:-.14em; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
-    .icon.hidden { display:none; }
     .mono { font-family:'JetBrains Mono', monospace; }
     .serif-em { font-family:'Instrument Serif', Georgia, serif; font-weight:400; }
     .card-tactile { background:#F5F5E6; border:1px solid rgba(184,188,163,.35); border-radius:20px; box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 -1px 0 rgba(54,58,39,.04) inset,0 12px 28px rgba(54,58,39,.06),0 2px 4px rgba(54,58,39,.04); }
 
-    /* Nyhetsbanner 2.0 + hero-luft (arbitrary Tailwind-klasser finns inte i den byggda CSS:en).
-       z-index sätts här: Tailwinds z-40 saknas i output.css, så bannern hamnade under
-       senare positionerade element (hero-kortet, .grain, sektioner) vid scroll.
-       Header = 50, banner = 45, allt innehåll under. */
-    #news-bar { z-index:45; font-size:15px; padding-top:11px; padding-bottom:11px; column-gap:12px; row-gap:4px; }
-    #hero { padding-top:160px; }
-    /* Kort bannertext på mobil, hela texten + länk från 640px (sm:-klasserna saknas i output.css). */
-    .vm-news-long, .vm-news-cta { display:none; }
-    @media (min-width:640px) { .vm-news-short { display:none; } .vm-news-long { display:inline; } .vm-news-cta { display:inline-flex; } }
+    /* Nyhetsbanner 2.0 + hero-luft (arbitrary Tailwind-klasser finns inte i den byggda CSS:en) */
+    #news-bar { font-size:15px; padding-top:11px; padding-bottom:11px; }
+    #hero { padding-top:200px; }
     @media (min-width:768px) { #news-bar { font-size:17px; padding-top:13px; padding-bottom:13px; } #hero { padding-top:180px; } }
-
-    /* Så fungerar det: tre steg med bild */
-    .vm-steps { list-style:none; display:grid; gap:20px; }
-    @media (min-width:768px) { .vm-steps { grid-template-columns:repeat(3,1fr); } }
-    .vm-step-visual { background:#EEEFDF; border-bottom:1px solid rgba(184,188,163,.4); padding:20px; min-height:190px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
-    .vm-step-num { width:28px; height:28px; border-radius:999px; background:#6B7A2F; color:#FAFAEB; font-weight:900; font-size:13px; display:flex; align-items:center; justify-content:center; margin-bottom:10px; }
-    .vm-tool { font-size:12px; font-weight:800; padding:4px 10px; border-radius:999px; border:1px solid rgba(184,188,163,.6); background:#FAFAEB; color:#1E2113; }
-    .vm-chat { width:100%; display:flex; flex-direction:column; gap:6px; }
-    .vm-bubble { font-size:12.5px; line-height:1.35; padding:8px 11px; border-radius:12px; max-width:88%; }
-    .vm-bubble-ai { background:#FAFAEB; color:#1E2113; border:1px solid rgba(184,188,163,.6); border-bottom-left-radius:4px; align-self:flex-start; }
-    .vm-bubble-me { background:#6B7A2F; color:#FAFAEB; border-bottom-right-radius:4px; align-self:flex-end; }
-
-    /* Case: vi byggde om vår egen sida — idé → intervju → spec → färdig sida */
-    .vm-flow { list-style:none; display:grid; gap:28px; }
-    @media (min-width:900px) { .vm-flow { grid-template-columns:repeat(4,1fr); gap:20px; } }
-    .vm-flow-step { position:relative; display:flex; flex-direction:column; }
-    .vm-flow-label { display:flex; align-items:center; gap:8px; margin-bottom:10px; font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.16em; font-weight:700; color:#D9C08A; }
-    .vm-flow-label span:first-child { color:rgba(250,250,235,.45); }
-    .vm-flow-card { flex:1; background:#F5F5E6; color:#1E2113; border-radius:16px; padding:16px; min-height:150px; display:flex; flex-direction:column; justify-content:center; box-shadow:0 12px 28px rgba(0,0,0,.18); }
-    .vm-flow-step:not(:last-child)::after { content:'↓'; position:absolute; left:50%; bottom:-24px; transform:translateX(-50%); color:#B08F4A; font-weight:900; }
-    @media (min-width:900px) { .vm-flow-step:not(:last-child)::after { content:'→'; left:auto; right:-17px; bottom:auto; top:50%; transform:none; } }
-    .vm-mini-chart { display:flex; flex-direction:column; align-items:center; gap:0; font-size:11.5px; font-weight:800; }
-    .vm-mini-chart span { padding:4px 10px; border-radius:8px; border:1px solid rgba(107,122,47,.45); background:#FAFAEB; }
-    .vm-mini-chart i { display:block; width:1px; height:9px; background:#6B7A2F; }
-    .vm-mini-chart .vm-mini-cta { background:#1E2113; color:#FAFAEB; border-color:#1E2113; }
     .card-flat { background:#F5F5E6; border:1px solid rgba(184,188,163,.4); border-radius:16px; }
     .btn-ink { background:#1E2113; color:#FAFAEB; border:1px solid #1E2113; transition:transform .15s,background .15s; }
     .btn-ink:hover { background:#2A2E1D; transform:translateY(-1px); }
@@ -176,8 +152,7 @@
     .grain::after { content:''; position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(rgba(90,94,69,.05) 1px, transparent 1px); background-size:3px 3px; opacity:.5; mix-blend-mode:multiply; }
     @keyframes traveler { 0%,100% { left:8%; } 50% { left:92%; } }
     .traveler { animation:traveler 5s ease-in-out infinite; }
-    section[id] { scroll-margin-top:180px; }
-    @media (min-width:768px) { section[id] { scroll-margin-top:120px; } }
+    section[id] { scroll-margin-top:72px; }
     a:focus-visible, button:focus-visible, summary:focus-visible { outline:2px solid #6B7A2F; outline-offset:3px; border-radius:6px; }
   </style>
 </head>
@@ -221,10 +196,11 @@
     </a>
 
     <nav class="hidden md:flex items-center gap-8 text-[13px] font-medium text-moss">
-      <a href="#how-it-works" class="hover:text-ink transition-colors" data-i18n="hero.cta.secondary">How it works</a>
-      <a href="#our-site" class="hover:text-ink transition-colors" data-i18n="nav.case">Our own site</a>
+      <a href="#whats-new" class="hover:text-ink transition-colors" data-i18n="nav.new">New in 2.0</a>
+      <a href="#problem" class="hover:text-ink transition-colors" data-i18n="nav.gap">The Gap</a>
+      <a href="#how-it-works" class="hover:text-ink transition-colors" data-i18n="nav.process">Process</a>
       <a href="#pricing" class="hover:text-ink transition-colors" data-i18n="nav.pricing">Pricing</a>
-      <a href="#faq" class="hover:text-ink transition-colors" data-i18n="faq.eyebrow">FAQ</a>
+      <a href="#testimonials" class="hover:text-ink transition-colors" data-i18n="nav.reviews">Reviews</a>
     </nav>
 
     <div class="flex items-center gap-3">
@@ -256,10 +232,11 @@
 
   <!-- Mobile nav -->
   <div id="mobile-nav" class="hidden md:hidden border-t border-mist/30 px-6 py-3" style="background:rgba(250,250,235,.97);">
-    <a href="#how-it-works" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="hero.cta.secondary">How it works</a>
-    <a href="#our-site" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.case">Our own site</a>
+    <a href="#whats-new" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.new">New in 2.0</a>
+    <a href="#problem" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.gap">The Gap</a>
+    <a href="#how-it-works" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.process">Process</a>
     <a href="#pricing" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.pricing">Pricing</a>
-    <a href="#faq" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="faq.eyebrow">FAQ</a>
+    <a href="#testimonials" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.reviews">Reviews</a>
     <a href="https://app.vibemaster.ai/" class="block py-3 text-sm font-medium text-moss hover:text-ink transition-colors border-b border-mist/30" data-i18n="nav.login">Login</a>
     <div class="py-3 border-b border-mist/30">
       <div class="flex flex-wrap gap-2">
@@ -279,11 +256,10 @@
 </header>
 
 <!-- ============ NYHET: VIBEMASTER 2.0 (2026-09-17) ============ -->
-<a href="#how-it-works" id="news-bar" class="fixed inset-x-0 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 font-bold text-center leading-snug transition-colors" style="top:57px; background:#6B7A2F; color:#FAFAEB; border-bottom:2px solid #B08F4A; box-shadow:0 6px 18px rgba(54,58,39,.18);">
-  <span class="inline-flex items-center gap-1.5 mono text-[11px] md:text-[12px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full font-bold" style="background:#B08F4A; color:#1E2113;"><svg class="icon" style="font-size:13px"><use href="#i-sparkle"/></svg><span data-i18n="news.badge">New</span></span>
-  <span class="vm-news-short" data-i18n="news.text.short">Vibemaster 2.0 is here</span>
-  <span class="vm-news-long" data-i18n="news.text">Vibemaster 2.0 is here: conversation mode, Mistral and the architecture as a flowchart.</span>
-  <span class="vm-news-cta items-center gap-1 underline underline-offset-4 whitespace-nowrap" style="color:#F3E7C8;"><span data-i18n="news.cta">See what's new</span><svg class="icon" style="font-size:15px"><use href="#i-arrow-right"/></svg></span>
+<a href="#whats-new" id="news-bar" class="fixed inset-x-0 z-40 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 py-3 md:py-3.5 text-[15px] md:text-[17px] font-bold text-center leading-snug transition-colors" style="top:57px; background:#6B7A2F; color:#FAFAEB; border-bottom:2px solid #B08F4A; box-shadow:0 6px 18px rgba(54,58,39,.18);">
+  <span class="inline-flex items-center gap-1.5 mono text-[11px] md:text-[12px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full font-bold" style="background:#B08F4A; color:#1E2113;"><svg class="icon" style="font-size:13px"><use href="#i-sparkle"/></svg>New</span>
+  <span data-i18n="news.text">Vibemaster 2.0 is here: conversation mode, Mistral and the architecture as a flowchart.</span>
+  <span class="hidden sm:inline-flex items-center gap-1 underline underline-offset-4 whitespace-nowrap" style="color:#F3E7C8;"><span data-i18n="news.cta">See what's new</span><svg class="icon" style="font-size:15px"><use href="#i-arrow-right"/></svg></span>
 </a>
 
 <main id="top" class="pt-14">
@@ -312,10 +288,32 @@
         Most people can't describe what they want to build. That's why AI fails. Vibemaster solves that.
       </p>
 
+      <div class="mt-6 flex flex-col gap-3">
+        <p class="text-xs font-bold text-olive uppercase tracking-wider mono" data-i18n="hero.deliverables.label">From idea to buildable</p>
+        <ul class="flex flex-col gap-2">
+          <li class="flex items-center gap-2 text-[14px] text-charcoal leading-relaxed">
+            <svg class="icon text-olive shrink-0" style="font-size:15px"><use href="#i-check"/></svg>
+            <span data-i18n="hero.del1">Product structure</span>
+          </li>
+          <li class="flex items-center gap-2 text-[14px] text-charcoal leading-relaxed">
+            <svg class="icon text-olive shrink-0" style="font-size:15px"><use href="#i-check"/></svg>
+            <span data-i18n="hero.del2">User flows</span>
+          </li>
+          <li class="flex items-center gap-2 text-[14px] text-charcoal leading-relaxed">
+            <svg class="icon text-olive shrink-0" style="font-size:15px"><use href="#i-check"/></svg>
+            <span data-i18n="hero.del3">Data model</span>
+          </li>
+          <li class="flex items-center gap-2 text-[14px] text-charcoal leading-relaxed">
+            <svg class="icon text-olive shrink-0" style="font-size:15px"><use href="#i-check"/></svg>
+            <span data-i18n="hero.del4">AI build instructions</span>
+          </li>
+        </ul>
+        <p class="text-sm text-stone italic" data-i18n="hero.positioning">Vibemaster is the layer between idea and AI building.</p>
+      </div>
+
       <div class="mt-8 flex flex-wrap items-center gap-3">
-        <a href="https://app.vibemaster.ai/" class="btn-ink inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[15px] font-bold">
-          <span data-i18n="hero.cta.primary">Make My Idea Buildable</span>
-          <svg class="icon" style="font-size:16px"><use href="#i-arrow-right"/></svg>
+        <a href="https://app.vibemaster.ai/" class="btn-ink inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[15px] font-bold" data-i18n="hero.cta.primary">
+          Make My Idea Buildable
         </a>
         <a href="#how-it-works" class="btn-outline inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[15px] font-bold">
           <svg class="icon" style="font-size:16px"><use href="#i-play"/></svg>
@@ -398,7 +396,7 @@
               </div>
             </div>
           </div>
-          <div class="mt-4 p-3 rounded-lg bg-ink text-ivory flex items-center justify-between">
+          <div class="mt-4 p-3 rounded-lg bg-ink text-ivory flex items-center justify-between cursor-pointer transition-colors hover:bg-charcoal">
             <div class="flex items-center gap-2.5">
               <span class="size-6 rounded flex items-center justify-center" style="background:rgba(250,250,235,.1);">
                 <svg class="icon" style="font-size:12px"><use href="#i-logo"/></svg>
@@ -409,104 +407,107 @@
           </div>
         </div>
       </div>
+      <div class="hidden lg:block absolute -left-3 -top-3 card-flat p-3 w-[164px] -rotate-[4deg] shadow-sm">
+        <div class="mono text-[9px] uppercase tracking-widest text-bronze mb-1" data-i18n="hero.mock.ships.label">Ships as</div>
+        <div class="text-[12px] font-bold leading-tight text-ink" data-i18n="hero.mock.ships.desc">Markdown + JSON, not a chat transcript.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ BRAND ROW — dark section ============ -->
-<section class="py-10 border-y border-ink" style="background:#1E2113; color:#FAFAEB;">
-  <div class="max-w-[1200px] mx-auto px-6">
-    <div class="mono text-[10px] tracking-[0.32em] uppercase text-center mb-5" style="color:rgba(184,188,163,.8);" data-i18n="integrations.label">Perfect Handoffs To</div>
-    <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 md:gap-x-14">
-      <span class="font-black text-[22px] tracking-tight">Lovable</span>
-      <span class="font-black text-[22px] tracking-tight">bolt<span class="text-bronze">.new</span></span>
-      <span class="font-black text-[22px] tracking-tight">Replit</span>
-      <span class="font-black text-[22px] tracking-tight lowercase">cursor</span>
-      <span class="font-black text-[22px] tracking-tight">Claude</span>
-      <span class="font-black text-[22px] tracking-tight">Google&nbsp;AI&nbsp;Studio</span>
-      <span class="font-black text-[22px] tracking-tight">v0</span>
+<!-- ============ WHAT'S NEW IN 2.0 ============ -->
+<section class="py-24 grain" id="whats-new">
+  <div class="max-w-[1100px] mx-auto px-6">
+    <div class="text-center mb-12">
+      <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="new.eyebrow">Vibemaster 2.0</div>
+      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] text-ink" data-i18n="new.h2">What's new in 2.0</h2>
+      <p class="mt-4 text-[16px] text-moss max-w-xl mx-auto leading-relaxed" data-i18n="new.sub">Our biggest update since launch, built from what you told us. Four things stand out.</p>
+    </div>
+    <!-- Två bildblock: Mistral och flödesschemat (Johan 2026-09-17: dessa två som bilder, resten text) -->
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div class="card-flat overflow-hidden flex flex-col">
+        <div class="p-5 md:p-6 flex items-center justify-center" style="background:#EEEFDF; border-bottom:1px solid rgba(184,188,163,.4); min-height:180px;">
+          <img src="assets/images/ai-models-2.0.png" alt="The AI model selector in Vibemaster 2.0: Gemini or Mistral (experimental)" width="800" height="112" class="w-full max-w-[420px] h-auto rounded-lg" style="box-shadow:0 8px 24px rgba(54,58,39,.12);" loading="lazy">
+        </div>
+        <div class="p-6 md:p-7">
+          <div class="mono text-[10px] uppercase tracking-widest text-bronze mb-2" data-i18n="new.img1.label">New: Mistral</div>
+          <h3 class="text-[20px] font-black tracking-tight text-ink leading-tight" data-i18n="new.c2.h4">Two AI models, your choice</h3>
+          <p class="text-[14.5px] text-moss mt-2 leading-relaxed" data-i18n="new.c2.p">Gemini stays as the default. New is Mistral, a European model, selectable per session. Same idea, two interpretations. Compare for yourself.</p>
+        </div>
+      </div>
+      <div class="card-flat overflow-hidden flex flex-col">
+        <div class="p-4 md:p-5 flex items-center justify-center" style="background:#EEEFDF; border-bottom:1px solid rgba(184,188,163,.4); min-height:180px;">
+          <img src="assets/images/flowchart-2.0.png" alt="The Architecture tab in Vibemaster 2.0: the project's architecture as an interactive flowchart" width="1700" height="700" class="w-full h-auto rounded-lg" style="box-shadow:0 8px 24px rgba(54,58,39,.12);" loading="lazy">
+        </div>
+        <div class="p-6 md:p-7">
+          <div class="mono text-[10px] uppercase tracking-widest text-bronze mb-2" data-i18n="new.img2.label">New: Architecture as a flowchart</div>
+          <h3 class="text-[20px] font-black tracking-tight text-ink leading-tight" data-i18n="new.c4.h4">The architecture as a flowchart, not just text</h3>
+          <p class="text-[14.5px] text-moss mt-2 leading-relaxed" data-i18n="new.c4.p">A picture is something everyone can understand and discuss, whatever their technical background. The founder, the developer, the investor and the customer look at the same chart and talk about the same thing. And it is the same diagram the coding tool receives, so what you agreed on is what gets built.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="card-flat p-6 md:p-7 flex gap-4">
+        <div class="shrink-0 size-11 rounded-xl flex items-center justify-center" style="background:#6B7A2F; color:#FAFAEB;">
+          <svg class="icon" style="font-size:20px"><use href="#i-sparkle"/></svg>
+        </div>
+        <div>
+          <h3 class="text-[18px] font-black tracking-tight text-ink leading-tight" data-i18n="new.c1.h4">Choose how you want to be interviewed</h3>
+          <p class="text-[14px] text-moss mt-2 leading-relaxed" data-i18n="new.c1.p">The classic step-by-step interview is still there and is still the fastest route for many. New is conversation mode: Vibemaster asks follow-ups on what you actually say, bundles what belongs together and suggests sharper wording you only need to confirm. Two ways, same result: a complete brief.</p>
+        </div>
+      </div>
+      <div class="card-flat p-6 md:p-7 flex gap-4">
+        <div class="shrink-0 size-11 rounded-xl flex items-center justify-center" style="background:#6B7A2F; color:#FAFAEB;">
+          <svg class="icon" style="font-size:20px"><use href="#i-file"/></svg>
+        </div>
+        <div>
+          <h3 class="text-[18px] font-black tracking-tight text-ink leading-tight" data-i18n="new.c3.h4">A code prompt that is a real specification</h3>
+          <p class="text-[14px] text-moss mt-2 leading-relaxed" data-i18n="new.c3.p">It now includes the architecture, ready-made setup files for your coding tool and clear instructions on what to build and in which order. Paste it into Lovable, Bolt, Cursor or Claude and let it build.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 text-center">
+      <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-4" data-i18n="new.more.label">Also new</div>
+      <div class="flex flex-wrap justify-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 text-[13px] text-charcoal" style="background:#F5F5E6;"><svg class="icon text-olive" style="font-size:13px"><use href="#i-check"/></svg><span data-i18n="new.more.1">Two paths in every plan: traditional development vs vibe coding</span></span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 text-[13px] text-charcoal" style="background:#F5F5E6;"><svg class="icon text-olive" style="font-size:13px"><use href="#i-check"/></svg><span data-i18n="new.more.2">Search and replace across all documents</span></span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 text-[13px] text-charcoal" style="background:#F5F5E6;"><svg class="icon text-olive" style="font-size:13px"><use href="#i-check"/></svg><span data-i18n="new.more.3">No session can be lost</span></span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 text-[13px] text-charcoal" style="background:#F5F5E6;"><svg class="icon text-olive" style="font-size:13px"><use href="#i-check"/></svg><span data-i18n="new.more.4">The whole app in English and Swedish</span></span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 text-[13px] text-charcoal" style="background:#F5F5E6;"><svg class="icon text-olive" style="font-size:13px"><use href="#i-check"/></svg><span data-i18n="new.more.5">Rebuilt for phone and tablet</span></span>
+      </div>
+      <a href="https://app.vibemaster.ai/" class="btn-ink inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-[15px] font-bold mt-8" data-i18n="new.cta">Try Vibemaster 2.0</a>
+      <p class="text-sm text-stone mt-3" data-i18n="new.note">Free to start. Conversation mode is included in PRO.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ HOW IT WORKS (inkl. nytt i 2.0) ============ -->
-<section class="py-20 grain" id="how-it-works">
-  <div class="max-w-[1200px] mx-auto px-6">
-    <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] text-ink text-center mb-12" data-i18n="hiw2.h2">From idea to build in three steps</h2>
 
-    <ol class="vm-steps">
-      <!-- 1 · Beskriv -->
-      <li class="card-flat overflow-hidden flex flex-col">
-        <div class="vm-step-visual">
-          <div class="vm-chat">
-            <div class="vm-bubble vm-bubble-ai" data-i18n="hiw2.s1.q">Who will use it first?</div>
-            <div class="vm-bubble vm-bubble-me" data-i18n="hiw2.s1.a">Small coffee roasters selling subscriptions.</div>
-          </div>
-          <img src="assets/images/ai-models-2.0.png" alt="The AI model selector in Vibemaster 2.0: Gemini or Mistral" width="800" height="112" class="w-full h-auto rounded-lg mt-3" style="box-shadow:0 6px 18px rgba(54,58,39,.1);" loading="lazy">
-        </div>
-        <div class="p-6">
-          <div class="vm-step-num">1</div>
-          <h3 class="text-[19px] font-black tracking-tight text-ink leading-tight" data-i18n="hiw2.s1.h">Describe your idea</h3>
-          <p class="text-[14px] text-moss mt-2 leading-relaxed" data-i18n="hiw2.s1.p">A guided interview or free conversation. Gemini or Mistral, your choice.</p>
-        </div>
-      </li>
-      <!-- 2 · Spec + flödesschema -->
-      <li class="card-flat overflow-hidden flex flex-col">
-        <div class="vm-step-visual">
-          <img src="assets/images/flowchart-2.0.png" alt="The Architecture tab in Vibemaster 2.0: the project's architecture as a flowchart" width="1700" height="700" class="w-full h-auto rounded-lg" style="box-shadow:0 6px 18px rgba(54,58,39,.1);" loading="lazy">
-        </div>
-        <div class="p-6">
-          <div class="vm-step-num">2</div>
-          <h3 class="text-[19px] font-black tracking-tight text-ink leading-tight" data-i18n="hiw2.s2.h">Get the spec and the flowchart</h3>
-          <p class="text-[14px] text-moss mt-2 leading-relaxed" data-i18n="hiw2.s2.p">Features, user flows, data model and architecture as one picture everyone understands.</p>
-        </div>
-      </li>
-      <!-- 3 · Bygg -->
-      <li class="card-flat overflow-hidden flex flex-col">
-        <div class="vm-step-visual">
-          <div class="w-full">
-            <div class="p-3 rounded-lg bg-ink text-ivory flex items-center justify-between">
-              <span class="mono text-[10.5px] uppercase tracking-widest font-bold" data-i18n="hero.mock.cta">Copy for Lovable</span>
-              <svg class="icon" style="font-size:15px"><use href="#i-copy"/></svg>
-            </div>
-            <div class="flex flex-wrap justify-center gap-2 mt-3">
-              <span class="vm-tool">Lovable</span><span class="vm-tool">Bolt</span><span class="vm-tool">Cursor</span><span class="vm-tool">Replit</span><span class="vm-tool">Claude</span>
-            </div>
-          </div>
-        </div>
-        <div class="p-6">
-          <div class="vm-step-num">3</div>
-          <h3 class="text-[19px] font-black tracking-tight text-ink leading-tight" data-i18n="hiw2.s3.h">Paste and build</h3>
-          <p class="text-[14px] text-moss mt-2 leading-relaxed" data-i18n="hiw2.s3.p">Copy the build prompt into your AI tool. It knows exactly what to build, and in which order.</p>
-        </div>
-      </li>
-    </ol>
-
-    <!-- Video -->
-    <div class="max-w-[820px] mx-auto mt-12">
-      <p class="text-center text-[15px] font-bold text-ink mb-4" data-i18n="video.h2">See how it works in 5 minutes</p>
-      <div class="relative w-full rounded-xl overflow-hidden shadow-lg" style="padding-top:56.25%;">
-        <div id="vm-video-facade"
-             data-i18n-video-src="video.src"
-             data-video-src="https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk"
-             role="button"
-             tabindex="0"
-             aria-label="Play video"
-             class="absolute inset-0 w-full h-full cursor-pointer group bg-ink">
-          <img id="vm-video-thumb"
-               src="https://i.ytimg.com/vi/xl_FHfXn-aA/hqdefault.jpg"
-               alt=""
-               width="480"
-               height="360"
-               loading="lazy"
-               decoding="async"
-               class="w-full h-full object-cover"/>
-          <div class="absolute inset-0 flex items-center justify-center bg-black/10 transition group-hover:bg-black/20">
-            <svg class="vm-play-btn" viewBox="0 0 68 48" aria-hidden="true">
-              <path d="M66.52 7.74a8.51 8.51 0 0 0-6-6.03C55.24 0 34 0 34 0S12.76 0 7.48 1.71a8.51 8.51 0 0 0-6 6.03C0 13.03 0 24 0 24s0 10.97 1.48 16.26a8.51 8.51 0 0 0 6 6.03C12.76 48 34 48 34 48s21.24 0 26.52-1.71a8.51 8.51 0 0 0 6-6.03C68 34.97 68 24 68 24s0-10.97-1.48-16.26z" fill="#212121" fill-opacity="0.8"/>
-              <path d="M27 34l17.5-10L27 14z" fill="#fff"/>
-            </svg>
-          </div>
+<!-- ============ VIDEO ============ -->
+<section class="py-16 grain" style="background:#EBEBD5;">
+  <div class="max-w-[820px] mx-auto px-6 text-center">
+    <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="video.eyebrow">Watch it in action</div>
+    <h2 class="text-[28px] md:text-[36px] font-black tracking-tight leading-tight text-ink mb-8" data-i18n="video.h2">See how it works in 2 minutes</h2>
+    <div class="relative w-full rounded-xl overflow-hidden shadow-lg" style="padding-top:56.25%;">
+      <div id="vm-video-facade"
+           data-i18n-video-src="video.src"
+           data-video-src="https://www.youtube.com/embed/xl_FHfXn-aA?si=1CK5LdCR5laS0Itk"
+           role="button"
+           tabindex="0"
+           aria-label="Play video"
+           class="absolute inset-0 w-full h-full cursor-pointer group bg-ink">
+        <img id="vm-video-thumb"
+             src="https://i.ytimg.com/vi/xl_FHfXn-aA/hqdefault.jpg"
+             alt=""
+             width="480"
+             height="360"
+             loading="lazy"
+             decoding="async"
+             class="w-full h-full object-cover"/>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/10 transition group-hover:bg-black/20">
+          <svg class="vm-play-btn" viewBox="0 0 68 48" aria-hidden="true">
+            <path d="M66.52 7.74a8.51 8.51 0 0 0-6-6.03C55.24 0 34 0 34 0S12.76 0 7.48 1.71a8.51 8.51 0 0 0-6 6.03C0 13.03 0 24 0 24s0 10.97 1.48 16.26a8.51 8.51 0 0 0 6 6.03C12.76 48 34 48 34 48s21.24 0 26.52-1.71a8.51 8.51 0 0 0 6-6.03C68 34.97 68 24 68 24s0-10.97-1.48-16.26z" fill="#212121" fill-opacity="0.8"/>
+            <path d="M27 34l17.5-10L27 14z" fill="#fff"/>
+          </svg>
         </div>
       </div>
     </div>
@@ -541,81 +542,269 @@
   })();
 </script>
 
-<!-- ============ CASE: VI BYGGDE VÅR EGEN SIDA ============ -->
-<section class="py-20 relative overflow-hidden" id="our-site" style="background:#363A27; color:#FAFAEB;">
-  <div aria-hidden="true" class="absolute inset-0 opacity-60" style="background:radial-gradient(800px 400px at 50% 0%, rgba(107,122,47,.25), transparent 70%);"></div>
-  <div class="max-w-[1200px] mx-auto px-6 relative">
-    <div class="text-center mb-12">
-      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05]" data-i18n="case.h2">We built this page with Vibemaster</h2>
-      <p class="mt-4 text-[16px] max-w-xl mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n="case.sub">Same flow you get: from a rough idea to the page you're reading now.</p>
+<!-- ============ BRAND ROW — dark section ============ -->
+<section class="py-10 border-y border-ink" style="background:#1E2113; color:#FAFAEB;">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="mono text-[10px] tracking-[0.32em] uppercase text-center mb-6" style="color:rgba(184,188,163,.8);" data-i18n="integrations.label">Perfect Handoffs To</div>
+    <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-4 md:gap-x-14">
+      <span class="font-black text-[22px] tracking-tight">Lovable</span>
+      <span class="font-black text-[22px] tracking-tight">bolt<span class="text-bronze">.new</span></span>
+      <span class="font-black text-[22px] tracking-tight">Replit</span>
+      <span class="font-black text-[22px] tracking-tight lowercase">cursor</span>
+      <span class="font-black text-[22px] tracking-tight">Claude</span>
+      <span class="font-black text-[22px] tracking-tight">Google&nbsp;AI&nbsp;Studio</span>
+      <span class="font-black text-[22px] tracking-tight">v0</span>
+    </div>
+    <p class="text-center text-[11px] mt-6 italic" style="color:rgba(184,188,163,.7);" data-i18n="integrations.more">and many more...</p>
+  </div>
+</section>
+
+<!-- ============ WHO IS IT FOR ============ -->
+<section class="py-20" id="who">
+  <div class="max-w-[1000px] mx-auto px-6">
+    <div class="mb-10">
+      <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="who.eyebrow">Who it's for</div>
+      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] max-w-2xl text-ink" data-i18n="who.h2">
+        Who is Vibemaster for?
+      </h2>
+    </div>
+    <div class="card-flat overflow-hidden">
+      <div class="divide-y" style="--tw-divide-opacity:0.5; border-color:rgba(184,188,163,0.5);">
+
+        <div class="flex items-start gap-5 p-5 group hover:bg-sand transition-colors">
+          <span class="mono text-[11px] text-stone w-10 shrink-0 mt-0.5">01 /</span>
+          <div class="flex-1">
+            <div class="font-bold text-[16px] text-charcoal" data-i18n="who.card1.role">Non-technical founders &amp; creators</div>
+            <div class="text-[13px] text-moss mt-1 leading-relaxed" data-i18n="who.card1.p">You bring the idea. Vibemaster makes it buildable.</div>
+          </div>
+          <svg class="icon text-stone group-hover:text-olive transition-colors mt-1 shrink-0" style="font-size:18px"><use href="#i-arrow-right"/></svg>
+        </div>
+
+        <div class="flex items-start gap-5 p-5 group hover:bg-sand transition-colors" style="border-top:1px solid rgba(184,188,163,.5);">
+          <span class="mono text-[11px] text-stone w-10 shrink-0 mt-0.5">02 /</span>
+          <div class="flex-1">
+            <div class="font-bold text-[16px] text-charcoal" data-i18n="who.card2.role">Product managers</div>
+            <div class="text-[13px] text-moss mt-1 leading-relaxed" data-i18n="who.card2.p">Stop translating between business and tech manually.</div>
+          </div>
+          <svg class="icon text-stone group-hover:text-olive transition-colors mt-1 shrink-0" style="font-size:18px"><use href="#i-arrow-right"/></svg>
+        </div>
+
+        <div class="flex items-start gap-5 p-5 group hover:bg-sand transition-colors" style="border-top:1px solid rgba(184,188,163,.5);">
+          <span class="mono text-[11px] text-stone w-10 shrink-0 mt-0.5">03 /</span>
+          <div class="flex-1">
+            <div class="font-bold text-[16px] text-charcoal" data-i18n="who.card3.role">Developers &amp; technical leads</div>
+            <div class="text-[13px] text-moss mt-1 leading-relaxed" data-i18n="who.card3.p">Get a clear structure before you start building.</div>
+          </div>
+          <svg class="icon text-stone group-hover:text-olive transition-colors mt-1 shrink-0" style="font-size:18px"><use href="#i-arrow-right"/></svg>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS / CASES — sand section ============ -->
+<section class="py-20 grain" id="testimonials" style="background:#EBEBD5;">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="flex items-end justify-between gap-6 mb-10 flex-wrap">
+      <div>
+        <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="cases.badge">Real Stories</div>
+        <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] max-w-xl text-ink" data-i18n="cases.h2">
+          Vibemaster in the wild
+        </h2>
+        <p class="mt-3 text-[15px] text-moss max-w-xl" data-i18n="cases.sub">Real people, real problems.</p>
+      </div>
     </div>
 
-    <ol class="vm-flow">
-      <!-- Idé -->
-      <li class="vm-flow-step">
-        <div class="vm-flow-label"><span>01</span><span data-i18n="case.s1">Idea</span></div>
-        <div class="vm-flow-card">
-          <svg class="icon text-bronze" style="font-size:26px; opacity:.6;"><use href="#i-quote"/></svg>
-          <p class="text-[14px] font-bold leading-snug text-ink mt-1" data-i18n="case.s1.quote">"Our landing page is too long. Make it short, visual and focused on trying the product."</p>
-        </div>
-      </li>
-      <!-- Intervju -->
-      <li class="vm-flow-step">
-        <div class="vm-flow-label"><span>02</span><span data-i18n="case.s2">Interview</span></div>
-        <div class="vm-flow-card">
-          <div class="vm-chat">
-            <div class="vm-bubble vm-bubble-ai" data-i18n="case.s2.q">Who is the most important visitor, and what should they do before leaving?</div>
-            <div class="vm-bubble vm-bubble-me" data-i18n="case.s2.a">A founder with an idea. Start a free project.</div>
-          </div>
-        </div>
-      </li>
-      <!-- Spec + arkitektur -->
-      <li class="vm-flow-step">
-        <div class="vm-flow-label"><span>03</span><span data-i18n="case.s3">Spec &amp; flowchart</span></div>
-        <div class="vm-flow-card">
-          <div class="vm-mini-chart" aria-hidden="true">
-            <span>Hero</span><i></i><span data-i18n="hero.cta.secondary">How it works</span><i></i><span data-i18n="nav.pricing">Pricing</span><i></i><span class="vm-mini-cta" data-i18n="case.s3.cta">Try free</span>
-          </div>
-        </div>
-      </li>
-      <!-- Färdig sida -->
-      <li class="vm-flow-step">
-        <div class="vm-flow-label"><span>04</span><span data-i18n="case.s4">Live page</span></div>
-        <div class="vm-flow-card p-0 overflow-hidden">
-          <div class="flex items-center gap-1 px-2.5 py-2 border-b border-mist/50">
-            <span class="size-2 rounded-full" style="background:rgba(180,65,42,.5)"></span>
-            <span class="size-2 rounded-full" style="background:rgba(200,138,31,.5)"></span>
-            <span class="size-2 rounded-full" style="background:rgba(107,122,47,.5)"></span>
-            <span class="mono text-[9.5px] text-stone ml-2">vibemaster.ai</span>
-          </div>
-          <div class="p-3">
-            <div class="h-1.5 rounded mb-2" style="background:#6B7A2F; width:100%;"></div>
-            <div class="rounded bg-ink" style="height:10px; width:80%;"></div>
-            <div class="rounded mt-1" style="height:10px; background:#B08F4A; width:45%;"></div>
-            <div class="h-1.5 rounded bg-mist/50 mt-2" style="width:70%;"></div>
-            <div class="h-5 rounded-md bg-ink mt-3" style="width:48%;"></div>
-          </div>
-        </div>
-      </li>
-    </ol>
+    <div class="grid md:grid-cols-3 gap-5">
 
-    <div class="mt-12 text-center">
-      <a href="https://app.vibemaster.ai/" class="inline-flex items-center gap-2 px-7 py-4 rounded-xl font-bold text-[15px] hover:opacity-90 transition-opacity" style="background:#B08F4A; color:#1E2113;">
-        <span data-i18n="case.cta">Try it on your own idea</span>
-        <svg class="icon" style="font-size:16px"><use href="#i-arrow-right"/></svg>
-      </a>
+      <!-- Niklas -->
+      <figure class="card-flat p-6 flex flex-col">
+        <svg class="icon text-olive mb-1" style="font-size:34px; opacity:.3;"><use href="#i-quote"/></svg>
+        <blockquote class="text-[15px] leading-snug font-medium text-charcoal flex-1" data-i18n="cases.c1.story">
+          Niklas was spending hours every week copying data from Excel into PDF invoice templates.
+        </blockquote>
+        <figcaption class="mt-5 pt-5 flex items-center gap-3" style="border-top:1px solid rgba(184,188,163,.5);">
+          <div class="size-10 rounded-full flex items-center justify-center font-black text-[13px]" style="background:rgba(107,122,47,.15); border:1px solid rgba(107,122,47,.25); color:#6B7A2F;">NL</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold text-[13px] text-ink" data-i18n="cases.c1.name">Niklas</div>
+            <div class="text-[11.5px] text-stone truncate" data-i18n="cases.c1.role">Administrator</div>
+          </div>
+          <span class="mono text-[9.5px] uppercase tracking-widest text-olive flex items-center gap-1 shrink-0">
+            <svg class="icon" style="font-size:11px"><use href="#i-spreadsheet"/></svg>
+            <span data-i18n="cases.c1.tag">Automation</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <!-- Eva -->
+      <figure class="card-flat p-6 flex flex-col">
+        <svg class="icon text-olive mb-1" style="font-size:34px; opacity:.3;"><use href="#i-quote"/></svg>
+        <blockquote class="text-[15px] leading-snug font-medium text-charcoal flex-1" data-i18n="cases.c2.story">
+          Eva needed to align her CTO and the entire development team around a new feature.
+        </blockquote>
+        <figcaption class="mt-5 pt-5 flex items-center gap-3" style="border-top:1px solid rgba(184,188,163,.5);">
+          <div class="size-10 rounded-full flex items-center justify-center font-black text-[13px]" style="background:rgba(176,143,74,.15); border:1px solid rgba(176,143,74,.25); color:#B08F4A;">EK</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold text-[13px] text-ink" data-i18n="cases.c2.name">Eva</div>
+            <div class="text-[11.5px] text-stone truncate" data-i18n="cases.c2.role">Product Manager</div>
+          </div>
+          <span class="mono text-[9.5px] uppercase tracking-widest text-bronze flex items-center gap-1 shrink-0">
+            <svg class="icon" style="font-size:11px"><use href="#i-route"/></svg>
+            <span data-i18n="cases.c2.tag">Product &amp; Strategy</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <!-- Mikael -->
+      <figure class="card-flat p-6 flex flex-col">
+        <svg class="icon text-olive mb-1" style="font-size:34px; opacity:.3;"><use href="#i-quote"/></svg>
+        <blockquote class="text-[15px] leading-snug font-medium text-charcoal flex-1" data-i18n="cases.c3.story">
+          Mikael had an idea for a plugin that could transform his production workflow.
+        </blockquote>
+        <figcaption class="mt-5 pt-5 flex items-center gap-3" style="border-top:1px solid rgba(184,188,163,.5);">
+          <div class="size-10 rounded-full flex items-center justify-center font-black text-[13px]" style="background:rgba(180,65,42,.12); border:1px solid rgba(180,65,42,.22); color:#B4412A;">MR</div>
+          <div class="flex-1 min-w-0">
+            <div class="font-bold text-[13px] text-ink" data-i18n="cases.c3.name">Mikael</div>
+            <div class="text-[11.5px] text-stone truncate" data-i18n="cases.c3.role">Music Producer</div>
+          </div>
+          <span class="mono text-[9.5px] uppercase tracking-widest flex items-center gap-1 shrink-0" style="color:#B4412A;">
+            <svg class="icon" style="font-size:11px"><use href="#i-music"/></svg>
+            <span data-i18n="cases.c3.tag">Product Launch</span>
+          </span>
+        </figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="py-20" id="problem">
+  <div class="max-w-[1000px] mx-auto px-6">
+    <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="problem.eyebrow">The problem</div>
+    <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] max-w-2xl mb-10 text-ink" data-i18n="problem.h2.a">
+      The problem isn't your AI vibecoding service
+    </h2>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="card-flat p-6">
+        <div class="mono text-[10px] uppercase tracking-widest mb-3" style="color:#B4412A;" data-i18n="problem.card1.h3">It's the gap between your idea and the tech.</div>
+        <p class="text-[14px] text-charcoal leading-relaxed" data-i18n="problem.card1.p">AI builders are incredibly fast, but they only build what you tell them. If your prompt is vague, the result is broken builds, circular errors, and wasted time.</p>
+      </div>
+      <div class="card-flat p-6" style="background:#EEF1DD; border-color:rgba(107,122,47,.3);">
+        <div class="mono text-[10px] uppercase tracking-widest text-olive mb-3" data-i18n="problem.card2.h3">The Idea → Build Bridge</div>
+        <p class="text-[14px] text-charcoal leading-relaxed" data-i18n="problem.card2.p">Vibemaster acts as your Product Manager + Tech Lead. We extract the complex logic from your head and translate it into instructions an AI can't misinterpret.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS — dark section ============ -->
+<section class="py-24 relative overflow-hidden" id="how-it-works" style="background:#363A27; color:#FAFAEB;">
+  <div aria-hidden="true" class="absolute inset-0 -z-0 opacity-60" style="background:radial-gradient(800px 400px at 50% 0%, rgba(107,122,47,.25), transparent 70%);"></div>
+  <div class="max-w-[1200px] mx-auto px-6 relative">
+    <div class="text-center mb-14">
+      <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="hiw.eyebrow">The bridge</div>
+      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05]" data-i18n="hiw.h2">
+        How You Bridge the Gap
+      </h2>
+      <p class="mt-4 text-[16px] max-w-xl mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n="hiw.sub">
+        Skip the technical manual and start building with confidence in three steps.
+      </p>
+    </div>
+
+    <!-- rail -->
+    <div class="relative">
+      <div class="hidden md:block absolute top-[26px] left-[16.6%] right-[16.6%] h-px border-t border-dashed" style="border-color:rgba(250,250,235,.25);"></div>
+      <div class="hidden md:block absolute top-[22px] size-2.5 rounded-full bg-bronze traveler" style="box-shadow:0 0 0 4px rgba(176,143,74,.2);"></div>
+
+      <div class="grid md:grid-cols-3 gap-10 md:gap-6 relative">
+        <div>
+          <div class="size-[52px] rounded-full flex items-center justify-center mx-auto border-2 border-bronze/60" style="background:#363A27;">
+            <svg class="icon text-bronze" style="font-size:22px"><use href="#i-sparkle"/></svg>
+          </div>
+          <div class="text-center mt-5">
+            <div class="mono text-[10px] uppercase tracking-widest text-bronze" data-i18n="hiw.step1.label">Step 01</div>
+            <div class="text-[19px] font-black mt-1 tracking-tight" data-i18n="hiw.step1.h4">1. Describe your idea</div>
+            <p class="text-[13.5px] mt-2 max-w-[280px] mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n="hiw.step1.p">
+              Tell us what you want to build in plain English.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="size-[52px] rounded-full flex items-center justify-center mx-auto border-2 border-bronze/60" style="background:#363A27;">
+            <svg class="icon text-bronze" style="font-size:22px"><use href="#i-file"/></svg>
+          </div>
+          <div class="text-center mt-5">
+            <div class="mono text-[10px] uppercase tracking-widest text-bronze" data-i18n="hiw.step2.label">Step 02</div>
+            <div class="text-[19px] font-black mt-1 tracking-tight" data-i18n="hiw.step2.h4">2. We translate to tech</div>
+            <p class="text-[13.5px] mt-2 max-w-[280px] mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n="hiw.step2.p">
+              We instantly translate your vision into a buildable system.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="size-[52px] rounded-full flex items-center justify-center mx-auto border-2 border-bronze/60" style="background:#363A27;">
+            <svg class="icon text-bronze" style="font-size:22px"><use href="#i-bolt"/></svg>
+          </div>
+          <div class="text-center mt-5">
+            <div class="mono text-[10px] uppercase tracking-widest text-bronze" data-i18n="hiw.step3.label">Step 03</div>
+            <div class="text-[19px] font-black mt-1 tracking-tight" data-i18n="hiw.step3.h4">3. Build instantly</div>
+            <p class="text-[13.5px] mt-2 max-w-[280px] mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n-html="hiw.step3.p">
+              Paste your Vibemaster plan directly into Lovable, Bolt, Replit, or Cursor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EU COMPLIANCE ============ -->
+<section class="py-20" id="eu-compliance">
+  <div class="max-w-[1000px] mx-auto px-6">
+    <div class="card-flat p-8 md:p-10 flex flex-col md:flex-row items-start gap-8">
+      <div class="shrink-0 size-16 rounded-2xl flex items-center justify-center" style="background:#6B7A2F; color:#FAFAEB;">
+        <svg class="icon" style="font-size:32px"><use href="#i-shield"/></svg>
+      </div>
+      <div class="flex-1">
+        <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-2" data-i18n="eu.badge">Hosted in Europe</div>
+        <h2 class="text-[26px] md:text-[32px] font-black tracking-tight leading-[1.1] text-ink" data-i18n="eu.h2">Your data stays in Europe</h2>
+        <p class="text-[15px] text-moss mt-3 leading-relaxed max-w-xl" data-i18n-html="eu.sub">
+          Vibemaster is hosted on Scalingo's infrastructure in Paris, France.
+        </p>
+        <p class="text-sm text-stone mt-2" data-i18n="eu.hosted">Hosted on Scalingo · Paris, France</p>
+        <div class="flex flex-wrap gap-2 mt-5">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 mono text-[10.5px] uppercase tracking-wider font-bold text-charcoal" style="background:#F5F5E6;">
+            <svg class="icon text-olive" style="font-size:11px"><use href="#i-shield"/></svg>GDPR
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 mono text-[10.5px] uppercase tracking-wider font-bold text-charcoal" style="background:#F5F5E6;">
+            <svg class="icon text-olive" style="font-size:11px"><use href="#i-globe"/></svg>Scalingo · Paris
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 mono text-[10.5px] uppercase tracking-wider font-bold text-charcoal" style="background:#F5F5E6;">
+            <svg class="icon text-olive" style="font-size:11px"><use href="#i-key"/></svg>BYOK
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-mist/60 mono text-[10.5px] uppercase tracking-wider font-bold text-charcoal" style="background:#F5F5E6;">
+            🇪🇺 EU-owned
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ PRICING — sand section ============ -->
-<section class="py-20 grain" id="pricing" style="background:#EBEBD5;">
+<section class="py-24 grain" id="pricing" style="background:#EBEBD5;">
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="text-center mb-10">
+    <div class="text-center mb-12">
+      <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="pricing.eyebrow">Pricing</div>
       <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] text-ink" data-i18n="pricing.h2">
         Simple Pricing for Visionaries
       </h2>
-      <div class="mt-6 inline-flex items-center p-1 rounded-lg border border-mist/60" style="background:#F5F5E6;">
+      <p class="mt-4 text-moss text-[15px] max-w-xl mx-auto" data-i18n="pricing.sub">
+        Choose the plan that matches your shipping speed.
+      </p>
+      <div class="mt-8 inline-flex items-center p-1 rounded-lg border border-mist/60" style="background:#F5F5E6;">
         <button id="bill-month" class="px-5 py-1.5 text-[12px] font-bold rounded-md" style="background:#1E2113; color:#FAFAEB;" data-i18n="pricing.monthly">Monthly</button>
         <button id="bill-year" class="px-5 py-1.5 text-[12px] font-bold text-moss hover:text-ink transition-colors">
           <span data-i18n="pricing.yearly">Yearly, one month free</span>
@@ -627,87 +816,112 @@
 
       <!-- Explorer -->
       <div class="card-flat p-6 flex flex-col">
-        <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.explorer.name">Explorer</div>
-        <div class="mt-2 flex items-baseline gap-1">
-          <span class="text-[44px] font-black leading-none text-ink" data-i18n="pricing.explorer.price">€0</span>
-          <span class="text-[13px] text-stone" data-i18n="pricing.explorer.period">/mo</span>
+        <div class="flex-1">
+          <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.explorer.name">Explorer</div>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-[44px] font-black leading-none text-ink" data-i18n="pricing.explorer.price">€0</span>
+            <span class="text-[13px] text-stone" data-i18n="pricing.explorer.period">/mo</span>
+          </div>
+          <p class="text-[13px] text-moss mt-3" data-i18n="pricing.explorer.sub">Perfect for solo hackers testing the waters.</p>
+          <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f1">2 Projects per month</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f2">Basic technical specs</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f3">Markdown exports</span></li>
+          </ul>
         </div>
-        <p class="text-[13px] text-moss mt-3" data-i18n="pricing.explorer.sub">Perfect for solo hackers testing the waters.</p>
-        <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
-          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f1">2 Projects per month</span></li>
-          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f2">Basic technical specs</span></li>
-          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.explorer.f3">Markdown exports</span></li>
-        </ul>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex-1 h-px bg-mist/40"></div>
+          <span class="mono text-[10px] uppercase tracking-[0.18em] text-stone" data-i18n="pricing.explorer.name">Explorer</span>
+          <div class="flex-1 h-px bg-mist/40"></div>
+        </div>
       </div>
 
       <!-- Professional — inverted -->
       <div class="flex flex-col p-6 rounded-[16px] relative" style="background:#1E2113; color:#FAFAEB; border:1px solid #1E2113;">
         <div class="absolute -top-3 left-6 px-3 py-0.5 rounded-full mono text-[9.5px] uppercase tracking-widest font-bold" style="background:#B08F4A; color:#1E2113;" data-i18n="pricing.popular">Most Popular</div>
-        <div class="mono text-[10px] uppercase tracking-widest text-bronze" data-i18n="pricing.pro.name">Professional</div>
-        <div class="mt-2 flex items-baseline gap-1">
-          <span class="text-[44px] font-black leading-none" data-i18n="pricing.pro.price" data-price-month="pricing.pro.price" data-price-year="pricing.pro.priceYear">€11.95</span>
-          <span class="text-[13px]" style="color:rgba(250,250,235,.6);" data-i18n="pricing.pro.period">/mo</span>
+        <div class="flex-1">
+          <div class="mono text-[10px] uppercase tracking-widest text-bronze" data-i18n="pricing.pro.name">Professional</div>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-[44px] font-black leading-none" data-i18n="pricing.pro.price" data-price-month="pricing.pro.price" data-price-year="pricing.pro.priceYear">€11.95</span>
+            <span class="text-[13px]" style="color:rgba(250,250,235,.6);" data-i18n="pricing.pro.period">/mo</span>
+          </div>
+          <p class="text-[13px] mt-3" style="color:rgba(250,250,235,.7);" data-i18n="pricing.pro.sub">For serious builders shipping weekly.</p>
+          <ul class="mt-6 space-y-2.5 text-[13.5px]">
+            <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><strong data-i18n="pricing.pro.f1">Unlimited Projects</strong></li>
+            <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f2">Version history &amp; diffs</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f3">Export to JSON &amp; PDF</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f4">Priority generation queue</span></li>
+          </ul>
         </div>
-        <p class="text-[13px] mt-3" style="color:rgba(250,250,235,.7);" data-i18n="pricing.pro.sub">For serious builders shipping weekly.</p>
-        <ul class="mt-6 space-y-2.5 text-[13.5px]">
-          <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><strong data-i18n="pricing.pro.f1">Unlimited Projects</strong></li>
-          <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f2">Version history &amp; diffs</span></li>
-          <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f3">Export to JSON &amp; PDF</span></li>
-          <li class="flex gap-2.5"><svg class="icon text-bronze mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.pro.f4">Priority generation queue</span></li>
-        </ul>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex-1 h-px" style="background:rgba(176,143,74,0.25)"></div>
+          <span class="mono text-[10px] uppercase tracking-[0.18em] text-bronze" data-i18n="pricing.pro.name">Professional</span>
+          <div class="flex-1 h-px" style="background:rgba(176,143,74,0.25)"></div>
+        </div>
       </div>
 
       <!-- Studio -->
       <div class="card-flat p-6 flex flex-col relative">
         <div class="absolute -top-3 left-6 px-3 py-0.5 rounded-full mono text-[9.5px] uppercase tracking-widest font-bold text-charcoal" style="background:#B8BCA3;" data-i18n="pricing.studio.badge">Coming soon</div>
-        <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.studio.name">Studio</div>
-        <div class="mt-2 flex items-baseline gap-1">
-          <span class="text-[44px] font-black leading-none text-ink" data-i18n="pricing.studio.price" data-price-month="pricing.studio.price" data-price-year="pricing.studio.priceYear">€51.95</span>
-          <span class="text-[13px] text-stone" data-i18n="pricing.studio.period">/mo</span>
+        <div class="flex-1">
+          <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.studio.name">Studio</div>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-[44px] font-black leading-none text-ink" data-i18n="pricing.studio.price" data-price-month="pricing.studio.price" data-price-year="pricing.studio.priceYear">€51.95</span>
+            <span class="text-[13px] text-stone" data-i18n="pricing.studio.period">/mo</span>
+          </div>
+          <p class="text-[13px] text-moss mt-3" data-i18n="pricing.studio.sub">For teams up to 6 people.</p>
+          <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f1">Up to 6 team seats</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f2">Shared projects</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f3">Claude &amp; Mistral via own API key</span></li>
+          </ul>
         </div>
-        <p class="text-[13px] text-moss mt-3" data-i18n="pricing.studio.sub">For teams up to 6 people.</p>
-        <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
-          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f1">Up to 6 team seats</span></li>
-          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f2">Shared projects</span></li>
-          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.studio.f3">Claude &amp; Mistral via own API key</span></li>
-        </ul>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex-1 h-px bg-mist/40"></div>
+          <span class="mono text-[10px] uppercase tracking-[0.18em] text-stone" data-i18n="pricing.studio.name">Studio</span>
+          <div class="flex-1 h-px bg-mist/40"></div>
+        </div>
       </div>
 
       <!-- Enterprise -->
       <div class="card-flat p-6 flex flex-col">
-        <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.enterprise.name">Enterprise</div>
-        <div class="mt-2 flex items-baseline gap-1">
-          <span class="text-[32px] font-black leading-none text-ink" data-i18n="pricing.enterprise.price">Custom</span>
+        <div class="flex-1">
+          <div class="mono text-[10px] uppercase tracking-widest text-stone" data-i18n="pricing.enterprise.name">Enterprise</div>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-[32px] font-black leading-none text-ink" data-i18n="pricing.enterprise.price">Custom</span>
+          </div>
+          <p class="text-[13px] text-moss mt-3" data-i18n="pricing.enterprise.sub">Global scale and security requirements.</p>
+          <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f1">Custom number of seats</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f2">Shared branding</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f3">Shared projects</span></li>
+            <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f4">Dedicated support</span></li>
+          </ul>
         </div>
-        <p class="text-[13px] text-moss mt-3" data-i18n="pricing.enterprise.sub">Global scale and security requirements.</p>
-        <ul class="mt-6 space-y-2.5 text-[13.5px] text-charcoal">
-          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f1">Custom number of seats</span></li>
-          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f2">Shared branding</span></li>
-          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f3">Shared projects</span></li>
-          <li class="flex gap-2.5"><svg class="icon text-olive mt-0.5 shrink-0" style="font-size:14px"><use href="#i-check"/></svg><span data-i18n="pricing.enterprise.f4">Dedicated support</span></li>
-        </ul>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="flex-1 h-px bg-mist/40"></div>
+          <span class="mono text-[10px] uppercase tracking-[0.18em] text-stone" data-i18n="pricing.enterprise.name">Enterprise</span>
+          <div class="flex-1 h-px bg-mist/40"></div>
+        </div>
       </div>
 
-    </div>
-
-    <div class="mt-10 text-center">
-      <a href="https://app.vibemaster.ai/" class="btn-ink inline-flex items-center gap-2 px-7 py-4 rounded-xl text-[15px] font-bold">
-        <span data-i18n="pricing.explorer.cta">Start Free</span>
-        <svg class="icon" style="font-size:16px"><use href="#i-arrow-right"/></svg>
-      </a>
     </div>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="py-20" id="faq">
+<section class="py-24" id="faq">
   <div class="max-w-[820px] mx-auto px-6">
-    <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] text-ink text-center mb-10" data-i18n="faq.h2">
-      Questions? We have answers.
-    </h2>
+    <div class="text-center mb-12">
+      <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-3" data-i18n="faq.eyebrow">FAQ</div>
+      <h2 class="text-[32px] md:text-[44px] font-black tracking-tight leading-[1.05] text-ink" data-i18n="faq.h2">
+        Questions? We have answers.
+      </h2>
+      <p class="mt-4 text-moss text-[15px]" data-i18n="faq.sub">Everything you need to know about getting started.</p>
+    </div>
     <div>
 
-      <details class="faq-row group py-5">
+      <details class="faq-row group py-5" open>
         <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
           <span data-i18n="faq.q1">Do I need technical knowledge to use Vibemaster?</span>
           <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
@@ -739,6 +953,16 @@
 
       <details class="faq-row group py-5">
         <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q4">Which tools can I use with Vibemaster?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a4">
+          You can use Vibemaster with most AI building tools — e.g. Google AI Studio, Lovable, Replit, Bolt.new, Cursor or Claude.
+        </div>
+      </details>
+
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
           <span data-i18n="faq.q5">Is my data secure and do you comply with EU regulations?</span>
           <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
         </summary>
@@ -747,30 +971,63 @@
         </div>
       </details>
 
+      <details class="faq-row group py-5">
+        <summary class="flex items-center justify-between cursor-pointer list-none text-[16px] font-bold text-ink select-none">
+          <span data-i18n="faq.q6">How does Vibemaster generate its tech plans?</span>
+          <svg class="icon text-stone transition-transform group-open:rotate-180 shrink-0 ml-4" style="font-size:18px"><use href="#i-arrow-down"/></svg>
+        </summary>
+        <div class="mt-3 text-[14.5px] text-moss leading-relaxed" data-i18n-html="faq.a6">
+          Vibemaster uses advanced AI models combined with a structured method.
+        </div>
+      </details>
+
     </div>
   </div>
 </section>
 
 <!-- ============ FINAL CTA — dark section ============ -->
-<section class="py-20 relative overflow-hidden" style="background:#1E2113; color:#FAFAEB;">
+<section class="py-24 relative overflow-hidden" style="background:#1E2113; color:#FAFAEB;">
   <div aria-hidden="true" class="absolute inset-0 opacity-50" style="background:radial-gradient(900px 400px at 50% 0%, rgba(176,143,74,.2), transparent 70%);"></div>
   <div class="max-w-[900px] mx-auto px-6 text-center relative">
+    <div class="mono text-[10.5px] uppercase tracking-[0.22em] text-bronze mb-4" data-i18n="cta.eyebrow">Ready when you are</div>
     <h2 class="text-[34px] md:text-[52px] font-black tracking-tight leading-[1.02]" data-i18n="cta.h2">
       Ready to ship your next big idea?
     </h2>
     <p class="mt-5 text-[16px] max-w-lg mx-auto leading-relaxed" style="color:rgba(250,250,235,.7);" data-i18n="cta.sub">
       Free plan, no card. Two real projects, yours forever. Upgrade when you're shipping weekly.
     </p>
-    <div class="mt-8">
-      <a href="https://app.vibemaster.ai/" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-bold text-[16px] hover:opacity-90 transition-opacity" style="background:#B08F4A; color:#1E2113;">
-        <span data-i18n="cta.primary">Get Started Now</span>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+      <a href="https://app.vibemaster.ai/" class="inline-flex items-center gap-2 px-7 py-4 rounded-xl font-bold text-[15px] hover:opacity-90 transition-opacity" style="background:#B08F4A; color:#1E2113;" data-i18n="cta.primary">
+        Get Started Now
         <svg class="icon" style="font-size:16px"><use href="#i-arrow-right"/></svg>
       </a>
+      <a href="#how-it-works" class="inline-flex items-center gap-2 px-7 py-4 rounded-xl font-bold text-[15px] transition-colors" style="border:2px solid rgba(250,250,235,.2); color:#FAFAEB;" data-i18n="cta.secondary">
+        See how it works
+      </a>
     </div>
-    <div class="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-3 text-[13px]" style="color:rgba(250,250,235,.7);">
-      <span class="flex items-center gap-2"><svg class="icon text-bronze" style="font-size:16px"><use href="#i-shield"/></svg><span data-i18n="cta.trust1.sub">Paris · Scalingo · GDPR</span></span>
-      <span class="flex items-center gap-2"><svg class="icon text-bronze" style="font-size:16px"><use href="#i-lock"/></svg><span data-i18n="cta.trust2.sub">Stripe · SOC2 partners</span></span>
-      <span class="flex items-center gap-2"><svg class="icon text-bronze" style="font-size:16px"><use href="#i-key"/></svg><span data-i18n="cta.trust3.sub">Anonymised training only</span></span>
+
+    <div class="mt-12 pt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left max-w-2xl mx-auto" style="border-top:1px solid rgba(250,250,235,.1);">
+      <div class="flex items-start gap-3">
+        <svg class="icon text-bronze mt-1 shrink-0" style="font-size:18px"><use href="#i-shield"/></svg>
+        <div>
+          <div class="font-bold text-[14px]" data-i18n="cta.trust1">EU Data Residency</div>
+          <div class="text-[12.5px] mt-0.5" style="color:rgba(250,250,235,.6);" data-i18n="cta.trust1.sub">Paris · Scalingo · GDPR</div>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="icon text-bronze mt-1 shrink-0" style="font-size:18px"><use href="#i-lock"/></svg>
+        <div>
+          <div class="font-bold text-[14px]" data-i18n="cta.trust2">Encrypted Payments</div>
+          <div class="text-[12.5px] mt-0.5" style="color:rgba(250,250,235,.6);" data-i18n="cta.trust2.sub">Stripe · SOC2 partners</div>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <svg class="icon text-bronze mt-1 shrink-0" style="font-size:18px"><use href="#i-key"/></svg>
+        <div>
+          <div class="font-bold text-[14px]" data-i18n="cta.trust3">Your ideas stay private</div>
+          <div class="text-[12.5px] mt-0.5" style="color:rgba(250,250,235,.6);" data-i18n="cta.trust3.sub">BYOK · anonymised training only</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -806,10 +1063,19 @@
       <div>
         <div class="mono text-[10px] uppercase tracking-widest text-stone mb-4" data-i18n="footer.product">Product</div>
         <ul class="space-y-2.5 text-[13px] text-moss">
-          <li><a class="hover:text-ink transition-colors" href="#how-it-works" data-i18n="footer.f.features">Features</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#" data-i18n="footer.f.features">Features</a></li>
           <li><a class="hover:text-ink transition-colors" href="#pricing" data-i18n="footer.f.pricing">Pricing</a></li>
           <li><a class="hover:text-ink transition-colors" href="#" data-i18n="footer.f.integrations">Integrations</a></li>
           <li><a class="hover:text-ink transition-colors" href="#" data-i18n="footer.f.changelog">Changelog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="mono text-[10px] uppercase tracking-widest text-stone mb-4" data-i18n="footer.usecases">Use cases</div>
+        <ul class="space-y-2.5 text-[13px] text-moss">
+          <li><a class="hover:text-ink transition-colors" href="#who" data-i18n="footer.uc.founders">For founders</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#who" data-i18n="footer.uc.pms">For PMs</a></li>
+          <li><a class="hover:text-ink transition-colors" href="#who" data-i18n="footer.uc.devs">For developers</a></li>
         </ul>
       </div>
 
@@ -834,7 +1100,7 @@
   </div>
 </footer>
 
-<script defer src="src/scripts/i18n.js?v=14"></script>
+<script defer src="src/scripts/i18n.js?v=13"></script>
 <script>
   (function () {
     var toggle = document.getElementById('nav-toggle');
