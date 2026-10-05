@@ -134,8 +134,11 @@
        z-index sätts här: Tailwinds z-40 saknas i output.css, så bannern hamnade under
        senare positionerade element (hero-kortet, .grain, sektioner) vid scroll.
        Header = 50, banner = 45, allt innehåll under. */
-    #news-bar { z-index:45; font-size:15px; padding-top:11px; padding-bottom:11px; }
-    #hero { padding-top:200px; }
+    #news-bar { z-index:45; font-size:15px; padding-top:11px; padding-bottom:11px; column-gap:12px; row-gap:4px; }
+    #hero { padding-top:160px; }
+    /* Kort bannertext på mobil, hela texten + länk från 640px (sm:-klasserna saknas i output.css). */
+    .vm-news-long, .vm-news-cta { display:none; }
+    @media (min-width:640px) { .vm-news-short { display:none; } .vm-news-long { display:inline; } .vm-news-cta { display:inline-flex; } }
     @media (min-width:768px) { #news-bar { font-size:17px; padding-top:13px; padding-bottom:13px; } #hero { padding-top:180px; } }
 
     /* Så fungerar det: tre steg med bild */
@@ -278,8 +281,9 @@
 <!-- ============ NYHET: VIBEMASTER 2.0 (2026-09-17) ============ -->
 <a href="#how-it-works" id="news-bar" class="fixed inset-x-0 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 font-bold text-center leading-snug transition-colors" style="top:57px; background:#6B7A2F; color:#FAFAEB; border-bottom:2px solid #B08F4A; box-shadow:0 6px 18px rgba(54,58,39,.18);">
   <span class="inline-flex items-center gap-1.5 mono text-[11px] md:text-[12px] uppercase tracking-[0.18em] px-2.5 py-1 rounded-full font-bold" style="background:#B08F4A; color:#1E2113;"><svg class="icon" style="font-size:13px"><use href="#i-sparkle"/></svg><span data-i18n="news.badge">New</span></span>
-  <span data-i18n="news.text">Vibemaster 2.0 is here: conversation mode, Mistral and the architecture as a flowchart.</span>
-  <span class="hidden sm:inline-flex items-center gap-1 underline underline-offset-4 whitespace-nowrap" style="color:#F3E7C8;"><span data-i18n="news.cta">See what's new</span><svg class="icon" style="font-size:15px"><use href="#i-arrow-right"/></svg></span>
+  <span class="vm-news-short" data-i18n="news.text.short">Vibemaster 2.0 is here</span>
+  <span class="vm-news-long" data-i18n="news.text">Vibemaster 2.0 is here: conversation mode, Mistral and the architecture as a flowchart.</span>
+  <span class="vm-news-cta items-center gap-1 underline underline-offset-4 whitespace-nowrap" style="color:#F3E7C8;"><span data-i18n="news.cta">See what's new</span><svg class="icon" style="font-size:15px"><use href="#i-arrow-right"/></svg></span>
 </a>
 
 <main id="top" class="pt-14">
@@ -560,8 +564,8 @@
         <div class="vm-flow-label"><span>02</span><span data-i18n="case.s2">Interview</span></div>
         <div class="vm-flow-card">
           <div class="vm-chat">
-            <div class="vm-bubble vm-bubble-ai" data-i18n="case.s2.q">What should a visitor do?</div>
-            <div class="vm-bubble vm-bubble-me" data-i18n="case.s2.a">Understand it in 10 seconds and try it for free.</div>
+            <div class="vm-bubble vm-bubble-ai" data-i18n="case.s2.q">Who is the most important visitor, and what should they do before leaving?</div>
+            <div class="vm-bubble vm-bubble-me" data-i18n="case.s2.a">A founder with an idea. Start a free project.</div>
           </div>
         </div>
       </li>
