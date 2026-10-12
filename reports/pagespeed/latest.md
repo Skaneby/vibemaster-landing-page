@@ -1,14 +1,14 @@
 # PageSpeed Insights report
 
 - URL: https://vibemaster.ai
-- Timestamp: 2026-10-05T06:38:22.552Z
+- Timestamp: 2026-10-12T06:38:33.307Z
 
 ## MOBILE
 
 ### Scores
 | Category | Score |
 |---|---|
-| Performance | 91 |
+| Performance | 89 |
 | Accessibility | 96 |
 | Best Practices | 100 |
 | SEO | 100 |
@@ -21,20 +21,20 @@
 | CLS | 0 |
 | TBT | 0 ms |
 | TTI | 2.9 s |
-| SI | 3.1 s |
+| SI | 4.5 s |
 
 ### Top opportunities (potential savings)
 | Audit | Est. savings (ms) | Title |
 |---|---|---|
-| `server-response-time` | 4 | Initial server response time was short |
+| `server-response-time` | 2 | Initial server response time was short |
 
 ### Diagnostics (non-passing)
 | Audit | Score |
 |---|---|
-| `color-contrast` | 0 |
-| `render-blocking-insight` | 0.5 |
-| `image-delivery-insight` | 0.5 |
 | `cache-insight` | 0.5 |
+| `render-blocking-insight` | 0.5 |
+| `color-contrast` | 0 |
+| `image-delivery-insight` | 0.5 |
 
 ## DESKTOP
 
@@ -59,15 +59,15 @@
 ### Top opportunities (potential savings)
 | Audit | Est. savings (ms) | Title |
 |---|---|---|
-| `server-response-time` | 4 | Initial server response time was short |
+| `server-response-time` | 2 | Initial server response time was short |
 
 ### Diagnostics (non-passing)
 | Audit | Score |
 |---|---|
-| `image-delivery-insight` | 0.5 |
-| `cache-insight` | 0.5 |
-| `render-blocking-insight` | 0.5 |
 | `color-contrast` | 0 |
+| `render-blocking-insight` | 0.5 |
+| `cache-insight` | 0.5 |
+| `image-delivery-insight` | 0.5 |
 
 ---
 Full raw responses are stored alongside this file as `*-mobile.json` / `*-desktop.json`.
