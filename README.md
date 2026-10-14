@@ -29,6 +29,19 @@ python3 -m http.server 8080
 # Then open http://localhost:8080
 ```
 
+## Languages (important)
+
+The page exists in 7 languages, each on its own URL (`/`, `/sv/`, `/de/`, `/es/`, `/fr/`, `/hi/`, `/zh/`)
+so search engines and AI crawlers can read every language without JavaScript.
+
+- Edit **`src/page.html`** (the page) and **`src/scripts/i18n.js`** (all texts).
+- Never edit `index.html` or `xx/index.html` directly — they are generated.
+- After any change, rebuild all languages:
+
+```bash
+npm run build        # or: node scripts/build-locales.mjs
+```
+
 ## Deployment
 
 Static site — can be deployed to GitHub Pages, Netlify, Vercel, or any static host.
