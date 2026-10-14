@@ -28,3 +28,6 @@ documents/
 
 # Internal design tools (not production pages)
 compare.html
+
+# Build tooling
+node_modules/

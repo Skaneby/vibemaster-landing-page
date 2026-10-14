@@ -51,6 +51,7 @@ The output works directly with AI builders such as Lovable, Cursor, Bolt.new, Re
 
 ## Links
 
-- Homepage: https://vibemaster.ai
+- Homepage (English): https://vibemaster.ai
+- Also in Swedish, German, Spanish, French, Hindi and Chinese: https://vibemaster.ai/sv/, /de/, /es/, /fr/, /hi/, /zh/
 - App: https://app.vibemaster.ai
 - Terms & Privacy: https://vibemaster.ai/villkor.html
