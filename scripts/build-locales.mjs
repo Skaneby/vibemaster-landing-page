@@ -97,7 +97,8 @@ async function main() {
       if (!t[`faq.q${n}`] || !t[`faq.a${n}`]) throw new Error(`${locale}: faq.q${n}/a${n} missing`);
     }
     const url = SITE + PATHS[locale];
-    const title = locale === 'en' ? enTitle : `Vibemaster — ${t['hero.h1.a']} ${t['hero.h1.b']}`;
+    const sep = locale === 'zh' ? '' : ' '; // Chinese is written without spaces
+    const title = locale === 'en' ? enTitle : `Vibemaster — ${t['hero.h1.a']}${sep}${t['hero.h1.b']}`;
     const description = locale === 'en' ? enDesc : t['hero.sub'];
     const ld = jsonLdFor(templateLd, locale, t, faqNums, description);
 
